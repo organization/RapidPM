@@ -1,0 +1,47 @@
+{
+    "author" : "Organization",
+    "description" : "Extension that implements parts of PocketMine-MP",
+    "name" : "fastmine",
+    "namespace" : "pocketmine",
+    "version" : "0.0.1",
+    "optimizations" : {
+        "call-gatherer-pass" : true,
+        "check-invalid-reads" : false,
+        "constant-folding" : true,
+        "local-context-pass" : true,
+        "static-constant-class-folding" : true,
+        "static-type-inference" : true,
+        "static-type-inference-second-pass" : true
+    },
+    "stubs" : {
+        "path" : "ide/%version%/%namespace%/",
+        "stubs-run-after-generate" : false
+    },
+    "verbose" : false,
+    "warnings" : {
+        "conditional-initialization" : true,
+        "invalid-array-index" : true,
+        "invalid-reference" : true,
+        "invalid-return-type" : true,
+        "invalid-typeof-comparison" : true,
+        "non-array-access" : true,
+        "non-array-append" : true,
+        "non-array-update" : true,
+        "non-valid-clone" : true,
+        "non-valid-decrement" : true,
+        "non-valid-fetch" : true,
+        "non-valid-increment" : true,
+        "non-valid-isset" : true,
+        "non-valid-new" : true,
+        "non-valid-objectupdate" : true,
+        "nonexistant-constant" : true,
+        "nonexistent-class" : true,
+        "nonexistent-function" : true,
+        "not-supported-magic-constant" : true,
+        "possible-wrong-parameter" : true,
+        "possible-wrong-parameter-undefined" : true,
+        "unreachable-code" : true,
+        "unused-variable" : true,
+        "unused-variable-external" : true
+    }
+  }
