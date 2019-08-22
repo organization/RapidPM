@@ -102,14 +102,13 @@ class Facing
      */
     public static function rotate(int direction, int axis, bool clockwise) -> int
     {
-        var rotated;
-        if (!isset(self::CLOCKWISE[axis])) {
+        if !isset self::CLOCKWISE[axis] {
             throw new \InvalidArgumentException("Invalid axis {axis}");
         }
-        if (!isset(self::CLOCKWISE[axis][direction])) {
+        if !isset self::CLOCKWISE[axis][direction] {
             throw new \InvalidArgumentException("Cannot rotate direction {direction} around axis {axis}");
         }
-        let rotated = self::CLOCKWISE[axis][direction];
+        int rotated = self::CLOCKWISE[axis][direction];
         return clockwise ? rotated : self::opposite(rotated);
     }
 

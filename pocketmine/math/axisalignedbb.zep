@@ -18,24 +18,24 @@ namespace Pocketmine\Math;
 
 class AxisAlignedBB
 {
-    /** @var float */
-    public minX;
-    /** @var float */
-    public minY;
-    /** @var float */
-    public minZ;
-    /** @var float */
-    public maxX;
-    /** @var float */
-    public maxY;
-    /** @var float */
-    public maxZ;
-    public function __construct(float minX, float minY, float minZ, float maxX, float maxY, float maxZ)
+    /** @var double */
+    public minX = 0.0;
+    /** @var double */
+    public minY = 0.0;
+    /** @var double */
+    public minZ = 0.0;
+    /** @var double */
+    public maxX = 0.0;
+    /** @var double */
+    public maxY = 0.0;
+    /** @var double */
+    public maxZ = 0.0;
+    public function __construct(double minX, double minY, double minZ, double maxX, double maxY, double maxZ)
     {
         this->setBounds(minX, minY, minZ, maxX, maxY, maxZ);
     }
 
-    public function setBounds(float minX, float minY, float minZ, float maxX, float maxY, float maxZ)
+    public function setBounds(double minX, double minY, double minZ, double maxX, double maxY, double maxZ)
     {
         if (minX > maxX) {
             throw new \InvalidArgumentException("minX {minX} is larger than maxX {maxX}");
@@ -71,26 +71,20 @@ class AxisAlignedBB
      * If each of X, Y and Z are positive, the relevant max bound will be increased. If negative, the relevant min
      * bound will be decreased.
      *
-     * @param float $x
-     * @param float $y
-     * @param float $z
+     * @param double $x
+     * @param double $y
+     * @param double $z
      *
      * @return AxisAlignedBB
      */
-    public function addCoord(float x, float y, float z) -> <AxisAlignedBB>
+    public function addCoord(double x, double y, double z) -> <AxisAlignedBB>
     {
-        var maxZ;
-        var maxY;
-        var maxX;
-        var minZ;
-        var minY;
-        var minX;
-        let minX = this->minX;
-        let minY = this->minY;
-        let minZ = this->minZ;
-        let maxX = this->maxX;
-        let maxY = this->maxY;
-        let maxZ = this->maxZ;
+        double minX = this->minX;
+        double minY = this->minY;
+        double minZ = this->minZ;
+        double maxX = this->maxX;
+        double maxY = this->maxY;
+        double maxZ = this->maxZ;
         if (x < 0) {
             let minX += x;
         } elseif (x > 0) {
@@ -112,13 +106,13 @@ class AxisAlignedBB
     /**
      * Outsets the bounds of this AxisAlignedBB by the specified X, Y and Z.
      *
-     * @param float $x
-     * @param float $y
-     * @param float $z
+     * @param double $x
+     * @param double $y
+     * @param double $z
      *
      * @return $this
      */
-    public function expand(float x, float y, float z) -> <AxisAlignedBB>
+    public function expand(double x, double y, double z) -> <AxisAlignedBB>
     {
         let this->minX -= x;
         let this->minY -= y;
@@ -132,13 +126,13 @@ class AxisAlignedBB
     /**
      * Returns an expanded clone of this AxisAlignedBB.
      *
-     * @param float $x
-     * @param float $y
-     * @param float $z
+     * @param double $x
+     * @param double $y
+     * @param double $z
      *
      * @return AxisAlignedBB
      */
-    public function expandedCopy(float x, float y, float z) -> <AxisAlignedBB>
+    public function expandedCopy(double x, double y, double z) -> <AxisAlignedBB>
     {
         return (clone this)->expand(x, y, z);
     }
@@ -146,13 +140,13 @@ class AxisAlignedBB
     /**
      * Shifts this AxisAlignedBB by the given X, Y and Z.
      *
-     * @param float $x
-     * @param float $y
-     * @param float $z
+     * @param double $x
+     * @param double $y
+     * @param double $z
      *
      * @return $this
      */
-    public function offset(float x, float y, float z) -> <AxisAlignedBB>
+    public function offset(double x, double y, double z) -> <AxisAlignedBB>
     {
         let this->minX += x;
         let this->minY += y;
@@ -166,13 +160,13 @@ class AxisAlignedBB
     /**
      * Returns an offset clone of this AxisAlignedBB.
      *
-     * @param float $x
-     * @param float $y
-     * @param float $z
+     * @param double $x
+     * @param double $y
+     * @param double $z
      *
      * @return AxisAlignedBB
      */
-    public function offsetCopy(float x, float y, float z) -> <AxisAlignedBB>
+    public function offsetCopy(double x, double y, double z) -> <AxisAlignedBB>
     {
         return (clone this)->offset(x, y, z);
     }
@@ -180,13 +174,13 @@ class AxisAlignedBB
     /**
      * Insets the bounds of this AxisAlignedBB by the specified X, Y and Z.
      *
-     * @param float $x
-     * @param float $y
-     * @param float $z
+     * @param double $x
+     * @param double $y
+     * @param double $z
      *
      * @return $this
      */
-    public function contract(float x, float y, float z) -> <AxisAlignedBB>
+    public function contract(double x, double y, double z) -> <AxisAlignedBB>
     {
         let this->minX += x;
         let this->minY += y;
@@ -200,13 +194,13 @@ class AxisAlignedBB
     /**
      * Returns a contracted clone of this AxisAlignedBB.
      *
-     * @param float $x
-     * @param float $y
-     * @param float $z
+     * @param double $x
+     * @param double $y
+     * @param double $z
      *
      * @return AxisAlignedBB
      */
-    public function contractedCopy(float x, float y, float z) -> <AxisAlignedBB>
+    public function contractedCopy(double x, double y, double z) -> <AxisAlignedBB>
     {
         return (clone this)->contract(x, y, z);
     }
@@ -215,12 +209,12 @@ class AxisAlignedBB
      * Extends the AABB in the given direction.
      *
      * @param int   $face
-     * @param float $distance Negative values pull the face in, positive values push out.
+     * @param double $distance Negative values pull the face in, positive values push out.
      *
      * @return $this
      * @throws \InvalidArgumentException
      */
-    public function extend(int face, float distance) -> <AxisAlignedBB>
+    public function extend(int face, double distance) -> <AxisAlignedBB>
     {
         if (face === Facing::DOWN) {
             let this->minY -= distance;
@@ -245,12 +239,12 @@ class AxisAlignedBB
      * @see AxisAlignedBB::extend()
      *
      * @param int   $face
-     * @param float $distance
+     * @param double $distance
      *
      * @return AxisAlignedBB
      * @throws \InvalidArgumentException
      */
-    public function extendedCopy(int face, float distance) -> <AxisAlignedBB>
+    public function extendedCopy(int face, double distance) -> <AxisAlignedBB>
     {
         return (clone this)->extend(face, distance);
     }
@@ -260,12 +254,12 @@ class AxisAlignedBB
      * @see AxisAlignedBB::extend()
      *
      * @param int   $face
-     * @param float $distance Positive values pull the face in, negative values push out.
+     * @param double $distance Positive values pull the face in, negative values push out.
      *
      * @return $this
      * @throws \InvalidArgumentException
      */
-    public function trim(int face, float distance) -> <AxisAlignedBB>
+    public function trim(int face, double distance) -> <AxisAlignedBB>
     {
         return this->extend(face, -distance);
     }
@@ -275,12 +269,12 @@ class AxisAlignedBB
      * @see AxisAlignedBB::trim()
      *
      * @param int   $face
-     * @param float $distance
+     * @param double $distance
      *
      * @return AxisAlignedBB
      * @throws \InvalidArgumentException
      */
-    public function trimmedCopy(int face, float distance) -> <AxisAlignedBB>
+    public function trimmedCopy(int face, double distance) -> <AxisAlignedBB>
     {
         return this->extendedCopy(face, -distance);
     }
@@ -289,12 +283,12 @@ class AxisAlignedBB
      * Increases the dimension of the AABB along the given axis.
      *
      * @param int   $axis one of the Facing::AXIS_* constants
-     * @param float $distance Negative values reduce width, positive values increase width.
+     * @param double $distance Negative values reduce width, positive values increase width.
      *
      * @return $this
      * @throws \InvalidArgumentException
      */
-    public function stretch(int axis, float distance) -> <AxisAlignedBB>
+    public function stretch(int axis, double distance) -> <AxisAlignedBB>
     {
         if (axis === Facing::AXIS_Y) {
             let this->minY -= distance;
@@ -316,12 +310,12 @@ class AxisAlignedBB
      * @see AxisAlignedBB::stretch()
      *
      * @param int   $axis
-     * @param float $distance
+     * @param double $distance
      *
      * @return AxisAlignedBB
      * @throws \InvalidArgumentException
      */
-    public function stretchedCopy(int axis, float distance) -> <AxisAlignedBB>
+    public function stretchedCopy(int axis, double distance) -> <AxisAlignedBB>
     {
         return (clone this)->stretch(axis, distance);
     }
@@ -331,12 +325,12 @@ class AxisAlignedBB
      * @see AxisAlignedBB::stretch()
      *
      * @param int   $axis
-     * @param float $distance
+     * @param double $distance
      *
      * @return $this
      * @throws \InvalidArgumentException
      */
-    public function squash(int axis, float distance) -> <AxisAlignedBB>
+    public function squash(int axis, double distance) -> <AxisAlignedBB>
     {
         return this->stretch(axis, -distance);
     }
@@ -346,17 +340,17 @@ class AxisAlignedBB
      * @see AxisAlignedBB::squash()
      *
      * @param int   $axis
-     * @param float $distance
+     * @param double $distance
      *
      * @return AxisAlignedBB
      * @throws \InvalidArgumentException
      */
-    public function squashedCopy(int axis, float distance) -> <AxisAlignedBB>
+    public function squashedCopy(int axis, double distance) -> <AxisAlignedBB>
     {
         return this->stretchedCopy(axis, -distance);
     }
 
-    public function calculateXOffset(<AxisAlignedBB> bb, float x) -> float
+    public function calculateXOffset(<AxisAlignedBB> bb, double x) -> double
     {
         var x2;
         var x;
@@ -381,7 +375,7 @@ class AxisAlignedBB
         return x;
     }
 
-    public function calculateYOffset(<AxisAlignedBB> bb, float y) -> float
+    public function calculateYOffset(<AxisAlignedBB> bb, double y) -> double
     {
         var y2;
         var y;
@@ -406,7 +400,7 @@ class AxisAlignedBB
         return y;
     }
 
-    public function calculateZOffset(<AxisAlignedBB> bb, float z) -> float
+    public function calculateZOffset(<AxisAlignedBB> bb, double z) -> double
     {
         var z2;
         var z;
@@ -435,11 +429,11 @@ class AxisAlignedBB
      * Returns whether any part of the specified AABB is inside (intersects with) this one.
      *
      * @param AxisAlignedBB $bb
-     * @param float         $epsilon
+     * @param double         $epsilon
      *
      * @return bool
      */
-    public function intersectsWith(<AxisAlignedBB> bb, float epsilon = 0.00001) -> bool
+    public function intersectsWith(<AxisAlignedBB> bb, double epsilon = 0.00001) -> bool
     {
         if bb->maxX - this->minX > epsilon && this->maxX - bb->minX > epsilon {
             if bb->maxY - this->minY > epsilon && this->maxY - bb->minY > epsilon {
@@ -468,9 +462,9 @@ class AxisAlignedBB
 
     /**
      * Returns the mean average of the AABB's X, Y and Z lengths.
-     * @return float
+     * @return double
      */
-    public function getAverageEdgeLength() -> float
+    public function getAverageEdgeLength() -> double
     {
         return (this->maxX - this->minX + this->maxY - this->minY + this->maxZ - this->minZ) / 3;
     }
@@ -478,9 +472,9 @@ class AxisAlignedBB
     /**
      * Returns the interior volume of the AABB.
      *
-     * @return float
+     * @return double
      */
-    public function getVolume() -> float
+    public function getVolume() -> double
     {
         return (this->maxX - this->minX) * (this->maxY - this->minY) * (this->maxZ - this->minZ);
     }
