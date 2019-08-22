@@ -97,7 +97,7 @@ class Vector3
 
     public function multiply(float number) -> <Vector3>
     {
-        return new Vector3(this->x * number, this->y * number, this->z * number);
+        return new Vector3(this->x * (float) number, this->y * (float) number, this->z * (float) number);
     }
 
     public function divide(float number) -> <Vector3>
@@ -115,7 +115,7 @@ class Vector3
         return new Vector3((int) floor(this->x), (int) floor(this->y), (int) floor(this->z));
     }
 
-    public function round(int precision = 0, int mode = PHP_ROUND_HALF_UP) -> <Vector3>
+    public function round(int precision = 0, int mode = 0x01 /* PHP_ROUND_HALF_UP */) -> <Vector3>
     {
         return precision > 0 ? new Vector3(round(this->x, precision, mode), round(this->y, precision, mode), round(this->z, precision, mode)) : new Vector3((int) round(this->x, precision, mode), (int) round(this->y, precision, mode), (int) round(this->z, precision, mode));
     }
@@ -146,9 +146,8 @@ class Vector3
                 return new Vector3(this->x - step, this->y, this->z);
             case Facing::EAST:
                 return new Vector3(this->x + step, this->y, this->z);
-            default:
-                return this;
         }
+        return this; // Z E P H I R?!
     }
 
     /**
@@ -218,13 +217,16 @@ class Vector3
      *
      * @return \Generator|Vector3[]
      */
-    public function sides(int step = 1) -> <\Generator>
+    public function sides(int step = 1) //-> <\Generator>
     {
         var facing;
+        array tempArr;
         
-        for facing in Facing::ALL {
-            return new \Generator([facing: this->getSide(facing, step)]);
+        //TODO: yield facing (Z E P H I R)
+        for facing in Facing::all {
+            let tempArr[] = this->getSide(facing, step);
         }
+        return new \ArrayIterator(tempArr);
     }
 
     /**
@@ -248,15 +250,18 @@ class Vector3
      *
      * @return \Generator|Vector3[]
      */
-    public function sidesAroundAxis(int axis, int step = 1) -> <\Generator>
+    public function sidesAroundAxis(int axis, int step = 1) //-> <\Generator>
     {
         var facing;
+        array tempArr;
         
-        for facing in Facing::ALL {
+        //TODO: yield facing (Z E P H I R)
+        for facing in Facing::all {
             if (Facing::axis(facing) !== axis) {
-                return new \Generator([facing: this->getSide(facing, step)]);
+                let tempArr[] = this->getSide(facing, step);
             }
         }
+        return new \ArrayIterator(tempArr);
     }
 
     /**
@@ -349,7 +354,7 @@ class Vector3
         if (f < 0 || f > 1) {
             return null;
         } else {
-            return new Vector3(x, this->y + (v->y - this->y) * f, this->z + (v->z - this->z) * f);
+            return new Vector3(x, this->y + (v->y - this->y) * (float) f, this->z + (v->z - this->z) * (float) f);
         }
     }
 
@@ -374,7 +379,7 @@ class Vector3
         if (f < 0 || f > 1) {
             return null;
         } else {
-            return new Vector3(this->x + (v->x - this->x) * f, y, this->z + (v->z - this->z) * f);
+            return new Vector3(this->x + (v->x - this->x) * (float) f, y, this->z + (v->z - this->z) * (float) f);
         }
     }
 
@@ -399,7 +404,7 @@ class Vector3
         if (f < 0 || f > 1) {
             return null;
         } else {
-            return new Vector3(this->x + (v->x - this->x) * f, this->y + (v->y - this->y) * f, z);
+            return new Vector3(this->x + (v->x - this->x) * (float) f, this->y + (v->y - this->y) * (float) f, z);
         }
     }
 

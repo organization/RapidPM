@@ -23,35 +23,51 @@ class Facing
     const AXIS_X = 2;
     const FLAG_AXIS_POSITIVE = 1;
     /* most significant 2 bits = axis, least significant bit = is positive direction */
-    //self::AXIS_Y << 1 = 0, self::AXIS_Z << 1 = 2, self::AXIS_X << 1 = 4
-    const DOWN       = 0; //self::AXIS_Y << 1;
-    const UP         = 1; //self::AXIS_Y << 1 | self::FLAG_AXIS_POSITIVE;
-    const NORTH      = 2; //self::AXIS_Z << 1;
-    const SOUTH      = 3; //self::AXIS_Z << 1 | self::FLAG_AXIS_POSITIVE;
-    const WEST       = 4; //self::AXIS_X << 1;
-    const EAST       = 5; //self::AXIS_X << 1 | self::FLAG_AXIS_POSITIVE;
-    const ALL        = [self::DOWN, self::UP, self::NORTH, self::SOUTH, self::WEST, self::EAST];
-    const HORIZONTAL = [self::NORTH, self::SOUTH, self::WEST, self::EAST];
-    const CLOCKWISE  = [
-                           0: [
-                                  2: 5,
-                                  5: 3, 
-                                  3: 4,
-                                  4: 2
-                              ],
-                           1: [
-                                  1: 5,
-                                  5: 0,
-                                  0: 4,
-                                  4: 1
-                              ],
-                           2: [
-                                  1: 2,
-                                  2: 0,
-                                  0: 3,
-                                  3: 1
-                              ]
-                       ];
+
+    /* self::AXIS_Y << 1 = 0 */
+    /* self::AXIS_Z << 1 = 2 */
+    /* self::AXIS_X << 1 = 4 */
+
+    const DOWN       = 0; /* self::AXIS_Y << 1; */
+    const UP         = 1; /* self::AXIS_Y << 1 | self::FLAG_AXIS_POSITIVE; */
+    const NORTH      = 2; /* self::AXIS_Z << 1; */
+    const SOUTH      = 3; /* self::AXIS_Z << 1 | self::FLAG_AXIS_POSITIVE; */
+    const WEST       = 4; /* self::AXIS_X << 1; */
+    const EAST       = 5; /* self::AXIS_X << 1 | self::FLAG_AXIS_POSITIVE; */
+    public static all        = [
+        self::DOWN,
+        self::UP,
+        self::NORTH,
+        self::SOUTH,
+        self::WEST,
+        self::EAST
+    ];
+    public static horizonal = [
+        self::NORTH,
+        self::SOUTH,
+        self::WEST,
+        self::EAST
+    ];
+    private static clockwise = [
+        [
+            2: 5,
+            5: 3, 
+            3: 4,
+            4: 2
+        ],
+        [
+            1: 5,
+            5: 0,
+            0: 4,
+            4: 1
+        ],
+        [
+            1: 2,
+            2: 0,
+            0: 3,
+            3: 1
+        ]
+    ];
 
     /**
      * Returns the axis of the given direction.
@@ -102,13 +118,13 @@ class Facing
      */
     public static function rotate(int direction, int axis, bool clockwise) -> int
     {
-        if !isset self::CLOCKWISE[axis] {
+        if !isset self::clockwise[axis] {
             throw new \InvalidArgumentException("Invalid axis {axis}");
         }
-        if !isset self::CLOCKWISE[axis][direction] {
+        if !isset self::clockwise[axis][direction] {
             throw new \InvalidArgumentException("Cannot rotate direction {direction} around axis {axis}");
         }
-        int rotated = self::CLOCKWISE[axis][direction];
+        var rotated = self::clockwise[axis][direction];
         return clockwise ? rotated : self::opposite(rotated);
     }
 
@@ -156,7 +172,7 @@ class Facing
      */
     public static function validate(int facing) -> void
     {
-        if (!in_array(facing, self::ALL, true)) {
+        if (!in_array(facing, self::all, true)) {
             throw new \InvalidArgumentException("Invalid direction {facing}");
         }
     }

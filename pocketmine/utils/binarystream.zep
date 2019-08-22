@@ -59,10 +59,10 @@ class BinaryStream
      *
      * @throws BinaryDataException if there are not enough bytes left in the buffer
      */
-    public function get(var len) -> string
+    public function get(var len)
     {
         var remaining;
-        var str;
+        string str;
         var buflen;
         if (len === 0) {
             return "";

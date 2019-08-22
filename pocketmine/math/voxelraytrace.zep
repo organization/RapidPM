@@ -143,7 +143,7 @@ abstract class VoxelRayTrace
             let ds = -ds;
             if (floor(s) == s) {
                 //exactly at coordinate, will leave the coordinate immediately by moving negatively
-                return 0;
+                return 0.0;
             }
         }
         // problem is now s+t*ds = 1

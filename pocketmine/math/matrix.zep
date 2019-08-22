@@ -96,7 +96,7 @@ class Matrix implements \ArrayAccess
         }
         let result = new Matrix(this->rows, this->columns);
         for r in range(0, this->rows - 1) {
-            for c in range(this->columns - 1) {
+            for c in range(0, this->columns - 1) {
                 result->setElement(r, c, this->matrix[r][c] + matrix->getElement(r, c));
             }
         }
@@ -113,7 +113,7 @@ class Matrix implements \ArrayAccess
         }
         let result = clone this;
         for r in range(0, this->rows - 1) {
-            for c in range(this->columns - 1) {
+            for c in range(0, this->columns - 1) {
                 result->setElement(r, c, this->matrix[r][c] - matrix->getElement(r, c));
             }
         }
@@ -154,7 +154,7 @@ class Matrix implements \ArrayAccess
         var r;
         var result;
         let result = new Matrix(this->columns, this->rows);
-        for r in range(this->rows - 1) {
+        for r in range(0, this->rows - 1) {
             for c in range(0, this->columns - 1) {
                 result->setElement(c, r, this->matrix[r][c]);
             }
