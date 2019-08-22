@@ -14,7 +14,7 @@
 ext/build/
 ext/modules/
 ext/Makefile*
-ext/config*
+ext/configure*
 ext/acinclude.m4
 ext/aclocal.m4
 ext/autom4te*

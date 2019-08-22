@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 export CC="gcc"
-export CFLAGS="-O2 -Wall -fvisibility=hidden -flto -DZEPHIR_RELEASE=1"
+export CFLAGS="-O3 -Wall -fvisibility=hidden -flto -DZEPHIR_RELEASE=1"
 
 phpize_bin=$(which phpize 2> /dev/null)
 
