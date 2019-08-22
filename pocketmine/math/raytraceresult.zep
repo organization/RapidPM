@@ -14,7 +14,7 @@
  *
 */
 
-namespace pocketmine\math;
+namespace Pocketmine\Math;
 
 /**
  * Class representing a ray trace collision with an AxisAlignedBB

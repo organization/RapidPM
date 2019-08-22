@@ -17,7 +17,7 @@
 /**
  * Methods for working with binary strings
  */
-namespace pocketmine\utils;
+namespace Pocketmine\Utils;
 
 /*
 if (!defined("ENDIANNESS")) {
@@ -492,7 +492,7 @@ class Binary
      *
      * @return int
      */
-    public static function readVarInt(string buffer, int &offset) -> int
+    public static function readVarInt(string buffer, int offset) -> int
     {
         var temp;
         var raw;
@@ -511,17 +511,18 @@ class Binary
      *
      * @throws BinaryDataException if the var-int did not end after 5 bytes or there were not enough bytes
      */
-    public static function readUnsignedVarInt(string buffer, int &offset) -> int
+    public static function readUnsignedVarInt(string buffer, int offset) -> int
     {
         var b;
-        var i;
-        var value;
-        let value = 0;
-        for (let i = 0; i <= 28; let i += 7) {
+        var i = 0;
+        var value = 0;
+        while i <= 28 {
+            let i += 7;
             if (!isset(buffer[offset])) {
                 throw new BinaryDataException("No bytes left in buffer");
             }
-            let b = ord(buffer[let offset++]);
+            let b = ord(buffer[offset]);
+            let offset++;
             let value |= (b & 0x7f) << i;
             if ((b & 0x80) === 0) {
                 return value;
@@ -558,7 +559,7 @@ class Binary
         var buf;
         let buf = "";
         let value &= 0xffffffff;
-        for (let i = 0; i < 5; ++i) {
+        for i in range(0, 4) {
             if (value >> 7 !== 0) {
                 let buf .= chr(value | 0x80);
             } else {
@@ -579,7 +580,7 @@ class Binary
      *
      * @return int
      */
-    public static function readVarLong(string buffer, int &offset) -> int
+    public static function readVarLong(string buffer, int offset) -> int
     {
         var temp;
         var raw;
@@ -598,17 +599,19 @@ class Binary
      *
      * @throws BinaryDataException if the var-int did not end after 10 bytes or there were not enough bytes
      */
-    public static function readUnsignedVarLong(string buffer, int &offset) -> int
+    public static function readUnsignedVarLong(string buffer, int offset) -> int
     {
         var b;
-        var i;
+        var i = 0;
         var value;
         let value = 0;
-        for (let i = 0; i <= 63; let i += 7) {
+        while i <= 63 {
+            let i += 7;
             if (!isset(buffer[offset])) {
                 throw new BinaryDataException("No bytes left in buffer");
             }
-            let b = ord(buffer[let offset++]);
+            let b = ord(buffer[offset]);
+            let offset++;
             let value |= (b & 0x7f) << i;
             if ((b & 0x80) === 0) {
                 return value;
@@ -642,7 +645,7 @@ class Binary
         var i;
         var buf;
         let buf = "";
-        for (let i = 0; i < 10; ++i) {
+        for i in range(0, 9)  {
             if (value >> 7 !== 0) {
                 let buf .= chr(value | 0x80);
                 //Let chr() take the last byte of this, it's faster than adding another & 0x7f.

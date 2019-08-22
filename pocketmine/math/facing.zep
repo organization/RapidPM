@@ -14,7 +14,7 @@
  *
 */
 
-namespace pocketmine\math;
+namespace Pocketmine\Math;
 
 class Facing
 {
@@ -23,15 +23,36 @@ class Facing
     const AXIS_X = 2;
     const FLAG_AXIS_POSITIVE = 1;
     /* most significant 2 bits = axis, least significant bit = is positive direction */
-    const DOWN = self::AXIS_Y << 1;
-    const UP = self::AXIS_Y << 1 | self::FLAG_AXIS_POSITIVE;
-    const NORTH = self::AXIS_Z << 1;
-    const SOUTH = self::AXIS_Z << 1 | self::FLAG_AXIS_POSITIVE;
-    const WEST = self::AXIS_X << 1;
-    const EAST = self::AXIS_X << 1 | self::FLAG_AXIS_POSITIVE;
-    const ALL = [self::DOWN, self::UP, self::NORTH, self::SOUTH, self::WEST, self::EAST];
+    //self::AXIS_Y << 1 = 0, self::AXIS_Z << 1 = 2, self::AXIS_X << 1 = 4
+    const DOWN       = 0; //self::AXIS_Y << 1;
+    const UP         = 1; //self::AXIS_Y << 1 | self::FLAG_AXIS_POSITIVE;
+    const NORTH      = 2; //self::AXIS_Z << 1;
+    const SOUTH      = 3; //self::AXIS_Z << 1 | self::FLAG_AXIS_POSITIVE;
+    const WEST       = 4; //self::AXIS_X << 1;
+    const EAST       = 5; //self::AXIS_X << 1 | self::FLAG_AXIS_POSITIVE;
+    const ALL        = [self::DOWN, self::UP, self::NORTH, self::SOUTH, self::WEST, self::EAST];
     const HORIZONTAL = [self::NORTH, self::SOUTH, self::WEST, self::EAST];
-    const CLOCKWISE = [self::AXIS_Y: [self::NORTH: self::EAST, self::EAST: self::SOUTH, self::SOUTH: self::WEST, self::WEST: self::NORTH], self::AXIS_Z: [self::UP: self::EAST, self::EAST: self::DOWN, self::DOWN: self::WEST, self::WEST: self::UP], self::AXIS_X: [self::UP: self::NORTH, self::NORTH: self::DOWN, self::DOWN: self::SOUTH, self::SOUTH: self::UP]];
+    const CLOCKWISE  = [
+                           0: [
+                                  2: 5,
+                                  5: 3, 
+                                  3: 4,
+                                  4: 2
+                              ],
+                           1: [
+                                  1: 5,
+                                  5: 0,
+                                  0: 4,
+                                  4: 1
+                              ],
+                           2: [
+                                  1: 2,
+                                  2: 0,
+                                  0: 3,
+                                  3: 1
+                              ]
+                       ];
+
     /**
      * Returns the axis of the given direction.
      *
@@ -60,7 +81,7 @@ class Facing
     /**
      * Returns the opposite Facing of the specified one.
      *
-     * @param int $direction 0-5 one of the Facing::* constants
+     * @param int $direction 0-5 one of the self::* constants
      *
      * @return int
      */

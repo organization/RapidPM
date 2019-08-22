@@ -14,7 +14,7 @@
  *
 */
 
-namespace pocketmine\math;
+namespace Pocketmine\Math;
 
 abstract class VoxelRayTrace
 {
@@ -28,9 +28,18 @@ abstract class VoxelRayTrace
      *
      * @return \Generator|Vector3[]
      */
-    public static function inDirection(<Vector3> start, <Vector3> directionVector, float maxDistance) -> \Generator
+    public static function inDirection(<Vector3> start, <Vector3> directionVector, float maxDistance) -> <\Generator>
     {
         return self::betweenPoints(start, start->add(directionVector->multiply(maxDistance)));
+    }
+
+    /**
+     * Spaceship operator
+     */
+    private static function spaceShip(var a, var b) -> int {
+        if a == b  { return 0; }
+        elseif a < b { return -1; }
+        else { return 1; }
     }
 
     /**
@@ -45,7 +54,7 @@ abstract class VoxelRayTrace
      *
      * @return \Generator|Vector3[]
      */
-    public static function betweenPoints(<Vector3> start, <Vector3> end) -> \Generator
+    public static function betweenPoints(<Vector3> start, <Vector3> end) -> <\Generator>
     {
         var tDeltaZ;
         var tDeltaY;
@@ -64,10 +73,10 @@ abstract class VoxelRayTrace
         if (directionVector->lengthSquared() <= 0) {
             throw new \InvalidArgumentException("Start and end points are the same, giving a zero direction vector");
         }
-        let radius = start->distance(end);
-        let stepX = directionVector->x <=> 0;
-        let stepY = directionVector->y <=> 0;
-        let stepZ = directionVector->z <=> 0;
+        let radius = start->distance(end); 
+        let stepX = spaceShip(directionVector->x, 0);
+        let stepY = spaceShip(directionVector->y, 0);
+        let stepZ = spaceShip(directionVector->z, 0);
         //Initialize the step accumulation variables depending how far into the current block the start position is. If
         //the start position is on the corner of the block, these will be zero.
         let tMaxX = self::rayTraceDistanceToBoundary(start->x, directionVector->x);
@@ -77,12 +86,15 @@ abstract class VoxelRayTrace
         let tDeltaX = directionVector->x == 0 ? 0 : stepX / directionVector->x;
         let tDeltaY = directionVector->y == 0 ? 0 : stepY / directionVector->y;
         let tDeltaZ = directionVector->z == 0 ? 0 : stepZ / directionVector->z;
+        var temp = [];
+        var counter = 0;
         while (true) {
-            (yield currentBlock);
+            let counter++;
+            let temp[counter] = currentBlock;
             // tMaxX stores the t-value at which we cross a cube boundary along the
             // X axis, and similarly for Y and Z. Therefore, choosing the least tMax
             // chooses the closest cube boundary.
-            if (tMaxX < tMaxY and tMaxX < tMaxZ) {
+            if (tMaxX < tMaxY && tMaxX < tMaxZ) {
                 if (tMaxX > radius) {
                     break;
                 }
@@ -102,6 +114,7 @@ abstract class VoxelRayTrace
                 let tMaxZ += tDeltaZ;
             }
         }
+        return new \Generator(temp);
     }
 
     /**

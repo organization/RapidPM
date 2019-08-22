@@ -14,7 +14,7 @@
  *
 */
 
-namespace pocketmine\math;
+namespace Pocketmine\Math;
 
 class Vector3
 {
@@ -131,7 +131,7 @@ class Vector3
      *
      * @return Vector3
      */
-    public function getSide(int side, int step = 1) -> Vector3
+    public function getSide(int side, int step = 1) -> <Vector3>
     {
         switch (side) {
             case Facing::DOWN:
@@ -156,7 +156,7 @@ class Vector3
      *
      * @return Vector3
      */
-    public function down(int step = 1) -> Vector3
+    public function down(int step = 1) -> <Vector3>
     {
         return this->getSide(Facing::DOWN, step);
     }
@@ -166,7 +166,7 @@ class Vector3
      *
      * @return Vector3
      */
-    public function up(int step = 1) -> Vector3
+    public function up(int step = 1) -> <Vector3>
     {
         return this->getSide(Facing::UP, step);
     }
@@ -176,7 +176,7 @@ class Vector3
      *
      * @return Vector3
      */
-    public function north(int step = 1) -> Vector3
+    public function north(int step = 1) -> <Vector3>
     {
         return this->getSide(Facing::NORTH, step);
     }
@@ -186,7 +186,7 @@ class Vector3
      *
      * @return Vector3
      */
-    public function south(int step = 1) -> Vector3
+    public function south(int step = 1) -> <Vector3>
     {
         return this->getSide(Facing::SOUTH, step);
     }
@@ -196,7 +196,7 @@ class Vector3
      *
      * @return Vector3
      */
-    public function west(int step = 1) -> Vector3
+    public function west(int step = 1) -> <Vector3>
     {
         return this->getSide(Facing::WEST, step);
     }
@@ -206,7 +206,7 @@ class Vector3
      *
      * @return Vector3
      */
-    public function east(int step = 1) -> Vector3
+    public function east(int step = 1) -> <Vector3>
     {
         return this->getSide(Facing::EAST, step);
     }
@@ -218,12 +218,12 @@ class Vector3
      *
      * @return \Generator|Vector3[]
      */
-    public function sides(int step = 1) -> \Generator
+    public function sides(int step = 1) -> <\Generator>
     {
         var facing;
         
         for facing in Facing::ALL {
-            (yield facing => this->getSide(facing, step));
+            return new \Generator([facing: this->getSide(facing, step)]);
         }
     }
 
@@ -248,13 +248,13 @@ class Vector3
      *
      * @return \Generator|Vector3[]
      */
-    public function sidesAroundAxis(int axis, int step = 1) -> \Generator
+    public function sidesAroundAxis(int axis, int step = 1) -> <\Generator>
     {
         var facing;
         
         for facing in Facing::ALL {
             if (Facing::axis(facing) !== axis) {
-                (yield facing => this->getSide(facing, step));
+                return new \Generator([facing: this->getSide(facing, step)]);
             }
         }
     }
@@ -276,7 +276,7 @@ class Vector3
 
     public function distanceSquared(<Vector3> pos) -> float
     {
-        return (this->x - pos->x) ** 2 + (this->y - pos->y) ** 2 + (this->z - pos->z) ** 2;
+        return pow((this->x - pos->x), 2)+ pow((this->y - pos->y), 2) + pow((this->z - pos->z), 2);
     }
 
     public function maxPlainDistance(var x = 0, var z = 0) -> float
@@ -325,7 +325,7 @@ class Vector3
 
     public function equals(<Vector3> v) -> bool
     {
-        return this->x == v->x and this->y == v->y and this->z == v->z;
+        return this->x == v->x && this->y == v->y && this->z == v->z;
     }
 
     /**
@@ -337,16 +337,16 @@ class Vector3
      *
      * @return Vector3|null
      */
-    public function getIntermediateWithXValue(<Vector3> v, float x) -> Vector3|null
+    public function getIntermediateWithXValue(<Vector3> v, float x) -> <Vector3>|null
     {
         var f;
         var xDiff;
         let xDiff = v->x - this->x;
-        if (xDiff * xDiff < 1.0E-7) {
+        if (xDiff * xDiff < 0.0000001) {
             return null;
         }
         let f = (x - this->x) / xDiff;
-        if (f < 0 or f > 1) {
+        if (f < 0 || f > 1) {
             return null;
         } else {
             return new Vector3(x, this->y + (v->y - this->y) * f, this->z + (v->z - this->z) * f);
@@ -362,16 +362,16 @@ class Vector3
      *
      * @return Vector3|null
      */
-    public function getIntermediateWithYValue(<Vector3> v, float y) -> Vector3|null
+    public function getIntermediateWithYValue(<Vector3> v, float y) -> <Vector3>|null
     {
         var f;
         var yDiff;
         let yDiff = v->y - this->y;
-        if (yDiff * yDiff < 1.0E-7) {
+        if (yDiff * yDiff < 0.0000001) {
             return null;
         }
         let f = (y - this->y) / yDiff;
-        if (f < 0 or f > 1) {
+        if (f < 0 || f > 1) {
             return null;
         } else {
             return new Vector3(this->x + (v->x - this->x) * f, y, this->z + (v->z - this->z) * f);
@@ -387,16 +387,16 @@ class Vector3
      *
      * @return Vector3|null
      */
-    public function getIntermediateWithZValue(<Vector3> v, float z) -> Vector3|null
+    public function getIntermediateWithZValue(<Vector3> v, float z) -> <Vector3>|null
     {
         var f;
         var zDiff;
         let zDiff = v->z - this->z;
-        if (zDiff * zDiff < 1.0E-7) {
+        if (zDiff * zDiff < 0.0000001) {
             return null;
         }
         let f = (z - this->z) / zDiff;
-        if (f < 0 or f > 1) {
+        if (f < 0 || f > 1) {
             return null;
         } else {
             return new Vector3(this->x + (v->x - this->x) * f, this->y + (v->y - this->y) * f, z);
@@ -410,7 +410,7 @@ class Vector3
      *
      * @return $this
      */
-    public function setComponents(var x, var y, var z) -> $this
+    public function setComponents(var x, var y, var z) -> <Vector3>
     {
         let this->x = x;
         let this->y = y;
@@ -426,16 +426,15 @@ class Vector3
     /**
      * Returns a new Vector3 taking the maximum of each component in the input vectors.
      *
-     * @param Vector3 ...$positions
+     * @param Vector3[] $positions
      *
      * @return Vector3
      */
-    public static function maxComponents(<Vector3> ...positions) -> <Vector3>
+    public static function maxComponents(array positions) -> <Vector3>
     {
-        var zList;
-        var yList;
-        var xList;
-        let xList = let yList = let zList = [];
+        var zList = [];
+        var yList = [];
+        var xList = [];
         var position;
         
         for position in positions {
@@ -449,16 +448,15 @@ class Vector3
     /**
      * Returns a new Vector3 taking the minimum of each component in the input vectors.
      *
-     * @param Vector3 ...$positions
+     * @param Vector3[] $positions
      *
      * @return Vector3
      */
-    public static function minComponents(<Vector3> ...positions) -> <Vector3>
+    public static function minComponents(array positions) -> <Vector3>
     {
-        var zList;
-        var yList;
-        var xList;
-        let xList = let yList = let zList = [];
+        var zList = [];
+        var yList = [];
+        var xList = [];
         var position;
         
         for position in positions {

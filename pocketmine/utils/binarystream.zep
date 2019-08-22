@@ -14,7 +14,7 @@
  *
 */
 
-namespace pocketmine\utils;
+namespace Pocketmine\Utils;
 
 class BinaryStream
 {
@@ -81,7 +81,14 @@ class BinaryStream
         if (remaining < len) {
             throw new BinaryDataException("Not enough bytes left in buffer: need {len}, have {remaining}");
         }
-        return len === 1 ? this->buffer[let this->offset++] : substr(this->buffer, (let this->offset += len) - len, len);
+        let this->offset++;
+        if len === 1 {
+            return this->buffer[this->offset - 1];
+        }
+        else { 
+            let this->offset += len;
+            return substr(this->buffer, this->offset - len - 1, len);
+        }
     }
 
     /**

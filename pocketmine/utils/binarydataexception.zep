@@ -14,7 +14,7 @@
  *
 */
 
-namespace pocketmine\utils;
+namespace Pocketmine\Utils;
 
 class BinaryDataException extends \RuntimeException
 {

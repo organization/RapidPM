@@ -14,7 +14,7 @@
  *
 */
 
-namespace pocketmine\math;
+namespace Pocketmine\Math;
 
 class Matrix implements \ArrayAccess
 {
@@ -56,9 +56,9 @@ class Matrix implements \ArrayAccess
     {
         var c;
         var r;
-        for (let r = 0; r < this->rows; ++r) {
+        for r in range(0, this->rows - 1) {
             let this->matrix[r] = [];
-            for (let c = 0; c < this->columns; ++c) {
+            for c in range(0, this->columns - 1) {
                 let this->matrix[r][c] = isset(m[r][c]) ? m[r][c] : 0;
             }
         }
@@ -66,7 +66,7 @@ class Matrix implements \ArrayAccess
 
     public function setElement(var row, var column, var value)
     {
-        if (row > this->rows or row < 0 or column > this->columns or column < 0) {
+        if (row > this->rows || row < 0 || column > this->columns || column < 0) {
             return false;
         }
         let this->matrix[(int) row][(int) column] = value;
@@ -75,7 +75,7 @@ class Matrix implements \ArrayAccess
 
     public function getElement(var row, var column)
     {
-        if (row > this->rows or row < 0 or column > this->columns or column < 0) {
+        if (row > this->rows || row < 0 || column > this->columns || column < 0) {
             return false;
         }
         return this->matrix[(int) row][(int) column];
@@ -91,12 +91,12 @@ class Matrix implements \ArrayAccess
         var c;
         var r;
         var result;
-        if (this->rows !== matrix->getRows() or this->columns !== matrix->getColumns()) {
+        if (this->rows !== matrix->getRows() || this->columns !== matrix->getColumns()) {
             return false;
         }
         let result = new Matrix(this->rows, this->columns);
-        for (let r = 0; r < this->rows; ++r) {
-            for (let c = 0; c < this->columns; ++c) {
+        for r in range(0, this->rows - 1) {
+            for c in range(this->columns - 1) {
                 result->setElement(r, c, this->matrix[r][c] + matrix->getElement(r, c));
             }
         }
@@ -108,12 +108,12 @@ class Matrix implements \ArrayAccess
         var c;
         var r;
         var result;
-        if (this->rows !== matrix->getRows() or this->columns !== matrix->getColumns()) {
+        if (this->rows !== matrix->getRows() || this->columns !== matrix->getColumns()) {
             return false;
         }
         let result = clone this;
-        for (let r = 0; r < this->rows; ++r) {
-            for (let c = 0; c < this->columns; ++c) {
+        for r in range(0, this->rows - 1) {
+            for c in range(this->columns - 1) {
                 result->setElement(r, c, this->matrix[r][c] - matrix->getElement(r, c));
             }
         }
@@ -126,8 +126,8 @@ class Matrix implements \ArrayAccess
         var r;
         var result;
         let result = clone this;
-        for (let r = 0; r < this->rows; ++r) {
-            for (let c = 0; c < this->columns; ++c) {
+        for r in range(0, this->rows - 1) {
+            for c in range(0, this->columns - 1) {
                 result->setElement(r, c, this->matrix[r][c] * number);
             }
         }
@@ -140,8 +140,8 @@ class Matrix implements \ArrayAccess
         var r;
         var result;
         let result = clone this;
-        for (let r = 0; r < this->rows; ++r) {
-            for (let c = 0; c < this->columns; ++c) {
+        for r in range(0, this->rows - 1) {
+            for c in range(0, this->columns - 1) {
                 result->setElement(r, c, this->matrix[r][c] / number);
             }
         }
@@ -154,8 +154,8 @@ class Matrix implements \ArrayAccess
         var r;
         var result;
         let result = new Matrix(this->columns, this->rows);
-        for (let r = 0; r < this->rows; ++r) {
-            for (let c = 0; c < this->columns; ++c) {
+        for r in range(this->rows - 1) {
+            for c in range(0, this->columns - 1) {
                 result->setElement(c, r, this->matrix[r][c]);
             }
         }
@@ -176,10 +176,10 @@ class Matrix implements \ArrayAccess
         }
         let c = matrix->getColumns();
         let result = new Matrix(this->rows, c);
-        for (let i = 0; i < this->rows; ++i) {
-            for (let j = 0; j < c; ++j) {
+        for i in range(0, this->rows - 1) {
+            for j in range(0, c - 1) {
                 let sum = 0;
-                for (let k = 0; k < this->columns; ++k) {
+                for k in range(0, this->columns - 1) {
                     let sum += this->matrix[i][k] * matrix->getElement(k, j);
                 }
                 result->setElement(i, j, sum);
@@ -210,7 +210,7 @@ class Matrix implements \ArrayAccess
         var r;
         var s;
         let s = "";
-        for (let r = 0; r < this->rows; ++r) {
+        for r in range(0, this->rows - 1) {
             let s .= implode(",", this->matrix[r]) . ";";
         }
         return "Matrix({this->rows}x{this->columns};" . substr(s, 0, -1) . ")";

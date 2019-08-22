@@ -17,7 +17,7 @@
 /**
  * Math related classes, like matrices, bounding boxes and vector
  */
-namespace pocketmine\math;
+namespace Pocketmine\Math;
 
 abstract class Math
 {
@@ -58,7 +58,7 @@ abstract class Math
     {
         var sqrtDiscriminant;
         var discriminant;
-        let discriminant = b ** 2 - 4 * a * c;
+        let discriminant = pow(b, 2) - 4 * a * c;
         if (discriminant > 0) {
             //2 real roots
             let sqrtDiscriminant = sqrt(discriminant);

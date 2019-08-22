@@ -14,7 +14,7 @@
  *
 */
 
-namespace pocketmine\math;
+namespace Pocketmine\Math;
 
 class AxisAlignedBB
 {
@@ -61,7 +61,7 @@ class AxisAlignedBB
      * @param AxisAlignedBB $bb
      * @return $this
      */
-    public function setBB(<AxisAlignedBB> bb) -> $this
+    public function setBB(<AxisAlignedBB> bb) -> <AxisAlignedBB>
     {
         return this->setBounds(bb->minX, bb->minY, bb->minZ, bb->maxX, bb->maxY, bb->maxZ);
     }
@@ -118,7 +118,7 @@ class AxisAlignedBB
      *
      * @return $this
      */
-    public function expand(float x, float y, float z) -> $this
+    public function expand(float x, float y, float z) -> <AxisAlignedBB>
     {
         let this->minX -= x;
         let this->minY -= y;
@@ -152,7 +152,7 @@ class AxisAlignedBB
      *
      * @return $this
      */
-    public function offset(float x, float y, float z) -> $this
+    public function offset(float x, float y, float z) -> <AxisAlignedBB>
     {
         let this->minX += x;
         let this->minY += y;
@@ -186,7 +186,7 @@ class AxisAlignedBB
      *
      * @return $this
      */
-    public function contract(float x, float y, float z) -> $this
+    public function contract(float x, float y, float z) -> <AxisAlignedBB>
     {
         let this->minX += x;
         let this->minY += y;
@@ -361,18 +361,18 @@ class AxisAlignedBB
         var x2;
         var x;
         var x1;
-        if (bb->maxY <= this->minY or bb->minY >= this->maxY) {
+        if bb->maxY <= this->minY || bb->minY >= this->maxY {
             return x;
         }
-        if (bb->maxZ <= this->minZ or bb->minZ >= this->maxZ) {
+        if bb->maxZ <= this->minZ || bb->minZ >= this->maxZ {
             return x;
         }
-        if (x > 0 and bb->maxX <= this->minX) {
+        if x > 0 && bb->maxX <= this->minX {
             let x1 = this->minX - bb->maxX;
             if (x1 < x) {
                 let x = x1;
             }
-        } elseif (x < 0 and bb->minX >= this->maxX) {
+        } elseif x < 0 && bb->minX >= this->maxX {
             let x2 = this->maxX - bb->minX;
             if (x2 > x) {
                 let x = x2;
@@ -386,18 +386,18 @@ class AxisAlignedBB
         var y2;
         var y;
         var y1;
-        if (bb->maxX <= this->minX or bb->minX >= this->maxX) {
+        if bb->maxX <= this->minX || bb->minX >= this->maxX {
             return y;
         }
-        if (bb->maxZ <= this->minZ or bb->minZ >= this->maxZ) {
+        if bb->maxZ <= this->minZ || bb->minZ >= this->maxZ {
             return y;
         }
-        if (y > 0 and bb->maxY <= this->minY) {
+        if y > 0 && bb->maxY <= this->minY {
             let y1 = this->minY - bb->maxY;
             if (y1 < y) {
                 let y = y1;
             }
-        } elseif (y < 0 and bb->minY >= this->maxY) {
+        } elseif y < 0 && bb->minY >= this->maxY {
             let y2 = this->maxY - bb->minY;
             if (y2 > y) {
                 let y = y2;
@@ -411,18 +411,18 @@ class AxisAlignedBB
         var z2;
         var z;
         var z1;
-        if (bb->maxX <= this->minX or bb->minX >= this->maxX) {
+        if bb->maxX <= this->minX || bb->minX >= this->maxX {
             return z;
         }
-        if (bb->maxY <= this->minY or bb->minY >= this->maxY) {
+        if bb->maxY <= this->minY || bb->minY >= this->maxY {
             return z;
         }
-        if (z > 0 and bb->maxZ <= this->minZ) {
+        if z > 0 && bb->maxZ <= this->minZ {
             let z1 = this->minZ - bb->maxZ;
             if (z1 < z) {
                 let z = z1;
             }
-        } elseif (z < 0 and bb->minZ >= this->maxZ) {
+        } elseif z < 0 && bb->minZ >= this->maxZ {
             let z2 = this->maxZ - bb->minZ;
             if (z2 > z) {
                 let z = z2;
@@ -439,11 +439,11 @@ class AxisAlignedBB
      *
      * @return bool
      */
-    public function intersectsWith(<AxisAlignedBB> bb, float epsilon = 1.0E-5) -> bool
+    public function intersectsWith(<AxisAlignedBB> bb, float epsilon = 0.00001) -> bool
     {
-        if (bb->maxX - this->minX > epsilon and this->maxX - bb->minX > epsilon) {
-            if (bb->maxY - this->minY > epsilon and this->maxY - bb->minY > epsilon) {
-                return bb->maxZ - this->minZ > epsilon and this->maxZ - bb->minZ > epsilon;
+        if bb->maxX - this->minX > epsilon && this->maxX - bb->minX > epsilon {
+            if bb->maxY - this->minY > epsilon && this->maxY - bb->minY > epsilon {
+                return bb->maxZ - this->minZ > epsilon && this->maxZ - bb->minZ > epsilon;
             }
         }
         return false;
@@ -457,13 +457,13 @@ class AxisAlignedBB
      */
     public function isVectorInside(<Vector3> vector) -> bool
     {
-        if (vector->x <= this->minX or vector->x >= this->maxX) {
+        if vector->x <= this->minX || vector->x >= this->maxX {
             return false;
         }
-        if (vector->y <= this->minY or vector->y >= this->maxY) {
+        if vector->y <= this->minY || vector->y >= this->maxY {
             return false;
         }
-        return vector->z > this->minZ and vector->z < this->maxZ;
+        return vector->z > this->minZ && vector->z < this->maxZ;
     }
 
     /**
@@ -493,7 +493,7 @@ class AxisAlignedBB
      */
     public function isVectorInYZ(<Vector3> vector) -> bool
     {
-        return vector->y >= this->minY and vector->y <= this->maxY and vector->z >= this->minZ and vector->z <= this->maxZ;
+        return vector->y >= this->minY && vector->y <= this->maxY && vector->z >= this->minZ && vector->z <= this->maxZ;
     }
 
     /**
@@ -504,7 +504,7 @@ class AxisAlignedBB
      */
     public function isVectorInXZ(<Vector3> vector) -> bool
     {
-        return vector->x >= this->minX and vector->x <= this->maxX and vector->z >= this->minZ and vector->z <= this->maxZ;
+        return vector->x >= this->minX && vector->x <= this->maxX && vector->z >= this->minZ && vector->z <= this->maxZ;
     }
 
     /**
@@ -515,7 +515,7 @@ class AxisAlignedBB
      */
     public function isVectorInXY(<Vector3> vector) -> bool
     {
-        return vector->x >= this->minX and vector->x <= this->maxX and vector->y >= this->minY and vector->y <= this->maxY;
+        return vector->x >= this->minX && vector->x <= this->maxX && vector->y >= this->minY && vector->y <= this->maxY;
     }
 
     /**
@@ -528,7 +528,7 @@ class AxisAlignedBB
      *
      * @return RayTraceResult|null
      */
-    public function calculateIntercept(<Vector3> pos1, <Vector3> pos2) -> RayTraceResult|null
+    public function calculateIntercept(<Vector3> pos1, <Vector3> pos2) -> <RayTraceResult>|null
     {
         var f;
         var d;
@@ -546,22 +546,22 @@ class AxisAlignedBB
         let v4 = pos1->getIntermediateWithYValue(pos2, this->maxY);
         let v5 = pos1->getIntermediateWithZValue(pos2, this->minZ);
         let v6 = pos1->getIntermediateWithZValue(pos2, this->maxZ);
-        if (v1 !== null and !this->isVectorInYZ(v1)) {
+        if (v1 !== null && !this->isVectorInYZ(v1)) {
             let v1 = null;
         }
-        if (v2 !== null and !this->isVectorInYZ(v2)) {
+        if (v2 !== null && !this->isVectorInYZ(v2)) {
             let v2 = null;
         }
-        if (v3 !== null and !this->isVectorInXZ(v3)) {
+        if (v3 !== null && !this->isVectorInXZ(v3)) {
             let v3 = null;
         }
-        if (v4 !== null and !this->isVectorInXZ(v4)) {
+        if (v4 !== null && !this->isVectorInXZ(v4)) {
             let v4 = null;
         }
-        if (v5 !== null and !this->isVectorInXY(v5)) {
+        if (v5 !== null && !this->isVectorInXY(v5)) {
             let v5 = null;
         }
-        if (v6 !== null and !this->isVectorInXY(v6)) {
+        if (v6 !== null && !this->isVectorInXY(v6)) {
             let v6 = null;
         }
         let vector = null;
@@ -569,9 +569,12 @@ class AxisAlignedBB
         var v;
         
         for v in [v1, v2, v3, v4, v5, v6] {
-            if (v !== null and (let d = pos1->distanceSquared(v)) < distance) {
-                let vector = v;
-                let distance = d;
+            if v !== null {
+                let d = pos1->distanceSquared(v);
+                if d < distance {
+                    let vector = v;
+                    let distance = d;
+                }
             }
         }
 
