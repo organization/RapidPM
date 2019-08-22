@@ -1,0 +1,5 @@
+
+extern zend_class_entry *pocketmine_utils_binarydataexception_ce;
+
+ZEPHIR_INIT_CLASS(Pocketmine_Utils_BinaryDataException);
+
