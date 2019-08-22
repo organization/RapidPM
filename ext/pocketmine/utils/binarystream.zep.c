@@ -51,7 +51,7 @@ ZEPHIR_INIT_CLASS(Pocketmine_Utils_BinaryStream) {
 
 }
 
-/**
+/**
  */
 PHP_METHOD(Pocketmine_Utils_BinaryStream, setOffset) {
 
@@ -73,7 +73,7 @@ PHP_METHOD(Pocketmine_Utils_BinaryStream, setOffset) {
 
 }
 
-/**
+/**
  */
 PHP_METHOD(Pocketmine_Utils_BinaryStream, getOffset) {
 
@@ -84,7 +84,7 @@ PHP_METHOD(Pocketmine_Utils_BinaryStream, getOffset) {
 
 }
 
-/**
+/**
  */
 PHP_METHOD(Pocketmine_Utils_BinaryStream, getBuffer) {
 

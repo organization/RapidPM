@@ -49,7 +49,7 @@ ZEPHIR_INIT_CLASS(Pocketmine_Math_Vector2) {
 
 }
 
-/**
+/**
  */
 PHP_METHOD(Pocketmine_Math_Vector2, getX) {
 
@@ -60,7 +60,7 @@ PHP_METHOD(Pocketmine_Math_Vector2, getX) {
 
 }
 
-/**
+/**
  */
 PHP_METHOD(Pocketmine_Math_Vector2, getY) {
 
