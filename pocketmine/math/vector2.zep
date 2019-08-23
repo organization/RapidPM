@@ -51,7 +51,7 @@ class Vector2
     public function add(var x, float y = 0) -> <Vector2>
     {
         if (x instanceof Vector2) {
-            return this->add(x->x, x->y);
+            return this->add((float) x->x, (float) x->y);
         } else {
             return new Vector2(this->x + (float) x, this->y + (float) y);
         }
@@ -66,7 +66,7 @@ class Vector2
     public function subtract(var x, float y = 0) -> <Vector2>
     {
         if (x instanceof Vector2) {
-            return this->add(-x->x, -x->y);
+            return this->add((float) -(x->x), (float) -(x->y));
         } else {
             return this->add(-x, -y);
         }
@@ -89,7 +89,7 @@ class Vector2
 
     public function abs() -> <Vector2>
     {
-        return new Vector2(abs(this->x), abs(this->y));
+        return new Vector2((float) abs(this->x), (float) abs(this->y));
     }
 
     public function multiply(float number) -> <Vector2>
@@ -111,7 +111,7 @@ class Vector2
     public function distance(var x, float y = 0) -> float
     {
         if (x instanceof Vector2) {
-            return sqrt(this->distanceSquared(x->x, x->y));
+            return sqrt(this->distanceSquared((float) x->x, (float) x->y));
         } else {
             return sqrt(this->distanceSquared(x, y));
         }
@@ -126,7 +126,7 @@ class Vector2
     public function distanceSquared(var x, float y = 0) -> float
     {
         if (x instanceof Vector2) {
-            return this->distanceSquared(x->x, x->y);
+            return this->distanceSquared((float) x->x, (float) x->y);
         } else {
             return pow(this->x - (float) x, 2) + pow(this->y - (float) y, 2);
         }

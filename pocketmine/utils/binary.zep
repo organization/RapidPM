@@ -567,7 +567,7 @@ class Binary
             let value = value >> 7 & PHP_INT_MAX >> 6;
             //PHP really needs a logical right-shift operator
         }
-        throw new InvalidArgumentException("Value too large to be encoded as a VarInt");
+        throw new \InvalidArgumentException("Value too large to be encoded as a VarInt");
     }
 
     /**
@@ -652,7 +652,7 @@ class Binary
             let value = value >> 7 & PHP_INT_MAX >> 6;
             //PHP really needs a logical right-shift operator
         }
-        throw new InvalidArgumentException("Value too large to be encoded as a VarLong");
+        throw new \InvalidArgumentException("Value too large to be encoded as a VarLong");
     }
 
 }

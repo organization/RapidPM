@@ -63,7 +63,7 @@ class AxisAlignedBB
      */
     public function setBB(<AxisAlignedBB> bb) -> <AxisAlignedBB>
     {
-        return this->setBounds(bb->minX, bb->minY, bb->minZ, bb->maxX, bb->maxY, bb->maxZ);
+        return this->setBounds((float) bb->minX, (float) bb->minY, (float) bb->minZ, (float) bb->maxX, (float) bb->maxY, (float) bb->maxZ);
     }
 
     /**
@@ -534,12 +534,12 @@ class AxisAlignedBB
         var v3;
         var v2;
         var v1;
-        let v1 = pos1->getIntermediateWithXValue(pos2, this->minX);
-        let v2 = pos1->getIntermediateWithXValue(pos2, this->maxX);
-        let v3 = pos1->getIntermediateWithYValue(pos2, this->minY);
-        let v4 = pos1->getIntermediateWithYValue(pos2, this->maxY);
-        let v5 = pos1->getIntermediateWithZValue(pos2, this->minZ);
-        let v6 = pos1->getIntermediateWithZValue(pos2, this->maxZ);
+        let v1 = pos1->getIntermediateWithXValue(pos2, (float) this->minX);
+        let v2 = pos1->getIntermediateWithXValue(pos2, (float) this->maxX);
+        let v3 = pos1->getIntermediateWithYValue(pos2, (float) this->minY);
+        let v4 = pos1->getIntermediateWithYValue(pos2, (float) this->maxY);
+        let v5 = pos1->getIntermediateWithZValue(pos2, (float) this->minZ);
+        let v6 = pos1->getIntermediateWithZValue(pos2, (float) this->maxZ);
         if (v1 !== null && !this->isVectorInYZ(v1)) {
             let v1 = null;
         }

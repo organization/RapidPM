@@ -41,13 +41,13 @@ ZEPHIR_INIT_CLASS(Pocketmine_Math_Vector3) {
 	ZEPHIR_REGISTER_CLASS(Pocketmine\\Math, Vector3, pocketmine, math_vector3, pocketmine_math_vector3_method_entry, 0);
 
 	/** @var float|int */
-	zend_declare_property_null(pocketmine_math_vector3_ce, SL("x"), ZEND_ACC_PUBLIC TSRMLS_CC);
+	zend_declare_property_double(pocketmine_math_vector3_ce, SL("x"), 0.0, ZEND_ACC_PUBLIC TSRMLS_CC);
 
 	/** @var float|int */
-	zend_declare_property_null(pocketmine_math_vector3_ce, SL("y"), ZEND_ACC_PUBLIC TSRMLS_CC);
+	zend_declare_property_double(pocketmine_math_vector3_ce, SL("y"), 0.0, ZEND_ACC_PUBLIC TSRMLS_CC);
 
 	/** @var float|int */
-	zend_declare_property_null(pocketmine_math_vector3_ce, SL("z"), ZEND_ACC_PUBLIC TSRMLS_CC);
+	zend_declare_property_double(pocketmine_math_vector3_ce, SL("z"), 0.0, ZEND_ACC_PUBLIC TSRMLS_CC);
 
 	return SUCCESS;
 

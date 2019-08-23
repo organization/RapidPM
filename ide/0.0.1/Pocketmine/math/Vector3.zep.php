@@ -21,17 +21,17 @@ class Vector3
     /**
      * @var float|int
      */
-    public $x;
+    public $x = 0.0;
 
     /**
      * @var float|int
      */
-    public $y;
+    public $y = 0.0;
 
     /**
      * @var float|int
      */
-    public $z;
+    public $z = 0.0;
 
 
     /**

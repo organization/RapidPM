@@ -74,9 +74,9 @@ abstract class VoxelRayTrace
             throw new \InvalidArgumentException("Start and end points are the same, giving a zero direction vector");
         }
         let radius = start->distance(end); 
-        let stepX = spaceShip(directionVector->x, 0);
-        let stepY = spaceShip(directionVector->y, 0);
-        let stepZ = spaceShip(directionVector->z, 0);
+        let stepX = self::spaceShip(directionVector->x, 0);
+        let stepY = self::spaceShip(directionVector->y, 0);
+        let stepZ = self::spaceShip(directionVector->z, 0);
         //Initialize the step accumulation variables depending how far into the current block the start position is. If
         //the start position is on the corner of the block, these will be zero.
         let tMaxX = self::rayTraceDistanceToBoundary(start->x, directionVector->x);

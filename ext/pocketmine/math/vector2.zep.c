@@ -139,16 +139,18 @@ PHP_METHOD(Pocketmine_Math_Vector2, add) {
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	double y;
-	zval *x, x_sub, *y_param = NULL, _0$$3, _1$$3, _2$$4, _3$$4, _4$$4, _5$$4;
+	zval *x, x_sub, *y_param = NULL, _0$$3, _1$$3, _2$$3, _3$$3, _4$$4, _5$$4, _6$$4, _7$$4;
 	zval *this_ptr = getThis();
 
 	ZVAL_UNDEF(&x_sub);
 	ZVAL_UNDEF(&_0$$3);
 	ZVAL_UNDEF(&_1$$3);
-	ZVAL_UNDEF(&_2$$4);
-	ZVAL_UNDEF(&_3$$4);
+	ZVAL_UNDEF(&_2$$3);
+	ZVAL_UNDEF(&_3$$3);
 	ZVAL_UNDEF(&_4$$4);
 	ZVAL_UNDEF(&_5$$4);
+	ZVAL_UNDEF(&_6$$4);
+	ZVAL_UNDEF(&_7$$4);
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 1, &x, &y_param);
@@ -161,18 +163,22 @@ PHP_METHOD(Pocketmine_Math_Vector2, add) {
 
 
 	if (zephir_instance_of_ev(x, pocketmine_math_vector2_ce TSRMLS_CC)) {
-		zephir_read_property(&_0$$3, x, SL("x"), PH_NOISY_CC | PH_READONLY);
-		zephir_read_property(&_1$$3, x, SL("y"), PH_NOISY_CC | PH_READONLY);
-		ZEPHIR_RETURN_CALL_METHOD(this_ptr, "add", NULL, 7, &_0$$3, &_1$$3);
+		ZEPHIR_OBS_VAR(&_0$$3);
+		zephir_read_property(&_0$$3, x, SL("x"), PH_NOISY_CC);
+		ZEPHIR_OBS_VAR(&_1$$3);
+		zephir_read_property(&_1$$3, x, SL("y"), PH_NOISY_CC);
+		ZVAL_DOUBLE(&_2$$3, zephir_get_doubleval(&_0$$3));
+		ZVAL_DOUBLE(&_3$$3, zephir_get_doubleval(&_1$$3));
+		ZEPHIR_RETURN_CALL_METHOD(this_ptr, "add", NULL, 7, &_2$$3, &_3$$3);
 		zephir_check_call_status();
 		RETURN_MM();
 	} else {
 		object_init_ex(return_value, pocketmine_math_vector2_ce);
-		zephir_read_property(&_2$$4, this_ptr, SL("x"), PH_NOISY_CC | PH_READONLY);
-		zephir_read_property(&_3$$4, this_ptr, SL("y"), PH_NOISY_CC | PH_READONLY);
-		ZVAL_DOUBLE(&_4$$4, (zephir_get_numberval(&_2$$4) + zephir_get_doubleval(x)));
-		ZVAL_DOUBLE(&_5$$4, (zephir_get_numberval(&_3$$4) + (double) (y)));
-		ZEPHIR_CALL_METHOD(NULL, return_value, "__construct", NULL, 8, &_4$$4, &_5$$4);
+		zephir_read_property(&_4$$4, this_ptr, SL("x"), PH_NOISY_CC | PH_READONLY);
+		zephir_read_property(&_5$$4, this_ptr, SL("y"), PH_NOISY_CC | PH_READONLY);
+		ZVAL_DOUBLE(&_6$$4, (zephir_get_numberval(&_4$$4) + zephir_get_doubleval(x)));
+		ZVAL_DOUBLE(&_7$$4, (zephir_get_numberval(&_5$$4) + (double) (y)));
+		ZEPHIR_CALL_METHOD(NULL, return_value, "__construct", NULL, 8, &_6$$4, &_7$$4);
 		zephir_check_call_status();
 		RETURN_MM();
 	}
@@ -188,16 +194,18 @@ PHP_METHOD(Pocketmine_Math_Vector2, add) {
 PHP_METHOD(Pocketmine_Math_Vector2, subtract) {
 
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
-	zephir_fcall_cache_entry *_2 = NULL;
+	zephir_fcall_cache_entry *_4 = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	double y;
-	zval *x, x_sub, *y_param = NULL, _0$$3, _1$$3, _3$$4;
+	zval *x, x_sub, *y_param = NULL, _0$$3, _1$$3, _2$$3, _3$$3, _5$$4;
 	zval *this_ptr = getThis();
 
 	ZVAL_UNDEF(&x_sub);
 	ZVAL_UNDEF(&_0$$3);
 	ZVAL_UNDEF(&_1$$3);
-	ZVAL_UNDEF(&_3$$4);
+	ZVAL_UNDEF(&_2$$3);
+	ZVAL_UNDEF(&_3$$3);
+	ZVAL_UNDEF(&_5$$4);
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 1, &x, &y_param);
@@ -216,13 +224,15 @@ PHP_METHOD(Pocketmine_Math_Vector2, subtract) {
 		ZEPHIR_OBS_VAR(&_1$$3);
 		zephir_read_property(&_1$$3, x, SL("y"), PH_NOISY_CC);
 		zephir_negate(&_1$$3 TSRMLS_CC);
-		ZEPHIR_RETURN_CALL_METHOD(this_ptr, "add", &_2, 0, &_0$$3, &_1$$3);
+		ZVAL_DOUBLE(&_2$$3, zephir_get_doubleval(&_0$$3));
+		ZVAL_DOUBLE(&_3$$3, zephir_get_doubleval(&_1$$3));
+		ZEPHIR_RETURN_CALL_METHOD(this_ptr, "add", &_4, 0, &_2$$3, &_3$$3);
 		zephir_check_call_status();
 		RETURN_MM();
 	} else {
 		zephir_negate(x TSRMLS_CC);
-		ZVAL_DOUBLE(&_3$$4, -y);
-		ZEPHIR_RETURN_CALL_METHOD(this_ptr, "add", &_2, 7, x, &_3$$4);
+		ZVAL_DOUBLE(&_5$$4, -y);
+		ZEPHIR_RETURN_CALL_METHOD(this_ptr, "add", &_4, 7, x, &_5$$4);
 		zephir_check_call_status();
 		RETURN_MM();
 	}
@@ -308,7 +318,7 @@ PHP_METHOD(Pocketmine_Math_Vector2, round) {
 
 PHP_METHOD(Pocketmine_Math_Vector2, abs) {
 
-	zval _0, _1, _3, _4;
+	zval _0, _1, _3, _4, _5, _6;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zephir_fcall_cache_entry *_2 = NULL;
@@ -318,6 +328,8 @@ PHP_METHOD(Pocketmine_Math_Vector2, abs) {
 	ZVAL_UNDEF(&_1);
 	ZVAL_UNDEF(&_3);
 	ZVAL_UNDEF(&_4);
+	ZVAL_UNDEF(&_5);
+	ZVAL_UNDEF(&_6);
 
 	ZEPHIR_MM_GROW();
 
@@ -328,7 +340,9 @@ PHP_METHOD(Pocketmine_Math_Vector2, abs) {
 	zephir_read_property(&_3, this_ptr, SL("y"), PH_NOISY_CC | PH_READONLY);
 	ZEPHIR_CALL_FUNCTION(&_4, "abs", &_2, 9, &_3);
 	zephir_check_call_status();
-	ZEPHIR_CALL_METHOD(NULL, return_value, "__construct", NULL, 8, &_1, &_4);
+	ZVAL_DOUBLE(&_5, zephir_get_doubleval(&_1));
+	ZVAL_DOUBLE(&_6, zephir_get_doubleval(&_4));
+	ZEPHIR_CALL_METHOD(NULL, return_value, "__construct", NULL, 8, &_5, &_6);
 	zephir_check_call_status();
 	RETURN_MM();
 
@@ -403,18 +417,20 @@ PHP_METHOD(Pocketmine_Math_Vector2, divide) {
 PHP_METHOD(Pocketmine_Math_Vector2, distance) {
 
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
-	zephir_fcall_cache_entry *_3 = NULL;
+	zephir_fcall_cache_entry *_5 = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	double y;
-	zval *x, x_sub, *y_param = NULL, _0$$3, _1$$3, _2$$3, _4$$4, _5$$4;
+	zval *x, x_sub, *y_param = NULL, _0$$3, _1$$3, _2$$3, _3$$3, _4$$3, _6$$4, _7$$4;
 	zval *this_ptr = getThis();
 
 	ZVAL_UNDEF(&x_sub);
 	ZVAL_UNDEF(&_0$$3);
 	ZVAL_UNDEF(&_1$$3);
 	ZVAL_UNDEF(&_2$$3);
-	ZVAL_UNDEF(&_4$$4);
-	ZVAL_UNDEF(&_5$$4);
+	ZVAL_UNDEF(&_3$$3);
+	ZVAL_UNDEF(&_4$$3);
+	ZVAL_UNDEF(&_6$$4);
+	ZVAL_UNDEF(&_7$$4);
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 1, &x, &y_param);
@@ -427,16 +443,20 @@ PHP_METHOD(Pocketmine_Math_Vector2, distance) {
 
 
 	if (zephir_instance_of_ev(x, pocketmine_math_vector2_ce TSRMLS_CC)) {
-		zephir_read_property(&_1$$3, x, SL("x"), PH_NOISY_CC | PH_READONLY);
-		zephir_read_property(&_2$$3, x, SL("y"), PH_NOISY_CC | PH_READONLY);
-		ZEPHIR_CALL_METHOD(&_0$$3, this_ptr, "distancesquared", &_3, 0, &_1$$3, &_2$$3);
+		ZEPHIR_OBS_VAR(&_1$$3);
+		zephir_read_property(&_1$$3, x, SL("x"), PH_NOISY_CC);
+		ZEPHIR_OBS_VAR(&_2$$3);
+		zephir_read_property(&_2$$3, x, SL("y"), PH_NOISY_CC);
+		ZVAL_DOUBLE(&_3$$3, zephir_get_doubleval(&_1$$3));
+		ZVAL_DOUBLE(&_4$$3, zephir_get_doubleval(&_2$$3));
+		ZEPHIR_CALL_METHOD(&_0$$3, this_ptr, "distancesquared", &_5, 0, &_3$$3, &_4$$3);
 		zephir_check_call_status();
 		RETURN_MM_DOUBLE(zephir_sqrt(&_0$$3 TSRMLS_CC));
 	} else {
-		ZVAL_DOUBLE(&_5$$4, y);
-		ZEPHIR_CALL_METHOD(&_4$$4, this_ptr, "distancesquared", &_3, 0, x, &_5$$4);
+		ZVAL_DOUBLE(&_7$$4, y);
+		ZEPHIR_CALL_METHOD(&_6$$4, this_ptr, "distancesquared", &_5, 0, x, &_7$$4);
 		zephir_check_call_status();
-		RETURN_MM_DOUBLE(zephir_sqrt(&_4$$4 TSRMLS_CC));
+		RETURN_MM_DOUBLE(zephir_sqrt(&_6$$4 TSRMLS_CC));
 	}
 
 }
@@ -452,20 +472,22 @@ PHP_METHOD(Pocketmine_Math_Vector2, distanceSquared) {
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	double y;
-	zval *x, x_sub, *y_param = NULL, _0$$3, _1$$3, _2$$4, _3$$4, _4$$4, _5$$4, _6$$4, _7$$4, _8$$4, _9$$4;
+	zval *x, x_sub, *y_param = NULL, _0$$3, _1$$3, _2$$3, _3$$3, _4$$4, _5$$4, _6$$4, _7$$4, _8$$4, _9$$4, _10$$4, _11$$4;
 	zval *this_ptr = getThis();
 
 	ZVAL_UNDEF(&x_sub);
 	ZVAL_UNDEF(&_0$$3);
 	ZVAL_UNDEF(&_1$$3);
-	ZVAL_UNDEF(&_2$$4);
-	ZVAL_UNDEF(&_3$$4);
+	ZVAL_UNDEF(&_2$$3);
+	ZVAL_UNDEF(&_3$$3);
 	ZVAL_UNDEF(&_4$$4);
 	ZVAL_UNDEF(&_5$$4);
 	ZVAL_UNDEF(&_6$$4);
 	ZVAL_UNDEF(&_7$$4);
 	ZVAL_UNDEF(&_8$$4);
 	ZVAL_UNDEF(&_9$$4);
+	ZVAL_UNDEF(&_10$$4);
+	ZVAL_UNDEF(&_11$$4);
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 1, &x, &y_param);
@@ -478,23 +500,27 @@ PHP_METHOD(Pocketmine_Math_Vector2, distanceSquared) {
 
 
 	if (zephir_instance_of_ev(x, pocketmine_math_vector2_ce TSRMLS_CC)) {
-		zephir_read_property(&_0$$3, x, SL("x"), PH_NOISY_CC | PH_READONLY);
-		zephir_read_property(&_1$$3, x, SL("y"), PH_NOISY_CC | PH_READONLY);
-		ZEPHIR_RETURN_CALL_METHOD(this_ptr, "distancesquared", NULL, 10, &_0$$3, &_1$$3);
+		ZEPHIR_OBS_VAR(&_0$$3);
+		zephir_read_property(&_0$$3, x, SL("x"), PH_NOISY_CC);
+		ZEPHIR_OBS_VAR(&_1$$3);
+		zephir_read_property(&_1$$3, x, SL("y"), PH_NOISY_CC);
+		ZVAL_DOUBLE(&_2$$3, zephir_get_doubleval(&_0$$3));
+		ZVAL_DOUBLE(&_3$$3, zephir_get_doubleval(&_1$$3));
+		ZEPHIR_RETURN_CALL_METHOD(this_ptr, "distancesquared", NULL, 10, &_2$$3, &_3$$3);
 		zephir_check_call_status();
 		RETURN_MM();
 	} else {
-		ZEPHIR_INIT_VAR(&_2$$4);
-		zephir_read_property(&_3$$4, this_ptr, SL("x"), PH_NOISY_CC | PH_READONLY);
-		ZVAL_DOUBLE(&_4$$4, (zephir_get_numberval(&_3$$4) - zephir_get_doubleval(x)));
-		ZVAL_LONG(&_5$$4, 2);
-		zephir_pow_function(&_2$$4, &_4$$4, &_5$$4);
-		ZEPHIR_INIT_VAR(&_6$$4);
-		zephir_read_property(&_7$$4, this_ptr, SL("y"), PH_NOISY_CC | PH_READONLY);
-		ZVAL_DOUBLE(&_8$$4, (zephir_get_numberval(&_7$$4) - (double) (y)));
-		ZVAL_LONG(&_9$$4, 2);
-		zephir_pow_function(&_6$$4, &_8$$4, &_9$$4);
-		zephir_add_function(return_value, &_2$$4, &_6$$4);
+		ZEPHIR_INIT_VAR(&_4$$4);
+		zephir_read_property(&_5$$4, this_ptr, SL("x"), PH_NOISY_CC | PH_READONLY);
+		ZVAL_DOUBLE(&_6$$4, (zephir_get_numberval(&_5$$4) - zephir_get_doubleval(x)));
+		ZVAL_LONG(&_7$$4, 2);
+		zephir_pow_function(&_4$$4, &_6$$4, &_7$$4);
+		ZEPHIR_INIT_VAR(&_8$$4);
+		zephir_read_property(&_9$$4, this_ptr, SL("y"), PH_NOISY_CC | PH_READONLY);
+		ZVAL_DOUBLE(&_10$$4, (zephir_get_numberval(&_9$$4) - (double) (y)));
+		ZVAL_LONG(&_11$$4, 2);
+		zephir_pow_function(&_8$$4, &_10$$4, &_11$$4);
+		zephir_add_function(return_value, &_4$$4, &_8$$4);
 		RETURN_MM();
 	}
 

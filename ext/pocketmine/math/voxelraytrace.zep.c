@@ -125,11 +125,11 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, spaceShip) {
  */
 PHP_METHOD(Pocketmine_Math_VoxelRayTrace, betweenPoints) {
 
-	zend_bool _16$$4;
+	zend_bool _17$$4;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
-	zephir_fcall_cache_entry *_6 = NULL;
+	zephir_fcall_cache_entry *_2 = NULL, *_7 = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS, counter;
-	zval *start, start_sub, *end, end_sub, tDeltaZ, tDeltaY, tDeltaX, tMaxZ, tMaxY, tMaxX, stepZ, stepY, stepX, radius, directionVector, currentBlock, _0, _1, _2, _3, _4, _5, _7, _8, _9, _10, _11, _12, _13, _14, _15, temp;
+	zval *start, start_sub, *end, end_sub, tDeltaZ, tDeltaY, tDeltaX, tMaxZ, tMaxY, tMaxX, stepZ, stepY, stepX, radius, directionVector, currentBlock, _0, _1, _3, _4, _5, _6, _8, _9, _10, _11, _12, _13, _14, _15, _16, temp;
 	zval *this_ptr = getThis();
 
 	ZVAL_UNDEF(&start_sub);
@@ -148,11 +148,10 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, betweenPoints) {
 	ZVAL_UNDEF(&currentBlock);
 	ZVAL_UNDEF(&_0);
 	ZVAL_UNDEF(&_1);
-	ZVAL_UNDEF(&_2);
 	ZVAL_UNDEF(&_3);
 	ZVAL_UNDEF(&_4);
 	ZVAL_UNDEF(&_5);
-	ZVAL_UNDEF(&_7);
+	ZVAL_UNDEF(&_6);
 	ZVAL_UNDEF(&_8);
 	ZVAL_UNDEF(&_9);
 	ZVAL_UNDEF(&_10);
@@ -161,6 +160,7 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, betweenPoints) {
 	ZVAL_UNDEF(&_13);
 	ZVAL_UNDEF(&_14);
 	ZVAL_UNDEF(&_15);
+	ZVAL_UNDEF(&_16);
 	ZVAL_UNDEF(&temp);
 
 	ZEPHIR_MM_GROW();
@@ -182,56 +182,56 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, betweenPoints) {
 	}
 	ZEPHIR_CALL_METHOD(&radius, start, "distance", NULL, 0, end);
 	zephir_check_call_status();
-	zephir_read_property(&_2, &directionVector, SL("x"), PH_NOISY_CC | PH_READONLY);
-	ZVAL_LONG(&_3, 0);
-	ZEPHIR_CALL_FUNCTION(&stepX, "spaceship", NULL, 0, &_2, &_3);
-	zephir_check_call_status();
-	zephir_read_property(&_3, &directionVector, SL("y"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_3, &directionVector, SL("x"), PH_NOISY_CC | PH_READONLY);
 	ZVAL_LONG(&_4, 0);
-	ZEPHIR_CALL_FUNCTION(&stepY, "spaceship", NULL, 0, &_3, &_4);
+	ZEPHIR_CALL_SELF(&stepX, "spaceship", &_2, 16, &_3, &_4);
 	zephir_check_call_status();
-	zephir_read_property(&_4, &directionVector, SL("z"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_4, &directionVector, SL("y"), PH_NOISY_CC | PH_READONLY);
 	ZVAL_LONG(&_5, 0);
-	ZEPHIR_CALL_FUNCTION(&stepZ, "spaceship", NULL, 0, &_4, &_5);
+	ZEPHIR_CALL_SELF(&stepY, "spaceship", &_2, 16, &_4, &_5);
 	zephir_check_call_status();
-	zephir_read_property(&_5, start, SL("x"), PH_NOISY_CC | PH_READONLY);
-	zephir_read_property(&_7, &directionVector, SL("x"), PH_NOISY_CC | PH_READONLY);
-	ZEPHIR_CALL_SELF(&tMaxX, "raytracedistancetoboundary", &_6, 16, &_5, &_7);
+	zephir_read_property(&_5, &directionVector, SL("z"), PH_NOISY_CC | PH_READONLY);
+	ZVAL_LONG(&_6, 0);
+	ZEPHIR_CALL_SELF(&stepZ, "spaceship", &_2, 16, &_5, &_6);
 	zephir_check_call_status();
-	zephir_read_property(&_8, start, SL("y"), PH_NOISY_CC | PH_READONLY);
-	zephir_read_property(&_9, &directionVector, SL("y"), PH_NOISY_CC | PH_READONLY);
-	ZEPHIR_CALL_SELF(&tMaxY, "raytracedistancetoboundary", &_6, 16, &_8, &_9);
+	zephir_read_property(&_6, start, SL("x"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_8, &directionVector, SL("x"), PH_NOISY_CC | PH_READONLY);
+	ZEPHIR_CALL_SELF(&tMaxX, "raytracedistancetoboundary", &_7, 17, &_6, &_8);
 	zephir_check_call_status();
-	zephir_read_property(&_10, start, SL("z"), PH_NOISY_CC | PH_READONLY);
-	zephir_read_property(&_11, &directionVector, SL("z"), PH_NOISY_CC | PH_READONLY);
-	ZEPHIR_CALL_SELF(&tMaxZ, "raytracedistancetoboundary", &_6, 16, &_10, &_11);
+	zephir_read_property(&_9, start, SL("y"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_10, &directionVector, SL("y"), PH_NOISY_CC | PH_READONLY);
+	ZEPHIR_CALL_SELF(&tMaxY, "raytracedistancetoboundary", &_7, 17, &_9, &_10);
 	zephir_check_call_status();
-	zephir_read_property(&_12, &directionVector, SL("x"), PH_NOISY_CC | PH_READONLY);
-	if (ZEPHIR_IS_LONG(&_12, 0)) {
+	zephir_read_property(&_11, start, SL("z"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_12, &directionVector, SL("z"), PH_NOISY_CC | PH_READONLY);
+	ZEPHIR_CALL_SELF(&tMaxZ, "raytracedistancetoboundary", &_7, 17, &_11, &_12);
+	zephir_check_call_status();
+	zephir_read_property(&_13, &directionVector, SL("x"), PH_NOISY_CC | PH_READONLY);
+	if (ZEPHIR_IS_LONG(&_13, 0)) {
 		ZEPHIR_INIT_VAR(&tDeltaX);
 		ZVAL_LONG(&tDeltaX, 0);
 	} else {
-		zephir_read_property(&_13, &directionVector, SL("x"), PH_NOISY_CC | PH_READONLY);
+		zephir_read_property(&_14, &directionVector, SL("x"), PH_NOISY_CC | PH_READONLY);
 		ZEPHIR_INIT_NVAR(&tDeltaX);
-		div_function(&tDeltaX, &stepX, &_13 TSRMLS_CC);
+		div_function(&tDeltaX, &stepX, &_14 TSRMLS_CC);
 	}
-	zephir_read_property(&_13, &directionVector, SL("y"), PH_NOISY_CC | PH_READONLY);
-	if (ZEPHIR_IS_LONG(&_13, 0)) {
+	zephir_read_property(&_14, &directionVector, SL("y"), PH_NOISY_CC | PH_READONLY);
+	if (ZEPHIR_IS_LONG(&_14, 0)) {
 		ZEPHIR_INIT_VAR(&tDeltaY);
 		ZVAL_LONG(&tDeltaY, 0);
 	} else {
-		zephir_read_property(&_14, &directionVector, SL("y"), PH_NOISY_CC | PH_READONLY);
+		zephir_read_property(&_15, &directionVector, SL("y"), PH_NOISY_CC | PH_READONLY);
 		ZEPHIR_INIT_NVAR(&tDeltaY);
-		div_function(&tDeltaY, &stepY, &_14 TSRMLS_CC);
+		div_function(&tDeltaY, &stepY, &_15 TSRMLS_CC);
 	}
-	zephir_read_property(&_14, &directionVector, SL("z"), PH_NOISY_CC | PH_READONLY);
-	if (ZEPHIR_IS_LONG(&_14, 0)) {
+	zephir_read_property(&_15, &directionVector, SL("z"), PH_NOISY_CC | PH_READONLY);
+	if (ZEPHIR_IS_LONG(&_15, 0)) {
 		ZEPHIR_INIT_VAR(&tDeltaZ);
 		ZVAL_LONG(&tDeltaZ, 0);
 	} else {
-		zephir_read_property(&_15, &directionVector, SL("z"), PH_NOISY_CC | PH_READONLY);
+		zephir_read_property(&_16, &directionVector, SL("z"), PH_NOISY_CC | PH_READONLY);
 		ZEPHIR_INIT_NVAR(&tDeltaZ);
-		div_function(&tDeltaZ, &stepZ, &_15 TSRMLS_CC);
+		div_function(&tDeltaZ, &stepZ, &_16 TSRMLS_CC);
 	}
 	ZEPHIR_INIT_VAR(&temp);
 	array_init(&temp);
@@ -242,11 +242,11 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, betweenPoints) {
 		}
 		counter++;
 		zephir_array_update_long(&temp, counter, &currentBlock, PH_COPY | PH_SEPARATE ZEPHIR_DEBUG_PARAMS_DUMMY);
-		_16$$4 = ZEPHIR_LT(&tMaxX, &tMaxY);
-		if (_16$$4) {
-			_16$$4 = ZEPHIR_LT(&tMaxX, &tMaxZ);
+		_17$$4 = ZEPHIR_LT(&tMaxX, &tMaxY);
+		if (_17$$4) {
+			_17$$4 = ZEPHIR_LT(&tMaxX, &tMaxZ);
 		}
-		if (_16$$4) {
+		if (_17$$4) {
 			if (ZEPHIR_GT(&tMaxX, &radius)) {
 				break;
 			}
