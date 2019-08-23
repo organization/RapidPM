@@ -20,13 +20,12 @@ class BinaryStream
 {
     /** @var int */
     public offset {
-        get
+        set, get
     };
     /** @var string */
     public buffer {
         get
     };
-
     public function __construct(string buffer = "", int offset = 0)
     {
         let this->buffer = buffer;
@@ -37,11 +36,6 @@ class BinaryStream
     {
         let this->buffer = "";
         let this->offset = 0;
-    }
-
-    public function setOffset(int offset) -> void
-    {
-        let this->offset = offset;
     }
 
     /**
