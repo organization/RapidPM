@@ -30,11 +30,6 @@ class BinaryStream
 
 
     /**
-     * @param int $offset
-     */
-    public function setOffset(int $offset) {}
-
-    /**
      * @return int
      */
     public function getOffset(): int {}
@@ -52,6 +47,11 @@ class BinaryStream
 
 
     public function reset() {}
+
+    /**
+     * @param int $offset
+     */
+    public function setOffset(int $offset) {}
 
     /**
      * Rewinds the stream pointer to the start.
