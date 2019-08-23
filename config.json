@@ -2,6 +2,7 @@
     "author" : "Organization",
     "description" : "Extension that implements parts of PocketMine-MP",
     "name" : "rapidpm",
+    "extension-name" : "rapidpm",
     "namespace" : "pocketmine",
     "version" : "0.0.2",
     "optimizer-dirs": [

@@ -1,4 +1,4 @@
 
 /* This file was generated automatically by Zephir do not modify it! */
 
-#include "php_pocketmine.h"
+#include "php_rapidpm.h"

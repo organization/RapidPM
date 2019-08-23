@@ -16,5 +16,5 @@ fi
 
 ${phpize_bin} --silent
 
-./configure --silent --enable-pocketmine
+./configure --silent --enable-rapidpm
 make -s && sudo make -s install
