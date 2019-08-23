@@ -3,7 +3,13 @@
     "description" : "Extension that implements parts of PocketMine-MP",
     "name" : "rapidpm",
     "namespace" : "pocketmine",
-    "version" : "0.0.1",
+    "version" : "0.0.2",
+    "optimizer-dirs": [
+        "optimizers"
+    ],
+    "extra-sources": [
+        "get_inf.c"
+    ],
     "optimizations" : {
         "call-gatherer-pass" : true,
         "check-invalid-reads" : false,

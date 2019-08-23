@@ -458,11 +458,11 @@ class Binary
     /**
      * Reads a 64-bit zigzag-encoded variable-length integer.
      *
-     * @param int    &$offset
+     * @param int    $offset
      *
      * @param string $buffer
      * @param int $offset
-     * @return int
+     * @return long
      */
     public static function readVarLong(string $buffer, int $offset): int {}
 

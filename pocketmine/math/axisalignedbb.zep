@@ -353,7 +353,6 @@ class AxisAlignedBB
     public function calculateXOffset(<AxisAlignedBB> bb, float x) -> float
     {
         var x2;
-        var x;
         var x1;
         if bb->maxY <= this->minY || bb->minY >= this->maxY {
             return x;
@@ -378,7 +377,6 @@ class AxisAlignedBB
     public function calculateYOffset(<AxisAlignedBB> bb, float y) -> float
     {
         var y2;
-        var y;
         var y1;
         if bb->maxX <= this->minX || bb->minX >= this->maxX {
             return y;
@@ -403,7 +401,6 @@ class AxisAlignedBB
     public function calculateZOffset(<AxisAlignedBB> bb, float z) -> float
     {
         var z2;
-        var z;
         var z1;
         if bb->maxX <= this->minX || bb->minX >= this->maxX {
             return z;

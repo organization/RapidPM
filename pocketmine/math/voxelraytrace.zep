@@ -133,10 +133,9 @@ abstract class VoxelRayTrace
      */
     private static function rayTraceDistanceToBoundary(float s, float ds) -> float
     {
-        var ds;
-        var s;
         if (ds == 0) {
-            return INF;
+            float inf = get_inf();
+            return inf;
         }
         if (ds < 0) {
             let s = -s;

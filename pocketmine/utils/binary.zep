@@ -494,11 +494,9 @@ class Binary
      */
     public static function readVarInt(string buffer, int offset) -> int
     {
-        var temp;
-        var raw;
-        let raw = self::readUnsignedVarInt(buffer, offset);
-        let temp = (raw << 63 >> 63 ^ raw) >> 1;
-        return temp ^ raw & 1 << 63;
+        var raw = self::readUnsignedVarInt(buffer, offset);
+        int temp = ((int) raw << 63 >> 63 ^ (int) raw) >> 1;
+        return temp ^ (int) raw & 1 << 63;
     }
 
     /**
@@ -539,7 +537,6 @@ class Binary
      */
     public static function writeVarInt(int v) -> string
     {
-        var v;
         let v = v << 32 >> 32;
         return self::writeUnsignedVarInt(v << 1 ^ v >> 31);
     }
@@ -554,9 +551,8 @@ class Binary
     public static function writeUnsignedVarInt(int value) -> string
     {
         var i;
-        var buf;
-        let buf = "";
-        let value = value & 0xffffffff;
+        string buf = "";
+        int value = value & 0xffffffff;
         for i in range(0, 4) {
             if ((value >> 7) !== 0) {
                 let buf .= chr(value | 0x80);
@@ -564,7 +560,7 @@ class Binary
                 let buf .= chr(value & 0x7f);
                 return buf;
             }
-            let value = value >> 7 & PHP_INT_MAX >> 6;
+            let value = value >> 7 & (long) PHP_INT_MAX >> 6;
             //PHP really needs a logical right-shift operator
         }
         throw new \InvalidArgumentException("Value too large to be encoded as a VarInt");
@@ -574,16 +570,14 @@ class Binary
      * Reads a 64-bit zigzag-encoded variable-length integer.
      *
      * @param string $buffer
-     * @param int    &$offset
+     * @param int    $offset
      *
-     * @return int
+     * @return long
      */
-    public static function readVarLong(string buffer, int offset) -> int
+    public static function readVarLong(string buffer, int offset) -> long
     {
-        var temp;
-        var raw;
-        let raw = self::readUnsignedVarLong(buffer, offset);
-        let temp = (raw << 63 >> 63 ^ raw) >> 1;
+        var raw = self::readUnsignedVarLong(buffer, offset);
+        long temp = ((long) raw << 63 >> 63 ^ (long) raw) >> 1;
         return temp ^ raw & 1 << 63;
     }
 
@@ -637,10 +631,8 @@ class Binary
      */
     public static function writeUnsignedVarLong(int value) -> string
     {
-        var value;
         var i;
-        var buf;
-        let buf = "";
+        string buf = "";
         for i in range(0, 9)  {
             if ((value >> 7) !== 0) {
                 let buf .= chr(value | 0x80);
@@ -649,7 +641,7 @@ class Binary
                 let buf .= chr(value & 0x7f);
                 return buf;
             }
-            let value = value >> 7 & PHP_INT_MAX >> 6;
+            let value = value >> 7 & (long) PHP_INT_MAX >> 6;
             //PHP really needs a logical right-shift operator
         }
         throw new \InvalidArgumentException("Value too large to be encoded as a VarLong");

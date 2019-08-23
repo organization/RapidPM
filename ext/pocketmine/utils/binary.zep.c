@@ -1405,13 +1405,12 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeLLong) {
 PHP_METHOD(Pocketmine_Utils_Binary, readVarInt) {
 
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
-	zend_long offset, ZEPHIR_LAST_CALL_STATUS;
-	zval *buffer_param = NULL, *offset_param = NULL, temp, raw, _0;
+	zend_long offset, ZEPHIR_LAST_CALL_STATUS, temp;
+	zval *buffer_param = NULL, *offset_param = NULL, raw, _0;
 	zval buffer;
 	zval *this_ptr = getThis();
 
 	ZVAL_UNDEF(&buffer);
-	ZVAL_UNDEF(&temp);
 	ZVAL_UNDEF(&raw);
 	ZVAL_UNDEF(&_0);
 
@@ -1425,9 +1424,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, readVarInt) {
 	ZVAL_LONG(&_0, offset);
 	ZEPHIR_CALL_SELF(&raw, "readunsignedvarint", NULL, 0, &buffer, &_0);
 	zephir_check_call_status();
-	ZEPHIR_INIT_VAR(&temp);
-	ZVAL_LONG(&temp, ((((((int) (zephir_get_numberval(&raw)) << 63) >> 63) ^ zephir_get_numberval(&raw))) >> 1));
-	RETURN_MM_LONG((((int) (zephir_get_numberval(&temp)) ^ ((int) (zephir_get_numberval(&raw)) & 1)) << 63));
+	temp = (((((zephir_get_intval(&raw) << 63) >> 63) ^ zephir_get_intval(&raw))) >> 1);
+	RETURN_MM_LONG(((temp ^ (zephir_get_intval(&raw) & 1)) << 63));
 
 }
 
@@ -1467,10 +1465,10 @@ PHP_METHOD(Pocketmine_Utils_Binary, readUnsignedVarInt) {
 		}
 		i += 7;
 		if (!(zephir_array_isset_long(buffer, offset))) {
-			ZEPHIR_THROW_EXCEPTION_DEBUG_STR(pocketmine_utils_binarydataexception_ce, "No bytes left in buffer", "pocketmine/utils/binary.zep", 521);
+			ZEPHIR_THROW_EXCEPTION_DEBUG_STR(pocketmine_utils_binarydataexception_ce, "No bytes left in buffer", "pocketmine/utils/binary.zep", 519);
 			return;
 		}
-		zephir_array_fetch_long(&_0$$3, buffer, offset, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 523 TSRMLS_CC);
+		zephir_array_fetch_long(&_0$$3, buffer, offset, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 521 TSRMLS_CC);
 		ZEPHIR_CALL_FUNCTION(&b$$3, "ord", &_1, 18, &_0$$3);
 		zephir_check_call_status();
 		offset++;
@@ -1479,7 +1477,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readUnsignedVarInt) {
 			RETURN_MM_LONG(value);
 		}
 	}
-	ZEPHIR_THROW_EXCEPTION_DEBUG_STR(pocketmine_utils_binarydataexception_ce, "VarInt did not terminate after 5 bytes!", "pocketmine/utils/binary.zep", 530);
+	ZEPHIR_THROW_EXCEPTION_DEBUG_STR(pocketmine_utils_binarydataexception_ce, "VarInt did not terminate after 5 bytes!", "pocketmine/utils/binary.zep", 528);
 	return;
 
 }
@@ -1494,12 +1492,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, readUnsignedVarInt) {
 PHP_METHOD(Pocketmine_Utils_Binary, writeVarInt) {
 
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
-	zend_long ZEPHIR_LAST_CALL_STATUS, _0;
-	zval v, *v_param = NULL, _1;
+	zval *v_param = NULL, _0;
+	zend_long v, ZEPHIR_LAST_CALL_STATUS;
 	zval *this_ptr = getThis();
 
-	ZVAL_UNDEF(&v);
-	ZVAL_UNDEF(&_1);
+	ZVAL_UNDEF(&_0);
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &v_param);
@@ -1507,11 +1504,9 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeVarInt) {
 	v = zephir_get_intval(v_param);
 
 
-	_0 = (((int) (zephir_get_numberval(&v)) << 32) >> 32);
-	ZEPHIR_INIT_VAR(&v);
-	ZVAL_LONG(&v, _0);
-	ZVAL_LONG(&_1, ((((int) (zephir_get_numberval(&v)) << 1) ^ zephir_get_numberval(&v)) >> 31));
-	ZEPHIR_RETURN_CALL_SELF("writeunsignedvarint", NULL, 0, &_1);
+	v = ((v << 32) >> 32);
+	ZVAL_LONG(&_0, (((v << 1) ^ v) >> 31));
+	ZEPHIR_RETURN_CALL_SELF("writeunsignedvarint", NULL, 0, &_0);
 	zephir_check_call_status();
 	RETURN_MM();
 
@@ -1527,19 +1522,20 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeVarInt) {
 PHP_METHOD(Pocketmine_Utils_Binary, writeUnsignedVarInt) {
 
 	zend_bool _0;
+	zval buf;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zephir_fcall_cache_entry *_5 = NULL;
-	zval *value_param = NULL, i, buf, _3$$4, _4$$4, _6$$5, _7$$5, _8$$3;
+	zval *value_param = NULL, i, _3$$4, _4$$4, _6$$5, _7$$5, _8$$3;
 	zend_long value, ZEPHIR_LAST_CALL_STATUS, _1, _2;
 	zval *this_ptr = getThis();
 
 	ZVAL_UNDEF(&i);
-	ZVAL_UNDEF(&buf);
 	ZVAL_UNDEF(&_3$$4);
 	ZVAL_UNDEF(&_4$$4);
 	ZVAL_UNDEF(&_6$$5);
 	ZVAL_UNDEF(&_7$$5);
 	ZVAL_UNDEF(&_8$$3);
+	ZVAL_UNDEF(&buf);
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &value_param);
@@ -1575,14 +1571,14 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeUnsignedVarInt) {
 				ZEPHIR_CALL_FUNCTION(&_7$$5, "chr", &_5, 19, &_6$$5);
 				zephir_check_call_status();
 				zephir_concat_self(&buf, &_7$$5 TSRMLS_CC);
-				RETURN_CCTOR(&buf);
+				RETURN_CTOR(&buf);
 			}
 			ZEPHIR_INIT_NVAR(&_8$$3);
 			ZEPHIR_MM_GET_CONSTANT(&_8$$3, "PHP_INT_MAX");
-			value = ((value >> (7 & zephir_get_numberval(&_8$$3))) >> 6);
+			value = ((value >> (7 & zephir_get_intval(&_8$$3))) >> 6);
 		}
 	}
-	ZEPHIR_THROW_EXCEPTION_DEBUG_STR(spl_ce_InvalidArgumentException, "Value too large to be encoded as a VarInt", "pocketmine/utils/binary.zep", 570);
+	ZEPHIR_THROW_EXCEPTION_DEBUG_STR(spl_ce_InvalidArgumentException, "Value too large to be encoded as a VarInt", "pocketmine/utils/binary.zep", 566);
 	return;
 
 }
@@ -1591,20 +1587,20 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeUnsignedVarInt) {
  * Reads a 64-bit zigzag-encoded variable-length integer.
  *
  * @param string $buffer
- * @param int    &$offset
+ * @param int    $offset
  *
- * @return int
+ * @return long
  */
 PHP_METHOD(Pocketmine_Utils_Binary, readVarLong) {
 
+	long temp;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long offset, ZEPHIR_LAST_CALL_STATUS;
-	zval *buffer_param = NULL, *offset_param = NULL, temp, raw, _0;
+	zval *buffer_param = NULL, *offset_param = NULL, raw, _0;
 	zval buffer;
 	zval *this_ptr = getThis();
 
 	ZVAL_UNDEF(&buffer);
-	ZVAL_UNDEF(&temp);
 	ZVAL_UNDEF(&raw);
 	ZVAL_UNDEF(&_0);
 
@@ -1618,9 +1614,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, readVarLong) {
 	ZVAL_LONG(&_0, offset);
 	ZEPHIR_CALL_SELF(&raw, "readunsignedvarlong", NULL, 0, &buffer, &_0);
 	zephir_check_call_status();
-	ZEPHIR_INIT_VAR(&temp);
-	ZVAL_LONG(&temp, ((((((int) (zephir_get_numberval(&raw)) << 63) >> 63) ^ zephir_get_numberval(&raw))) >> 1));
-	RETURN_MM_LONG((((int) (zephir_get_numberval(&temp)) ^ ((int) (zephir_get_numberval(&raw)) & 1)) << 63));
+	temp = (((((zephir_get_intval(&raw) << 63) >> 63) ^ zephir_get_intval(&raw))) >> 1);
+	RETURN_MM_LONG(((temp ^ ((int) (zephir_get_numberval(&raw)) & 1)) << 63));
 
 }
 
@@ -1660,10 +1655,10 @@ PHP_METHOD(Pocketmine_Utils_Binary, readUnsignedVarLong) {
 		}
 		i += 7;
 		if (!(zephir_array_isset_long(buffer, offset))) {
-			ZEPHIR_THROW_EXCEPTION_DEBUG_STR(pocketmine_utils_binarydataexception_ce, "No bytes left in buffer", "pocketmine/utils/binary.zep", 607);
+			ZEPHIR_THROW_EXCEPTION_DEBUG_STR(pocketmine_utils_binarydataexception_ce, "No bytes left in buffer", "pocketmine/utils/binary.zep", 601);
 			return;
 		}
-		zephir_array_fetch_long(&_0$$3, buffer, offset, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 609 TSRMLS_CC);
+		zephir_array_fetch_long(&_0$$3, buffer, offset, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 603 TSRMLS_CC);
 		ZEPHIR_CALL_FUNCTION(&b$$3, "ord", &_1, 18, &_0$$3);
 		zephir_check_call_status();
 		offset++;
@@ -1672,7 +1667,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readUnsignedVarLong) {
 			RETURN_MM_LONG(value);
 		}
 	}
-	ZEPHIR_THROW_EXCEPTION_DEBUG_STR(pocketmine_utils_binarydataexception_ce, "VarLong did not terminate after 10 bytes!", "pocketmine/utils/binary.zep", 616);
+	ZEPHIR_THROW_EXCEPTION_DEBUG_STR(pocketmine_utils_binarydataexception_ce, "VarLong did not terminate after 10 bytes!", "pocketmine/utils/binary.zep", 610);
 	return;
 
 }
@@ -1716,20 +1711,20 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeVarLong) {
 PHP_METHOD(Pocketmine_Utils_Binary, writeUnsignedVarLong) {
 
 	zend_bool _0;
+	zval buf;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
-	zend_long ZEPHIR_LAST_CALL_STATUS, _1, _2, _9$$3;
 	zephir_fcall_cache_entry *_5 = NULL;
-	zval value, *value_param = NULL, i, buf, _3$$4, _4$$4, _6$$5, _7$$5, _8$$3;
+	zval *value_param = NULL, i, _3$$4, _4$$4, _6$$5, _7$$5, _8$$3;
+	zend_long value, ZEPHIR_LAST_CALL_STATUS, _1, _2;
 	zval *this_ptr = getThis();
 
-	ZVAL_UNDEF(&value);
 	ZVAL_UNDEF(&i);
-	ZVAL_UNDEF(&buf);
 	ZVAL_UNDEF(&_3$$4);
 	ZVAL_UNDEF(&_4$$4);
 	ZVAL_UNDEF(&_6$$5);
 	ZVAL_UNDEF(&_7$$5);
 	ZVAL_UNDEF(&_8$$3);
+	ZVAL_UNDEF(&buf);
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &value_param);
@@ -1754,26 +1749,24 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeUnsignedVarLong) {
 			}
 			ZEPHIR_INIT_NVAR(&i);
 			ZVAL_LONG(&i, _1);
-			if ((((int) (zephir_get_numberval(&value)) >> 7)) != 0) {
-				ZVAL_LONG(&_3$$4, ((int) (zephir_get_numberval(&value)) | 0x80));
+			if (((value >> 7)) != 0) {
+				ZVAL_LONG(&_3$$4, (value | 0x80));
 				ZEPHIR_CALL_FUNCTION(&_4$$4, "chr", &_5, 19, &_3$$4);
 				zephir_check_call_status();
 				zephir_concat_self(&buf, &_4$$4 TSRMLS_CC);
 			} else {
-				ZVAL_LONG(&_6$$5, ((int) (zephir_get_numberval(&value)) & 0x7f));
+				ZVAL_LONG(&_6$$5, (value & 0x7f));
 				ZEPHIR_CALL_FUNCTION(&_7$$5, "chr", &_5, 19, &_6$$5);
 				zephir_check_call_status();
 				zephir_concat_self(&buf, &_7$$5 TSRMLS_CC);
-				RETURN_CCTOR(&buf);
+				RETURN_CTOR(&buf);
 			}
 			ZEPHIR_INIT_NVAR(&_8$$3);
 			ZEPHIR_MM_GET_CONSTANT(&_8$$3, "PHP_INT_MAX");
-			_9$$3 = (((int) (zephir_get_numberval(&value)) >> (7 & zephir_get_numberval(&_8$$3))) >> 6);
-			ZEPHIR_INIT_NVAR(&value);
-			ZVAL_LONG(&value, _9$$3);
+			value = ((value >> (7 & zephir_get_intval(&_8$$3))) >> 6);
 		}
 	}
-	ZEPHIR_THROW_EXCEPTION_DEBUG_STR(spl_ce_InvalidArgumentException, "Value too large to be encoded as a VarLong", "pocketmine/utils/binary.zep", 655);
+	ZEPHIR_THROW_EXCEPTION_DEBUG_STR(spl_ce_InvalidArgumentException, "Value too large to be encoded as a VarLong", "pocketmine/utils/binary.zep", 647);
 	return;
 
 }

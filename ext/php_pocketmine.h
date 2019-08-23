@@ -11,7 +11,7 @@
 #include "kernel/globals.h"
 
 #define PHP_POCKETMINE_NAME        "rapidpm"
-#define PHP_POCKETMINE_VERSION     "0.0.1"
+#define PHP_POCKETMINE_VERSION     "0.0.2"
 #define PHP_POCKETMINE_EXTNAME     "pocketmine"
 #define PHP_POCKETMINE_AUTHOR      "Organization"
 #define PHP_POCKETMINE_ZEPVERSION  "0.12.2-b3f17c25"

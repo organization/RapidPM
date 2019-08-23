@@ -20,7 +20,7 @@ if test "$PHP_POCKETMINE" = "yes"; then
 	pocketmine/math/voxelraytrace.zep.c
 	pocketmine/utils/binary.zep.c
 	pocketmine/utils/binarydataexception.zep.c
-	pocketmine/utils/binarystream.zep.c "
+	pocketmine/utils/binarystream.zep.c get_inf.c"
 	PHP_NEW_EXTENSION(pocketmine, $pocketmine_sources, $ext_shared,, )
 	PHP_SUBST(POCKETMINE_SHARED_LIBADD)
 

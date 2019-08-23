@@ -133,122 +133,122 @@ class BinaryStream
 
     public function getShort() -> int
     {
-        return \unpack("n", this->get(2))[1];
+        return unpack("n", this->get(2))[1];
     }
 
     public function getSignedShort() -> int
     {
-        return \unpack("n", this->get(2))[1] << 48 >> 48;
+        return unpack("n", this->get(2))[1] << 48 >> 48;
     }
 
     public function putShort(int v)
     {
-        let this->buffer .= \pack("n", v);
+        let this->buffer .= pack("n", v);
     }
 
     public function getLShort() -> int
     {
-        return \unpack("v", this->get(2))[1];
+        return unpack("v", this->get(2))[1];
     }
 
     public function getSignedLShort() -> int
     {
-        return \unpack("v", this->get(2))[1] << 48 >> 48;
+        return unpack("v", this->get(2))[1] << 48 >> 48;
     }
 
     public function putLShort(int v)
     {
-        let this->buffer .= \pack("v", v);
+        let this->buffer .= pack("v", v);
     }
 
     public function getTriad() -> int
     {
-        return \unpack("N", "\0" . this->get(3))[1];
+        return unpack("N", "\0" . this->get(3))[1];
     }
 
     public function putTriad(int v)
     {
-        let this->buffer .= \substr(\pack("N", v), 1);
+        let this->buffer .= substr(pack("N", v), 1);
     }
 
     public function getLTriad() -> int
     {
-        return \unpack("V", this->get(3) . "\0")[1];
+        return unpack("V", this->get(3) . "\0")[1];
     }
 
     public function putLTriad(int v)
     {
-        let this->buffer .= \substr(\pack("V", v), 0, -1);
+        let this->buffer .= substr(pack("V", v), 0, -1);
     }
 
     public function getInt() -> int
     {
-        return \unpack("N", this->get(4))[1] << 32 >> 32;
+        return unpack("N", this->get(4))[1] << 32 >> 32;
     }
 
     public function putInt(int v)
     {
-        let this->buffer .= \pack("N", v);
+        let this->buffer .= pack("N", v);
     }
 
     public function getLInt() -> int
     {
-        return \unpack("V", this->get(4))[1] << 32 >> 32;
+        return unpack("V", this->get(4))[1] << 32 >> 32;
     }
 
     public function putLInt(int v)
     {
-        let this->buffer .= \pack("V", v);
+        let this->buffer .= pack("V", v);
     }
 
     public function getFloat() -> float
     {
-        return \unpack("G", this->get(4))[1];
+        return unpack("G", this->get(4))[1];
     }
 
     public function getRoundedFloat(int accuracy) -> float
     {
-        return \round(\unpack("G", this->get(4))[1], accuracy);
+        return \round(unpack("G", this->get(4))[1], accuracy);
     }
 
     public function putFloat(float v)
     {
-        let this->buffer .= \pack("G", v);
+        let this->buffer .= pack("G", v);
     }
 
     public function getLFloat() -> float
     {
-        return \unpack("g", this->get(4))[1];
+        return unpack("g", this->get(4))[1];
     }
 
     public function getRoundedLFloat(int accuracy) -> float
     {
-        return \round(\unpack("g", this->get(4))[1], accuracy);
+        return \round(unpack("g", this->get(4))[1], accuracy);
     }
 
     public function putLFloat(float v)
     {
-        let this->buffer .= \pack("g", v);
+        let this->buffer .= pack("g", v);
     }
 
     public function getDouble() -> float
     {
-        return \unpack("E", this->get(8))[1];
+        return unpack("E", this->get(8))[1];
     }
 
     public function putDouble(float v) -> void
     {
-        let this->buffer .= \pack("E", v);
+        let this->buffer .= pack("E", v);
     }
 
     public function getLDouble() -> float
     {
-        return \unpack("e", this->get(8))[1];
+        return unpack("e", this->get(8))[1];
     }
 
     public function putLDouble(float v) -> void
     {
-        let this->buffer .= \pack("e", v);
+        let this->buffer .= pack("e", v);
     }
 
     /**
@@ -264,7 +264,7 @@ class BinaryStream
      */
     public function putLong(int v)
     {
-        let this->buffer .= \pack("NN", v >> 32, v & 0xffffffff);
+        let this->buffer .= pack("NN", v >> 32, v & 0xffffffff);
     }
 
     /**
@@ -280,7 +280,7 @@ class BinaryStream
      */
     public function putLLong(int v)
     {
-        let this->buffer .= \pack("VV", v & 0xffffffff, v >> 32);
+        let this->buffer .= pack("VV", v & 0xffffffff, v >> 32);
     }
 
     /**

@@ -291,11 +291,12 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, betweenPoints) {
  */
 PHP_METHOD(Pocketmine_Math_VoxelRayTrace, rayTraceDistanceToBoundary) {
 
-	zval s, *s_param = NULL, ds, *ds_param = NULL;
+	zval *s_param = NULL, *ds_param = NULL, _0$$4, _1;
+	double s, ds, inf$$3;
 	zval *this_ptr = getThis();
 
-	ZVAL_UNDEF(&s);
-	ZVAL_UNDEF(&ds);
+	ZVAL_UNDEF(&_0$$4);
+	ZVAL_UNDEF(&_1);
 
 	zephir_fetch_params_without_memory_grow(2, 0, &s_param, &ds_param);
 
@@ -303,17 +304,20 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, rayTraceDistanceToBoundary) {
 	ds = zephir_get_doubleval(ds_param);
 
 
-	if (ZEPHIR_IS_LONG(&ds, 0)) {
-		RETURN_DOUBLE(INF);
+	if (ds == 0) {
+		inf$$3 = get_inf();
+		RETURN_DOUBLE(inf$$3);
 	}
-	if (ZEPHIR_LT_LONG(&ds, 0)) {
-		zephir_negate(&s TSRMLS_CC);
-		zephir_negate(&ds TSRMLS_CC);
-		if (ZEPHIR_IS_LONG(&s, zephir_floor(&s TSRMLS_CC))) {
+	if (ds < 0) {
+		s = -s;
+		ds = -ds;
+		ZVAL_DOUBLE(&_0$$4, s);
+		if (zephir_floor(&_0$$4 TSRMLS_CC) == s) {
 			RETURN_DOUBLE(0.0);
 		}
 	}
-	RETURN_DOUBLE(zephir_safe_div_double_zval((((double) 1 - ((zephir_get_numberval(&s) - zephir_floor(&s TSRMLS_CC))))), &ds TSRMLS_CC));
+	ZVAL_DOUBLE(&_1, s);
+	RETURN_DOUBLE(zephir_safe_div_double_double((((double) 1 - ((s - zephir_floor(&_1 TSRMLS_CC))))), ds TSRMLS_CC));
 
 }
 
