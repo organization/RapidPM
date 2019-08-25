@@ -155,11 +155,7 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_vector3_abs, 0, 
 #endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
-ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_pocketmine_math_vector3_getside, 0, 1, Pocketmine\\Math\\Vector3, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_vector3_getside, 0, 1, IS_OBJECT, "Pocketmine\\Math\\Vector3", 0)
-#endif
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector3_getside, 0, 0, 1)
 #if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, side, IS_LONG, 0)
 #else
@@ -172,11 +168,47 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_vector3_getside,
 #endif
 ZEND_END_ARG_INFO()
 
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector3_down, 0, 0, 0)
 #if PHP_VERSION_ID >= 70200
-ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_pocketmine_math_vector3_down, 0, 0, Pocketmine\\Math\\Vector3, 0)
+	ZEND_ARG_TYPE_INFO(0, step, IS_LONG, 0)
 #else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_vector3_down, 0, 0, IS_OBJECT, "Pocketmine\\Math\\Vector3", 0)
+	ZEND_ARG_INFO(0, step)
 #endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector3_up, 0, 0, 0)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, step, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, step)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector3_north, 0, 0, 0)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, step, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, step)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector3_south, 0, 0, 0)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, step, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, step)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector3_west, 0, 0, 0)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, step, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, step)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector3_east, 0, 0, 0)
 #if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, step, IS_LONG, 0)
 #else
@@ -185,66 +217,10 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_vector3_down, 0,
 ZEND_END_ARG_INFO()
 
 #if PHP_VERSION_ID >= 70200
-ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_pocketmine_math_vector3_up, 0, 0, Pocketmine\\Math\\Vector3, 0)
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_pocketmine_math_vector3_sides, 0, 0, Generator, 0)
 #else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_vector3_up, 0, 0, IS_OBJECT, "Pocketmine\\Math\\Vector3", 0)
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_vector3_sides, 0, 0, IS_OBJECT, "Generator", 0)
 #endif
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, step, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, step)
-#endif
-ZEND_END_ARG_INFO()
-
-#if PHP_VERSION_ID >= 70200
-ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_pocketmine_math_vector3_north, 0, 0, Pocketmine\\Math\\Vector3, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_vector3_north, 0, 0, IS_OBJECT, "Pocketmine\\Math\\Vector3", 0)
-#endif
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, step, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, step)
-#endif
-ZEND_END_ARG_INFO()
-
-#if PHP_VERSION_ID >= 70200
-ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_pocketmine_math_vector3_south, 0, 0, Pocketmine\\Math\\Vector3, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_vector3_south, 0, 0, IS_OBJECT, "Pocketmine\\Math\\Vector3", 0)
-#endif
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, step, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, step)
-#endif
-ZEND_END_ARG_INFO()
-
-#if PHP_VERSION_ID >= 70200
-ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_pocketmine_math_vector3_west, 0, 0, Pocketmine\\Math\\Vector3, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_vector3_west, 0, 0, IS_OBJECT, "Pocketmine\\Math\\Vector3", 0)
-#endif
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, step, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, step)
-#endif
-ZEND_END_ARG_INFO()
-
-#if PHP_VERSION_ID >= 70200
-ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_pocketmine_math_vector3_east, 0, 0, Pocketmine\\Math\\Vector3, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_vector3_east, 0, 0, IS_OBJECT, "Pocketmine\\Math\\Vector3", 0)
-#endif
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, step, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, step)
-#endif
-ZEND_END_ARG_INFO()
-
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector3_sides, 0, 0, 0)
 #if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, step, IS_LONG, 0)
 #else
@@ -269,7 +245,11 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_vector3_sidesarr
 #endif
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector3_sidesaroundaxis, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_pocketmine_math_vector3_sidesaroundaxis, 0, 1, Generator, 0)
+#else
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_vector3_sidesaroundaxis, 0, 1, IS_OBJECT, "Generator", 0)
+#endif
 #if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, axis, IS_LONG, 0)
 #else
@@ -398,11 +378,7 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_vector3_getinter
 #endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
-ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_pocketmine_math_vector3_setcomponents, 0, 3, Pocketmine\\Math\\Vector3, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_vector3_setcomponents, 0, 3, IS_OBJECT, "Pocketmine\\Math\\Vector3", 0)
-#endif
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector3_setcomponents, 0, 0, 3)
 	ZEND_ARG_INFO(0, x)
 	ZEND_ARG_INFO(0, y)
 	ZEND_ARG_INFO(0, z)

@@ -131,11 +131,7 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_axisalignedbb_ad
 #endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
-ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_pocketmine_math_axisalignedbb_expand, 0, 3, Pocketmine\\Math\\AxisAlignedBB, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_axisalignedbb_expand, 0, 3, IS_OBJECT, "Pocketmine\\Math\\AxisAlignedBB", 0)
-#endif
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_axisalignedbb_expand, 0, 0, 3)
 #if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, x, IS_DOUBLE, 0)
 #else
@@ -175,11 +171,7 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_axisalignedbb_ex
 #endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
-ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_pocketmine_math_axisalignedbb_offset, 0, 3, Pocketmine\\Math\\AxisAlignedBB, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_axisalignedbb_offset, 0, 3, IS_OBJECT, "Pocketmine\\Math\\AxisAlignedBB", 0)
-#endif
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_axisalignedbb_offset, 0, 0, 3)
 #if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, x, IS_DOUBLE, 0)
 #else
@@ -219,11 +211,7 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_axisalignedbb_of
 #endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
-ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_pocketmine_math_axisalignedbb_contract, 0, 3, Pocketmine\\Math\\AxisAlignedBB, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_axisalignedbb_contract, 0, 3, IS_OBJECT, "Pocketmine\\Math\\AxisAlignedBB", 0)
-#endif
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_axisalignedbb_contract, 0, 0, 3)
 #if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, x, IS_DOUBLE, 0)
 #else

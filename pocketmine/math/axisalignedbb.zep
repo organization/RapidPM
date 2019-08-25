@@ -112,7 +112,7 @@ class AxisAlignedBB
      *
      * @return $this
      */
-    public function expand(float x, float y, float z) -> <AxisAlignedBB>
+    public function expand(float x, float y, float z)
     {
         let this->minX -= x;
         let this->minY -= y;
@@ -146,7 +146,7 @@ class AxisAlignedBB
      *
      * @return $this
      */
-    public function offset(float x, float y, float z) -> <AxisAlignedBB>
+    public function offset(float x, float y, float z)
     {
         let this->minX += x;
         let this->minY += y;
@@ -180,7 +180,7 @@ class AxisAlignedBB
      *
      * @return $this
      */
-    public function contract(float x, float y, float z) -> <AxisAlignedBB>
+    public function contract(float x, float y, float z)
     {
         let this->minX += x;
         let this->minY += y;

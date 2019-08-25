@@ -138,7 +138,7 @@ class Vector3
      * @param int $step
      * @return Vector3
      */
-    public function getSide(int $side, int $step = 1): Vector3 {}
+    public function getSide(int $side, int $step = 1) {}
 
     /**
      * @param int $step
@@ -146,7 +146,7 @@ class Vector3
      * @param int $step
      * @return Vector3
      */
-    public function down(int $step = 1): Vector3 {}
+    public function down(int $step = 1) {}
 
     /**
      * @param int $step
@@ -154,7 +154,7 @@ class Vector3
      * @param int $step
      * @return Vector3
      */
-    public function up(int $step = 1): Vector3 {}
+    public function up(int $step = 1) {}
 
     /**
      * @param int $step
@@ -162,7 +162,7 @@ class Vector3
      * @param int $step
      * @return Vector3
      */
-    public function north(int $step = 1): Vector3 {}
+    public function north(int $step = 1) {}
 
     /**
      * @param int $step
@@ -170,7 +170,7 @@ class Vector3
      * @param int $step
      * @return Vector3
      */
-    public function south(int $step = 1): Vector3 {}
+    public function south(int $step = 1) {}
 
     /**
      * @param int $step
@@ -178,7 +178,7 @@ class Vector3
      * @param int $step
      * @return Vector3
      */
-    public function west(int $step = 1): Vector3 {}
+    public function west(int $step = 1) {}
 
     /**
      * @param int $step
@@ -186,7 +186,7 @@ class Vector3
      * @param int $step
      * @return Vector3
      */
-    public function east(int $step = 1): Vector3 {}
+    public function east(int $step = 1) {}
 
     /**
      * Yields vectors stepped out from this one in all directions.
@@ -194,9 +194,9 @@ class Vector3
      * @param int $step Distance in each direction to shift the vector
      *
      * @param int $step
-     * @return \Generator|Vector3[]
+     * @return \Generator
      */
-    public function sides(int $step = 1) {}
+    public function sides(int $step = 1): \Generator {}
 
     /**
      * Same as sides() but returns a pre-populated array instead of Generator.
@@ -216,9 +216,9 @@ class Vector3
      *
      * @param int $axis Facing directions on this axis will be excluded
      * @param int $step
-     * @return \Generator|Vector3[]
+     * @return \Generator
      */
-    public function sidesAroundAxis(int $axis, int $step = 1) {}
+    public function sidesAroundAxis(int $axis, int $step = 1): \Generator {}
 
     /**
      * Return a Vector3 instance
@@ -322,9 +322,9 @@ class Vector3
      * @param mixed $y
      * @param mixed $z
      * @param $y
-     * @return Vector3
+     * @return $this
      */
-    public function setComponents($x, $y, $z): Vector3 {}
+    public function setComponents($x, $y, $z) {}
 
 
     public function __toString() {}

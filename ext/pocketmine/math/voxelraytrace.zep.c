@@ -266,11 +266,9 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, betweenPoints) {
 			ZEPHIR_ADD_ASSIGN(&tMaxZ, &tDeltaZ);
 		}
 	}
-	object_init_ex(return_value, zephir_get_internal_ce(SL("generator")));
-	if (zephir_has_constructor(return_value TSRMLS_CC)) {
-		ZEPHIR_CALL_METHOD(NULL, return_value, "__construct", NULL, 0, &temp);
-		zephir_check_call_status();
-	}
+	object_init_ex(return_value, zephir_get_internal_ce(SL("arrayiterator")));
+	ZEPHIR_CALL_METHOD(NULL, return_value, "__construct", NULL, 12, &temp);
+	zephir_check_call_status();
 	RETURN_MM();
 
 }

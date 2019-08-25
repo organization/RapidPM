@@ -131,7 +131,7 @@ class Vector3
      *
      * @return Vector3
      */
-    public function getSide(int side, int step = 1) -> <Vector3>
+    public function getSide(int side, int step = 1)
     {
         switch (side) {
             case Facing::DOWN:
@@ -155,7 +155,7 @@ class Vector3
      *
      * @return Vector3
      */
-    public function down(int step = 1) -> <Vector3>
+    public function down(int step = 1)
     {
         return this->getSide(Facing::DOWN, step);
     }
@@ -165,7 +165,7 @@ class Vector3
      *
      * @return Vector3
      */
-    public function up(int step = 1) -> <Vector3>
+    public function up(int step = 1)
     {
         return this->getSide(Facing::UP, step);
     }
@@ -175,7 +175,7 @@ class Vector3
      *
      * @return Vector3
      */
-    public function north(int step = 1) -> <Vector3>
+    public function north(int step = 1)
     {
         return this->getSide(Facing::NORTH, step);
     }
@@ -185,7 +185,7 @@ class Vector3
      *
      * @return Vector3
      */
-    public function south(int step = 1) -> <Vector3>
+    public function south(int step = 1)
     {
         return this->getSide(Facing::SOUTH, step);
     }
@@ -195,7 +195,7 @@ class Vector3
      *
      * @return Vector3
      */
-    public function west(int step = 1) -> <Vector3>
+    public function west(int step = 1)
     {
         return this->getSide(Facing::WEST, step);
     }
@@ -205,7 +205,7 @@ class Vector3
      *
      * @return Vector3
      */
-    public function east(int step = 1) -> <Vector3>
+    public function east(int step = 1)
     {
         return this->getSide(Facing::EAST, step);
     }
@@ -217,7 +217,7 @@ class Vector3
      *
      * @return \Generator|Vector3[]
      */
-    public function sides(int step = 1) //-> <\Generator>
+    public function sides(int step = 1) -> <\Generator>
     {
         var facing;
         array tempArr;
@@ -250,7 +250,7 @@ class Vector3
      *
      * @return \Generator|Vector3[]
      */
-    public function sidesAroundAxis(int axis, int step = 1) //-> <\Generator>
+    public function sidesAroundAxis(int axis, int step = 1) -> <\Generator>
     {
         var facing;
         array tempArr;
@@ -415,7 +415,7 @@ class Vector3
      *
      * @return $this
      */
-    public function setComponents(var x, var y, var z) -> <Vector3>
+    public function setComponents(var x, var y, var z)
     {
         let this->x = x;
         let this->y = y;

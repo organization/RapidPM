@@ -99,9 +99,9 @@ class AxisAlignedBB
      * @param float $x
      * @param float $y
      * @param double $z
-     * @return AxisAlignedBB
+     * @return $this
      */
-    public function expand(float $x, float $y, float $z): AxisAlignedBB {}
+    public function expand(float $x, float $y, float $z) {}
 
     /**
      * Returns an expanded clone of this AxisAlignedBB.
@@ -123,9 +123,9 @@ class AxisAlignedBB
      * @param float $x
      * @param float $y
      * @param double $z
-     * @return AxisAlignedBB
+     * @return $this
      */
-    public function offset(float $x, float $y, float $z): AxisAlignedBB {}
+    public function offset(float $x, float $y, float $z) {}
 
     /**
      * Returns an offset clone of this AxisAlignedBB.
@@ -147,9 +147,9 @@ class AxisAlignedBB
      * @param float $x
      * @param float $y
      * @param double $z
-     * @return AxisAlignedBB
+     * @return $this
      */
-    public function contract(float $x, float $y, float $z): AxisAlignedBB {}
+    public function contract(float $x, float $y, float $z) {}
 
     /**
      * Returns a contracted clone of this AxisAlignedBB.

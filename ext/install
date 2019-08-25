@@ -9,7 +9,7 @@
 # the LICENSE file that was distributed with this source code.
 
 export CC="gcc"
-export CFLAGS="-O3 -Wall -fvisibility=hidden -flto -DZEPHIR_RELEASE=1"
+export CFLAGS="-O2 -Wall -fvisibility=hidden -flto -DZEPHIR_RELEASE=1"
 
 IN_DOCKER=0
 
@@ -39,7 +39,7 @@ ZEPHIR_LDFLAGS=""
 test -n "$CFLAGS" && ZEPHIR_CFLAGS="CFLAGS=\"$CFLAGS\""
 test -n "$LDFLAGS" && ZEPHIR_LDFLAGS="LDFLAGS=\"$LDFLAGS\""
 
-./configure --silent --enable-rapidpm "$ZEPHIR_CFLAGS" "$ZEPHIR_LDFLAGS"
+/configure --silent --enable-rapidpm "$ZEPHIR_CFLAGS" "$ZEPHIR_LDFLAGS"
 
-make -s install
+make -s
 $sudo make -s install

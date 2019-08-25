@@ -114,7 +114,7 @@ abstract class VoxelRayTrace
                 let tMaxZ += tDeltaZ;
             }
         }
-        return new \Generator(temp);
+        return new \ArrayIterator(temp);
     }
 
     /**
