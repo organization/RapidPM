@@ -130,7 +130,9 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_facing_validate,
 #endif
 #else
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_facing_validate, 0, 0, 1)
+#define arginfo_pocketmine_math_facing_validate NULL
 #endif
+
 #if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, facing, IS_LONG, 0)
 #else
