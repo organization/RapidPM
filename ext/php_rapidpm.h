@@ -14,7 +14,7 @@
 #define PHP_RAPIDPM_VERSION     "0.0.2"
 #define PHP_RAPIDPM_EXTNAME     "rapidpm"
 #define PHP_RAPIDPM_AUTHOR      "Organization"
-#define PHP_RAPIDPM_ZEPVERSION  "0.12.2-b3f17c25"
+#define PHP_RAPIDPM_ZEPVERSION  "0.12.3-$Id$"
 #define PHP_RAPIDPM_DESCRIPTION "Extension that implements parts of PocketMine-MP"
 
 

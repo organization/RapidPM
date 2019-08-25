@@ -30,11 +30,6 @@ class BinaryStream
 
 
     /**
-     * @param int $offset
-     */
-    public function setOffset(int $offset) {}
-
-    /**
      * @return int
      */
     public function getOffset(): int {}
@@ -50,13 +45,18 @@ class BinaryStream
      */
     public function __construct(string $buffer = '', int $offset = 0) {}
 
+    /**
+     * @param int $offset
+     */
+    public function setOffset(int $offset): void {}
+
 
     public function reset() {}
 
     /**
      * Rewinds the stream pointer to the start.
      */
-    public function rewind() {}
+    public function rewind(): void {}
 
     /**
      * @param string $buffer
@@ -215,7 +215,7 @@ class BinaryStream
     /**
      * @param double $v
      */
-    public function putDouble(float $v) {}
+    public function putDouble(float $v): void {}
 
     /**
      * @return double
@@ -225,7 +225,7 @@ class BinaryStream
     /**
      * @param double $v
      */
-    public function putLDouble(float $v) {}
+    public function putLDouble(float $v): void {}
 
     /**
      * @return int

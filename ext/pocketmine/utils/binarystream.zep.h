@@ -3,10 +3,10 @@ extern zend_class_entry *pocketmine_utils_binarystream_ce;
 
 ZEPHIR_INIT_CLASS(Pocketmine_Utils_BinaryStream);
 
-PHP_METHOD(Pocketmine_Utils_BinaryStream, setOffset);
 PHP_METHOD(Pocketmine_Utils_BinaryStream, getOffset);
 PHP_METHOD(Pocketmine_Utils_BinaryStream, getBuffer);
 PHP_METHOD(Pocketmine_Utils_BinaryStream, __construct);
+PHP_METHOD(Pocketmine_Utils_BinaryStream, setOffset);
 PHP_METHOD(Pocketmine_Utils_BinaryStream, reset);
 PHP_METHOD(Pocketmine_Utils_BinaryStream, rewind);
 PHP_METHOD(Pocketmine_Utils_BinaryStream, setBuffer);
@@ -55,14 +55,6 @@ PHP_METHOD(Pocketmine_Utils_BinaryStream, getVarLong);
 PHP_METHOD(Pocketmine_Utils_BinaryStream, putVarLong);
 PHP_METHOD(Pocketmine_Utils_BinaryStream, feof);
 
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_setoffset, 0, 0, 1)
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, offset, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, offset)
-#endif
-ZEND_END_ARG_INFO()
-
 #if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getoffset, 0, 0, IS_LONG, 0)
 #else
@@ -87,6 +79,32 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream___construct, 0, 0, 
 	ZEND_ARG_TYPE_INFO(0, offset, IS_LONG, 0)
 #else
 	ZEND_ARG_INFO(0, offset)
+#endif
+ZEND_END_ARG_INFO()
+
+#if PHP_VERSION_ID >= 70100
+#if PHP_VERSION_ID >= 70200
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_setoffset, 0, 1, IS_VOID, 0)
+#else
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_setoffset, 0, 1, IS_VOID, NULL, 0)
+#endif
+#else
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_setoffset, 0, 0, 1)
+#endif
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, offset, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, offset)
+#endif
+ZEND_END_ARG_INFO()
+
+#if PHP_VERSION_ID >= 70100
+#if PHP_VERSION_ID >= 70200
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_rewind, 0, 0, IS_VOID, 0)
+#else
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_rewind, 0, 0, IS_VOID, NULL, 0)
+#endif
+#else
 #endif
 ZEND_END_ARG_INFO()
 
@@ -317,7 +335,15 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_ge
 #endif
 ZEND_END_ARG_INFO()
 
+#if PHP_VERSION_ID >= 70100
+#if PHP_VERSION_ID >= 70200
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putdouble, 0, 1, IS_VOID, 0)
+#else
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putdouble, 0, 1, IS_VOID, NULL, 0)
+#endif
+#else
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putdouble, 0, 0, 1)
+#endif
 #if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_DOUBLE, 0)
 #else
@@ -332,7 +358,15 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_ge
 #endif
 ZEND_END_ARG_INFO()
 
+#if PHP_VERSION_ID >= 70100
+#if PHP_VERSION_ID >= 70200
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putldouble, 0, 1, IS_VOID, 0)
+#else
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putldouble, 0, 1, IS_VOID, NULL, 0)
+#endif
+#else
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putldouble, 0, 0, 1)
+#endif
 #if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_DOUBLE, 0)
 #else
@@ -438,12 +472,12 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_fe
 ZEND_END_ARG_INFO()
 
 ZEPHIR_INIT_FUNCS(pocketmine_utils_binarystream_method_entry) {
-	PHP_ME(Pocketmine_Utils_BinaryStream, setOffset, arginfo_pocketmine_utils_binarystream_setoffset, ZEND_ACC_PUBLIC)
 	PHP_ME(Pocketmine_Utils_BinaryStream, getOffset, arginfo_pocketmine_utils_binarystream_getoffset, ZEND_ACC_PUBLIC)
 	PHP_ME(Pocketmine_Utils_BinaryStream, getBuffer, arginfo_pocketmine_utils_binarystream_getbuffer, ZEND_ACC_PUBLIC)
 	PHP_ME(Pocketmine_Utils_BinaryStream, __construct, arginfo_pocketmine_utils_binarystream___construct, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+	PHP_ME(Pocketmine_Utils_BinaryStream, setOffset, arginfo_pocketmine_utils_binarystream_setoffset, ZEND_ACC_PUBLIC)
 	PHP_ME(Pocketmine_Utils_BinaryStream, reset, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(Pocketmine_Utils_BinaryStream, rewind, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(Pocketmine_Utils_BinaryStream, rewind, arginfo_pocketmine_utils_binarystream_rewind, ZEND_ACC_PUBLIC)
 	PHP_ME(Pocketmine_Utils_BinaryStream, setBuffer, arginfo_pocketmine_utils_binarystream_setbuffer, ZEND_ACC_PUBLIC)
 	PHP_ME(Pocketmine_Utils_BinaryStream, get, arginfo_pocketmine_utils_binarystream_get, ZEND_ACC_PUBLIC)
 	PHP_ME(Pocketmine_Utils_BinaryStream, getRemaining, arginfo_pocketmine_utils_binarystream_getremaining, ZEND_ACC_PUBLIC)
