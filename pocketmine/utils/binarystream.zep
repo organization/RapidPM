@@ -88,8 +88,13 @@ class BinaryStream
             throw new BinaryDataException("Not enough bytes left in buffer: need {len}, have {remaining}");
         }
         let this->offset++;
-        let this->offset += len;
-        return substr(this->buffer, this->offset - len - 1, len);
+        if len === 1 {
+            return substr(this->buffer, this->offset - 1, 1);
+        }
+        else {
+            let this->offset += len;
+            return substr(this->buffer, this->offset - len - 1, len);
+        }
     }
 
     /**
