@@ -90,7 +90,9 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_se
 #endif
 #else
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_setoffset, 0, 0, 1)
+#define arginfo_pocketmine_utils_binarystream_setoffset NULL
 #endif
+
 #if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, offset, IS_LONG, 0)
 #else
@@ -104,9 +106,10 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_re
 #else
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_rewind, 0, 0, IS_VOID, NULL, 0)
 #endif
-#else
-#endif
 ZEND_END_ARG_INFO()
+#else
+#define arginfo_pocketmine_utils_binarystream_rewind NULL
+#endif
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_setbuffer, 0, 0, 0)
 #if PHP_VERSION_ID >= 70200
@@ -343,7 +346,9 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_pu
 #endif
 #else
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putdouble, 0, 0, 1)
+#define arginfo_pocketmine_utils_binarystream_putdouble NULL
 #endif
+
 #if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_DOUBLE, 0)
 #else
@@ -366,7 +371,9 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_pu
 #endif
 #else
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putldouble, 0, 0, 1)
+#define arginfo_pocketmine_utils_binarystream_putldouble NULL
 #endif
+
 #if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_DOUBLE, 0)
 #else
