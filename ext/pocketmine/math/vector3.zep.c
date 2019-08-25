@@ -584,8 +584,9 @@ PHP_METHOD(Pocketmine_Math_Vector3, getSide) {
 
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zephir_fcall_cache_entry *_4 = NULL;
-	zval *side_param = NULL, *step_param = NULL, _0$$3, _1$$3, _2$$3, _3$$3, _5$$4, _6$$4, _7$$4, _8$$4, _9$$5, _10$$5, _11$$5, _12$$5, _13$$6, _14$$6, _15$$6, _16$$6, _17$$7, _18$$7, _19$$7, _20$$7, _21$$8, _22$$8, _23$$8, _24$$8;
-	zend_long side, step, ZEPHIR_LAST_CALL_STATUS;
+	zval *side_param = NULL, *step_param, _0$$3, _1$$3, _2$$3, _3$$3, _5$$4, _6$$4, _7$$4, _8$$4, _9$$5, _10$$5, _11$$5, _12$$5, _13$$6, _14$$6, _15$$6, _16$$6, _17$$7, _18$$7, _19$$7, _20$$7, _21$$8, _22$$8, _23$$8, _24$$8;
+        ZVAL_LONG(&step_param, 1);
+        zend_long side, step, ZEPHIR_LAST_CALL_STATUS;
 	zval *this_ptr = getThis();
 
 	ZVAL_UNDEF(&_0$$3);
