@@ -10,7 +10,7 @@ while getopts "p:" OPTION 2> /dev/null; do
 	esac
 done
 
-git clone --recurse-submodules -j8 https://github.com/pmmp/PocketMine-MP.git
+git clone --recurse-submodules -j8 https://github.com/pmmp/PocketMine-MP.git -b master
 cd PocketMine-MP
 
 composer install
