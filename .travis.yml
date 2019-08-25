@@ -23,10 +23,10 @@ before_script:
  - ./configure && make && make install
  - cd ..
  - git clone https://github.com/organization/RapidPM.git rapidpm
- - cd rapidpm/ext/
- - phpize
- - ./configure && make && make install
- - cd ../../
+ - cd rapidpm
+ - wget https://github.com/phalcon/zephir/releases/latest/download/zephir.phar
+ - php zephir.phar build
+ - cd ..
 # - pecl install channel://pecl.php.net/pthreads-3.1.6
  - echo | pecl install channel://pecl.php.net/yaml-2.0.4
  - pecl install channel://pecl.php.net/crypto-0.3.1
