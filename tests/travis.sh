@@ -15,4 +15,4 @@ cd PocketMine-MP
 
 composer install
 
-./test/travis.sh
+./tests/travis.sh

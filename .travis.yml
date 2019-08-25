@@ -24,7 +24,8 @@ before_script:
  - cd ..
  - git clone https://github.com/organization/RapidPM.git rapidpm
  - cd rapidpm/ext/
- - ./install
+ - phpize
+ - ./configure && make && make install
  - cd ../../
 # - pecl install channel://pecl.php.net/pthreads-3.1.6
  - echo | pecl install channel://pecl.php.net/yaml-2.0.4
