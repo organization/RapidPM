@@ -11,7 +11,7 @@
 #include "kernel/globals.h"
 
 #define PHP_RAPIDPM_NAME        "rapidpm"
-#define PHP_RAPIDPM_VERSION     "0.0.2"
+#define PHP_RAPIDPM_VERSION     "0.0.3"
 #define PHP_RAPIDPM_EXTNAME     "rapidpm"
 #define PHP_RAPIDPM_AUTHOR      "Organization"
 #define PHP_RAPIDPM_ZEPVERSION  "0.12.3-$Id$"

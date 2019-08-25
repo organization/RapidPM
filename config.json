@@ -4,7 +4,7 @@
     "name" : "rapidpm",
     "extension-name" : "rapidpm",
     "namespace" : "pocketmine",
-    "version" : "0.0.2",
+    "version" : "0.0.3",
     "optimizer-dirs": [
         "optimizers"
     ],

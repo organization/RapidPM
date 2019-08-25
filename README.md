@@ -1,6 +1,6 @@
 # ![RapidPM](/RapidPM.png)
 
-# _RapidPM_
+# _RapidPM_ [![Build Status](https://travis-ci.org/organization/RapidPM.svg?branch=master)](https://travis-ci.org/organization/RapidPM)
 
 _**High performance extension**_ that implements parts of **[PocketMine-MP](https://github.com/pmmp/PocketMine-MP)** with **[Zephir](https://www.zephir-lang.com)**.
 
