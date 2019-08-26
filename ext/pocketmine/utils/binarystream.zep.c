@@ -261,8 +261,8 @@ PHP_METHOD(Pocketmine_Utils_BinaryStream, get) {
 		ZEPHIR_MM_RESTORE();
 		return;
 	}
-	RETURN_ON_FAILURE(zephir_property_incr(this_ptr, SL("offset") TSRMLS_CC));
 	if (len == 1) {
+		RETURN_ON_FAILURE(zephir_property_incr(this_ptr, SL("offset") TSRMLS_CC));
 		zephir_read_property(&_5$$6, this_ptr, SL("buffer"), PH_NOISY_CC | PH_READONLY);
 		zephir_read_property(&_6$$6, this_ptr, SL("offset"), PH_NOISY_CC | PH_READONLY);
 		ZVAL_LONG(&_7$$6, (zephir_get_numberval(&_6$$6) - 1));
@@ -275,7 +275,7 @@ PHP_METHOD(Pocketmine_Utils_BinaryStream, get) {
 	zephir_update_property_zval(this_ptr, SL("offset"), &_9);
 	zephir_read_property(&_9, this_ptr, SL("buffer"), PH_NOISY_CC | PH_READONLY);
 	zephir_read_property(&_10, this_ptr, SL("offset"), PH_NOISY_CC | PH_READONLY);
-	ZVAL_LONG(&_11, (((zephir_get_numberval(&_10) - 1)) - len));
+	ZVAL_LONG(&_11, (zephir_get_numberval(&_10) - len));
 	ZVAL_LONG(&_12, len);
 	zephir_substr(return_value, &_9, zephir_get_intval(&_11), zephir_get_intval(&_12), 0);
 	RETURN_MM();
