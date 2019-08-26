@@ -59,42 +59,31 @@ class BinaryStream
     }
 
     /**
-     * @param int|bool $len
+     * @param int $len
      *
      * @return string
      *
      * @throws BinaryDataException if there are not enough bytes left in the buffer
      */
-    public function get(var len)
+    public function get(int len) -> string
     {
-        var remaining;
-        string str;
-        var buflen;
         if (len === 0) {
             return "";
         }
-        let buflen = strlen(this->buffer);
-        if (len === true) {
-            let str = substr(this->buffer, this->offset);
-            let this->offset = buflen;
-            return str;
-        }
         if (len < 0) {
-            let this->offset = buflen - 1;
-            return "";
+            throw new \InvalidArgumentException("Length must be positive");
         }
-        let remaining = buflen - this->offset;
+        var remaining;
+        let remaining = strlen(this->buffer) - this->offset;
         if (remaining < len) {
-            throw new BinaryDataException("Not enough bytes left in buffer: need {len}, have {remaining}");
+            throw new BinaryDataException("Not enough bytes left in buffer: need " . len  . ", have " . remaining);
         }
         let this->offset++;
         if len === 1 {
             return substr(this->buffer, this->offset - 1, 1);
         }
-        else {
-            let this->offset += len;
-            return substr(this->buffer, this->offset - len - 1, len);
-        }
+        let this->offset += len;
+        return substr(this->buffer, (this->offset - 1) - len, len);
     }
 
     /**
@@ -103,8 +92,7 @@ class BinaryStream
      */
     public function getRemaining() -> string
     {
-        var str;
-        let str = substr(this->buffer, this->offset);
+        var str = substr(this->buffer, this->offset);
         if (str === false) {
             throw new BinaryDataException("No bytes left to read");
         }

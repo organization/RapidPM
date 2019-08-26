@@ -65,14 +65,15 @@ class BinaryStream
     public function setBuffer(string $buffer = '', int $offset = 0) {}
 
     /**
-     * @param int|bool $len
+     * @param int $len
      *
      * @return string
      *
      * @throws BinaryDataException if there are not enough bytes left in the buffer
-     * @param mixed $len
+     * @param int $len
+     * @return string
      */
-    public function get($len) {}
+    public function get(int $len): string {}
 
     /**
      * @throws BinaryDataException
