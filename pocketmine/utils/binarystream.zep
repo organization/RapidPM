@@ -82,7 +82,7 @@ class BinaryStream
             let this->offset++;
             return substr(this->buffer, this->offset - 1, 1);
         }
-        let this->offset += len;
+        let this->offset = len + (int) this->offset;
         return substr(this->buffer, this->offset - len, len);
     }
 
