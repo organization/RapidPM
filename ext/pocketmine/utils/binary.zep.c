@@ -1507,7 +1507,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeVarInt) {
 	v = zephir_get_intval(v_param);
 
 
-	v = ((((v >> 32)) ^ v));
+	v = ((((v << 32)) >> 32));
 	ZVAL_LONG(&_0, (((v << 1) ^ v) >> 31));
 	ZEPHIR_RETURN_CALL_SELF("writeunsignedvarint", NULL, 0, &_0);
 	zephir_check_call_status();
