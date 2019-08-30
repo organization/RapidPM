@@ -18,7 +18,7 @@ namespace Pocketmine\Utils;
 
 class BinaryStream
 {
-    /** @var long */
+    /** @var int */
     public offset {
         get
     };
@@ -33,7 +33,7 @@ class BinaryStream
         let this->offset = offset;
     }
 
-    public function setOffset(long offset) -> void
+    public function setOffset(int offset) -> void
     {
         let this->offset = offset;
     }
@@ -52,7 +52,7 @@ class BinaryStream
         let this->offset = 0;
     }
 
-    public function setBuffer(string buffer = "", long offset = 0)
+    public function setBuffer(string buffer = "", int offset = 0)
     {
         let this->buffer = buffer;
         let this->offset = offset;
@@ -65,7 +65,7 @@ class BinaryStream
      *
      * @throws BinaryDataException if there are not enough bytes left in the buffer
      */
-    public function get(long len) -> string
+    public function get(int len) -> string
     {
         if (len === 0) {
             return "";
@@ -82,7 +82,7 @@ class BinaryStream
             let this->offset++;
             return substr(this->buffer, this->offset - 1, 1);
         }
-        let this->offset = len + (long) this->offset;
+        let this->offset = len + (int) this->offset;
         return substr(this->buffer, this->offset - len, len);
     }
 
@@ -132,7 +132,7 @@ class BinaryStream
 
     public function getSignedShort() -> int
     {
-        return unpack("n", this->get(2))[1] << 48 >> 48;
+        return (int) ceil(unpack("n", this->get(2))[1] / 48);
     }
 
     public function putShort(int v)
@@ -147,7 +147,7 @@ class BinaryStream
 
     public function getSignedLShort() -> int
     {
-        return unpack("v", this->get(2))[1] << 48 >> 48;
+        return (int) ceil(unpack("v", this->get(2))[1] / 48);
     }
 
     public function putLShort(int v)
@@ -155,29 +155,29 @@ class BinaryStream
         let this->buffer .= pack("v", v);
     }
 
-    public function getTriad() -> long
+    public function getTriad() -> int
     {
         return unpack("N", "\0" . this->get(3))[1];
     }
 
-    public function putTriad(long v)
+    public function putTriad(int v)
     {
         let this->buffer .= substr(pack("N", v), 1);
     }
 
-    public function getLTriad() -> long
+    public function getLTriad() -> int
     {
         return unpack("V", this->get(3) . "\0")[1];
     }
 
-    public function putLTriad(long v)
+    public function putLTriad(int v)
     {
         let this->buffer .= substr(pack("V", v), 0, -1);
     }
 
-    public function getInt() -> long
+    public function getInt() -> int
     {
-        return unpack("N", this->get(4))[1] << 32 >> 32;
+        return (int) ceil(unpack("N", this->get(4))[1] / 32);
     }
 
     public function putInt(int v)
@@ -185,12 +185,12 @@ class BinaryStream
         let this->buffer .= pack("N", v);
     }
 
-    public function getLInt() -> long
+    public function getLInt() -> int
     {
-        return unpack("V", this->get(4))[1] << 32 >> 32;
+        return (int) ceil(unpack("V", this->get(4))[1] / 32);
     }
 
-    public function putLInt(long v)
+    public function putLInt(int v)
     {
         let this->buffer .= pack("V", v);
     }
@@ -202,7 +202,7 @@ class BinaryStream
 
     public function getRoundedFloat(int accuracy) -> float
     {
-        return round(unpack("G", this->get(4))[1], accuracy);
+        return \round(unpack("G", this->get(4))[1], accuracy);
     }
 
     public function putFloat(float v)
@@ -217,7 +217,7 @@ class BinaryStream
 
     public function getRoundedLFloat(int accuracy) -> float
     {
-        return round(unpack("g", this->get(4))[1], accuracy);
+        return \round(unpack("g", this->get(4))[1], accuracy);
     }
 
     public function putLFloat(float v)
