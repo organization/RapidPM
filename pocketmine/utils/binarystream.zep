@@ -18,7 +18,7 @@ namespace Pocketmine\Utils;
 
 class BinaryStream
 {
-    /** @var int */
+    /** @var long  */
     public offset {
         get
     };
@@ -33,7 +33,7 @@ class BinaryStream
         let this->offset = offset;
     }
 
-    public function setOffset(int offset) -> void
+    public function setOffset(long offset) -> void
     {
         let this->offset = offset;
     }
@@ -52,7 +52,7 @@ class BinaryStream
         let this->offset = 0;
     }
 
-    public function setBuffer(string buffer = "", int offset = 0)
+    public function setBuffer(string buffer = "", long offset = 0)
     {
         let this->buffer = buffer;
         let this->offset = offset;
@@ -65,7 +65,7 @@ class BinaryStream
      *
      * @throws BinaryDataException if there are not enough bytes left in the buffer
      */
-    public function get(int len) -> string
+    public function get(long len) -> string
     {
         if (len === 0) {
             return "";
@@ -82,7 +82,7 @@ class BinaryStream
             let this->offset++;
             return substr(this->buffer, this->offset - 1, 1);
         }
-        let this->offset = len + (int) this->offset;
+        let this->offset = len + (long) this->offset;
         return substr(this->buffer, this->offset - len, len);
     }
 
@@ -102,7 +102,7 @@ class BinaryStream
 
     public function put(string str)
     {
-        let this->buffer .= str;
+        let this->buffer = this->buffer . str;
     }
 
     public function getBool() -> bool
@@ -112,7 +112,7 @@ class BinaryStream
 
     public function putBool(bool v)
     {
-        let this->buffer .= v ? "\1" : "\0";
+        let this->buffer = this->buffer . (v ? "\1" : "\0");
     }
 
     public function getByte() -> int
@@ -122,7 +122,7 @@ class BinaryStream
 
     public function putByte(int v)
     {
-        let this->buffer .= chr(v);
+        let this->buffer = this->buffer . chr(v);
     }
 
     public function getShort() -> int
@@ -137,7 +137,7 @@ class BinaryStream
 
     public function putShort(int v)
     {
-        let this->buffer .= pack("n", v);
+        let this->buffer = this->buffer . pack("n", v);
     }
 
     public function getLShort() -> int
@@ -152,27 +152,27 @@ class BinaryStream
 
     public function putLShort(int v)
     {
-        let this->buffer .= pack("v", v);
+        let this->buffer = this->buffer . pack("v", v);
     }
 
-    public function getTriad() -> int
+    public function getTriad() -> long
     {
         return unpack("N", "\0" . this->get(3))[1];
     }
 
-    public function putTriad(int v)
+    public function putTriad(long v)
     {
-        let this->buffer .= substr(pack("N", v), 1);
+        let this->buffer = this->buffer . substr(pack("N", v), 1);
     }
 
-    public function getLTriad() -> int
+    public function getLTriad() -> long
     {
         return unpack("V", this->get(3) . "\0")[1];
     }
 
-    public function putLTriad(int v)
+    public function putLTriad(long v)
     {
-        let this->buffer .= substr(pack("V", v), 0, -1);
+        let this->buffer = this->buffer . substr(pack("V", v), 0, -1);
     }
 
     public function getInt() -> int
@@ -182,17 +182,17 @@ class BinaryStream
 
     public function putInt(int v)
     {
-        let this->buffer .= pack("N", v);
+        let this->buffer = this->buffer . pack("N", v);
     }
 
-    public function getLInt() -> int
+    public function getLInt() -> long
     {
         return (int) ceil(unpack("V", this->get(4))[1] / 32);
     }
 
-    public function putLInt(int v)
+    public function putLInt(long v)
     {
-        let this->buffer .= pack("V", v);
+        let this->buffer = this->buffer . pack("V", v);
     }
 
     public function getFloat() -> float
@@ -202,12 +202,12 @@ class BinaryStream
 
     public function getRoundedFloat(int accuracy) -> float
     {
-        return \round(unpack("G", this->get(4))[1], accuracy);
+        return round(unpack("G", this->get(4))[1], accuracy);
     }
 
     public function putFloat(float v)
     {
-        let this->buffer .= pack("G", v);
+        let this->buffer = this->buffer . pack("G", v);
     }
 
     public function getLFloat() -> float
@@ -217,12 +217,12 @@ class BinaryStream
 
     public function getRoundedLFloat(int accuracy) -> float
     {
-        return \round(unpack("g", this->get(4))[1], accuracy);
+        return round(unpack("g", this->get(4))[1], accuracy);
     }
 
     public function putLFloat(float v)
     {
-        let this->buffer .= pack("g", v);
+        let this->buffer = this->buffer . pack("g", v);
     }
 
     public function getDouble() -> float
@@ -232,7 +232,7 @@ class BinaryStream
 
     public function putDouble(float v) -> void
     {
-        let this->buffer .= pack("E", v);
+        let this->buffer = this->buffer . pack("E", v);
     }
 
     public function getLDouble() -> float
@@ -242,7 +242,7 @@ class BinaryStream
 
     public function putLDouble(float v) -> void
     {
-        let this->buffer .= pack("e", v);
+        let this->buffer = this->buffer . pack("e", v);
     }
 
     /**
@@ -258,7 +258,7 @@ class BinaryStream
      */
     public function putLong(int v)
     {
-        let this->buffer .= pack("NN", v >> 32, v & 0xffffffff);
+        let this->buffer = this->buffer . pack("NN", v >> 32, v & 0xffffffff);
     }
 
     /**
@@ -274,7 +274,7 @@ class BinaryStream
      */
     public function putLLong(int v)
     {
-        let this->buffer .= pack("VV", v & 0xffffffff, v >> 32);
+        let this->buffer = this->buffer . pack("VV", v & 0xffffffff, v >> 32);
     }
 
     /**
@@ -292,7 +292,7 @@ class BinaryStream
      */
     public function putUnsignedVarInt(int v)
     {
-        let this->buffer .= Binary::writeUnsignedVarInt(v);
+        let this->buffer = this->buffer . Binary::writeUnsignedVarInt(v);
     }
 
     /**
@@ -310,7 +310,7 @@ class BinaryStream
      */
     public function putVarInt(int v)
     {
-        let this->buffer .= Binary::writeVarInt(v);
+        let this->buffer = this->buffer . Binary::writeVarInt(v);
     }
 
     /**
@@ -328,7 +328,7 @@ class BinaryStream
      */
     public function putUnsignedVarLong(int v)
     {
-        let this->buffer .= Binary::writeUnsignedVarLong(v);
+        let this->buffer = this->buffer . Binary::writeUnsignedVarLong(v);
     }
 
     /**
@@ -346,7 +346,7 @@ class BinaryStream
      */
     public function putVarLong(int v)
     {
-        let this->buffer .= Binary::writeVarLong(v);
+        let this->buffer = this->buffer . Binary::writeVarLong(v);
     }
 
     /**
