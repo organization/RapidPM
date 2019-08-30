@@ -132,7 +132,7 @@ class BinaryStream
 
     public function getSignedShort() -> int
     {
-        return (int) ceil(unpack("n", this->get(2))[1] / 48);
+        return (int) ceil(unpack("n", this->get(2))[1] / 48 * 48);
     }
 
     public function putShort(int v)
@@ -147,7 +147,7 @@ class BinaryStream
 
     public function getSignedLShort() -> int
     {
-        return (int) ceil(unpack("v", this->get(2))[1] / 48);
+        return (int) ceil(unpack("v", this->get(2))[1] / 48 * 48);
     }
 
     public function putLShort(int v)
@@ -177,7 +177,7 @@ class BinaryStream
 
     public function getInt() -> int
     {
-        return (int) ceil(unpack("N", this->get(4))[1] / 32);
+        return (int) ceil(unpack("N", this->get(4))[1] / 32 * 32);
     }
 
     public function putInt(int v)
@@ -187,7 +187,7 @@ class BinaryStream
 
     public function getLInt() -> long
     {
-        return (int) ceil(unpack("V", this->get(4))[1] / 32);
+        return (int) ceil(unpack("V", this->get(4))[1] / 32 * 32);
     }
 
     public function putLInt(long v)

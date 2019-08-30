@@ -157,7 +157,7 @@ class BinaryStream
     public function putLTriad(int $v) {}
 
     /**
-     * @return long
+     * @return int
      */
     public function getInt(): int {}
 

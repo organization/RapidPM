@@ -495,7 +495,7 @@ class Binary
     public static function readVarInt(string buffer, int offset) -> int
     {
         var raw = self::readUnsignedVarInt(buffer, offset);
-        int temp = ((int) raw << 63 >> 63 ^ (int) raw) >> 1;
+        int temp = ((int) ceil(raw / 63) ^ (int) raw) >> 1;
         return temp ^ (int) raw & 1 << 63;
     }
 
@@ -537,7 +537,7 @@ class Binary
      */
     public static function writeVarInt(int v) -> string
     {
-        let v = v << 32 >> 32;
+        let v = (int) ceil(v / 32);
         return self::writeUnsignedVarInt(v << 1 ^ v >> 31);
     }
 
@@ -577,7 +577,7 @@ class Binary
     public static function readVarLong(string buffer, int offset) -> long
     {
         var raw = self::readUnsignedVarLong(buffer, offset);
-        long temp = ((long) raw << 63 >> 63 ^ (long) raw) >> 1;
+        long temp = ((long) ceil(raw / 63) ^ (long) raw) >> 1;
         return temp ^ raw & 1 << 63;
     }
 
