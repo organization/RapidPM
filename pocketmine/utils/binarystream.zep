@@ -202,7 +202,7 @@ class BinaryStream
 
     public function getRoundedFloat(int accuracy) -> float
     {
-        return \round(unpack("G", this->get(4))[1], accuracy);
+        return round(unpack("G", this->get(4))[1], accuracy);
     }
 
     public function putFloat(float v)
@@ -217,7 +217,7 @@ class BinaryStream
 
     public function getRoundedLFloat(int accuracy) -> float
     {
-        return \round(unpack("g", this->get(4))[1], accuracy);
+        return round(unpack("g", this->get(4))[1], accuracy);
     }
 
     public function putLFloat(float v)

@@ -712,8 +712,9 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLTriad) {
 PHP_METHOD(Pocketmine_Utils_Binary, writeLTriad) {
 
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
+	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *value_param = NULL, _0, _1, _2, _3;
-	zend_long value, ZEPHIR_LAST_CALL_STATUS;
+	long value;
 	zval *this_ptr = getThis();
 
 	ZVAL_UNDEF(&_0);
@@ -786,8 +787,9 @@ PHP_METHOD(Pocketmine_Utils_Binary, readInt) {
 PHP_METHOD(Pocketmine_Utils_Binary, writeInt) {
 
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
+	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *value_param = NULL, _0, _1;
-	zend_long value, ZEPHIR_LAST_CALL_STATUS;
+	long value;
 	zval *this_ptr = getThis();
 
 	ZVAL_UNDEF(&_0);
@@ -855,8 +857,9 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLInt) {
 PHP_METHOD(Pocketmine_Utils_Binary, writeLInt) {
 
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
+	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *value_param = NULL, _0, _1;
-	zend_long value, ZEPHIR_LAST_CALL_STATUS;
+	long value;
 	zval *this_ptr = getThis();
 
 	ZVAL_UNDEF(&_0);

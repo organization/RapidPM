@@ -213,7 +213,7 @@ class Binary
      *
      * @return int
      */
-    public static function readTriad(string str) -> int
+    public static function readTriad(string str) -> long
     {
         return unpack("N", "\0" . str)[1];
     }
@@ -225,7 +225,7 @@ class Binary
      *
      * @return string
      */
-    public static function writeTriad(int value) -> string
+    public static function writeTriad(int value) -> long
     {
         return substr(pack("N", value), 1);
     }
@@ -237,7 +237,7 @@ class Binary
      *
      * @return int
      */
-    public static function readLTriad(string str) -> int
+    public static function readLTriad(string str) -> long
     {
         return unpack("V", str . "\0")[1];
     }
@@ -249,7 +249,7 @@ class Binary
      *
      * @return string
      */
-    public static function writeLTriad(int value) -> string
+    public static function writeLTriad(long value) -> string
     {
         return substr(pack("V", value), 0, -1);
     }
@@ -261,7 +261,7 @@ class Binary
      *
      * @return int
      */
-    public static function readInt(string str) -> int
+    public static function readInt(string str) -> long
     {
         return self::signInt(unpack("N", str)[1]);
     }
@@ -273,7 +273,7 @@ class Binary
      *
      * @return string
      */
-    public static function writeInt(int value) -> string
+    public static function writeInt(long value) -> string
     {
         return pack("N", value);
     }
@@ -285,7 +285,7 @@ class Binary
      *
      * @return int
      */
-    public static function readLInt(string str) -> int
+    public static function readLInt(string str) -> long
     {
         return self::signInt(unpack("V", str)[1]);
     }
@@ -297,7 +297,7 @@ class Binary
      *
      * @return string
      */
-    public static function writeLInt(int value) -> string
+    public static function writeLInt(long value) -> string
     {
         return pack("V", value);
     }

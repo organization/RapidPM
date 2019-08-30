@@ -21,6 +21,7 @@
 #include "kernel/fcall.h"
 #include "kernel/concat.h"
 #include "kernel/array.h"
+#include "kernel/math.h"
 
 
 /**
@@ -882,8 +883,7 @@ PHP_METHOD(Pocketmine_Utils_BinaryStream, getRoundedFloat) {
 	zephir_check_call_status();
 	zephir_array_fetch_long(&_4, &_3, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binarystream.zep", 205 TSRMLS_CC);
 	ZVAL_LONG(&_1, accuracy);
-	ZEPHIR_RETURN_CALL_FUNCTION("\round", NULL, 25, &_4, &_1);
-	zephir_check_call_status();
+	zephir_round(return_value, &_4, &_1, NULL TSRMLS_CC);
 	RETURN_MM();
 
 }
@@ -971,8 +971,7 @@ PHP_METHOD(Pocketmine_Utils_BinaryStream, getRoundedLFloat) {
 	zephir_check_call_status();
 	zephir_array_fetch_long(&_4, &_3, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binarystream.zep", 220 TSRMLS_CC);
 	ZVAL_LONG(&_1, accuracy);
-	ZEPHIR_RETURN_CALL_FUNCTION("\round", NULL, 25, &_4, &_1);
-	zephir_check_call_status();
+	zephir_round(return_value, &_4, &_1, NULL TSRMLS_CC);
 	RETURN_MM();
 
 }

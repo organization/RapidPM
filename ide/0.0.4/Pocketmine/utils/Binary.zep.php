@@ -184,7 +184,7 @@ class Binary
      * @param string $str
      *
      * @param string $str
-     * @return int
+     * @return long
      */
     public static function readTriad(string $str): int {}
 
@@ -194,9 +194,9 @@ class Binary
      * @param int $value
      *
      * @param int $value
-     * @return string
+     * @return long
      */
-    public static function writeTriad(int $value): string {}
+    public static function writeTriad(int $value): int {}
 
     /**
      * Reads a 3-byte little-endian number
@@ -204,7 +204,7 @@ class Binary
      * @param string $str
      *
      * @param string $str
-     * @return int
+     * @return long
      */
     public static function readLTriad(string $str): int {}
 
@@ -213,7 +213,7 @@ class Binary
      *
      * @param int $value
      *
-     * @param int $value
+     * @param long $value
      * @return string
      */
     public static function writeLTriad(int $value): string {}
@@ -224,7 +224,7 @@ class Binary
      * @param string $str
      *
      * @param string $str
-     * @return int
+     * @return long
      */
     public static function readInt(string $str): int {}
 
@@ -233,7 +233,7 @@ class Binary
      *
      * @param int $value
      *
-     * @param int $value
+     * @param long $value
      * @return string
      */
     public static function writeInt(int $value): string {}
@@ -244,7 +244,7 @@ class Binary
      * @param string $str
      *
      * @param string $str
-     * @return int
+     * @return long
      */
     public static function readLInt(string $str): int {}
 
@@ -253,7 +253,7 @@ class Binary
      *
      * @param int $value
      *
-     * @param int $value
+     * @param long $value
      * @return string
      */
     public static function writeLInt(int $value): string {}
