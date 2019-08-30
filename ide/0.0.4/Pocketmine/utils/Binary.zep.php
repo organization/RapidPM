@@ -184,9 +184,9 @@ class Binary
      * @param string $str
      *
      * @param string $str
-     * @return long
+     * @return string
      */
-    public static function readTriad(string $str): int {}
+    public static function readTriad(string $str): string {}
 
     /**
      * Writes a 3-byte big-endian number

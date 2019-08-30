@@ -213,7 +213,7 @@ class Binary
      *
      * @return int
      */
-    public static function readTriad(string str) -> long
+    public static function readTriad(string str) -> string
     {
         return unpack("N", "\0" . str)[1];
     }
