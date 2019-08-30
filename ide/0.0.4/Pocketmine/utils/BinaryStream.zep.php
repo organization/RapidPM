@@ -19,7 +19,7 @@ namespace Pocketmine\Utils;
 class BinaryStream
 {
     /**
-     * @var int
+     * @var long
      */
     public $offset;
 
@@ -30,7 +30,7 @@ class BinaryStream
 
 
     /**
-     * @return int
+     * @return long
      */
     public function getOffset(): int {}
 
@@ -46,7 +46,7 @@ class BinaryStream
     public function __construct(string $buffer = '', int $offset = 0) {}
 
     /**
-     * @param int $offset
+     * @param long $offset
      */
     public function setOffset(int $offset): void {}
 
@@ -60,7 +60,7 @@ class BinaryStream
 
     /**
      * @param string $buffer
-     * @param int $offset
+     * @param long $offset
      */
     public function setBuffer(string $buffer = '', int $offset = 0) {}
 
@@ -70,7 +70,7 @@ class BinaryStream
      * @return string
      *
      * @throws BinaryDataException if there are not enough bytes left in the buffer
-     * @param int $len
+     * @param long $len
      * @return string
      */
     public function get(int $len): string {}
@@ -137,27 +137,27 @@ class BinaryStream
     public function putLShort(int $v) {}
 
     /**
-     * @return int
+     * @return long
      */
     public function getTriad(): int {}
 
     /**
-     * @param int $v
+     * @param long $v
      */
     public function putTriad(int $v) {}
 
     /**
-     * @return int
+     * @return long
      */
     public function getLTriad(): int {}
 
     /**
-     * @param int $v
+     * @param long $v
      */
     public function putLTriad(int $v) {}
 
     /**
-     * @return int
+     * @return long
      */
     public function getInt(): int {}
 
@@ -167,12 +167,12 @@ class BinaryStream
     public function putInt(int $v) {}
 
     /**
-     * @return int
+     * @return long
      */
     public function getLInt(): int {}
 
     /**
-     * @param int $v
+     * @param long $v
      */
     public function putLInt(int $v) {}
 

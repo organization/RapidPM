@@ -18,7 +18,7 @@ namespace Pocketmine\Utils;
 
 class BinaryStream
 {
-    /** @var int */
+    /** @var long */
     public offset {
         get
     };
@@ -33,7 +33,7 @@ class BinaryStream
         let this->offset = offset;
     }
 
-    public function setOffset(int offset) -> void
+    public function setOffset(long offset) -> void
     {
         let this->offset = offset;
     }
@@ -52,7 +52,7 @@ class BinaryStream
         let this->offset = 0;
     }
 
-    public function setBuffer(string buffer = "", int offset = 0)
+    public function setBuffer(string buffer = "", long offset = 0)
     {
         let this->buffer = buffer;
         let this->offset = offset;
@@ -65,7 +65,7 @@ class BinaryStream
      *
      * @throws BinaryDataException if there are not enough bytes left in the buffer
      */
-    public function get(int len) -> string
+    public function get(long len) -> string
     {
         if (len === 0) {
             return "";
@@ -82,7 +82,7 @@ class BinaryStream
             let this->offset++;
             return substr(this->buffer, this->offset - 1, 1);
         }
-        let this->offset = len + (int) this->offset;
+        let this->offset = len + (long) this->offset;
         return substr(this->buffer, this->offset - len, len);
     }
 
@@ -155,27 +155,27 @@ class BinaryStream
         let this->buffer .= pack("v", v);
     }
 
-    public function getTriad() -> int
+    public function getTriad() -> long
     {
         return unpack("N", "\0" . this->get(3))[1];
     }
 
-    public function putTriad(int v)
+    public function putTriad(long v)
     {
         let this->buffer .= substr(pack("N", v), 1);
     }
 
-    public function getLTriad() -> int
+    public function getLTriad() -> long
     {
         return unpack("V", this->get(3) . "\0")[1];
     }
 
-    public function putLTriad(int v)
+    public function putLTriad(long v)
     {
         let this->buffer .= substr(pack("V", v), 0, -1);
     }
 
-    public function getInt() -> int
+    public function getInt() -> long
     {
         return unpack("N", this->get(4))[1] << 32 >> 32;
     }
@@ -185,12 +185,12 @@ class BinaryStream
         let this->buffer .= pack("N", v);
     }
 
-    public function getLInt() -> int
+    public function getLInt() -> long
     {
         return unpack("V", this->get(4))[1] << 32 >> 32;
     }
 
-    public function putLInt(int v)
+    public function putLInt(long v)
     {
         let this->buffer .= pack("V", v);
     }

@@ -42,7 +42,7 @@ ZEPHIR_INIT_CLASS(Pocketmine_Utils_BinaryStream) {
 
 	ZEPHIR_REGISTER_CLASS(Pocketmine\\Utils, BinaryStream, pocketmine, utils_binarystream, pocketmine_utils_binarystream_method_entry, 0);
 
-	/** @var int */
+	/** @var long */
 	zend_declare_property_null(pocketmine_utils_binarystream_ce, SL("offset"), ZEND_ACC_PUBLIC TSRMLS_CC);
 
 	/** @var string */
@@ -112,7 +112,7 @@ PHP_METHOD(Pocketmine_Utils_BinaryStream, __construct) {
 PHP_METHOD(Pocketmine_Utils_BinaryStream, setOffset) {
 
 	zval *offset_param = NULL, _0;
-	zend_long offset;
+	long offset;
 	zval *this_ptr = getThis();
 
 	ZVAL_UNDEF(&_0);
@@ -170,7 +170,7 @@ PHP_METHOD(Pocketmine_Utils_BinaryStream, rewind) {
 PHP_METHOD(Pocketmine_Utils_BinaryStream, setBuffer) {
 
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
-	zend_long offset;
+	long offset;
 	zval *buffer_param = NULL, *offset_param = NULL, _0;
 	zval buffer;
 	zval *this_ptr = getThis();
@@ -212,8 +212,9 @@ PHP_METHOD(Pocketmine_Utils_BinaryStream, setBuffer) {
 PHP_METHOD(Pocketmine_Utils_BinaryStream, get) {
 
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
+	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *len_param = NULL, remaining, _0, _1, _9, _10, _11, _12, _13, _2$$5, _3$$5, _4$$5, _5$$6, _6$$6, _7$$6, _8$$6;
-	zend_long len, ZEPHIR_LAST_CALL_STATUS;
+	long len;
 	zval *this_ptr = getThis();
 
 	ZVAL_UNDEF(&remaining);
@@ -626,8 +627,9 @@ PHP_METHOD(Pocketmine_Utils_BinaryStream, getTriad) {
 PHP_METHOD(Pocketmine_Utils_BinaryStream, putTriad) {
 
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
+	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *v_param = NULL, _0, _1, _2;
-	zend_long v, ZEPHIR_LAST_CALL_STATUS;
+	long v;
 	zval *this_ptr = getThis();
 
 	ZVAL_UNDEF(&_0);
@@ -686,8 +688,9 @@ PHP_METHOD(Pocketmine_Utils_BinaryStream, getLTriad) {
 PHP_METHOD(Pocketmine_Utils_BinaryStream, putLTriad) {
 
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
+	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *v_param = NULL, _0, _1, _2, _3;
-	zend_long v, ZEPHIR_LAST_CALL_STATUS;
+	long v;
 	zval *this_ptr = getThis();
 
 	ZVAL_UNDEF(&_0);
@@ -799,8 +802,9 @@ PHP_METHOD(Pocketmine_Utils_BinaryStream, getLInt) {
 PHP_METHOD(Pocketmine_Utils_BinaryStream, putLInt) {
 
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
+	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *v_param = NULL, _0, _1, _2;
-	zend_long v, ZEPHIR_LAST_CALL_STATUS;
+	long v;
 	zval *this_ptr = getThis();
 
 	ZVAL_UNDEF(&_0);
