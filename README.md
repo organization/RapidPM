@@ -14,6 +14,9 @@ The **only way** to fix this issue is to eradicating the rotten root: **escaping
 
 _**RapidPM**_ will do this for you.
 
+## How to install?
+See **[this comment](https://github.com/organization/RapidPM/issues/6#issuecomment-526207449)**.
+
 ## Why [Zephir](https://www.zephir-lang.com)?
 
 Zend API of **[PHP](https://github.com/php/php-src)** is **very difficult to handle** and C is **memory-unsafe**.
