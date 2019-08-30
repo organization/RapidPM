@@ -1427,7 +1427,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readVarInt) {
 	ZVAL_LONG(&_0, offset);
 	ZEPHIR_CALL_SELF(&raw, "readunsignedvarint", NULL, 0, &buffer, &_0);
 	zephir_check_call_status();
-	temp = (((((zephir_get_intval(&raw) << 63) >> 63) ^ zephir_get_intval(&raw))) >> 1);
+	temp = (((((((zephir_get_intval(&raw) << 63)) >> 63)) ^ zephir_get_intval(&raw))) >> 1);
 	RETURN_MM_LONG(((temp ^ (zephir_get_intval(&raw) & 1)) << 63));
 
 }
@@ -1507,7 +1507,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeVarInt) {
 	v = zephir_get_intval(v_param);
 
 
-	v = ((v << 32) >> 32);
+	v = ((((v >> 32)) ^ v));
 	ZVAL_LONG(&_0, (((v << 1) ^ v) >> 31));
 	ZEPHIR_RETURN_CALL_SELF("writeunsignedvarint", NULL, 0, &_0);
 	zephir_check_call_status();
@@ -1617,8 +1617,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, readVarLong) {
 	ZVAL_LONG(&_0, offset);
 	ZEPHIR_CALL_SELF(&raw, "readunsignedvarlong", NULL, 0, &buffer, &_0);
 	zephir_check_call_status();
-	temp = (((((zephir_get_intval(&raw) << 63) >> 63) ^ zephir_get_intval(&raw))) >> 1);
-	RETURN_MM_LONG(((temp ^ ((int) (zephir_get_numberval(&raw)) & 1)) << 63));
+	temp = (((((((zephir_get_intval(&raw) << 63)) >> 63)) ^ zephir_get_intval(&raw))) >> 1);
+	RETURN_MM_LONG(((temp ^ (zephir_get_intval(&raw) & 1)) << 63));
 
 }
 
