@@ -537,7 +537,7 @@ class Binary
      */
     public static function writeVarInt(int v) -> string
     {
-        let v = ((v >> 32) ^ v);
+        let v = ((v << 32) >> 32);
         return self::writeUnsignedVarInt(v << 1 ^ v >> 31);
     }
 
