@@ -247,7 +247,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readBool) {
 	zephir_get_strval(&b, b_param);
 
 
-	RETURN_MM_BOOL(!ZEPHIR_IS_STRING_IDENTICAL(&b, "\0"));
+	RETURN_MM_BOOL(!ZEPHIR_IS_STRING_IDENTICAL(&b, "\x00"));
 
 }
 
@@ -275,9 +275,9 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeBool) {
 
 	ZEPHIR_INIT_VAR(&_0);
 	if (b) {
-		ZVAL_STRING(&_0, "\1");
+		ZVAL_STRING(&_0, "\x01");
 	} else {
-		ZVAL_STRING(&_0, "\0");
+		ZVAL_STRING(&_0, "\x00");
 	}
 	RETURN_CCTOR(&_0);
 
@@ -619,7 +619,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readTriad) {
 
 
 	ZEPHIR_INIT_VAR(&_0);
-	ZEPHIR_CONCAT_SV(&_0, "\\0", &str);
+	ZEPHIR_CONCAT_SV(&_0, "\\x00", &str);
 	ZEPHIR_INIT_VAR(&_1);
 	ZVAL_STRING(&_1, "N");
 	ZEPHIR_CALL_FUNCTION(&_2, "unpack", NULL, 20, &_1, &_0);
@@ -692,7 +692,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLTriad) {
 
 
 	ZEPHIR_INIT_VAR(&_0);
-	ZEPHIR_CONCAT_VS(&_0, &str, "\\0");
+	ZEPHIR_CONCAT_VS(&_0, &str, "\\x00");
 	ZEPHIR_INIT_VAR(&_1);
 	ZVAL_STRING(&_1, "V");
 	ZEPHIR_CALL_FUNCTION(&_2, "unpack", NULL, 20, &_1, &_0);

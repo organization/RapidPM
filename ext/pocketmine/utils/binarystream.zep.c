@@ -361,7 +361,7 @@ PHP_METHOD(Pocketmine_Utils_BinaryStream, getBool) {
 	ZVAL_LONG(&_1, 1);
 	ZEPHIR_CALL_METHOD(&_0, this_ptr, "get", NULL, 0, &_1);
 	zephir_check_call_status();
-	RETURN_MM_BOOL(!ZEPHIR_IS_STRING_IDENTICAL(&_0, "\0"));
+	RETURN_MM_BOOL(!ZEPHIR_IS_STRING_IDENTICAL(&_0, "\x00"));
 
 }
 
@@ -386,10 +386,10 @@ PHP_METHOD(Pocketmine_Utils_BinaryStream, putBool) {
 	ZEPHIR_INIT_VAR(&_1);
 	if (v) {
 		ZEPHIR_INIT_NVAR(&_1);
-		ZVAL_STRING(&_1, "\1");
+		ZVAL_STRING(&_1, "\x01");
 	} else {
 		ZEPHIR_INIT_NVAR(&_1);
-		ZVAL_STRING(&_1, "\0");
+		ZVAL_STRING(&_1, "\x00");
 	}
 	ZEPHIR_INIT_VAR(&_2);
 	ZEPHIR_CONCAT_VV(&_2, &_0, &_1);
@@ -642,7 +642,7 @@ PHP_METHOD(Pocketmine_Utils_BinaryStream, getTriad) {
 	ZEPHIR_CALL_METHOD(&_0, this_ptr, "get", NULL, 0, &_1);
 	zephir_check_call_status();
 	ZEPHIR_INIT_VAR(&_2);
-	ZEPHIR_CONCAT_SV(&_2, "\\0", &_0);
+	ZEPHIR_CONCAT_SV(&_2, "\\x00", &_0);
 	ZEPHIR_INIT_VAR(&_3);
 	ZVAL_STRING(&_3, "N");
 	ZEPHIR_CALL_FUNCTION(&_4, "unpack", NULL, 20, &_3, &_2);
@@ -708,7 +708,7 @@ PHP_METHOD(Pocketmine_Utils_BinaryStream, getLTriad) {
 	ZEPHIR_CALL_METHOD(&_0, this_ptr, "get", NULL, 0, &_1);
 	zephir_check_call_status();
 	ZEPHIR_INIT_VAR(&_2);
-	ZEPHIR_CONCAT_VS(&_2, &_0, "\\0");
+	ZEPHIR_CONCAT_VS(&_2, &_0, "\\x00");
 	ZEPHIR_INIT_VAR(&_3);
 	ZVAL_STRING(&_3, "V");
 	ZEPHIR_CALL_FUNCTION(&_4, "unpack", NULL, 20, &_3, &_2);
@@ -1549,16 +1549,27 @@ PHP_METHOD(Pocketmine_Utils_BinaryStream, putVarLong) {
  */
 PHP_METHOD(Pocketmine_Utils_BinaryStream, feof) {
 
-	zval _0, _1;
+	zval _1;
+	zval _0, _2, _3;
+	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
+	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *this_ptr = getThis();
 
 	ZVAL_UNDEF(&_0);
+	ZVAL_UNDEF(&_2);
+	ZVAL_UNDEF(&_3);
 	ZVAL_UNDEF(&_1);
 
+	ZEPHIR_MM_GROW();
 
-	zephir_read_property(&_0, this_ptr, SL("buffer"), PH_NOISY_CC | PH_READONLY);
-	zephir_read_property(&_1, this_ptr, SL("offset"), PH_NOISY_CC | PH_READONLY);
-	RETURN_BOOL(!(zephir_array_isset(&_0, &_1)));
+	ZEPHIR_OBS_VAR(&_0);
+	zephir_read_property(&_0, this_ptr, SL("buffer"), PH_NOISY_CC);
+	zephir_get_strval(&_1, &_0);
+	ZEPHIR_CALL_FUNCTION(&_2, "str_split", NULL, 25, &_1);
+	zephir_check_call_status();
+	ZEPHIR_OBS_VAR(&_3);
+	zephir_read_property(&_3, this_ptr, SL("offset"), PH_NOISY_CC);
+	RETURN_MM_BOOL(!(zephir_array_isset_long(&_2, zephir_get_intval(&_3))));
 
 }
 

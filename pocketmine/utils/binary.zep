@@ -21,7 +21,7 @@ namespace Pocketmine\Utils;
 
 /*
 if (!defined("ENDIANNESS")) {
-    define("ENDIANNESS", pack("s", 1) === "\0\1" ? Binary::BIG_ENDIAN : Binary::LITTLE_ENDIAN);
+    define("ENDIANNESS", pack("s", 1) === "\x00\x01" ? Binary::BIG_ENDIAN : Binary::LITTLE_ENDIAN);
 }
 */
 class Binary
@@ -83,7 +83,7 @@ class Binary
      */
     public static function readBool(string b) -> bool
     {
-        return b !== "\0";
+        return b !== "\x00";
     }
 
     /**
@@ -95,7 +95,7 @@ class Binary
      */
     public static function writeBool(bool b) -> string
     {
-        return b ? "\1" : "\0";
+        return b ? "\x01" : "\x00";
     }
 
     /**
@@ -215,7 +215,7 @@ class Binary
      */
     public static function readTriad(string str) -> string
     {
-        return unpack("N", "\0" . str)[1];
+        return unpack("N", "\x00" . str)[1];
     }
 
     /**
@@ -239,7 +239,7 @@ class Binary
      */
     public static function readLTriad(string str) -> long
     {
-        return unpack("V", str . "\0")[1];
+        return unpack("V", str . "\x00")[1];
     }
 
     /**

@@ -107,12 +107,12 @@ class BinaryStream
 
     public function getBool() -> bool
     {
-        return this->get(1) !== "\0";
+        return this->get(1) !== "\x00";
     }
 
     public function putBool(bool v)
     {
-        let this->buffer = this->buffer . (v ? "\1" : "\0");
+        let this->buffer = this->buffer . (v ? "\x01" : "\x00");
     }
 
     public function getByte() -> int
@@ -159,7 +159,7 @@ class BinaryStream
 
     public function getTriad() -> long
     {
-        return unpack("N", "\0" . this->get(3))[1];
+        return unpack("N", "\x00" . this->get(3))[1];
     }
 
     public function putTriad(long v)
@@ -169,7 +169,7 @@ class BinaryStream
 
     public function getLTriad() -> long
     {
-        return unpack("V", this->get(3) . "\0")[1];
+        return unpack("V", this->get(3) . "\x00")[1];
     }
 
     public function putLTriad(long v)
@@ -359,7 +359,7 @@ class BinaryStream
      */
     public function feof() -> bool
     {
-        return !isset(this->buffer[this->offset]);
+        return !isset str_split((string) this->buffer)[(int) this->offset];
     }
 
 }
