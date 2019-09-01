@@ -119,15 +119,15 @@ PHP_METHOD(Pocketmine_Math_AxisAlignedBB, setBounds) {
 
 
 	if (minX > maxX) {
-		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "minX {minX} is larger than maxX {maxX}", "pocketmine/math/axisalignedbb.zep", 41);
+		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "minX {minX} is larger than maxX {maxX}", "/root/RapidPM/pocketmine/math/axisalignedbb.zep", 41);
 		return;
 	}
 	if (minY > maxY) {
-		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "minY {minY} is larger than maxY {maxY}", "pocketmine/math/axisalignedbb.zep", 44);
+		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "minY {minY} is larger than maxY {maxY}", "/root/RapidPM/pocketmine/math/axisalignedbb.zep", 44);
 		return;
 	}
 	if (minZ > maxZ) {
-		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "minZ {minZ} is larger than maxZ {maxZ}", "pocketmine/math/axisalignedbb.zep", 47);
+		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "minZ {minZ} is larger than maxZ {maxZ}", "/root/RapidPM/pocketmine/math/axisalignedbb.zep", 47);
 		return;
 	}
 	ZEPHIR_INIT_ZVAL_NREF(_0);
@@ -609,7 +609,7 @@ PHP_METHOD(Pocketmine_Math_AxisAlignedBB, extend) {
 		ZVAL_DOUBLE(&_5$$8, distance);
 		zephir_update_property_zval(this_ptr, SL("maxX"), &_5$$8);
 	} else {
-		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "Invalid face {face}", "pocketmine/math/axisalignedbb.zep", 232);
+		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "Invalid face {face}", "/root/RapidPM/pocketmine/math/axisalignedbb.zep", 232);
 		return;
 	}
 	RETURN_THISW();
@@ -777,7 +777,7 @@ PHP_METHOD(Pocketmine_Math_AxisAlignedBB, stretch) {
 		ZVAL_DOUBLE(&_2$$5, distance);
 		zephir_update_property_zval(this_ptr, SL("maxX"), &_2$$5);
 	} else {
-		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "Invalid axis {axis}", "pocketmine/math/axisalignedbb.zep", 303);
+		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "Invalid axis {axis}", "/root/RapidPM/pocketmine/math/axisalignedbb.zep", 303);
 		return;
 	}
 	RETURN_THISW();
@@ -1693,7 +1693,7 @@ PHP_METHOD(Pocketmine_Math_AxisAlignedBB, calculateIntercept) {
 	zephir_array_fast_append(&_22, &v4);
 	zephir_array_fast_append(&_22, &v5);
 	zephir_array_fast_append(&_22, &v6);
-	zephir_is_iterable(&_22, 0, "pocketmine/math/axisalignedbb.zep", 572);
+	zephir_is_iterable(&_22, 0, "/root/RapidPM/pocketmine/math/axisalignedbb.zep", 572);
 	if (Z_TYPE_P(&_22) == IS_ARRAY) {
 		ZEND_HASH_FOREACH_VAL(Z_ARRVAL_P(&_22), _23)
 		{

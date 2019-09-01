@@ -596,16 +596,16 @@ class Binary
         var i = 0;
         var value = 0;
         while i <= 63 {
-            let i += 7;
             if (!isset str_split((string) buffer)[(int) offset]) {
                 throw new BinaryDataException("No bytes left in buffer");
             }
-             var b = ord(substr(buffer, offset, 1));
+            var b = ord(substr(buffer, offset, 1));
             let offset++;
             let value = value | ((b & 0x7f) << i);
             if ((b & 0x80) === 0) {
                 return value;
             }
+	    let i += 7;
         }
         throw new BinaryDataException("VarLong did not terminate after 10 bytes!");
     }

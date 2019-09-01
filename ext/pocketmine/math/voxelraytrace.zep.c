@@ -178,7 +178,7 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, betweenPoints) {
 	ZEPHIR_CALL_METHOD(&_1, &directionVector, "lengthsquared", NULL, 0);
 	zephir_check_call_status();
 	if (ZEPHIR_LE_LONG(&_1, 0)) {
-		ZEPHIR_THROW_EXCEPTION_DEBUG_STR(spl_ce_InvalidArgumentException, "Start and end points are the same, giving a zero direction vector", "pocketmine/math/voxelraytrace.zep", 74);
+		ZEPHIR_THROW_EXCEPTION_DEBUG_STR(spl_ce_InvalidArgumentException, "Start and end points are the same, giving a zero direction vector", "/root/RapidPM/pocketmine/math/voxelraytrace.zep", 74);
 		return;
 	}
 	ZEPHIR_CALL_METHOD(&radius, start, "distance", NULL, 0, end);
