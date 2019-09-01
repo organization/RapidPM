@@ -1338,6 +1338,7 @@ PHP_METHOD(Pocketmine_Utils_BinaryStream, getUnsignedVarInt) {
 
 	ZEPHIR_OBS_VAR(&temp);
 	zephir_read_property(&temp, this_ptr, SL("offset"), PH_NOISY_CC);
+	zval_ref_make(&temp);
 	zephir_read_property(&_1, this_ptr, SL("buffer"), PH_NOISY_CC | PH_READONLY);
 	ZEPHIR_CALL_CE_STATIC(&result, pocketmine_utils_binary_ce, "readunsignedvarint", &_0, 0, &_1, &temp);
 	zephir_check_call_status();
@@ -1399,6 +1400,7 @@ PHP_METHOD(Pocketmine_Utils_BinaryStream, getVarInt) {
 
 	ZEPHIR_OBS_VAR(&temp);
 	zephir_read_property(&temp, this_ptr, SL("offset"), PH_NOISY_CC);
+	zval_ref_make(&temp);
 	zephir_read_property(&_1, this_ptr, SL("buffer"), PH_NOISY_CC | PH_READONLY);
 	ZEPHIR_CALL_CE_STATIC(&result, pocketmine_utils_binary_ce, "readvarint", &_0, 0, &_1, &temp);
 	zephir_check_call_status();
@@ -1460,6 +1462,7 @@ PHP_METHOD(Pocketmine_Utils_BinaryStream, getUnsignedVarLong) {
 
 	ZEPHIR_OBS_VAR(&temp);
 	zephir_read_property(&temp, this_ptr, SL("offset"), PH_NOISY_CC);
+	zval_ref_make(&temp);
 	zephir_read_property(&_1, this_ptr, SL("buffer"), PH_NOISY_CC | PH_READONLY);
 	ZEPHIR_CALL_CE_STATIC(&result, pocketmine_utils_binary_ce, "readunsignedvarlong", &_0, 0, &_1, &temp);
 	zephir_check_call_status();
@@ -1522,6 +1525,7 @@ PHP_METHOD(Pocketmine_Utils_BinaryStream, getVarLong) {
 
 	ZEPHIR_OBS_VAR(&temp);
 	zephir_read_property(&temp, this_ptr, SL("offset"), PH_NOISY_CC);
+	zval_ref_make(&temp);
 	zephir_read_property(&_1, this_ptr, SL("buffer"), PH_NOISY_CC | PH_READONLY);
 	ZEPHIR_CALL_CE_STATIC(&result, pocketmine_utils_binary_ce, "readvarlong", &_0, 0, &_1, &temp);
 	zephir_check_call_status();
