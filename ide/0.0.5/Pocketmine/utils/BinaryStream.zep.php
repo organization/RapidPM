@@ -279,7 +279,7 @@ class BinaryStream
     /**
      * Reads a 64-bit variable-length integer from the buffer and returns it.
      *
-     * @return int
+     * @return long
      */
     public function getUnsignedVarLong(): int {}
 
@@ -293,14 +293,14 @@ class BinaryStream
     /**
      * Reads a 64-bit zigzag-encoded variable-length integer from the buffer and returns it.
      *
-     * @return int
+     * @return long
      */
     public function getVarLong(): int {}
 
     /**
      * Writes a 64-bit zigzag-encoded variable-length integer to the end of the buffer.
      *
-     * @param int $v
+     * @param long $v
      * @param int
      */
     public function putVarLong(int $v) {}

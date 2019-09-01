@@ -20,7 +20,8 @@ if test "$PHP_RAPIDPM" = "yes"; then
 	pocketmine/math/voxelraytrace.zep.c
 	pocketmine/utils/binary.zep.c
 	pocketmine/utils/binarydataexception.zep.c
-	pocketmine/utils/binarystream.zep.c get_inf.c"
+	pocketmine/utils/binarystream.zep.c get_inf.c
+	zval_ref.c"
 	PHP_NEW_EXTENSION(rapidpm, $rapidpm_sources, $ext_shared,, )
 	PHP_SUBST(RAPIDPM_SHARED_LIBADD)
 

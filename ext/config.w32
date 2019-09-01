@@ -9,7 +9,7 @@ if (PHP_RAPIDPM != "no") {
     ADD_EXTENSION_DEP("rapidpm", "json");
     AC_DEFINE("ZEPHIR_USE_PHP_JSON", 1, "Whether PHP json extension is present at compile time");
   }
-  ADD_SOURCES(configure_module_dirname + "/.", "get_inf.c", "rapidpm");
+  ADD_SOURCES(configure_module_dirname + "/.", "get_inf.c zval_ref.c", "rapidpm");
   ADD_SOURCES(configure_module_dirname + "/pocketmine/math", "axisalignedbb.zep.c facing.zep.c math.zep.c matrix.zep.c raytraceresult.zep.c vector2.zep.c vector3.zep.c vectormath.zep.c voxelraytrace.zep.c", "rapidpm");
 	ADD_SOURCES(configure_module_dirname + "/pocketmine/utils", "binary.zep.c binarydataexception.zep.c binarystream.zep.c", "rapidpm");
   ADD_FLAG("CFLAGS_RAPIDPM", "/D ZEPHIR_RELEASE /Oi /Ot /Oy /Ob2 /Gs /GF /Gy /GL");

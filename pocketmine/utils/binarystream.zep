@@ -363,3 +363,4 @@ class BinaryStream
     }
 
 }
+

@@ -12,6 +12,10 @@ class GetInfOptimizer extends OptimizerAbstract
 {
     public function optimize(array $expression, Call $call, CompilationContext $context)
     {
+        if (isset($expression['parameters'])) {
+            throw new CompilerException("'get_inf' not require parameter", $expression);
+        }
+
         /**
          * Process the expected symbol to be returned
          */

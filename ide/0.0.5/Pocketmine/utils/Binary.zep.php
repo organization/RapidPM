@@ -416,10 +416,10 @@ class Binary
      * @param int    $offset
      *
      * @param string $buffer
-     * @param int $offset
+     * @param mixed $offset
      * @return int
      */
-    public static function readVarInt(string $buffer, int $offset): int {}
+    public static function readVarInt(string $buffer, $offset): int {}
 
     /**
      * Reads a 32-bit variable-length unsigned integer.
@@ -430,10 +430,10 @@ class Binary
      *
      * @throws BinaryDataException if the var-int did not end after 5 bytes or there were not enough bytes
      * @param string $buffer
-     * @param int $offset
+     * @param mixed $offset
      * @return int
      */
-    public static function readUnsignedVarInt($buffer, int $offset): int {}
+    public static function readUnsignedVarInt($buffer, $offset): int {}
 
     /**
      * Writes a 32-bit integer as a zigzag-encoded variable-length integer.
@@ -461,24 +461,24 @@ class Binary
      * @param int    $offset
      *
      * @param string $buffer
-     * @param int $offset
+     * @param mixed $offset
      * @return long
      */
-    public static function readVarLong(string $buffer, int $offset): int {}
+    public static function readVarLong(string $buffer, $offset): int {}
 
     /**
      * Reads a 64-bit unsigned variable-length integer.
      *
-     * @param int    &$offset
+     * @param int    $offset
      *
      * @return int
      *
      * @throws BinaryDataException if the var-int did not end after 10 bytes or there were not enough bytes
      * @param string $buffer
-     * @param int $offset
-     * @return int
+     * @param mixed $offset
+     * @return long
      */
-    public static function readUnsignedVarLong($buffer, int $offset): int {}
+    public static function readUnsignedVarLong($buffer, $offset): int {}
 
     /**
      * Writes a 64-bit integer as a zigzag-encoded variable-length long.
