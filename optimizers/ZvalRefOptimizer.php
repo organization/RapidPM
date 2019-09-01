@@ -6,17 +6,18 @@ use Zephir\CompilationContext;
 use Zephir\CompiledExpression;
 use Zephir\Exception\CompilerException;
 use Zephir\Optimizers\OptimizerAbstract;
+use Zephir\Types;
 
 class ZvalRefOptimizer extends OptimizerAbstract
 {
     public function optimize(array $expression, Call $call, CompilationContext $context)
     {
         $context->headersManager->add('zval_ref');
-        if (count($expression['parameters']) != 2) {
-            throw new CompilerException("'zval_ref' requires two parameter", $expression);
+        if (count($expression['parameters']) != 1) {
+            throw new CompilerException("'zval_ref' requires one parameter", $expression);
         }
 
         $resolvedParams = $call->getReadOnlyResolvedParams($expression['parameters'], $context, $expression);
-        return new CompiledExpression('void', 'ZVAL_REF(' . $resolvedParams[0] . ', ' . $resolvedParams[1] . ')', $expression);
+        return new CompiledExpression(Types::T_VOID, 'zval_ref_make(' . $resolvedParams[0] . ')', $expression);
     }
 }

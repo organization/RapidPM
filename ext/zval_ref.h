@@ -4,6 +4,6 @@
 #include <Zend/zend.h>
 #include <Zend/zend_API.h>
 
-void ZVAL_REF(zval* dst, zval* src);
+void zval_ref_make(zval* dst);
 
 #endif

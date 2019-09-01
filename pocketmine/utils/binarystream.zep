@@ -287,7 +287,10 @@ class BinaryStream
      */
     public function getUnsignedVarInt() -> int
     {
-        return Binary::readUnsignedVarInt(this->buffer, this->offset);
+        var temp = this->offset;
+        zval_ref(temp);
+        var result = Binary::readUnsignedVarInt(this->buffer, temp);
+        return (int) result;
     }
 
     /**
@@ -305,7 +308,10 @@ class BinaryStream
      */
     public function getVarInt() -> int
     {
-        return Binary::readVarInt(this->buffer, this->offset);
+        var temp = this->offset;
+        zval_ref(temp);
+        var result = Binary::readVarInt(this->buffer, temp);
+        return (int) result;
     }
 
     /**
@@ -323,7 +329,10 @@ class BinaryStream
      */
     public function getUnsignedVarLong() -> long
     {
-        return Binary::readUnsignedVarLong(this->buffer, this->offset);
+        var temp = this->offset;
+        zval_ref(temp);
+        var result = Binary::readUnsignedVarLong(this->buffer, temp);
+        return (long) result;
     }
 
     /**
@@ -341,7 +350,10 @@ class BinaryStream
      */
     public function getVarLong() -> long
     {
-        return Binary::readVarLong(this->buffer, this->offset);
+        var temp = this->offset;
+        zval_ref(temp);
+        var result = Binary::readVarLong(this->buffer, temp);
+        return (long) result;
     }
 
     /**

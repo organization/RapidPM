@@ -492,7 +492,7 @@ class Binary
      *
      * @return int
      */
-    public static function readVarInt(string buffer, var offset) -> int
+    public static function readVarInt(string buffer, offset) -> int
     {
         var raw = self::readUnsignedVarInt(buffer, offset);
         int temp = ((((int) raw << 63) >> 63) ^ (int) raw) >> 1;
@@ -509,12 +509,12 @@ class Binary
      *
      * @throws BinaryDataException if the var-int did not end after 5 bytes or there were not enough bytes
      */
-    public static function readUnsignedVarInt(var buffer, var offset) -> int
+    public static function readUnsignedVarInt(var buffer, offset) -> int
     {
         var i = 0;
         var value = 0;
         while i <= 28 {
-            if (!isset str_split((string) buffer)[(int) offset]) {
+            if (!isset str_split((string) buffer)[offset]) {
                 throw new BinaryDataException("No bytes left in buffer");
             }
             var b = ord(substr(buffer, offset, 1));
@@ -574,7 +574,7 @@ class Binary
      *
      * @return long
      */
-    public static function readVarLong(string buffer, var offset) -> long
+    public static function readVarLong(string buffer, offset) -> long
     {
         var raw = self::readUnsignedVarLong(buffer, offset);
         long temp = ((((long) raw << 63) >> 63) ^ (long) raw) >> 1;
@@ -591,7 +591,7 @@ class Binary
      *
      * @throws BinaryDataException if the var-int did not end after 10 bytes or there were not enough bytes
      */
-    public static function readUnsignedVarLong(var buffer, var offset) -> long
+    public static function readUnsignedVarLong(var buffer, offset) -> long
     {
         var i = 0;
         var value = 0;

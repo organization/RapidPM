@@ -22,6 +22,7 @@
 #include "kernel/concat.h"
 #include "kernel/array.h"
 #include "kernel/math.h"
+#include "zval_ref.h"
 
 
 /**
@@ -1323,22 +1324,24 @@ PHP_METHOD(Pocketmine_Utils_BinaryStream, putLLong) {
  */
 PHP_METHOD(Pocketmine_Utils_BinaryStream, getUnsignedVarInt) {
 
-	zval _1, _2;
+	zval temp, result, _1;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zephir_fcall_cache_entry *_0 = NULL;
 	zval *this_ptr = getThis();
 
+	ZVAL_UNDEF(&temp);
+	ZVAL_UNDEF(&result);
 	ZVAL_UNDEF(&_1);
-	ZVAL_UNDEF(&_2);
 
 	ZEPHIR_MM_GROW();
 
+	ZEPHIR_OBS_VAR(&temp);
+	zephir_read_property(&temp, this_ptr, SL("offset"), PH_NOISY_CC);
 	zephir_read_property(&_1, this_ptr, SL("buffer"), PH_NOISY_CC | PH_READONLY);
-	zephir_read_property(&_2, this_ptr, SL("offset"), PH_NOISY_CC | PH_READONLY);
-	ZEPHIR_RETURN_CALL_CE_STATIC(pocketmine_utils_binary_ce, "readunsignedvarint", &_0, 0, &_1, &_2);
+	ZEPHIR_CALL_CE_STATIC(&result, pocketmine_utils_binary_ce, "readunsignedvarint", &_0, 0, &_1, &temp);
 	zephir_check_call_status();
-	RETURN_MM();
+	RETURN_MM_LONG(zephir_get_intval(&result));
 
 }
 
@@ -1382,22 +1385,24 @@ PHP_METHOD(Pocketmine_Utils_BinaryStream, putUnsignedVarInt) {
  */
 PHP_METHOD(Pocketmine_Utils_BinaryStream, getVarInt) {
 
-	zval _1, _2;
+	zval temp, result, _1;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zephir_fcall_cache_entry *_0 = NULL;
 	zval *this_ptr = getThis();
 
+	ZVAL_UNDEF(&temp);
+	ZVAL_UNDEF(&result);
 	ZVAL_UNDEF(&_1);
-	ZVAL_UNDEF(&_2);
 
 	ZEPHIR_MM_GROW();
 
+	ZEPHIR_OBS_VAR(&temp);
+	zephir_read_property(&temp, this_ptr, SL("offset"), PH_NOISY_CC);
 	zephir_read_property(&_1, this_ptr, SL("buffer"), PH_NOISY_CC | PH_READONLY);
-	zephir_read_property(&_2, this_ptr, SL("offset"), PH_NOISY_CC | PH_READONLY);
-	ZEPHIR_RETURN_CALL_CE_STATIC(pocketmine_utils_binary_ce, "readvarint", &_0, 0, &_1, &_2);
+	ZEPHIR_CALL_CE_STATIC(&result, pocketmine_utils_binary_ce, "readvarint", &_0, 0, &_1, &temp);
 	zephir_check_call_status();
-	RETURN_MM();
+	RETURN_MM_LONG(zephir_get_intval(&result));
 
 }
 
@@ -1441,22 +1446,24 @@ PHP_METHOD(Pocketmine_Utils_BinaryStream, putVarInt) {
  */
 PHP_METHOD(Pocketmine_Utils_BinaryStream, getUnsignedVarLong) {
 
-	zval _1, _2;
+	zval temp, result, _1;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zephir_fcall_cache_entry *_0 = NULL;
 	zval *this_ptr = getThis();
 
+	ZVAL_UNDEF(&temp);
+	ZVAL_UNDEF(&result);
 	ZVAL_UNDEF(&_1);
-	ZVAL_UNDEF(&_2);
 
 	ZEPHIR_MM_GROW();
 
+	ZEPHIR_OBS_VAR(&temp);
+	zephir_read_property(&temp, this_ptr, SL("offset"), PH_NOISY_CC);
 	zephir_read_property(&_1, this_ptr, SL("buffer"), PH_NOISY_CC | PH_READONLY);
-	zephir_read_property(&_2, this_ptr, SL("offset"), PH_NOISY_CC | PH_READONLY);
-	ZEPHIR_RETURN_CALL_CE_STATIC(pocketmine_utils_binary_ce, "readunsignedvarlong", &_0, 0, &_1, &_2);
+	ZEPHIR_CALL_CE_STATIC(&result, pocketmine_utils_binary_ce, "readunsignedvarlong", &_0, 0, &_1, &temp);
 	zephir_check_call_status();
-	RETURN_MM();
+	RETURN_MM_LONG(zephir_get_intval(&result));
 
 }
 
@@ -1501,22 +1508,24 @@ PHP_METHOD(Pocketmine_Utils_BinaryStream, putUnsignedVarLong) {
  */
 PHP_METHOD(Pocketmine_Utils_BinaryStream, getVarLong) {
 
-	zval _1, _2;
+	zval temp, result, _1;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zephir_fcall_cache_entry *_0 = NULL;
 	zval *this_ptr = getThis();
 
+	ZVAL_UNDEF(&temp);
+	ZVAL_UNDEF(&result);
 	ZVAL_UNDEF(&_1);
-	ZVAL_UNDEF(&_2);
 
 	ZEPHIR_MM_GROW();
 
+	ZEPHIR_OBS_VAR(&temp);
+	zephir_read_property(&temp, this_ptr, SL("offset"), PH_NOISY_CC);
 	zephir_read_property(&_1, this_ptr, SL("buffer"), PH_NOISY_CC | PH_READONLY);
-	zephir_read_property(&_2, this_ptr, SL("offset"), PH_NOISY_CC | PH_READONLY);
-	ZEPHIR_RETURN_CALL_CE_STATIC(pocketmine_utils_binary_ce, "readvarlong", &_0, 0, &_1, &_2);
+	ZEPHIR_CALL_CE_STATIC(&result, pocketmine_utils_binary_ce, "readvarlong", &_0, 0, &_1, &temp);
 	zephir_check_call_status();
-	RETURN_MM();
+	RETURN_MM_LONG(zephir_get_intval(&result));
 
 }
 

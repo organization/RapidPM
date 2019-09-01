@@ -1489,7 +1489,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readUnsignedVarInt) {
 		zephir_get_strval(&_0$$3, buffer);
 		ZEPHIR_CALL_FUNCTION(&_1$$3, "str_split", &_2, 24, &_0$$3);
 		zephir_check_call_status();
-		if (!(zephir_array_isset_long(&_1$$3, zephir_get_intval(offset)))) {
+		if (!(zephir_array_isset(&_1$$3, offset))) {
 			ZEPHIR_THROW_EXCEPTION_DEBUG_STR(pocketmine_utils_binarydataexception_ce, "No bytes left in buffer", "pocketmine/utils/binary.zep", 518);
 			return;
 		}
