@@ -175,19 +175,19 @@ PHP_METHOD(Pocketmine_Math_Facing, rotate) {
 
 	zephir_read_static_property_ce(&_0, pocketmine_math_facing_ce, SL("clockwise"), PH_NOISY_CC | PH_READONLY);
 	if (!(zephir_array_isset_long(&_0, axis))) {
-		ZEPHIR_THROW_EXCEPTION_DEBUG_STR(spl_ce_InvalidArgumentException, "Invalid axis {axis}", "/root/RapidPM/pocketmine/math/facing.zep", 122);
+		ZEPHIR_THROW_EXCEPTION_DEBUG_STR(spl_ce_InvalidArgumentException, "Invalid axis {axis}", "pocketmine/math/facing.zep", 122);
 		return;
 	}
 	zephir_read_static_property_ce(&_1, pocketmine_math_facing_ce, SL("clockwise"), PH_NOISY_CC | PH_READONLY);
-	zephir_array_fetch_long(&_2, &_1, axis, PH_READONLY, "/root/RapidPM/pocketmine/math/facing.zep", 124 TSRMLS_CC);
+	zephir_array_fetch_long(&_2, &_1, axis, PH_READONLY, "pocketmine/math/facing.zep", 124 TSRMLS_CC);
 	if (!(zephir_array_isset_long(&_2, direction))) {
-		ZEPHIR_THROW_EXCEPTION_DEBUG_STR(spl_ce_InvalidArgumentException, "Cannot rotate direction {direction} around axis {axis}", "/root/RapidPM/pocketmine/math/facing.zep", 125);
+		ZEPHIR_THROW_EXCEPTION_DEBUG_STR(spl_ce_InvalidArgumentException, "Cannot rotate direction {direction} around axis {axis}", "pocketmine/math/facing.zep", 125);
 		return;
 	}
 	zephir_read_static_property_ce(&_3, pocketmine_math_facing_ce, SL("clockwise"), PH_NOISY_CC | PH_READONLY);
-	zephir_array_fetch_long(&_4, &_3, axis, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/facing.zep", 127 TSRMLS_CC);
+	zephir_array_fetch_long(&_4, &_3, axis, PH_NOISY | PH_READONLY, "pocketmine/math/facing.zep", 127 TSRMLS_CC);
 	ZEPHIR_OBS_VAR(&rotated);
-	zephir_array_fetch_long(&rotated, &_4, direction, PH_NOISY, "/root/RapidPM/pocketmine/math/facing.zep", 127 TSRMLS_CC);
+	zephir_array_fetch_long(&rotated, &_4, direction, PH_NOISY, "pocketmine/math/facing.zep", 127 TSRMLS_CC);
 	ZEPHIR_INIT_VAR(&_5);
 	if (clockwise) {
 		ZEPHIR_CPY_WRT(&_5, &rotated);
@@ -345,7 +345,7 @@ PHP_METHOD(Pocketmine_Math_Facing, validate) {
 	ZEPHIR_CALL_FUNCTION(&_2, "in_array", NULL, 3, &_1, &_0, &__$true);
 	zephir_check_call_status();
 	if (!zephir_is_true(&_2)) {
-		ZEPHIR_THROW_EXCEPTION_DEBUG_STR(spl_ce_InvalidArgumentException, "Invalid direction {facing}", "/root/RapidPM/pocketmine/math/facing.zep", 176);
+		ZEPHIR_THROW_EXCEPTION_DEBUG_STR(spl_ce_InvalidArgumentException, "Invalid direction {facing}", "pocketmine/math/facing.zep", 176);
 		return;
 	}
 	ZEPHIR_MM_RESTORE();

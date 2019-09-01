@@ -102,7 +102,7 @@ PHP_METHOD(Pocketmine_Math_Matrix, offsetGet) {
 
 
 	zephir_read_property(&_0, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-	zephir_array_fetch_long(&_1, &_0, zephir_get_intval(offset), PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 35 TSRMLS_CC);
+	zephir_array_fetch_long(&_1, &_0, zephir_get_intval(offset), PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 35 TSRMLS_CC);
 	RETURN_CTORW(&_1);
 
 }
@@ -251,11 +251,11 @@ PHP_METHOD(Pocketmine_Math_Matrix, set) {
 					ZEPHIR_INIT_NVAR(&c);
 					ZVAL_LONG(&c, _7$$3);
 					ZEPHIR_INIT_LNVAR(_9$$4);
-					zephir_array_fetch(&_10$$4, &m, &r, PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 62 TSRMLS_CC);
+					zephir_array_fetch(&_10$$4, &m, &r, PH_READONLY, "pocketmine/math/matrix.zep", 62 TSRMLS_CC);
 					if (zephir_array_isset(&_10$$4, &c)) {
-						zephir_array_fetch(&_11$$4, &m, &r, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 62 TSRMLS_CC);
+						zephir_array_fetch(&_11$$4, &m, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 62 TSRMLS_CC);
 						ZEPHIR_OBS_NVAR(&_9$$4);
-						zephir_array_fetch(&_9$$4, &_11$$4, &c, PH_NOISY, "/root/RapidPM/pocketmine/math/matrix.zep", 62 TSRMLS_CC);
+						zephir_array_fetch(&_9$$4, &_11$$4, &c, PH_NOISY, "pocketmine/math/matrix.zep", 62 TSRMLS_CC);
 					} else {
 						ZEPHIR_INIT_NVAR(&_9$$4);
 						ZVAL_LONG(&_9$$4, 0);
@@ -343,8 +343,8 @@ PHP_METHOD(Pocketmine_Math_Matrix, getElement) {
 		RETURN_BOOL(0);
 	}
 	zephir_read_property(&_5, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-	zephir_array_fetch_long(&_6, &_5, zephir_get_intval(row), PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 81 TSRMLS_CC);
-	zephir_array_fetch_long(&_7, &_6, zephir_get_intval(column), PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 81 TSRMLS_CC);
+	zephir_array_fetch_long(&_6, &_5, zephir_get_intval(row), PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 81 TSRMLS_CC);
+	zephir_array_fetch_long(&_7, &_6, zephir_get_intval(column), PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 81 TSRMLS_CC);
 	RETURN_CTORW(&_7);
 
 }
@@ -448,8 +448,8 @@ PHP_METHOD(Pocketmine_Math_Matrix, add) {
 					ZEPHIR_INIT_NVAR(&c);
 					ZVAL_LONG(&c, _13$$4);
 					zephir_read_property(&_15$$5, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-					zephir_array_fetch(&_16$$5, &_15$$5, &r, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 100 TSRMLS_CC);
-					zephir_array_fetch(&_17$$5, &_16$$5, &c, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 100 TSRMLS_CC);
+					zephir_array_fetch(&_16$$5, &_15$$5, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 100 TSRMLS_CC);
+					zephir_array_fetch(&_17$$5, &_16$$5, &c, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 100 TSRMLS_CC);
 					ZEPHIR_CALL_METHOD(&_18$$5, matrix, "getelement", &_19, 0, &r, &c);
 					zephir_check_call_status();
 					ZEPHIR_INIT_LNVAR(_20$$5);
@@ -544,8 +544,8 @@ PHP_METHOD(Pocketmine_Math_Matrix, subtract) {
 					ZEPHIR_INIT_NVAR(&c);
 					ZVAL_LONG(&c, _11$$4);
 					zephir_read_property(&_13$$5, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-					zephir_array_fetch(&_14$$5, &_13$$5, &r, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 117 TSRMLS_CC);
-					zephir_array_fetch(&_15$$5, &_14$$5, &c, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 117 TSRMLS_CC);
+					zephir_array_fetch(&_14$$5, &_13$$5, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 117 TSRMLS_CC);
+					zephir_array_fetch(&_15$$5, &_14$$5, &c, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 117 TSRMLS_CC);
 					ZEPHIR_CALL_METHOD(&_16$$5, matrix, "getelement", &_17, 0, &r, &c);
 					zephir_check_call_status();
 					ZEPHIR_INIT_LNVAR(_18$$5);
@@ -622,8 +622,8 @@ PHP_METHOD(Pocketmine_Math_Matrix, multiplyScalar) {
 					ZEPHIR_INIT_NVAR(&c);
 					ZVAL_LONG(&c, _6$$3);
 					zephir_read_property(&_8$$4, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-					zephir_array_fetch(&_9$$4, &_8$$4, &r, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 131 TSRMLS_CC);
-					zephir_array_fetch(&_10$$4, &_9$$4, &c, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 131 TSRMLS_CC);
+					zephir_array_fetch(&_9$$4, &_8$$4, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 131 TSRMLS_CC);
+					zephir_array_fetch(&_10$$4, &_9$$4, &c, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 131 TSRMLS_CC);
 					ZEPHIR_INIT_LNVAR(_11$$4);
 					mul_function(&_11$$4, &_10$$4, number TSRMLS_CC);
 					ZEPHIR_CALL_METHOD(NULL, &result, "setelement", &_12, 0, &r, &c, &_11$$4);
@@ -698,8 +698,8 @@ PHP_METHOD(Pocketmine_Math_Matrix, divideScalar) {
 					ZEPHIR_INIT_NVAR(&c);
 					ZVAL_LONG(&c, _6$$3);
 					zephir_read_property(&_8$$4, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-					zephir_array_fetch(&_9$$4, &_8$$4, &r, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 145 TSRMLS_CC);
-					zephir_array_fetch(&_10$$4, &_9$$4, &c, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 145 TSRMLS_CC);
+					zephir_array_fetch(&_9$$4, &_8$$4, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 145 TSRMLS_CC);
+					zephir_array_fetch(&_10$$4, &_9$$4, &c, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 145 TSRMLS_CC);
 					ZEPHIR_INIT_LNVAR(_11$$4);
 					div_function(&_11$$4, &_10$$4, number TSRMLS_CC);
 					ZEPHIR_CALL_METHOD(NULL, &result, "setelement", &_12, 0, &r, &c, &_11$$4);
@@ -773,8 +773,8 @@ PHP_METHOD(Pocketmine_Math_Matrix, transpose) {
 					ZEPHIR_INIT_NVAR(&c);
 					ZVAL_LONG(&c, _8$$3);
 					zephir_read_property(&_10$$4, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-					zephir_array_fetch(&_11$$4, &_10$$4, &r, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 159 TSRMLS_CC);
-					zephir_array_fetch(&_12$$4, &_11$$4, &c, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 159 TSRMLS_CC);
+					zephir_array_fetch(&_11$$4, &_10$$4, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 159 TSRMLS_CC);
+					zephir_array_fetch(&_12$$4, &_11$$4, &c, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 159 TSRMLS_CC);
 					ZEPHIR_CALL_METHOD(NULL, &result, "setelement", &_13, 6, &c, &r, &_12$$4);
 					zephir_check_call_status();
 				}
@@ -880,8 +880,8 @@ PHP_METHOD(Pocketmine_Math_Matrix, product) {
 							ZEPHIR_INIT_NVAR(&k);
 							ZVAL_LONG(&k, _12$$5);
 							zephir_read_property(&_14$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-							zephir_array_fetch(&_15$$6, &_14$$6, &i, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 183 TSRMLS_CC);
-							zephir_array_fetch(&_16$$6, &_15$$6, &k, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 183 TSRMLS_CC);
+							zephir_array_fetch(&_15$$6, &_14$$6, &i, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 183 TSRMLS_CC);
+							zephir_array_fetch(&_16$$6, &_15$$6, &k, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 183 TSRMLS_CC);
 							ZEPHIR_CALL_METHOD(&_17$$6, matrix, "getelement", &_18, 0, &k, &j);
 							zephir_check_call_status();
 							ZEPHIR_INIT_LNVAR(_19$$6);
@@ -976,19 +976,19 @@ PHP_METHOD(Pocketmine_Math_Matrix, determinant) {
 		}
 		if (ZEPHIR_IS_LONG(&_1, 2)) {
 			zephir_read_property(&_2$$5, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_3$$5, &_2$$5, 0, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 201 TSRMLS_CC);
-			zephir_array_fetch_long(&_4$$5, &_3$$5, 0, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 201 TSRMLS_CC);
+			zephir_array_fetch_long(&_3$$5, &_2$$5, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201 TSRMLS_CC);
+			zephir_array_fetch_long(&_4$$5, &_3$$5, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201 TSRMLS_CC);
 			zephir_read_property(&_5$$5, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_6$$5, &_5$$5, 1, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 201 TSRMLS_CC);
-			zephir_array_fetch_long(&_7$$5, &_6$$5, 1, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 201 TSRMLS_CC);
+			zephir_array_fetch_long(&_6$$5, &_5$$5, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201 TSRMLS_CC);
+			zephir_array_fetch_long(&_7$$5, &_6$$5, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201 TSRMLS_CC);
 			ZEPHIR_SINIT_VAR(_8$$5);
 			mul_function(&_8$$5, &_4$$5, &_7$$5 TSRMLS_CC);
 			zephir_read_property(&_9$$5, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_4$$5, &_9$$5, 0, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 201 TSRMLS_CC);
-			zephir_array_fetch_long(&_7$$5, &_4$$5, 1, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 201 TSRMLS_CC);
+			zephir_array_fetch_long(&_4$$5, &_9$$5, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201 TSRMLS_CC);
+			zephir_array_fetch_long(&_7$$5, &_4$$5, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201 TSRMLS_CC);
 			zephir_read_property(&_10$$5, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_11$$5, &_10$$5, 1, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 201 TSRMLS_CC);
-			zephir_array_fetch_long(&_12$$5, &_11$$5, 0, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 201 TSRMLS_CC);
+			zephir_array_fetch_long(&_11$$5, &_10$$5, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201 TSRMLS_CC);
+			zephir_array_fetch_long(&_12$$5, &_11$$5, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201 TSRMLS_CC);
 			ZEPHIR_SINIT_VAR(_13$$5);
 			mul_function(&_13$$5, &_7$$5, &_12$$5 TSRMLS_CC);
 			zephir_sub_function(return_value, &_8$$5, &_13$$5);
@@ -996,89 +996,89 @@ PHP_METHOD(Pocketmine_Math_Matrix, determinant) {
 		}
 		if (ZEPHIR_IS_LONG(&_1, 3)) {
 			zephir_read_property(&_14$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_15$$6, &_14$$6, 0, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
-			zephir_array_fetch_long(&_16$$6, &_15$$6, 0, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_15$$6, &_14$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_16$$6, &_15$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
 			zephir_read_property(&_17$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_18$$6, &_17$$6, 1, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
-			zephir_array_fetch_long(&_19$$6, &_18$$6, 1, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_18$$6, &_17$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_19$$6, &_18$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
 			ZEPHIR_SINIT_VAR(_20$$6);
 			mul_function(&_20$$6, &_16$$6, &_19$$6 TSRMLS_CC);
 			zephir_read_property(&_21$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_16$$6, &_21$$6, 2, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
-			zephir_array_fetch_long(&_19$$6, &_16$$6, 2, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_16$$6, &_21$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_19$$6, &_16$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
 			ZEPHIR_SINIT_VAR(_22$$6);
 			mul_function(&_22$$6, &_20$$6, &_19$$6 TSRMLS_CC);
 			zephir_read_property(&_23$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_19$$6, &_23$$6, 0, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
-			zephir_array_fetch_long(&_24$$6, &_19$$6, 1, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_19$$6, &_23$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_24$$6, &_19$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
 			zephir_read_property(&_25$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_26$$6, &_25$$6, 1, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
-			zephir_array_fetch_long(&_27$$6, &_26$$6, 2, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_26$$6, &_25$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_27$$6, &_26$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
 			ZEPHIR_SINIT_NVAR(_20$$6);
 			mul_function(&_20$$6, &_24$$6, &_27$$6 TSRMLS_CC);
 			zephir_read_property(&_28$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_24$$6, &_28$$6, 2, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
-			zephir_array_fetch_long(&_27$$6, &_24$$6, 0, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_24$$6, &_28$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_27$$6, &_24$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
 			ZEPHIR_SINIT_VAR(_29$$6);
 			mul_function(&_29$$6, &_20$$6, &_27$$6 TSRMLS_CC);
 			ZEPHIR_SINIT_NVAR(_20$$6);
 			zephir_add_function(&_20$$6, &_22$$6, &_29$$6);
 			zephir_read_property(&_30$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_27$$6, &_30$$6, 0, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
-			zephir_array_fetch_long(&_31$$6, &_27$$6, 2, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_27$$6, &_30$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_31$$6, &_27$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
 			zephir_read_property(&_32$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_33$$6, &_32$$6, 1, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
-			zephir_array_fetch_long(&_34$$6, &_33$$6, 0, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_33$$6, &_32$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_34$$6, &_33$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
 			ZEPHIR_SINIT_NVAR(_22$$6);
 			mul_function(&_22$$6, &_31$$6, &_34$$6 TSRMLS_CC);
 			zephir_read_property(&_35$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_31$$6, &_35$$6, 2, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
-			zephir_array_fetch_long(&_34$$6, &_31$$6, 1, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_31$$6, &_35$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_34$$6, &_31$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
 			ZEPHIR_SINIT_NVAR(_29$$6);
 			mul_function(&_29$$6, &_22$$6, &_34$$6 TSRMLS_CC);
 			ZEPHIR_SINIT_NVAR(_22$$6);
 			zephir_add_function(&_22$$6, &_20$$6, &_29$$6);
 			zephir_read_property(&_36$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_34$$6, &_36$$6, 2, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
-			zephir_array_fetch_long(&_37$$6, &_34$$6, 0, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_34$$6, &_36$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_37$$6, &_34$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
 			zephir_read_property(&_38$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_39$$6, &_38$$6, 1, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
-			zephir_array_fetch_long(&_40$$6, &_39$$6, 1, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_39$$6, &_38$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_40$$6, &_39$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
 			ZEPHIR_SINIT_NVAR(_20$$6);
 			mul_function(&_20$$6, &_37$$6, &_40$$6 TSRMLS_CC);
 			zephir_read_property(&_41$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_37$$6, &_41$$6, 0, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
-			zephir_array_fetch_long(&_40$$6, &_37$$6, 2, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_37$$6, &_41$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_40$$6, &_37$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
 			ZEPHIR_SINIT_NVAR(_29$$6);
 			mul_function(&_29$$6, &_20$$6, &_40$$6 TSRMLS_CC);
 			ZEPHIR_SINIT_NVAR(_20$$6);
 			zephir_sub_function(&_20$$6, &_22$$6, &_29$$6);
 			zephir_read_property(&_42$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_40$$6, &_42$$6, 2, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
-			zephir_array_fetch_long(&_43$$6, &_40$$6, 1, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_40$$6, &_42$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_43$$6, &_40$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
 			zephir_read_property(&_44$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_45$$6, &_44$$6, 1, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
-			zephir_array_fetch_long(&_46$$6, &_45$$6, 2, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_45$$6, &_44$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_46$$6, &_45$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
 			ZEPHIR_SINIT_NVAR(_22$$6);
 			mul_function(&_22$$6, &_43$$6, &_46$$6 TSRMLS_CC);
 			zephir_read_property(&_47$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_43$$6, &_47$$6, 0, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
-			zephir_array_fetch_long(&_46$$6, &_43$$6, 0, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_43$$6, &_47$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_46$$6, &_43$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
 			ZEPHIR_SINIT_NVAR(_29$$6);
 			mul_function(&_29$$6, &_22$$6, &_46$$6 TSRMLS_CC);
 			ZEPHIR_SINIT_NVAR(_22$$6);
 			zephir_sub_function(&_22$$6, &_20$$6, &_29$$6);
 			zephir_read_property(&_48$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_46$$6, &_48$$6, 2, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
-			zephir_array_fetch_long(&_49$$6, &_46$$6, 2, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_46$$6, &_48$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_49$$6, &_46$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
 			zephir_read_property(&_50$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_51$$6, &_50$$6, 1, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
-			zephir_array_fetch_long(&_52$$6, &_51$$6, 0, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_51$$6, &_50$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_52$$6, &_51$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
 			ZEPHIR_SINIT_NVAR(_20$$6);
 			mul_function(&_20$$6, &_49$$6, &_52$$6 TSRMLS_CC);
 			zephir_read_property(&_53$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_49$$6, &_53$$6, 0, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
-			zephir_array_fetch_long(&_52$$6, &_49$$6, 1, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_49$$6, &_53$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
+			zephir_array_fetch_long(&_52$$6, &_49$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203 TSRMLS_CC);
 			ZEPHIR_SINIT_NVAR(_29$$6);
 			mul_function(&_29$$6, &_20$$6, &_52$$6 TSRMLS_CC);
 			zephir_sub_function(return_value, &_22$$6, &_29$$6);
@@ -1131,7 +1131,7 @@ PHP_METHOD(Pocketmine_Math_Matrix, __toString) {
 			ZVAL_LONG(&r, _2);
 			ZEPHIR_INIT_NVAR(&_4$$3);
 			zephir_read_property(&_5$$3, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch(&_6$$3, &_5$$3, &r, PH_NOISY | PH_READONLY, "/root/RapidPM/pocketmine/math/matrix.zep", 214 TSRMLS_CC);
+			zephir_array_fetch(&_6$$3, &_5$$3, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 214 TSRMLS_CC);
 			zephir_fast_join_str(&_4$$3, SL(","), &_6$$3 TSRMLS_CC);
 			ZEPHIR_INIT_LNVAR(_7$$3);
 			ZEPHIR_CONCAT_VS(&_7$$3, &_4$$3, ";");
