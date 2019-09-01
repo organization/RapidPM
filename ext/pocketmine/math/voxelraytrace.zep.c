@@ -19,6 +19,7 @@
 #include "kernel/exception.h"
 #include "ext/spl/spl_exceptions.h"
 #include "kernel/array.h"
+#include "get_inf.h"
 #include "kernel/math.h"
 
 

@@ -287,7 +287,8 @@ class BinaryStream
      */
     public function getUnsignedVarInt() -> int
     {
-        return Binary::readUnsignedVarInt(this->buffer, this->offset);
+        var ref = this->offset;
+        return Binary::readUnsignedVarInt(this->buffer, ref);
     }
 
     /**
@@ -305,7 +306,8 @@ class BinaryStream
      */
     public function getVarInt() -> int
     {
-        return Binary::readVarInt(this->buffer, this->offset);
+        var ref = this->offset;
+        return Binary::readVarInt(this->buffer, ref);
     }
 
     /**
@@ -321,16 +323,17 @@ class BinaryStream
      * Reads a 64-bit variable-length integer from the buffer and returns it.
      * @return int
      */
-    public function getUnsignedVarLong() -> int
+    public function getUnsignedVarLong() -> long
     {
-        return Binary::readUnsignedVarLong(this->buffer, this->offset);
+        var ref = this->offset;
+        return Binary::readUnsignedVarLong(this->buffer, ref);
     }
 
     /**
      * Writes a 64-bit variable-length integer to the end of the buffer.
      * @param int $v
      */
-    public function putUnsignedVarLong(int v)
+    public function putUnsignedVarLong(long v)
     {
         let this->buffer = this->buffer . Binary::writeUnsignedVarLong(v);
     }
@@ -339,16 +342,17 @@ class BinaryStream
      * Reads a 64-bit zigzag-encoded variable-length integer from the buffer and returns it.
      * @return int
      */
-    public function getVarLong() -> int
+    public function getVarLong() -> long
     {
-        return Binary::readVarLong(this->buffer, this->offset);
+        var ref = this->offset;
+        return Binary::readVarLong(this->buffer, ref);
     }
 
     /**
      * Writes a 64-bit zigzag-encoded variable-length integer to the end of the buffer.
      * @param int
      */
-    public function putVarLong(int v)
+    public function putVarLong(long v)
     {
         let this->buffer = this->buffer . Binary::writeVarLong(v);
     }

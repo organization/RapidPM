@@ -6,6 +6,8 @@
 #include "php_ext.h"
 #include "ext/standard/basic_functions.h"
 
-inline double get_inf() {
+#include "get_inf.h"
+
+double get_inf() {
     return php_get_inf();
 }

@@ -21,6 +21,7 @@ class GetInfOptimizer extends OptimizerAbstract
         if (!$symbolVariable->isDouble()) {
             throw new CompilerException("Values only can be stored in double variables", $expression);
         }
+        $context->headersManager->add('get_inf');
 
         return new CompiledExpression('double', 'get_inf()', $expression);
     }

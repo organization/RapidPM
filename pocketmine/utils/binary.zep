@@ -492,7 +492,7 @@ class Binary
      *
      * @return int
      */
-    public static function readVarInt(string buffer, int offset) -> int
+    public static function readVarInt(string buffer, var offset) -> int
     {
         var raw = self::readUnsignedVarInt(buffer, offset);
         int temp = ((((int) raw << 63) >> 63) ^ (int) raw) >> 1;
@@ -509,16 +509,16 @@ class Binary
      *
      * @throws BinaryDataException if the var-int did not end after 5 bytes or there were not enough bytes
      */
-    public static function readUnsignedVarInt(var buffer, int offset) -> int
+    public static function readUnsignedVarInt(var buffer, var offset) -> int
     {
         var i = 0;
         var value = 0;
         while i <= 28 {
             let i += 7;
-            if (!isset(buffer[offset])) {
+            if (!isset(buffer[(int) offset])) {
                 throw new BinaryDataException("No bytes left in buffer");
             }
-            var b = ord(buffer[offset]);
+            var b = ord(buffer[(int) offset]);
             let offset++;
             let value = value | ((b & 0x7f) << i);
             if ((b & 0x80) === 0) {
@@ -574,7 +574,7 @@ class Binary
      *
      * @return long
      */
-    public static function readVarLong(string buffer, int offset) -> long
+    public static function readVarLong(string buffer, var offset) -> long
     {
         var raw = self::readUnsignedVarLong(buffer, offset);
         long temp = ((((long) raw << 63) >> 63) ^ (long) raw) >> 1;
@@ -585,22 +585,22 @@ class Binary
      * Reads a 64-bit unsigned variable-length integer.
      *
      * @param string $buffer
-     * @param int    &$offset
+     * @param int    $offset
      *
      * @return int
      *
      * @throws BinaryDataException if the var-int did not end after 10 bytes or there were not enough bytes
      */
-    public static function readUnsignedVarLong(var buffer, int offset) -> int
+    public static function readUnsignedVarLong(var buffer, var offset) -> long
     {
         var i = 0;
         var value = 0;
         while i <= 63 {
             let i += 7;
-            if (!isset(buffer[offset])) {
+            if (!isset(buffer[(int) offset])) {
                 throw new BinaryDataException("No bytes left in buffer");
             }
-            var b = ord(buffer[offset]);
+            var b = ord(buffer[(int) offset]);
             let offset++;
             let value = value | ((b & 0x7f) << i);
             if ((b & 0x80) === 0) {

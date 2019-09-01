@@ -591,11 +591,7 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binary_readvari
 #else
 	ZEND_ARG_INFO(0, buffer)
 #endif
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, offset, IS_LONG, 0)
-#else
 	ZEND_ARG_INFO(0, offset)
-#endif
 ZEND_END_ARG_INFO()
 
 #if PHP_VERSION_ID >= 70200
@@ -604,11 +600,7 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binary_readunsi
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binary_readunsignedvarint, 0, 2, IS_LONG, NULL, 0)
 #endif
 	ZEND_ARG_INFO(0, buffer)
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, offset, IS_LONG, 0)
-#else
 	ZEND_ARG_INFO(0, offset)
-#endif
 ZEND_END_ARG_INFO()
 
 #if PHP_VERSION_ID >= 70200
@@ -645,11 +637,7 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binary_readvarl
 #else
 	ZEND_ARG_INFO(0, buffer)
 #endif
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, offset, IS_LONG, 0)
-#else
 	ZEND_ARG_INFO(0, offset)
-#endif
 ZEND_END_ARG_INFO()
 
 #if PHP_VERSION_ID >= 70200
@@ -658,11 +646,7 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binary_readunsi
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binary_readunsignedvarlong, 0, 2, IS_LONG, NULL, 0)
 #endif
 	ZEND_ARG_INFO(0, buffer)
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, offset, IS_LONG, 0)
-#else
 	ZEND_ARG_INFO(0, offset)
-#endif
 ZEND_END_ARG_INFO()
 
 #if PHP_VERSION_ID >= 70200
