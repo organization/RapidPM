@@ -107,12 +107,12 @@ class BinaryStream
 
     public function getBool() -> bool
     {
-        return this->get(1) !== "\x00";
+        return this->get(1) !== '\0';
     }
 
     public function putBool(bool v)
     {
-        let this->buffer = this->buffer . (v ? "\x01" : "\x00");
+        let this->buffer = this->buffer . (v ? '\1' : '\0');
     }
 
     public function getByte() -> int
@@ -159,7 +159,7 @@ class BinaryStream
 
     public function getTriad() -> long
     {
-        return unpack("N", "\x00" . this->get(3))[1];
+        return unpack("N", chr('\0') . this->get(3))[1];
     }
 
     public function putTriad(long v)
@@ -169,7 +169,7 @@ class BinaryStream
 
     public function getLTriad() -> long
     {
-        return unpack("V", this->get(3) . "\x00")[1];
+        return unpack("V", this->get(3) . chr('\0'))[1];
     }
 
     public function putLTriad(long v)
@@ -287,8 +287,7 @@ class BinaryStream
      */
     public function getUnsignedVarInt() -> int
     {
-        var ref = this->offset;
-        return Binary::readUnsignedVarInt(this->buffer, ref);
+        return Binary::readUnsignedVarInt(this->buffer, this->offset);
     }
 
     /**
@@ -306,8 +305,7 @@ class BinaryStream
      */
     public function getVarInt() -> int
     {
-        var ref = this->offset;
-        return Binary::readVarInt(this->buffer, ref);
+        return Binary::readVarInt(this->buffer, this->offset);
     }
 
     /**
@@ -325,8 +323,7 @@ class BinaryStream
      */
     public function getUnsignedVarLong() -> long
     {
-        var ref = this->offset;
-        return Binary::readUnsignedVarLong(this->buffer, ref);
+        return Binary::readUnsignedVarLong(this->buffer, this->offset);
     }
 
     /**
@@ -344,8 +341,7 @@ class BinaryStream
      */
     public function getVarLong() -> long
     {
-        var ref = this->offset;
-        return Binary::readVarLong(this->buffer, ref);
+        return Binary::readVarLong(this->buffer, this->offset);
     }
 
     /**

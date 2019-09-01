@@ -83,7 +83,7 @@ class Binary
      */
     public static function readBool(string b) -> bool
     {
-        return b !== "\x00";
+        return b !== chr('\0');
     }
 
     /**
@@ -95,7 +95,7 @@ class Binary
      */
     public static function writeBool(bool b) -> string
     {
-        return b ? "\x01" : "\x00";
+        return b ? '\1' : '\0';
     }
 
     /**
@@ -215,7 +215,7 @@ class Binary
      */
     public static function readTriad(string str) -> string
     {
-        return unpack("N", "\x00" . str)[1];
+        return unpack("N", chr('\0') . str)[1];
     }
 
     /**
@@ -239,7 +239,7 @@ class Binary
      */
     public static function readLTriad(string str) -> long
     {
-        return unpack("V", str . "\x00")[1];
+        return unpack("V", str . chr('\0'))[1];
     }
 
     /**
