@@ -27,5 +27,5 @@ void zval_ref_make(zval* dst) {
     ZVAL_ZVAL(dst, src, 1, 0);
     GC_SET_REFCOUNT(dst, refcount_gc);
     */
-    ZVAL_NEW_REF(&dst, &dst));
+    ZVAL_NEW_REF(dst, dst);
 }

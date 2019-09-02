@@ -17,6 +17,6 @@
 
 void zval_ref_read(zval* dst) {
     if(Z_ISREF_P(dst)) {
-        ZVAL_NEW_REF(&dst, Z_REFVAL_P(dst)));
+        ZVAL_NEW_REF(dst, Z_REFVAL_P(dst));
     }
 }
