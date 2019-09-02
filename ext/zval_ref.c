@@ -15,12 +15,11 @@
 
 #include "macro.h"
 
-void zval_ref_make(zval* dst)
-{
+void zval_ref_make(zval* dst) {
     /*
     int refcount_gc = GC_REFCOUNT(dst);
 
-    GC_SET_REFCOUNT(dst, 1);
+    ZVAL_MAKE_REF_EX(dst, 1);
 
     zval_ptr_dtor(&dst);
     MAKE_STD_ZVAL(dst);

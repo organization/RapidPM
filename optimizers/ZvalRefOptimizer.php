@@ -18,6 +18,6 @@ class ZvalRefOptimizer extends OptimizerAbstract
         }
 
         $resolvedParams = $call->getReadOnlyResolvedParams($expression['parameters'], $context, $expression);
-        return new CompiledExpression(Types::T_NULL, 'zval_ref_make(' . $resolvedParams[0] . ')', $expression);
+        return new CompiledExpression(Types::T_INT /* void trick */, 'zval_ref_make(' . $resolvedParams[0] . ')', $expression);
     }
 }
