@@ -648,7 +648,7 @@ void zep_Pocketmine_Math_Vector2_getX_zephir_internal_call(int ht, zval *return_
 
 	
 
-	RETURN_MEMBER(getThis(), "x");
+	RETURN_MEMBER(this_ptr, "x");
 
 }
 
@@ -658,7 +658,7 @@ void zep_Pocketmine_Math_Vector2_getY_zephir_internal_call(int ht, zval *return_
 
 	
 
-	RETURN_MEMBER(getThis(), "y");
+	RETURN_MEMBER(this_ptr, "y");
 
 }
 

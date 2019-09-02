@@ -1148,7 +1148,7 @@ void zep_Pocketmine_Math_Matrix_getRows_zephir_internal_call(int ht, zval *retur
 
 	
 
-	RETURN_MEMBER(getThis(), "rows");
+	RETURN_MEMBER(this_ptr, "rows");
 
 }
 
@@ -1156,7 +1156,7 @@ void zep_Pocketmine_Math_Matrix_getColumns_zephir_internal_call(int ht, zval *re
 
 	
 
-	RETURN_MEMBER(getThis(), "columns");
+	RETURN_MEMBER(this_ptr, "columns");
 
 }
 

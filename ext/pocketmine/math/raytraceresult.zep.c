@@ -129,7 +129,7 @@ void zep_Pocketmine_Math_RayTraceResult_getBoundingBox_zephir_internal_call(int 
 
 	
 
-	RETURN_MEMBER(getThis(), "bb");
+	RETURN_MEMBER(this_ptr, "bb");
 
 }
 
@@ -140,7 +140,7 @@ void zep_Pocketmine_Math_RayTraceResult_getHitFace_zephir_internal_call(int ht, 
 
 	
 
-	RETURN_MEMBER(getThis(), "hitFace");
+	RETURN_MEMBER(this_ptr, "hitFace");
 
 }
 
@@ -151,7 +151,7 @@ void zep_Pocketmine_Math_RayTraceResult_getHitVector_zephir_internal_call(int ht
 
 	
 
-	RETURN_MEMBER(getThis(), "hitVector");
+	RETURN_MEMBER(this_ptr, "hitVector");
 
 }
 

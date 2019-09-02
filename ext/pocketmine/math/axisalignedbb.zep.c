@@ -1863,7 +1863,7 @@ void zep_Pocketmine_Math_AxisAlignedBB_setBounds_zephir_internal_call(int ht, zv
 	ZEPHIR_INIT_ZVAL_NREF(_0);
 	ZVAL_DOUBLE(&_0, maxZ);
 	zephir_update_property_zval(this_ptr, SL("maxZ"), &_0);
-	RETURN_THISW();
+	RETURN_THISW_INTERNAL();
 
 }
 
@@ -2050,7 +2050,7 @@ void zep_Pocketmine_Math_AxisAlignedBB_expand_zephir_internal_call(int ht, zval 
 	ZEPHIR_INIT_ZVAL_NREF(_0);
 	ZVAL_DOUBLE(&_0, z);
 	zephir_update_property_zval(this_ptr, SL("maxZ"), &_0);
-	RETURN_THISW();
+	RETURN_THISW_INTERNAL();
 
 }
 
@@ -2145,7 +2145,7 @@ void zep_Pocketmine_Math_AxisAlignedBB_offset_zephir_internal_call(int ht, zval 
 	ZEPHIR_INIT_ZVAL_NREF(_0);
 	ZVAL_DOUBLE(&_0, z);
 	zephir_update_property_zval(this_ptr, SL("maxZ"), &_0);
-	RETURN_THISW();
+	RETURN_THISW_INTERNAL();
 
 }
 
@@ -2240,7 +2240,7 @@ void zep_Pocketmine_Math_AxisAlignedBB_contract_zephir_internal_call(int ht, zva
 	ZEPHIR_INIT_ZVAL_NREF(_0);
 	ZVAL_DOUBLE(&_0, z);
 	zephir_update_property_zval(this_ptr, SL("maxZ"), &_0);
-	RETURN_THISW();
+	RETURN_THISW_INTERNAL();
 
 }
 
@@ -2348,7 +2348,7 @@ void zep_Pocketmine_Math_AxisAlignedBB_extend_zephir_internal_call(int ht, zval 
 		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "Invalid face {face}", "pocketmine/math/axisalignedbb.zep", 232);
 		return;
 	}
-	RETURN_THISW();
+	RETURN_THISW_INTERNAL();
 
 }
 
@@ -2520,7 +2520,7 @@ void zep_Pocketmine_Math_AxisAlignedBB_stretch_zephir_internal_call(int ht, zval
 		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "Invalid axis {axis}", "pocketmine/math/axisalignedbb.zep", 303);
 		return;
 	}
-	RETURN_THISW();
+	RETURN_THISW_INTERNAL();
 
 }
 

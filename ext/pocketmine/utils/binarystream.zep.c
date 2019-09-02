@@ -1608,7 +1608,7 @@ void zep_Pocketmine_Utils_BinaryStream_getOffset_zephir_internal_call(int ht, zv
 
 	
 
-	RETURN_MEMBER(getThis(), "offset");
+	RETURN_MEMBER(this_ptr, "offset");
 
 }
 
@@ -1618,7 +1618,7 @@ void zep_Pocketmine_Utils_BinaryStream_getBuffer_zephir_internal_call(int ht, zv
 
 	
 
-	RETURN_MEMBER(getThis(), "buffer");
+	RETURN_MEMBER(this_ptr, "buffer");
 
 }
 

@@ -144,7 +144,10 @@ extern zend_string* i_self;
 
 /** Return zval with always ctor, without restoring the memory stack */
 #define RETURN_THISW() \
-	RETURN_ZVAL(getThis(), 1, 0);
+        RETURN_ZVAL(getThis(), 1, 0);
+
+#define RETURN_THISW_INTERNAL() \
+        RETURN_ZVAL(this_ptr, 1, 0);
 
 /** Return this pointer */
 #define RETURN_THIS() { \

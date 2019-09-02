@@ -1934,7 +1934,7 @@ void zep_Pocketmine_Math_Vector3_getX_zephir_internal_call(int ht, zval *return_
 
 	
 
-	RETURN_MEMBER(getThis(), "x");
+	RETURN_MEMBER(this_ptr, "x");
 
 }
 
@@ -1944,7 +1944,7 @@ void zep_Pocketmine_Math_Vector3_getY_zephir_internal_call(int ht, zval *return_
 
 	
 
-	RETURN_MEMBER(getThis(), "y");
+	RETURN_MEMBER(this_ptr, "y");
 
 }
 
@@ -1954,7 +1954,7 @@ void zep_Pocketmine_Math_Vector3_getZ_zephir_internal_call(int ht, zval *return_
 
 	
 
-	RETURN_MEMBER(getThis(), "z");
+	RETURN_MEMBER(this_ptr, "z");
 
 }
 
@@ -2698,7 +2698,7 @@ void zep_Pocketmine_Math_Vector3_setComponents_zephir_internal_call(int ht, zval
 	zephir_update_property_zval(this_ptr, SL("x"), x);
 	zephir_update_property_zval(this_ptr, SL("y"), y);
 	zephir_update_property_zval(this_ptr, SL("z"), z);
-	RETURN_THISW();
+	RETURN_THISW_INTERNAL();
 
 }
 
