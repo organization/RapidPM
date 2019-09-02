@@ -20,6 +20,7 @@
 #include "kernel/concat.h"
 #include "kernel/string.h"
 #include "kernel/math.h"
+#include "zval_ref_read.h"
 #include "kernel/exception.h"
 #include "ext/spl/spl_exceptions.h"
 
@@ -1440,6 +1441,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readVarInt) {
 	zephir_get_strval(&buffer, buffer_param);
 
 
+	zval_ref_read(offset);
 	ZEPHIR_CALL_SELF(&raw, "readunsignedvarint", NULL, 0, &buffer, offset);
 	zephir_check_call_status();
 	temp = (((((((zephir_get_intval(&raw) << 63)) >> 63)) ^ zephir_get_intval(&raw))) >> 1);
@@ -1480,6 +1482,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readUnsignedVarInt) {
 	ZEPHIR_SEPARATE_PARAM(offset);
 
 
+	zval_ref_read(offset);
 	i = 0;
 	value = 0;
 	while (1) {
@@ -1489,8 +1492,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, readUnsignedVarInt) {
 		zephir_get_strval(&_0$$3, buffer);
 		ZEPHIR_CALL_FUNCTION(&_1$$3, "str_split", &_2, 24, &_0$$3);
 		zephir_check_call_status();
-		if (!(zephir_array_isset(&_1$$3, offset))) {
-			ZEPHIR_THROW_EXCEPTION_DEBUG_STR(pocketmine_utils_binarydataexception_ce, "No bytes left in buffer", "pocketmine/utils/binary.zep", 518);
+		if (!(zephir_array_isset_long(&_1$$3, zephir_get_intval(offset)))) {
+			ZEPHIR_THROW_EXCEPTION_DEBUG_STR(pocketmine_utils_binarydataexception_ce, "No bytes left in buffer", "pocketmine/utils/binary.zep", 520);
 			return;
 		}
 		ZVAL_LONG(&_3$$3, 1);
@@ -1506,7 +1509,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readUnsignedVarInt) {
 		}
 		i += 7;
 	}
-	ZEPHIR_THROW_EXCEPTION_DEBUG_STR(pocketmine_utils_binarydataexception_ce, "VarInt did not terminate after 5 bytes!", "pocketmine/utils/binary.zep", 528);
+	ZEPHIR_THROW_EXCEPTION_DEBUG_STR(pocketmine_utils_binarydataexception_ce, "VarInt did not terminate after 5 bytes!", "pocketmine/utils/binary.zep", 530);
 	return;
 
 }
@@ -1607,7 +1610,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeUnsignedVarInt) {
 			value = ((value >> (7 & zephir_get_intval(&_8$$3))) >> 6);
 		}
 	}
-	ZEPHIR_THROW_EXCEPTION_DEBUG_STR(spl_ce_InvalidArgumentException, "Value too large to be encoded as a VarInt", "pocketmine/utils/binary.zep", 566);
+	ZEPHIR_THROW_EXCEPTION_DEBUG_STR(spl_ce_InvalidArgumentException, "Value too large to be encoded as a VarInt", "pocketmine/utils/binary.zep", 568);
 	return;
 
 }
@@ -1639,6 +1642,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readVarLong) {
 	zephir_get_strval(&buffer, buffer_param);
 
 
+	zval_ref_read(offset);
 	ZEPHIR_CALL_SELF(&raw, "readunsignedvarlong", NULL, 0, &buffer, offset);
 	zephir_check_call_status();
 	temp = (((((((zephir_get_intval(&raw) << 63)) >> 63)) ^ zephir_get_intval(&raw))) >> 1);
@@ -1679,6 +1683,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readUnsignedVarLong) {
 	ZEPHIR_SEPARATE_PARAM(offset);
 
 
+	zval_ref_read(offset);
 	i = 0;
 	value = 0;
 	while (1) {
@@ -1689,7 +1694,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readUnsignedVarLong) {
 		ZEPHIR_CALL_FUNCTION(&_1$$3, "str_split", &_2, 24, &_0$$3);
 		zephir_check_call_status();
 		if (!(zephir_array_isset_long(&_1$$3, zephir_get_intval(offset)))) {
-			ZEPHIR_THROW_EXCEPTION_DEBUG_STR(pocketmine_utils_binarydataexception_ce, "No bytes left in buffer", "pocketmine/utils/binary.zep", 600);
+			ZEPHIR_THROW_EXCEPTION_DEBUG_STR(pocketmine_utils_binarydataexception_ce, "No bytes left in buffer", "pocketmine/utils/binary.zep", 604);
 			return;
 		}
 		ZVAL_LONG(&_3$$3, 1);
@@ -1705,7 +1710,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readUnsignedVarLong) {
 		}
 		i += 7;
 	}
-	ZEPHIR_THROW_EXCEPTION_DEBUG_STR(pocketmine_utils_binarydataexception_ce, "VarLong did not terminate after 10 bytes!", "pocketmine/utils/binary.zep", 610);
+	ZEPHIR_THROW_EXCEPTION_DEBUG_STR(pocketmine_utils_binarydataexception_ce, "VarLong did not terminate after 10 bytes!", "pocketmine/utils/binary.zep", 614);
 	return;
 
 }
@@ -1804,7 +1809,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeUnsignedVarLong) {
 			value = ((value >> (7 & zephir_get_intval(&_8$$3))) >> 6);
 		}
 	}
-	ZEPHIR_THROW_EXCEPTION_DEBUG_STR(spl_ce_InvalidArgumentException, "Value too large to be encoded as a VarLong", "pocketmine/utils/binary.zep", 647);
+	ZEPHIR_THROW_EXCEPTION_DEBUG_STR(spl_ce_InvalidArgumentException, "Value too large to be encoded as a VarLong", "pocketmine/utils/binary.zep", 651);
 	return;
 
 }

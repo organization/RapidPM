@@ -494,6 +494,7 @@ class Binary
      */
     public static function readVarInt(string buffer, offset) -> int
     {
+        zval_ref_read(offset);
         var raw = self::readUnsignedVarInt(buffer, offset);
         int temp = ((((int) raw << 63) >> 63) ^ (int) raw) >> 1;
         return temp ^ (int) raw & 1 << 63;
@@ -511,10 +512,11 @@ class Binary
      */
     public static function readUnsignedVarInt(var buffer, offset) -> int
     {
+        zval_ref_read(offset);
         var i = 0;
         var value = 0;
         while i <= 28 {
-            if (!isset str_split((string) buffer)[offset]) {
+            if (!isset str_split((string) buffer)[(int) offset]) {
                 throw new BinaryDataException("No bytes left in buffer");
             }
             var b = ord(substr(buffer, offset, 1));
@@ -576,6 +578,7 @@ class Binary
      */
     public static function readVarLong(string buffer, offset) -> long
     {
+        zval_ref_read(offset);
         var raw = self::readUnsignedVarLong(buffer, offset);
         long temp = ((((long) raw << 63) >> 63) ^ (long) raw) >> 1;
         return temp ^ (long) raw & 1 << 63;
@@ -593,6 +596,7 @@ class Binary
      */
     public static function readUnsignedVarLong(var buffer, offset) -> long
     {
+        zval_ref_read(offset);
         var i = 0;
         var value = 0;
         while i <= 63 {

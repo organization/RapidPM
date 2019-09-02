@@ -10,7 +10,8 @@
     ],
     "extra-sources": [
         "get_inf.c",
-        "zval_ref.c"
+        "zval_ref.c",
+        "zval_ref_read.c"
     ],
     "optimizations" : {
         "call-gatherer-pass" : true,
