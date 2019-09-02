@@ -66,7 +66,7 @@ ZEPHIR_INIT_CLASS(Pocketmine_Math_RayTraceResult) {
 PHP_METHOD(Pocketmine_Math_RayTraceResult, __construct) {
 
 	zend_long hitFace;
-	zval *bb, bb_sub, *hitFace_param = NULL, *hitVector, hitVector_sub, _0;
+	zval *bb = NULL, bb_sub, *hitFace_param = NULL, *hitVector = NULL, hitVector_sub, _0;
 	zval *this_ptr = getThis();
 
 	ZVAL_UNDEF(&bb_sub);
@@ -117,6 +117,39 @@ PHP_METHOD(Pocketmine_Math_RayTraceResult, getHitVector) {
 
 	zval *this_ptr = getThis();
 
+
+	RETURN_MEMBER(getThis(), "hitVector");
+
+}
+
+/**
+ * @return AxisAlignedBB
+ */
+void zep_Pocketmine_Math_RayTraceResult_getBoundingBox_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used) {
+
+	
+
+	RETURN_MEMBER(getThis(), "bb");
+
+}
+
+/**
+ * @return int
+ */
+void zep_Pocketmine_Math_RayTraceResult_getHitFace_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used) {
+
+	
+
+	RETURN_MEMBER(getThis(), "hitFace");
+
+}
+
+/**
+ * @return Vector3
+ */
+void zep_Pocketmine_Math_RayTraceResult_getHitVector_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used) {
+
+	
 
 	RETURN_MEMBER(getThis(), "hitVector");
 

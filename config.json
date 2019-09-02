@@ -14,8 +14,9 @@
         "zval_ref_read.c"
     ],
     "optimizations" : {
+        "internal-call-transformation":true,
         "call-gatherer-pass" : true,
-        "check-invalid-reads" : false,
+        "check-invalid-reads" : true,
         "constant-folding" : true,
         "local-context-pass" : true,
         "static-constant-class-folding" : true,

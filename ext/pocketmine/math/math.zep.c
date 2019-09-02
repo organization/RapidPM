@@ -54,7 +54,7 @@ PHP_METHOD(Pocketmine_Math_Math, floorFloat) {
 
 	zend_long i = 0;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
-	zval *n, n_sub, _0;
+	zval *n = NULL, n_sub, _0;
 	zval *this_ptr = getThis();
 
 	ZVAL_UNDEF(&n_sub);
@@ -85,7 +85,7 @@ PHP_METHOD(Pocketmine_Math_Math, ceilFloat) {
 
 	zend_long i = 0;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
-	zval *n, n_sub, _0;
+	zval *n = NULL, n_sub, _0;
 	zval *this_ptr = getThis();
 
 	ZVAL_UNDEF(&n_sub);
@@ -133,6 +133,131 @@ PHP_METHOD(Pocketmine_Math_Math, solveQuadratic) {
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 3, 0, &a_param, &b_param, &c_param);
+
+	a = zephir_get_doubleval(a_param);
+	b = zephir_get_doubleval(b_param);
+	c = zephir_get_doubleval(c_param);
+
+
+	ZEPHIR_INIT_VAR(&_0);
+	ZVAL_DOUBLE(&_1, b);
+	ZVAL_LONG(&_2, 2);
+	zephir_pow_function(&_0, &_1, &_2);
+	ZEPHIR_INIT_VAR(&discriminant);
+	ZVAL_DOUBLE(&discriminant, (zephir_get_numberval(&_0) - (double) ((double) (4 * a) * c)));
+	if (ZEPHIR_GT_LONG(&discriminant, 0)) {
+		ZEPHIR_INIT_VAR(&sqrtDiscriminant);
+		ZVAL_DOUBLE(&sqrtDiscriminant, zephir_sqrt(&discriminant TSRMLS_CC));
+		zephir_create_array(return_value, 2, 0 TSRMLS_CC);
+		ZEPHIR_INIT_VAR(&_3$$3);
+		ZVAL_DOUBLE(&_3$$3, zephir_safe_div_double_long(((-b + zephir_get_numberval(&sqrtDiscriminant))), ((double) (2 * a)) TSRMLS_CC));
+		zephir_array_fast_append(return_value, &_3$$3);
+		ZEPHIR_INIT_NVAR(&_3$$3);
+		ZVAL_DOUBLE(&_3$$3, zephir_safe_div_double_long(((-b - zephir_get_numberval(&sqrtDiscriminant))), ((double) (2 * a)) TSRMLS_CC));
+		zephir_array_fast_append(return_value, &_3$$3);
+		RETURN_MM();
+	} else if (ZEPHIR_IS_LONG(&discriminant, 0)) {
+		zephir_create_array(return_value, 1, 0 TSRMLS_CC);
+		ZEPHIR_INIT_VAR(&_4$$4);
+		ZVAL_DOUBLE(&_4$$4, zephir_safe_div_double_long(-b, ((double) (2 * a)) TSRMLS_CC));
+		zephir_array_fast_append(return_value, &_4$$4);
+		RETURN_MM();
+	} else {
+		array_init(return_value);
+		RETURN_MM();
+	}
+
+}
+
+/**
+ * @param float $n
+ *
+ * @return int
+ */
+void zep_Pocketmine_Math_Math_floorFloat_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *n_ext ) {
+
+	zend_long i = 0;
+	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
+	zval *n = NULL, n_sub, _0;
+		ZVAL_UNDEF(&n_sub);
+	ZVAL_UNDEF(&_0);
+
+	ZEPHIR_MM_GROW();
+	n = n_ext;
+
+
+
+
+	i = zephir_get_intval(n);
+	ZEPHIR_INIT_VAR(&_0);
+	if (ZEPHIR_GE_LONG(n, i)) {
+		ZVAL_LONG(&_0, i);
+	} else {
+		ZVAL_LONG(&_0, (i - 1));
+	}
+	RETURN_CCTOR(&_0);
+
+}
+
+/**
+ * @param float $n
+ *
+ * @return int
+ */
+void zep_Pocketmine_Math_Math_ceilFloat_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *n_ext ) {
+
+	zend_long i = 0;
+	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
+	zval *n = NULL, n_sub, _0;
+		ZVAL_UNDEF(&n_sub);
+	ZVAL_UNDEF(&_0);
+
+	ZEPHIR_MM_GROW();
+	n = n_ext;
+
+
+
+
+	i = zephir_get_intval(n);
+	ZEPHIR_INIT_VAR(&_0);
+	if (ZEPHIR_LE_LONG(n, i)) {
+		ZVAL_LONG(&_0, i);
+	} else {
+		ZVAL_LONG(&_0, (i + 1));
+	}
+	RETURN_CCTOR(&_0);
+
+}
+
+/**
+ * Solves a quadratic equation with the given coefficients and returns an array of up to two solutions.
+ *
+ * @param float $a
+ * @param float $b
+ * @param float $c
+ *
+ * @return float[]
+ */
+void zep_Pocketmine_Math_Math_solveQuadratic_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *a_param_ext, zval *b_param_ext, zval *c_param_ext) {
+
+	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
+	zval *a_param = NULL, *b_param = NULL, *c_param = NULL, sqrtDiscriminant, discriminant, _0, _1, _2, _3$$3, _4$$4;
+	double a, b, c;
+		ZVAL_UNDEF(&sqrtDiscriminant);
+	ZVAL_UNDEF(&discriminant);
+	ZVAL_UNDEF(&_0);
+	ZVAL_UNDEF(&_1);
+	ZVAL_UNDEF(&_2);
+	ZVAL_UNDEF(&_3$$3);
+	ZVAL_UNDEF(&_4$$4);
+
+	ZEPHIR_MM_GROW();
+	a_param = a_param_ext;
+
+	b_param = b_param_ext;
+
+	c_param = c_param_ext;
+
 
 	a = zephir_get_doubleval(a_param);
 	b = zephir_get_doubleval(b_param);

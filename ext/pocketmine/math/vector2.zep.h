@@ -23,6 +23,21 @@ PHP_METHOD(Pocketmine_Math_Vector2, lengthSquared);
 PHP_METHOD(Pocketmine_Math_Vector2, normalize);
 PHP_METHOD(Pocketmine_Math_Vector2, dot);
 PHP_METHOD(Pocketmine_Math_Vector2, __toString);
+void zep_Pocketmine_Math_Vector2_getX_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Vector2_getY_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Vector2_getFloorX_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Vector2_getFloorY_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Vector2_ceil_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Vector2_floor_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Vector2_round_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Vector2_abs_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Vector2_multiply_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *number_param_ext);
+void zep_Pocketmine_Math_Vector2_divide_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *number_param_ext);
+void zep_Pocketmine_Math_Vector2_length_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Vector2_lengthSquared_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Vector2_normalize_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Vector2_dot_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *v_ext );
+void zep_Pocketmine_Math_Vector2___toString_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used);
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector2___construct, 0, 0, 0)
 #if PHP_VERSION_ID >= 70200
@@ -181,6 +196,26 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_vector2_dot, 0, 
 #else
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_vector2_dot, 0, 1, IS_DOUBLE, NULL, 0)
 #endif
+	ZEND_ARG_OBJ_INFO(0, v, Pocketmine\\Math\\Vector2, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector2_multiply_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, number, IS_DOUBLE, 0)
+#else
+	ZEND_ARG_INFO(0, number)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector2_divide_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, number, IS_DOUBLE, 0)
+#else
+	ZEND_ARG_INFO(0, number)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector2_dot_zephir_internal_call, 0, 0, 1)
 	ZEND_ARG_OBJ_INFO(0, v, Pocketmine\\Math\\Vector2, 0)
 ZEND_END_ARG_INFO()
 

@@ -54,6 +54,57 @@ PHP_METHOD(Pocketmine_Utils_Binary, readVarLong);
 PHP_METHOD(Pocketmine_Utils_Binary, readUnsignedVarLong);
 PHP_METHOD(Pocketmine_Utils_Binary, writeVarLong);
 PHP_METHOD(Pocketmine_Utils_Binary, writeUnsignedVarLong);
+void zep_Pocketmine_Utils_Binary_signByte_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
+void zep_Pocketmine_Utils_Binary_unsignByte_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
+void zep_Pocketmine_Utils_Binary_signShort_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
+void zep_Pocketmine_Utils_Binary_unsignShort_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
+void zep_Pocketmine_Utils_Binary_signInt_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
+void zep_Pocketmine_Utils_Binary_unsignInt_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
+void zep_Pocketmine_Utils_Binary_flipShortEndianness_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
+void zep_Pocketmine_Utils_Binary_flipIntEndianness_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
+void zep_Pocketmine_Utils_Binary_flipLongEndianness_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
+void zep_Pocketmine_Utils_Binary_readBool_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *b_param_ext);
+void zep_Pocketmine_Utils_Binary_writeBool_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *b_param_ext);
+void zep_Pocketmine_Utils_Binary_readByte_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *c_param_ext);
+void zep_Pocketmine_Utils_Binary_readSignedByte_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *c_param_ext);
+void zep_Pocketmine_Utils_Binary_writeByte_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *c_param_ext);
+void zep_Pocketmine_Utils_Binary_readShort_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext);
+void zep_Pocketmine_Utils_Binary_readSignedShort_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext);
+void zep_Pocketmine_Utils_Binary_writeShort_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
+void zep_Pocketmine_Utils_Binary_readLShort_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext);
+void zep_Pocketmine_Utils_Binary_readSignedLShort_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext);
+void zep_Pocketmine_Utils_Binary_writeLShort_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
+void zep_Pocketmine_Utils_Binary_readTriad_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext);
+void zep_Pocketmine_Utils_Binary_writeTriad_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
+void zep_Pocketmine_Utils_Binary_readLTriad_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext);
+void zep_Pocketmine_Utils_Binary_writeLTriad_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
+void zep_Pocketmine_Utils_Binary_readInt_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext);
+void zep_Pocketmine_Utils_Binary_writeInt_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
+void zep_Pocketmine_Utils_Binary_readLInt_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext);
+void zep_Pocketmine_Utils_Binary_writeLInt_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
+void zep_Pocketmine_Utils_Binary_readFloat_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext);
+void zep_Pocketmine_Utils_Binary_readRoundedFloat_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext, zval *accuracy_param_ext);
+void zep_Pocketmine_Utils_Binary_writeFloat_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
+void zep_Pocketmine_Utils_Binary_readLFloat_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext);
+void zep_Pocketmine_Utils_Binary_readRoundedLFloat_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext, zval *accuracy_param_ext);
+void zep_Pocketmine_Utils_Binary_writeLFloat_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
+void zep_Pocketmine_Utils_Binary_printFloat_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
+void zep_Pocketmine_Utils_Binary_readDouble_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext);
+void zep_Pocketmine_Utils_Binary_writeDouble_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
+void zep_Pocketmine_Utils_Binary_readLDouble_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext);
+void zep_Pocketmine_Utils_Binary_writeLDouble_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
+void zep_Pocketmine_Utils_Binary_readLong_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext);
+void zep_Pocketmine_Utils_Binary_writeLong_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
+void zep_Pocketmine_Utils_Binary_readLLong_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext);
+void zep_Pocketmine_Utils_Binary_writeLLong_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
+void zep_Pocketmine_Utils_Binary_readVarInt_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *buffer_param_ext, zval *offset_ext );
+void zep_Pocketmine_Utils_Binary_readUnsignedVarInt_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *buffer_ext , zval *offset_ext );
+void zep_Pocketmine_Utils_Binary_writeVarInt_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *v_param_ext);
+void zep_Pocketmine_Utils_Binary_writeUnsignedVarInt_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
+void zep_Pocketmine_Utils_Binary_readVarLong_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *buffer_param_ext, zval *offset_ext );
+void zep_Pocketmine_Utils_Binary_readUnsignedVarLong_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *buffer_ext , zval *offset_ext );
+void zep_Pocketmine_Utils_Binary_writeVarLong_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *v_param_ext);
+void zep_Pocketmine_Utils_Binary_writeUnsignedVarLong_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
 
 #if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binary_signbyte, 0, 1, IS_LONG, 0)
@@ -666,6 +717,420 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binary_writeuns
 #else
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binary_writeunsignedvarlong, 0, 1, IS_STRING, NULL, 0)
 #endif
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, value, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, value)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_signbyte_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, value, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, value)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_unsignbyte_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, value, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, value)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_signshort_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, value, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, value)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_unsignshort_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, value, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, value)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_signint_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, value, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, value)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_unsignint_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, value, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, value)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_flipshortendianness_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, value, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, value)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_flipintendianness_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, value, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, value)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_fliplongendianness_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, value, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, value)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_readbool_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, b, IS_STRING, 0)
+#else
+	ZEND_ARG_INFO(0, b)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_writebool_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, b, _IS_BOOL, 0)
+#else
+	ZEND_ARG_INFO(0, b)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_readbyte_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, c, IS_STRING, 0)
+#else
+	ZEND_ARG_INFO(0, c)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_readsignedbyte_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, c, IS_STRING, 0)
+#else
+	ZEND_ARG_INFO(0, c)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_writebyte_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, c, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, c)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_readshort_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, str, IS_STRING, 0)
+#else
+	ZEND_ARG_INFO(0, str)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_readsignedshort_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, str, IS_STRING, 0)
+#else
+	ZEND_ARG_INFO(0, str)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_writeshort_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, value, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, value)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_readlshort_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, str, IS_STRING, 0)
+#else
+	ZEND_ARG_INFO(0, str)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_readsignedlshort_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, str, IS_STRING, 0)
+#else
+	ZEND_ARG_INFO(0, str)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_writelshort_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, value, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, value)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_readtriad_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, str, IS_STRING, 0)
+#else
+	ZEND_ARG_INFO(0, str)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_writetriad_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, value, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, value)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_readltriad_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, str, IS_STRING, 0)
+#else
+	ZEND_ARG_INFO(0, str)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_writeltriad_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, value, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, value)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_readint_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, str, IS_STRING, 0)
+#else
+	ZEND_ARG_INFO(0, str)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_writeint_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, value, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, value)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_readlint_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, str, IS_STRING, 0)
+#else
+	ZEND_ARG_INFO(0, str)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_writelint_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, value, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, value)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_readfloat_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, str, IS_STRING, 0)
+#else
+	ZEND_ARG_INFO(0, str)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_readroundedfloat_zephir_internal_call, 0, 0, 2)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, str, IS_STRING, 0)
+#else
+	ZEND_ARG_INFO(0, str)
+#endif
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, accuracy, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, accuracy)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_writefloat_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, value, IS_DOUBLE, 0)
+#else
+	ZEND_ARG_INFO(0, value)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_readlfloat_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, str, IS_STRING, 0)
+#else
+	ZEND_ARG_INFO(0, str)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_readroundedlfloat_zephir_internal_call, 0, 0, 2)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, str, IS_STRING, 0)
+#else
+	ZEND_ARG_INFO(0, str)
+#endif
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, accuracy, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, accuracy)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_writelfloat_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, value, IS_DOUBLE, 0)
+#else
+	ZEND_ARG_INFO(0, value)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_printfloat_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, value, IS_DOUBLE, 0)
+#else
+	ZEND_ARG_INFO(0, value)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_readdouble_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, str, IS_STRING, 0)
+#else
+	ZEND_ARG_INFO(0, str)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_writedouble_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, value, IS_DOUBLE, 0)
+#else
+	ZEND_ARG_INFO(0, value)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_readldouble_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, str, IS_STRING, 0)
+#else
+	ZEND_ARG_INFO(0, str)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_writeldouble_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, value, IS_DOUBLE, 0)
+#else
+	ZEND_ARG_INFO(0, value)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_readlong_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, str, IS_STRING, 0)
+#else
+	ZEND_ARG_INFO(0, str)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_writelong_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, value, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, value)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_readllong_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, str, IS_STRING, 0)
+#else
+	ZEND_ARG_INFO(0, str)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_writellong_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, value, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, value)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_readvarint_zephir_internal_call, 0, 0, 2)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, buffer, IS_STRING, 0)
+#else
+	ZEND_ARG_INFO(0, buffer)
+#endif
+	ZEND_ARG_INFO(0, offset)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_readunsignedvarint_zephir_internal_call, 0, 0, 2)
+	ZEND_ARG_INFO(0, buffer)
+	ZEND_ARG_INFO(0, offset)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_writevarint_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, v)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_writeunsignedvarint_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, value, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, value)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_readvarlong_zephir_internal_call, 0, 0, 2)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, buffer, IS_STRING, 0)
+#else
+	ZEND_ARG_INFO(0, buffer)
+#endif
+	ZEND_ARG_INFO(0, offset)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_readunsignedvarlong_zephir_internal_call, 0, 0, 2)
+	ZEND_ARG_INFO(0, buffer)
+	ZEND_ARG_INFO(0, offset)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_writevarlong_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
+#else
+	ZEND_ARG_INFO(0, v)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_writeunsignedvarlong_zephir_internal_call, 0, 0, 1)
 #if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, value, IS_LONG, 0)
 #else

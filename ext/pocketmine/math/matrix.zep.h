@@ -22,6 +22,24 @@ PHP_METHOD(Pocketmine_Math_Matrix, transpose);
 PHP_METHOD(Pocketmine_Math_Matrix, product);
 PHP_METHOD(Pocketmine_Math_Matrix, determinant);
 PHP_METHOD(Pocketmine_Math_Matrix, __toString);
+void zep_Pocketmine_Math_Matrix_getRows_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Matrix_getColumns_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Matrix_offsetExists_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *offset_ext );
+void zep_Pocketmine_Math_Matrix_offsetGet_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *offset_ext );
+void zep_Pocketmine_Math_Matrix_offsetSet_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *offset_ext , zval *value_ext );
+void zep_Pocketmine_Math_Matrix_offsetUnset_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *offset_ext );
+void zep_Pocketmine_Math_Matrix_set_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *m_param_ext);
+void zep_Pocketmine_Math_Matrix_setElement_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *row_ext , zval *column_ext , zval *value_ext );
+void zep_Pocketmine_Math_Matrix_getElement_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *row_ext , zval *column_ext );
+void zep_Pocketmine_Math_Matrix_isSquare_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Matrix_add_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *matrix_ext );
+void zep_Pocketmine_Math_Matrix_subtract_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *matrix_ext );
+void zep_Pocketmine_Math_Matrix_multiplyScalar_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *number_ext );
+void zep_Pocketmine_Math_Matrix_divideScalar_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *number_ext );
+void zep_Pocketmine_Math_Matrix_transpose_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Matrix_product_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *matrix_ext );
+void zep_Pocketmine_Math_Matrix_determinant_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Matrix___toString_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used);
 zend_object *zephir_init_properties_Pocketmine_Math_Matrix(zend_class_entry *class_type TSRMLS_DC);
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_offsetexists, 0, 0, 1)
@@ -79,6 +97,58 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_dividescalar, 0, 0, 1)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_product, 0, 0, 1)
+	ZEND_ARG_OBJ_INFO(0, matrix, Pocketmine\\Math\\Matrix, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_offsetexists_zephir_internal_call, 0, 0, 1)
+	ZEND_ARG_INFO(0, offset)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_offsetget_zephir_internal_call, 0, 0, 1)
+	ZEND_ARG_INFO(0, offset)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_offsetset_zephir_internal_call, 0, 0, 2)
+	ZEND_ARG_INFO(0, offset)
+	ZEND_ARG_INFO(0, value)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_offsetunset_zephir_internal_call, 0, 0, 1)
+	ZEND_ARG_INFO(0, offset)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_set_zephir_internal_call, 0, 0, 1)
+	ZEND_ARG_ARRAY_INFO(0, m, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_setelement_zephir_internal_call, 0, 0, 3)
+	ZEND_ARG_INFO(0, row)
+	ZEND_ARG_INFO(0, column)
+	ZEND_ARG_INFO(0, value)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_getelement_zephir_internal_call, 0, 0, 2)
+	ZEND_ARG_INFO(0, row)
+	ZEND_ARG_INFO(0, column)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_add_zephir_internal_call, 0, 0, 1)
+	ZEND_ARG_OBJ_INFO(0, matrix, Pocketmine\\Math\\Matrix, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_subtract_zephir_internal_call, 0, 0, 1)
+	ZEND_ARG_OBJ_INFO(0, matrix, Pocketmine\\Math\\Matrix, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_multiplyscalar_zephir_internal_call, 0, 0, 1)
+	ZEND_ARG_INFO(0, number)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_dividescalar_zephir_internal_call, 0, 0, 1)
+	ZEND_ARG_INFO(0, number)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_product_zephir_internal_call, 0, 0, 1)
 	ZEND_ARG_OBJ_INFO(0, matrix, Pocketmine\\Math\\Matrix, 0)
 ZEND_END_ARG_INFO()
 
