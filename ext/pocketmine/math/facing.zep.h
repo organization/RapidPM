@@ -11,14 +11,6 @@ PHP_METHOD(Pocketmine_Math_Facing, rotateY);
 PHP_METHOD(Pocketmine_Math_Facing, rotateZ);
 PHP_METHOD(Pocketmine_Math_Facing, rotateX);
 PHP_METHOD(Pocketmine_Math_Facing, validate);
-void zep_Pocketmine_Math_Facing_axis_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *direction_param_ext);
-void zep_Pocketmine_Math_Facing_isPositive_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *direction_param_ext);
-void zep_Pocketmine_Math_Facing_opposite_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *direction_param_ext);
-void zep_Pocketmine_Math_Facing_rotate_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *direction_param_ext, zval *axis_param_ext, zval *clockwise_param_ext);
-void zep_Pocketmine_Math_Facing_rotateY_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *direction_param_ext, zval *clockwise_param_ext);
-void zep_Pocketmine_Math_Facing_rotateZ_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *direction_param_ext, zval *clockwise_param_ext);
-void zep_Pocketmine_Math_Facing_rotateX_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *direction_param_ext, zval *clockwise_param_ext);
-void zep_Pocketmine_Math_Facing_validate_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *facing_param_ext);
 void zephir_init_static_properties_Pocketmine_Math_Facing(TSRMLS_D);
 
 #if PHP_VERSION_ID >= 70200
@@ -141,95 +133,6 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_facing_validate, 0, 0, 1)
 #define arginfo_pocketmine_math_facing_validate NULL
 #endif
 
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, facing, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, facing)
-#endif
-ZEND_END_ARG_INFO()
-
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_facing_axis_zephir_internal_call, 0, 0, 1)
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, direction, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, direction)
-#endif
-ZEND_END_ARG_INFO()
-
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_facing_ispositive_zephir_internal_call, 0, 0, 1)
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, direction, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, direction)
-#endif
-ZEND_END_ARG_INFO()
-
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_facing_opposite_zephir_internal_call, 0, 0, 1)
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, direction, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, direction)
-#endif
-ZEND_END_ARG_INFO()
-
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_facing_rotate_zephir_internal_call, 0, 0, 3)
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, direction, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, direction)
-#endif
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, axis, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, axis)
-#endif
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, clockwise, _IS_BOOL, 0)
-#else
-	ZEND_ARG_INFO(0, clockwise)
-#endif
-ZEND_END_ARG_INFO()
-
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_facing_rotatey_zephir_internal_call, 0, 0, 2)
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, direction, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, direction)
-#endif
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, clockwise, _IS_BOOL, 0)
-#else
-	ZEND_ARG_INFO(0, clockwise)
-#endif
-ZEND_END_ARG_INFO()
-
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_facing_rotatez_zephir_internal_call, 0, 0, 2)
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, direction, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, direction)
-#endif
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, clockwise, _IS_BOOL, 0)
-#else
-	ZEND_ARG_INFO(0, clockwise)
-#endif
-ZEND_END_ARG_INFO()
-
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_facing_rotatex_zephir_internal_call, 0, 0, 2)
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, direction, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, direction)
-#endif
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, clockwise, _IS_BOOL, 0)
-#else
-	ZEND_ARG_INFO(0, clockwise)
-#endif
-ZEND_END_ARG_INFO()
-
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_facing_validate_zephir_internal_call, 0, 0, 1)
 #if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, facing, IS_LONG, 0)
 #else

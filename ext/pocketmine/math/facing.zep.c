@@ -192,7 +192,7 @@ PHP_METHOD(Pocketmine_Math_Facing, rotate) {
 	if (clockwise) {
 		ZEPHIR_CPY_WRT(&_5, &rotated);
 	} else {
-		ZEPHIR_STATIC_CALL_INTERNAL_METHOD_P1(&_5, pocketmine_math_facing_ce, zep_Pocketmine_Math_Facing_opposite_zephir_internal_call, &rotated);
+		ZEPHIR_CALL_SELF(&_5, "opposite", NULL, 0, &rotated);
 		zephir_check_call_status();
 	}
 	RETURN_CCTOR(&_5);
@@ -232,7 +232,7 @@ PHP_METHOD(Pocketmine_Math_Facing, rotateY) {
 	} else {
 		ZVAL_BOOL(&_2, 0);
 	}
-	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P3(pocketmine_math_facing_ce, zep_Pocketmine_Math_Facing_rotate_zephir_internal_call, &_0, &_1, &_2);
+	ZEPHIR_RETURN_CALL_SELF("rotate", NULL, 0, &_0, &_1, &_2);
 	zephir_check_call_status();
 	RETURN_MM();
 
@@ -271,7 +271,7 @@ PHP_METHOD(Pocketmine_Math_Facing, rotateZ) {
 	} else {
 		ZVAL_BOOL(&_2, 0);
 	}
-	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P3(pocketmine_math_facing_ce, zep_Pocketmine_Math_Facing_rotate_zephir_internal_call, &_0, &_1, &_2);
+	ZEPHIR_RETURN_CALL_SELF("rotate", NULL, 0, &_0, &_1, &_2);
 	zephir_check_call_status();
 	RETURN_MM();
 
@@ -310,7 +310,7 @@ PHP_METHOD(Pocketmine_Math_Facing, rotateX) {
 	} else {
 		ZVAL_BOOL(&_2, 0);
 	}
-	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P3(pocketmine_math_facing_ce, zep_Pocketmine_Math_Facing_rotate_zephir_internal_call, &_0, &_1, &_2);
+	ZEPHIR_RETURN_CALL_SELF("rotate", NULL, 0, &_0, &_1, &_2);
 	zephir_check_call_status();
 	RETURN_MM();
 
@@ -336,290 +336,6 @@ PHP_METHOD(Pocketmine_Math_Facing, validate) {
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &facing_param);
-
-	facing = zephir_get_intval(facing_param);
-
-
-	zephir_read_static_property_ce(&_0, pocketmine_math_facing_ce, SL("all"), PH_NOISY_CC | PH_READONLY);
-	ZVAL_LONG(&_1, facing);
-	ZEPHIR_CALL_FUNCTION(&_2, "in_array", NULL, 3, &_1, &_0, &__$true);
-	zephir_check_call_status();
-	if (!zephir_is_true(&_2)) {
-		ZEPHIR_THROW_EXCEPTION_DEBUG_STR(spl_ce_InvalidArgumentException, "Invalid direction {facing}", "pocketmine/math/facing.zep", 176);
-		return;
-	}
-	ZEPHIR_MM_RESTORE();
-
-}
-
-/**
- * Returns the axis of the given direction.
- *
- * @param int $direction
- *
- * @return int
- */
-void zep_Pocketmine_Math_Facing_axis_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *direction_param_ext) {
-
-	zval *direction_param = NULL;
-	zend_long direction;
-
-	direction_param = direction_param_ext;
-
-
-	direction = zephir_get_intval(direction_param);
-
-
-	RETURN_LONG((direction >> 1));
-
-}
-
-/**
- * Returns whether the direction is facing the positive of its axis.
- *
- * @param int $direction
- *
- * @return bool
- */
-void zep_Pocketmine_Math_Facing_isPositive_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *direction_param_ext) {
-
-	zval *direction_param = NULL;
-	zend_long direction;
-
-	direction_param = direction_param_ext;
-
-
-	direction = zephir_get_intval(direction_param);
-
-
-	RETURN_BOOL(((direction & 1)) == 1);
-
-}
-
-/**
- * Returns the opposite Facing of the specified one.
- *
- * @param int $direction 0-5 one of the self::* constants
- *
- * @return int
- */
-void zep_Pocketmine_Math_Facing_opposite_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *direction_param_ext) {
-
-	zval *direction_param = NULL;
-	zend_long direction;
-
-	direction_param = direction_param_ext;
-
-
-	direction = zephir_get_intval(direction_param);
-
-
-	RETURN_LONG((direction ^ 1));
-
-}
-
-/**
- * Rotates the given direction around the axis.
- *
- * @param int  $direction
- * @param int  $axis
- * @param bool $clockwise
- *
- * @return int
- * @throws \InvalidArgumentException if not possible to rotate $direction around $axis
- */
-void zep_Pocketmine_Math_Facing_rotate_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *direction_param_ext, zval *axis_param_ext, zval *clockwise_param_ext) {
-
-	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
-	zend_bool clockwise;
-	zval *direction_param = NULL, *axis_param = NULL, *clockwise_param = NULL, _0, _1, _2, rotated, _3, _4, _5;
-	zend_long direction, axis, ZEPHIR_LAST_CALL_STATUS;
-		ZVAL_UNDEF(&_0);
-	ZVAL_UNDEF(&_1);
-	ZVAL_UNDEF(&_2);
-	ZVAL_UNDEF(&rotated);
-	ZVAL_UNDEF(&_3);
-	ZVAL_UNDEF(&_4);
-	ZVAL_UNDEF(&_5);
-
-	ZEPHIR_MM_GROW();
-	direction_param = direction_param_ext;
-
-	axis_param = axis_param_ext;
-
-	clockwise_param = clockwise_param_ext;
-
-
-	direction = zephir_get_intval(direction_param);
-	axis = zephir_get_intval(axis_param);
-	clockwise = zephir_get_boolval(clockwise_param);
-
-
-	zephir_read_static_property_ce(&_0, pocketmine_math_facing_ce, SL("clockwise"), PH_NOISY_CC | PH_READONLY);
-	if (!(zephir_array_isset_long(&_0, axis))) {
-		ZEPHIR_THROW_EXCEPTION_DEBUG_STR(spl_ce_InvalidArgumentException, "Invalid axis {axis}", "pocketmine/math/facing.zep", 122);
-		return;
-	}
-	zephir_read_static_property_ce(&_1, pocketmine_math_facing_ce, SL("clockwise"), PH_NOISY_CC | PH_READONLY);
-	zephir_array_fetch_long(&_2, &_1, axis, PH_READONLY, "pocketmine/math/facing.zep", 124 TSRMLS_CC);
-	if (!(zephir_array_isset_long(&_2, direction))) {
-		ZEPHIR_THROW_EXCEPTION_DEBUG_STR(spl_ce_InvalidArgumentException, "Cannot rotate direction {direction} around axis {axis}", "pocketmine/math/facing.zep", 125);
-		return;
-	}
-	zephir_read_static_property_ce(&_3, pocketmine_math_facing_ce, SL("clockwise"), PH_NOISY_CC | PH_READONLY);
-	zephir_array_fetch_long(&_4, &_3, axis, PH_NOISY | PH_READONLY, "pocketmine/math/facing.zep", 127 TSRMLS_CC);
-	ZEPHIR_OBS_VAR(&rotated);
-	zephir_array_fetch_long(&rotated, &_4, direction, PH_NOISY, "pocketmine/math/facing.zep", 127 TSRMLS_CC);
-	ZEPHIR_INIT_VAR(&_5);
-	if (clockwise) {
-		ZEPHIR_CPY_WRT(&_5, &rotated);
-	} else {
-		ZEPHIR_STATIC_CALL_INTERNAL_METHOD_P1(&_5, pocketmine_math_facing_ce, zep_Pocketmine_Math_Facing_opposite_zephir_internal_call, &rotated);
-		zephir_check_call_status();
-	}
-	RETURN_CCTOR(&_5);
-
-}
-
-/**
- * @param int  $direction
- * @param bool $clockwise
- *
- * @return int
- * @throws \InvalidArgumentException
- */
-void zep_Pocketmine_Math_Facing_rotateY_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *direction_param_ext, zval *clockwise_param_ext) {
-
-	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
-	zend_bool clockwise;
-	zval *direction_param = NULL, *clockwise_param = NULL, _0, _1, _2;
-	zend_long direction, ZEPHIR_LAST_CALL_STATUS;
-		ZVAL_UNDEF(&_0);
-	ZVAL_UNDEF(&_1);
-	ZVAL_UNDEF(&_2);
-
-	ZEPHIR_MM_GROW();
-	direction_param = direction_param_ext;
-
-	clockwise_param = clockwise_param_ext;
-
-
-	direction = zephir_get_intval(direction_param);
-	clockwise = zephir_get_boolval(clockwise_param);
-
-
-	ZVAL_LONG(&_0, direction);
-	ZVAL_LONG(&_1, 0);
-	if (clockwise) {
-		ZVAL_BOOL(&_2, 1);
-	} else {
-		ZVAL_BOOL(&_2, 0);
-	}
-	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P3(pocketmine_math_facing_ce, zep_Pocketmine_Math_Facing_rotate_zephir_internal_call, &_0, &_1, &_2);
-	zephir_check_call_status();
-	RETURN_MM();
-
-}
-
-/**
- * @param int  $direction
- * @param bool $clockwise
- *
- * @return int
- * @throws \InvalidArgumentException
- */
-void zep_Pocketmine_Math_Facing_rotateZ_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *direction_param_ext, zval *clockwise_param_ext) {
-
-	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
-	zend_bool clockwise;
-	zval *direction_param = NULL, *clockwise_param = NULL, _0, _1, _2;
-	zend_long direction, ZEPHIR_LAST_CALL_STATUS;
-		ZVAL_UNDEF(&_0);
-	ZVAL_UNDEF(&_1);
-	ZVAL_UNDEF(&_2);
-
-	ZEPHIR_MM_GROW();
-	direction_param = direction_param_ext;
-
-	clockwise_param = clockwise_param_ext;
-
-
-	direction = zephir_get_intval(direction_param);
-	clockwise = zephir_get_boolval(clockwise_param);
-
-
-	ZVAL_LONG(&_0, direction);
-	ZVAL_LONG(&_1, 1);
-	if (clockwise) {
-		ZVAL_BOOL(&_2, 1);
-	} else {
-		ZVAL_BOOL(&_2, 0);
-	}
-	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P3(pocketmine_math_facing_ce, zep_Pocketmine_Math_Facing_rotate_zephir_internal_call, &_0, &_1, &_2);
-	zephir_check_call_status();
-	RETURN_MM();
-
-}
-
-/**
- * @param int  $direction
- * @param bool $clockwise
- *
- * @return int
- * @throws \InvalidArgumentException
- */
-void zep_Pocketmine_Math_Facing_rotateX_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *direction_param_ext, zval *clockwise_param_ext) {
-
-	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
-	zend_bool clockwise;
-	zval *direction_param = NULL, *clockwise_param = NULL, _0, _1, _2;
-	zend_long direction, ZEPHIR_LAST_CALL_STATUS;
-		ZVAL_UNDEF(&_0);
-	ZVAL_UNDEF(&_1);
-	ZVAL_UNDEF(&_2);
-
-	ZEPHIR_MM_GROW();
-	direction_param = direction_param_ext;
-
-	clockwise_param = clockwise_param_ext;
-
-
-	direction = zephir_get_intval(direction_param);
-	clockwise = zephir_get_boolval(clockwise_param);
-
-
-	ZVAL_LONG(&_0, direction);
-	ZVAL_LONG(&_1, 2);
-	if (clockwise) {
-		ZVAL_BOOL(&_2, 1);
-	} else {
-		ZVAL_BOOL(&_2, 0);
-	}
-	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P3(pocketmine_math_facing_ce, zep_Pocketmine_Math_Facing_rotate_zephir_internal_call, &_0, &_1, &_2);
-	zephir_check_call_status();
-	RETURN_MM();
-
-}
-
-/**
- * Validates the given integer as a Facing direction.
- *
- * @param int $facing
- * @throws \InvalidArgumentException if the argument is not a valid Facing constant
- */
-void zep_Pocketmine_Math_Facing_validate_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *facing_param_ext) {
-
-	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
-	zval *facing_param = NULL, __$true, _0, _1, _2;
-	zend_long facing, ZEPHIR_LAST_CALL_STATUS;
-		ZVAL_BOOL(&__$true, 1);
-	ZVAL_UNDEF(&_0);
-	ZVAL_UNDEF(&_1);
-	ZVAL_UNDEF(&_2);
-
-	ZEPHIR_MM_GROW();
-	facing_param = facing_param_ext;
-
 
 	facing = zephir_get_intval(facing_param);
 
@@ -671,7 +387,7 @@ void zephir_init_static_properties_Pocketmine_Math_Facing(TSRMLS_D) {
 	add_index_long(&_1, 0, 3);
 	add_index_long(&_1, 3, 1);
 	zephir_array_fast_append(&_0, &_1);
-	zend_update_static_property(pocketmine_math_facing_ce, ZEND_STRL("clockwise"), &_0);
+	zephir_update_static_property_ce(pocketmine_math_facing_ce, ZEND_STRL("clockwise"), &_0);
 	ZEPHIR_INIT_NVAR(&_1);
 	zephir_create_array(&_1, 4, 0 TSRMLS_CC);
 	ZEPHIR_INIT_VAR(&_2);
@@ -686,7 +402,7 @@ void zephir_init_static_properties_Pocketmine_Math_Facing(TSRMLS_D) {
 	ZEPHIR_INIT_NVAR(&_2);
 	ZVAL_LONG(&_2, 5);
 	zephir_array_fast_append(&_1, &_2);
-	zend_update_static_property(pocketmine_math_facing_ce, ZEND_STRL("horizonal"), &_1);
+	zephir_update_static_property_ce(pocketmine_math_facing_ce, ZEND_STRL("horizonal"), &_1);
 	ZEPHIR_INIT_VAR(&_3);
 	zephir_create_array(&_3, 6, 0 TSRMLS_CC);
 	ZEPHIR_INIT_NVAR(&_2);
@@ -707,7 +423,7 @@ void zephir_init_static_properties_Pocketmine_Math_Facing(TSRMLS_D) {
 	ZEPHIR_INIT_NVAR(&_2);
 	ZVAL_LONG(&_2, 5);
 	zephir_array_fast_append(&_3, &_2);
-	zend_update_static_property(pocketmine_math_facing_ce, ZEND_STRL("all"), &_3);
+	zephir_update_static_property_ce(pocketmine_math_facing_ce, ZEND_STRL("all"), &_3);
 	ZEPHIR_MM_RESTORE();
 
 }

@@ -144,10 +144,7 @@ extern zend_string* i_self;
 
 /** Return zval with always ctor, without restoring the memory stack */
 #define RETURN_THISW() \
-        RETURN_ZVAL(getThis(), 1, 0);
-
-#define RETURN_THISW_INTERNAL() \
-        RETURN_ZVAL(this_ptr, 1, 0);
+	RETURN_ZVAL(getThis(), 1, 0);
 
 /** Return this pointer */
 #define RETURN_THIS() { \
@@ -285,21 +282,16 @@ int zephir_fetch_parameters(int num_args, int required_args, int optional_args, 
 #define ZEPHIR_MAKE_REF(obj) ZVAL_NEW_REF(obj, obj);
 #define ZEPHIR_UNREF(obj) ZVAL_UNREF(obj);
 
-#define ZEPHIR_MM_GET_CONSTANT(return_value, const_name) do { \
-	zval *_constant_ptr = zend_get_constant_str(SL(const_name)); \
-	if (_constant_ptr == NULL) { \
-		ZEPHIR_MM_RESTORE(); \
-		return; \
-	} \
-	ZVAL_COPY(return_value, _constant_ptr); \
-} while(0)
-
 #define ZEPHIR_GET_CONSTANT(return_value, const_name) do { \
 	zval *_constant_ptr = zend_get_constant_str(SL(const_name)); \
 	if (_constant_ptr == NULL) { \
-		return; \
+	    zval _null; \
+		ZVAL_NULL(&_null); \
+		ZVAL_COPY(return_value, &_null); \
+		zephir_ptr_dtor(&_null); \
+	} else { \
+	    ZVAL_COPY(return_value, _constant_ptr); \
 	} \
-	ZVAL_COPY(return_value, _constant_ptr); \
 } while(0)
 
 #define ZEPHIR_GET_IMKEY(var, it) it->funcs->get_current_key(it, &var);

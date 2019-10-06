@@ -66,36 +66,7 @@ PHP_METHOD(Pocketmine_Math_VectorMath, getDirection2D) {
 	ZVAL_DOUBLE(&_1, azimuth);
 	ZVAL_DOUBLE(&_2, cos(azimuth));
 	ZVAL_DOUBLE(&_3, sin(azimuth));
-	ZEPHIR_CALL_METHOD(NULL, return_value, "__construct", NULL, 7, &_2, &_3);
-	zephir_check_call_status();
-	RETURN_MM();
-
-}
-
-void zep_Pocketmine_Math_VectorMath_getDirection2D_zephir_internal_call(int ht, zval *return_value, zval *this_ptr, int return_value_used, zval *azimuth_param_ext) {
-
-	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
-	zend_long ZEPHIR_LAST_CALL_STATUS;
-	zval *azimuth_param = NULL, _0, _1, _2, _3;
-	double azimuth;
-		ZVAL_UNDEF(&_0);
-	ZVAL_UNDEF(&_1);
-	ZVAL_UNDEF(&_2);
-	ZVAL_UNDEF(&_3);
-
-	ZEPHIR_MM_GROW();
-	azimuth_param = azimuth_param_ext;
-
-
-	azimuth = zephir_get_doubleval(azimuth_param);
-
-
-	object_init_ex(return_value, pocketmine_math_vector2_ce);
-	ZVAL_DOUBLE(&_0, azimuth);
-	ZVAL_DOUBLE(&_1, azimuth);
-	ZVAL_DOUBLE(&_2, cos(azimuth));
-	ZVAL_DOUBLE(&_3, sin(azimuth));
-	ZEPHIR_CALL_METHOD(NULL, return_value, "__construct", NULL, 7, &_2, &_3);
+	ZEPHIR_CALL_METHOD(NULL, return_value, "__construct", NULL, 8, &_2, &_3);
 	zephir_check_call_status();
 	RETURN_MM();
 
