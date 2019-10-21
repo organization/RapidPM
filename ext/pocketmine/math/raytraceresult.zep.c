@@ -42,17 +42,17 @@ ZEPHIR_INIT_CLASS(Pocketmine_Math_RayTraceResult) {
 	/**
 	 * @var AxisAlignedBB
 	 */
-	zend_declare_property_null(pocketmine_math_raytraceresult_ce, SL("bb"), ZEND_ACC_PUBLIC TSRMLS_CC);
+	zend_declare_property_null(pocketmine_math_raytraceresult_ce, SL("bb"), ZEND_ACC_PUBLIC);
 
 	/**
 	 * @var int
 	 */
-	zend_declare_property_null(pocketmine_math_raytraceresult_ce, SL("hitFace"), ZEND_ACC_PUBLIC TSRMLS_CC);
+	zend_declare_property_null(pocketmine_math_raytraceresult_ce, SL("hitFace"), ZEND_ACC_PUBLIC);
 
 	/**
 	 * @var Vector3
 	 */
-	zend_declare_property_null(pocketmine_math_raytraceresult_ce, SL("hitVector"), ZEND_ACC_PUBLIC TSRMLS_CC);
+	zend_declare_property_null(pocketmine_math_raytraceresult_ce, SL("hitVector"), ZEND_ACC_PUBLIC);
 
 	return SUCCESS;
 

@@ -32,37 +32,51 @@ class BinaryStream
     /**
      * @return long
      */
-    public function getOffset(): int {}
+    public function getOffset(): int
+    {
+    }
 
     /**
      * @return string
      */
-    public function getBuffer(): string {}
+    public function getBuffer(): string
+    {
+    }
 
     /**
      * @param string $buffer
      * @param int $offset
      */
-    public function __construct(string $buffer = '', int $offset = 0) {}
+    public function __construct(string $buffer = '', int $offset = 0)
+    {
+    }
 
     /**
      * @param long $offset
      */
-    public function setOffset(int $offset): void {}
+    public function setOffset(int $offset)
+    {
+    }
 
 
-    public function reset() {}
+    public function reset()
+    {
+    }
 
     /**
      * Rewinds the stream pointer to the start.
      */
-    public function rewind(): void {}
+    public function rewind()
+    {
+    }
 
     /**
      * @param string $buffer
      * @param long $offset
      */
-    public function setBuffer(string $buffer = '', int $offset = 0) {}
+    public function setBuffer(string $buffer = '', int $offset = 0)
+    {
+    }
 
     /**
      * @param int $len
@@ -70,246 +84,332 @@ class BinaryStream
      * @return string
      *
      * @throws BinaryDataException if there are not enough bytes left in the buffer
-     * @param long $len
-     * @return string
      */
-    public function get(int $len): string {}
+    public function get(int $len): string
+    {
+    }
 
     /**
-     * @throws BinaryDataException
      * @return string
+     * @throws BinaryDataException
      */
-    public function getRemaining(): string {}
+    public function getRemaining(): string
+    {
+    }
 
     /**
      * @param string $str
      */
-    public function put(string $str) {}
+    public function put(string $str)
+    {
+    }
 
     /**
      * @return bool
      */
-    public function getBool(): bool {}
+    public function getBool(): bool
+    {
+    }
 
     /**
      * @param bool $v
      */
-    public function putBool(bool $v) {}
+    public function putBool(bool $v)
+    {
+    }
 
     /**
      * @return int
      */
-    public function getByte(): int {}
+    public function getByte(): int
+    {
+    }
 
     /**
      * @param int $v
      */
-    public function putByte(int $v) {}
+    public function putByte(int $v)
+    {
+    }
 
     /**
      * @return int
      */
-    public function getShort(): int {}
+    public function getShort(): int
+    {
+    }
 
     /**
      * @return int
      */
-    public function getSignedShort(): int {}
+    public function getSignedShort(): int
+    {
+    }
 
     /**
      * @param int $v
      */
-    public function putShort(int $v) {}
+    public function putShort(int $v)
+    {
+    }
 
     /**
      * @return int
      */
-    public function getLShort(): int {}
+    public function getLShort(): int
+    {
+    }
 
     /**
      * @return int
      */
-    public function getSignedLShort(): int {}
+    public function getSignedLShort(): int
+    {
+    }
 
     /**
      * @param int $v
      */
-    public function putLShort(int $v) {}
+    public function putLShort(int $v)
+    {
+    }
 
     /**
      * @return long
      */
-    public function getTriad(): int {}
+    public function getTriad(): int
+    {
+    }
 
     /**
      * @param long $v
      */
-    public function putTriad(int $v) {}
+    public function putTriad(int $v)
+    {
+    }
 
     /**
      * @return long
      */
-    public function getLTriad(): int {}
+    public function getLTriad(): int
+    {
+    }
 
     /**
      * @param long $v
      */
-    public function putLTriad(int $v) {}
+    public function putLTriad(int $v)
+    {
+    }
 
     /**
      * @return int
      */
-    public function getInt(): int {}
+    public function getInt(): int
+    {
+    }
 
     /**
      * @param int $v
      */
-    public function putInt(int $v) {}
+    public function putInt(int $v)
+    {
+    }
 
     /**
      * @return long
      */
-    public function getLInt(): int {}
+    public function getLInt(): int
+    {
+    }
 
     /**
      * @param long $v
      */
-    public function putLInt(int $v) {}
+    public function putLInt(int $v)
+    {
+    }
 
     /**
      * @return double
      */
-    public function getFloat(): float {}
+    public function getFloat(): float
+    {
+    }
 
     /**
      * @param int $accuracy
      * @return double
      */
-    public function getRoundedFloat(int $accuracy): float {}
+    public function getRoundedFloat(int $accuracy): float
+    {
+    }
 
     /**
      * @param double $v
      */
-    public function putFloat(float $v) {}
+    public function putFloat(float $v)
+    {
+    }
 
     /**
      * @return double
      */
-    public function getLFloat(): float {}
+    public function getLFloat(): float
+    {
+    }
 
     /**
      * @param int $accuracy
      * @return double
      */
-    public function getRoundedLFloat(int $accuracy): float {}
+    public function getRoundedLFloat(int $accuracy): float
+    {
+    }
 
     /**
      * @param double $v
      */
-    public function putLFloat(float $v) {}
+    public function putLFloat(float $v)
+    {
+    }
 
     /**
      * @return double
      */
-    public function getDouble(): float {}
+    public function getDouble(): float
+    {
+    }
 
     /**
      * @param double $v
      */
-    public function putDouble(float $v): void {}
+    public function putDouble(float $v)
+    {
+    }
 
     /**
      * @return double
      */
-    public function getLDouble(): float {}
+    public function getLDouble(): float
+    {
+    }
 
     /**
      * @param double $v
      */
-    public function putLDouble(float $v): void {}
+    public function putLDouble(float $v)
+    {
+    }
 
     /**
      * @return int
      */
-    public function getLong(): int {}
+    public function getLong(): int
+    {
+    }
 
     /**
      * @param int $v
      */
-    public function putLong(int $v) {}
+    public function putLong(int $v)
+    {
+    }
 
     /**
      * @return int
      */
-    public function getLLong(): int {}
+    public function getLLong(): int
+    {
+    }
 
     /**
      * @param int $v
      */
-    public function putLLong(int $v) {}
+    public function putLLong(int $v)
+    {
+    }
 
     /**
      * Reads a 32-bit variable-length unsigned integer from the buffer and returns it.
      *
      * @return int
      */
-    public function getUnsignedVarInt(): int {}
+    public function getUnsignedVarInt(): int
+    {
+    }
 
     /**
      * Writes a 32-bit variable-length unsigned integer to the end of the buffer.
      *
      * @param int $v
      */
-    public function putUnsignedVarInt(int $v) {}
+    public function putUnsignedVarInt(int $v)
+    {
+    }
 
     /**
      * Reads a 32-bit zigzag-encoded variable-length integer from the buffer and returns it.
      *
      * @return int
      */
-    public function getVarInt(): int {}
+    public function getVarInt(): int
+    {
+    }
 
     /**
      * Writes a 32-bit zigzag-encoded variable-length integer to the end of the buffer.
      *
      * @param int $v
      */
-    public function putVarInt(int $v) {}
+    public function putVarInt(int $v)
+    {
+    }
 
     /**
      * Reads a 64-bit variable-length integer from the buffer and returns it.
      *
-     * @return long
+     * @return int
      */
-    public function getUnsignedVarLong(): int {}
+    public function getUnsignedVarLong(): int
+    {
+    }
 
     /**
      * Writes a 64-bit variable-length integer to the end of the buffer.
      *
      * @param int $v
      */
-    public function putUnsignedVarLong(int $v) {}
+    public function putUnsignedVarLong(int $v)
+    {
+    }
 
     /**
      * Reads a 64-bit zigzag-encoded variable-length integer from the buffer and returns it.
      *
-     * @return long
+     * @return int
      */
-    public function getVarLong(): int {}
+    public function getVarLong(): int
+    {
+    }
 
     /**
      * Writes a 64-bit zigzag-encoded variable-length integer to the end of the buffer.
      *
-     * @param long $v
      * @param int
+     * @param long $v
      */
-    public function putVarLong(int $v) {}
+    public function putVarLong(int $v)
+    {
+    }
 
     /**
      * Returns whether the offset has reached the end of the buffer.
      *
      * @return bool
      */
-    public function feof(): bool {}
+    public function feof(): bool
+    {
+    }
 
 }

@@ -29,92 +29,130 @@ class Matrix implements \ArrayAccess
 
 
 
-    public function getRows() {}
+    public function getRows()
+    {
+    }
 
 
-    public function getColumns() {}
+    public function getColumns()
+    {
+    }
 
     /**
      * @param mixed $offset
      */
-    public function offsetExists($offset) {}
+    public function offsetExists($offset)
+    {
+    }
 
     /**
      * @param mixed $offset
      */
-    public function offsetGet($offset) {}
+    public function offsetGet($offset)
+    {
+    }
 
     /**
      * @param mixed $offset
      * @param mixed $value
      */
-    public function offsetSet($offset, $value) {}
+    public function offsetSet($offset, $value)
+    {
+    }
 
     /**
      * @param mixed $offset
      */
-    public function offsetUnset($offset) {}
+    public function offsetUnset($offset)
+    {
+    }
 
     /**
      * @param mixed $rows
      * @param mixed $columns
      * @param array $set
      */
-    public function __construct($rows, $columns, array $set = array()) {}
+    public function __construct($rows, $columns, array $set = array())
+    {
+    }
 
     /**
      * @param array $m
      */
-    public function set(array $m) {}
+    public function set(array $m)
+    {
+    }
 
     /**
      * @param mixed $row
      * @param mixed $column
      * @param mixed $value
      */
-    public function setElement($row, $column, $value) {}
+    public function setElement($row, $column, $value)
+    {
+    }
 
     /**
      * @param mixed $row
      * @param mixed $column
      */
-    public function getElement($row, $column) {}
+    public function getElement($row, $column)
+    {
+    }
 
 
-    public function isSquare() {}
+    public function isSquare()
+    {
+    }
 
     /**
      * @param Matrix $matrix
      */
-    public function add(Matrix $matrix) {}
+    public function add(Matrix $matrix)
+    {
+    }
 
     /**
      * @param Matrix $matrix
      */
-    public function subtract(Matrix $matrix) {}
+    public function subtract(Matrix $matrix)
+    {
+    }
 
     /**
      * @param mixed $number
      */
-    public function multiplyScalar($number) {}
+    public function multiplyScalar($number)
+    {
+    }
 
     /**
      * @param mixed $number
      */
-    public function divideScalar($number) {}
+    public function divideScalar($number)
+    {
+    }
 
 
-    public function transpose() {}
+    public function transpose()
+    {
+    }
 
     /**
      * @param Matrix $matrix
      */
-    public function product(Matrix $matrix) {}
+    public function product(Matrix $matrix)
+    {
+    }
 
 
-    public function determinant() {}
+    public function determinant()
+    {
+    }
 
 
-    public function __toString() {}
+    public function __toString()
+    {
+    }
 
 }

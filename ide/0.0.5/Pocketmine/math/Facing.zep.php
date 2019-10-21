@@ -63,80 +63,89 @@ class Facing
      *
      * @param int $direction
      *
-     * @param int $direction
      * @return int
      */
-    public static function axis(int $direction): int {}
+    public static function axis(int $direction): int
+    {
+    }
 
     /**
      * Returns whether the direction is facing the positive of its axis.
      *
      * @param int $direction
      *
-     * @param int $direction
      * @return bool
      */
-    public static function isPositive(int $direction): bool {}
+    public static function isPositive(int $direction): bool
+    {
+    }
 
     /**
      * Returns the opposite Facing of the specified one.
      *
      * @param int $direction 0-5 one of the self::* constants
      *
-     * @param int $direction
      * @return int
      */
-    public static function opposite(int $direction): int {}
+    public static function opposite(int $direction): int
+    {
+    }
 
     /**
      * Rotates the given direction around the axis.
      *
+     * @param int  $direction
+     * @param int  $axis
      * @param bool $clockwise
      *
+     * @return int
      * @throws \InvalidArgumentException if not possible to rotate $direction around $axis
-     * @param int $direction
-     * @param int $axis
-     * @param bool $clockwise
-     * @return int
      */
-    public static function rotate(int $direction, int $axis, bool $clockwise): int {}
+    public static function rotate(int $direction, int $axis, bool $clockwise): int
+    {
+    }
 
     /**
+     * @param int  $direction
      * @param bool $clockwise
      *
-     * @throws \InvalidArgumentException
-     * @param int $direction
-     * @param bool $clockwise
      * @return int
+     * @throws \InvalidArgumentException
      */
-    public static function rotateY(int $direction, bool $clockwise): int {}
+    public static function rotateY(int $direction, bool $clockwise): int
+    {
+    }
 
     /**
+     * @param int  $direction
      * @param bool $clockwise
      *
-     * @throws \InvalidArgumentException
-     * @param int $direction
-     * @param bool $clockwise
      * @return int
+     * @throws \InvalidArgumentException
      */
-    public static function rotateZ(int $direction, bool $clockwise): int {}
+    public static function rotateZ(int $direction, bool $clockwise): int
+    {
+    }
 
     /**
+     * @param int  $direction
      * @param bool $clockwise
      *
-     * @throws \InvalidArgumentException
-     * @param int $direction
-     * @param bool $clockwise
      * @return int
+     * @throws \InvalidArgumentException
      */
-    public static function rotateX(int $direction, bool $clockwise): int {}
+    public static function rotateX(int $direction, bool $clockwise): int
+    {
+    }
 
     /**
      * Validates the given integer as a Facing direction.
      *
-     * @throws \InvalidArgumentException if the argument is not a valid Facing constant
      * @param int $facing
+     * @throws \InvalidArgumentException if the argument is not a valid Facing constant
      */
-    public static function validate(int $facing): void {}
+    public static function validate(int $facing)
+    {
+    }
 
 }

@@ -23,14 +23,15 @@ abstract class VoxelRayTrace
      * Performs a ray trace from the start position in the given direction, for a distance of $maxDistance. This
      * returns a Generator which yields Vector3s containing the coordinates of voxels it passes through.
      *
-     * @param float   $maxDistance
-     *
      * @param Vector3 $start
      * @param Vector3 $directionVector
-     * @param double $maxDistance
-     * @return \Generator
+     * @param float   $maxDistance
+     *
+     * @return \Generator|Vector3[]
      */
-    public static function inDirection(Vector3 $start, Vector3 $directionVector, float $maxDistance): \Generator {}
+    public static function inDirection(Vector3 $start, Vector3 $directionVector, float $maxDistance): \Generator
+    {
+    }
 
     /**
      * Spaceship operator
@@ -39,7 +40,9 @@ abstract class VoxelRayTrace
      * @param mixed $b
      * @return int
      */
-    private static function spaceShip($a, $b): int {}
+    private static function spaceShip($a, $b): int
+    {
+    }
 
     /**
      * Performs a ray trace between the start and end coordinates. This returns a Generator which yields Vector3s
@@ -49,13 +52,14 @@ abstract class VoxelRayTrace
      *
      * @link http://www.cse.yorku.ca/~amana/research/grid.pdf
      *
-     * @param Vector3 $end
-     *
      * @param Vector3 $start
      * @param Vector3 $end
-     * @return \Generator
+     *
+     * @return \Generator|Vector3[]
      */
-    public static function betweenPoints(Vector3 $start, Vector3 $end): \Generator {}
+    public static function betweenPoints(Vector3 $start, Vector3 $end): \Generator
+    {
+    }
 
     /**
      * Returns the distance that must be travelled on an axis from the start point with the direction vector component to
@@ -66,12 +70,13 @@ abstract class VoxelRayTrace
      *
      * Find the smallest positive t such that s+tds is an integer.
      *
+     * @param float $s Starting coordinate
      * @param float $ds Direction vector component of the relevant axis
      *
-     * @param float $s Starting coordinate
-     * @param double $ds
-     * @return double
+     * @return float Distance along the ray trace that must be travelled to cross a boundary.
      */
-    private static function rayTraceDistanceToBoundary(float $s, float $ds): float {}
+    private static function rayTraceDistanceToBoundary(float $s, float $ds): float
+    {
+    }
 
 }
