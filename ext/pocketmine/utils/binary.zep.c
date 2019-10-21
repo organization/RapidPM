@@ -421,7 +421,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readShort) {
 	ZVAL_STRING(&_0, "n");
 	ZEPHIR_CALL_FUNCTION(&_1, "unpack", NULL, 20, &_0, &str);
 	zephir_check_call_status();
-	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 146 TSRMLS_CC);
+	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 146);
 	RETURN_CTOR(&_2);
 
 }
@@ -456,7 +456,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readSignedShort) {
 	ZVAL_STRING(&_0, "n");
 	ZEPHIR_CALL_FUNCTION(&_1, "unpack", NULL, 20, &_0, &str);
 	zephir_check_call_status();
-	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 158 TSRMLS_CC);
+	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 158);
 	ZEPHIR_RETURN_CALL_SELF("signshort", NULL, 0, &_2);
 	zephir_check_call_status();
 	RETURN_MM();
@@ -525,7 +525,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLShort) {
 	ZVAL_STRING(&_0, "v");
 	ZEPHIR_CALL_FUNCTION(&_1, "unpack", NULL, 20, &_0, &str);
 	zephir_check_call_status();
-	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 182 TSRMLS_CC);
+	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 182);
 	RETURN_CTOR(&_2);
 
 }
@@ -560,7 +560,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readSignedLShort) {
 	ZVAL_STRING(&_0, "v");
 	ZEPHIR_CALL_FUNCTION(&_1, "unpack", NULL, 20, &_0, &str);
 	zephir_check_call_status();
-	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 194 TSRMLS_CC);
+	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 194);
 	ZEPHIR_RETURN_CALL_SELF("signshort", NULL, 0, &_2);
 	zephir_check_call_status();
 	RETURN_MM();
@@ -637,7 +637,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readTriad) {
 	ZVAL_STRING(&_0, "N");
 	ZEPHIR_CALL_FUNCTION(&_3, "unpack", NULL, 20, &_0, &_2);
 	zephir_check_call_status();
-	zephir_array_fetch_long(&_4, &_3, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 218 TSRMLS_CC);
+	zephir_array_fetch_long(&_4, &_3, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 218);
 	RETURN_CTOR(&_4);
 
 }
@@ -715,7 +715,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLTriad) {
 	ZVAL_STRING(&_0, "V");
 	ZEPHIR_CALL_FUNCTION(&_3, "unpack", NULL, 20, &_0, &_2);
 	zephir_check_call_status();
-	zephir_array_fetch_long(&_4, &_3, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 242 TSRMLS_CC);
+	zephir_array_fetch_long(&_4, &_3, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 242);
 	RETURN_CTOR(&_4);
 
 }
@@ -788,7 +788,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readInt) {
 	ZVAL_STRING(&_0, "N");
 	ZEPHIR_CALL_FUNCTION(&_1, "unpack", NULL, 20, &_0, &str);
 	zephir_check_call_status();
-	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 266 TSRMLS_CC);
+	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 266);
 	ZEPHIR_RETURN_CALL_SELF("signint", NULL, 0, &_2);
 	zephir_check_call_status();
 	RETURN_MM();
@@ -858,7 +858,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLInt) {
 	ZVAL_STRING(&_0, "V");
 	ZEPHIR_CALL_FUNCTION(&_1, "unpack", NULL, 20, &_0, &str);
 	zephir_check_call_status();
-	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 290 TSRMLS_CC);
+	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 290);
 	ZEPHIR_RETURN_CALL_SELF("signint", NULL, 0, &_2);
 	zephir_check_call_status();
 	RETURN_MM();
@@ -928,7 +928,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readFloat) {
 	ZVAL_STRING(&_0, "G");
 	ZEPHIR_CALL_FUNCTION(&_1, "unpack", NULL, 20, &_0, &str);
 	zephir_check_call_status();
-	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 314 TSRMLS_CC);
+	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 314);
 	RETURN_CTOR(&_2);
 
 }
@@ -963,7 +963,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readRoundedFloat) {
 	ZEPHIR_CALL_SELF(&_0, "readfloat", NULL, 0, &str);
 	zephir_check_call_status();
 	ZVAL_LONG(&_1, accuracy);
-	zephir_round(return_value, &_0, &_1, NULL TSRMLS_CC);
+	zephir_round(return_value, &_0, &_1, NULL);
 	RETURN_MM();
 
 }
@@ -1031,7 +1031,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLFloat) {
 	ZVAL_STRING(&_0, "g");
 	ZEPHIR_CALL_FUNCTION(&_1, "unpack", NULL, 20, &_0, &str);
 	zephir_check_call_status();
-	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 351 TSRMLS_CC);
+	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 351);
 	RETURN_CTOR(&_2);
 
 }
@@ -1066,7 +1066,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readRoundedLFloat) {
 	ZEPHIR_CALL_SELF(&_0, "readlfloat", NULL, 0, &str);
 	zephir_check_call_status();
 	ZVAL_LONG(&_1, accuracy);
-	zephir_round(return_value, &_0, &_1, NULL TSRMLS_CC);
+	zephir_round(return_value, &_0, &_1, NULL);
 	RETURN_MM();
 
 }
@@ -1175,7 +1175,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readDouble) {
 	ZVAL_STRING(&_0, "E");
 	ZEPHIR_CALL_FUNCTION(&_1, "unpack", NULL, 20, &_0, &str);
 	zephir_check_call_status();
-	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 400 TSRMLS_CC);
+	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 400);
 	RETURN_CTOR(&_2);
 
 }
@@ -1243,7 +1243,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLDouble) {
 	ZVAL_STRING(&_0, "e");
 	ZEPHIR_CALL_FUNCTION(&_1, "unpack", NULL, 20, &_0, &str);
 	zephir_check_call_status();
-	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 424 TSRMLS_CC);
+	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 424);
 	RETURN_CTOR(&_2);
 
 }
@@ -1311,7 +1311,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLong) {
 	ZVAL_STRING(&_0, "J");
 	ZEPHIR_CALL_FUNCTION(&_1, "unpack", NULL, 20, &_0, &str);
 	zephir_check_call_status();
-	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 448 TSRMLS_CC);
+	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 448);
 	RETURN_CTOR(&_2);
 
 }
@@ -1378,7 +1378,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLLong) {
 	ZVAL_STRING(&_0, "P");
 	ZEPHIR_CALL_FUNCTION(&_1, "unpack", NULL, 20, &_0, &str);
 	zephir_check_call_status();
-	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 472 TSRMLS_CC);
+	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 472);
 	RETURN_CTOR(&_2);
 
 }
@@ -1597,12 +1597,12 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeUnsignedVarInt) {
 				ZVAL_LONG(&_3$$4, (value | 0x80));
 				ZEPHIR_CALL_FUNCTION(&_4$$4, "chr", &_5, 18, &_3$$4);
 				zephir_check_call_status();
-				zephir_concat_self(&buf, &_4$$4 TSRMLS_CC);
+				zephir_concat_self(&buf, &_4$$4);
 			} else {
 				ZVAL_LONG(&_6$$5, (value & 0x7f));
 				ZEPHIR_CALL_FUNCTION(&_7$$5, "chr", &_5, 18, &_6$$5);
 				zephir_check_call_status();
-				zephir_concat_self(&buf, &_7$$5 TSRMLS_CC);
+				zephir_concat_self(&buf, &_7$$5);
 				RETURN_CTOR(&buf);
 			}
 			ZEPHIR_INIT_NVAR(&_8$$3);
@@ -1796,12 +1796,12 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeUnsignedVarLong) {
 				ZVAL_LONG(&_3$$4, (value | 0x80));
 				ZEPHIR_CALL_FUNCTION(&_4$$4, "chr", &_5, 18, &_3$$4);
 				zephir_check_call_status();
-				zephir_concat_self(&buf, &_4$$4 TSRMLS_CC);
+				zephir_concat_self(&buf, &_4$$4);
 			} else {
 				ZVAL_LONG(&_6$$5, (value & 0x7f));
 				ZEPHIR_CALL_FUNCTION(&_7$$5, "chr", &_5, 18, &_6$$5);
 				zephir_check_call_status();
-				zephir_concat_self(&buf, &_7$$5 TSRMLS_CC);
+				zephir_concat_self(&buf, &_7$$5);
 				RETURN_CTOR(&buf);
 			}
 			ZEPHIR_INIT_NVAR(&_8$$3);

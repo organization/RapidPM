@@ -25,24 +25,32 @@ class RayTraceResult
 
     /**
      * @param AxisAlignedBB $bb
-     * @param int $hitFace one of the Facing::* constants
-     * @param Vector3 $hitVector
+     * @param int           $hitFace one of the Facing::* constants
+     * @param Vector3       $hitVector
      */
-    public function __construct(AxisAlignedBB $bb, int $hitFace, Vector3 $hitVector) {}
+    public function __construct(AxisAlignedBB $bb, int $hitFace, Vector3 $hitVector)
+    {
+    }
 
     /**
      * @return AxisAlignedBB
      */
-    public function getBoundingBox(): AxisAlignedBB {}
+    public function getBoundingBox(): AxisAlignedBB
+    {
+    }
 
     /**
      * @return int
      */
-    public function getHitFace(): int {}
+    public function getHitFace(): int
+    {
+    }
 
     /**
      * @return Vector3
      */
-    public function getHitVector(): Vector3 {}
+    public function getHitVector(): Vector3
+    {
+    }
 
 }

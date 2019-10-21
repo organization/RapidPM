@@ -41,22 +41,22 @@ ZEPHIR_INIT_CLASS(Pocketmine_Math_AxisAlignedBB) {
 	ZEPHIR_REGISTER_CLASS(Pocketmine\\Math, AxisAlignedBB, pocketmine, math_axisalignedbb, pocketmine_math_axisalignedbb_method_entry, 0);
 
 	/** @var float */
-	zend_declare_property_double(pocketmine_math_axisalignedbb_ce, SL("minX"), 0.0, ZEND_ACC_PUBLIC TSRMLS_CC);
+	zend_declare_property_double(pocketmine_math_axisalignedbb_ce, SL("minX"), 0.0, ZEND_ACC_PUBLIC);
 
 	/** @var float */
-	zend_declare_property_double(pocketmine_math_axisalignedbb_ce, SL("minY"), 0.0, ZEND_ACC_PUBLIC TSRMLS_CC);
+	zend_declare_property_double(pocketmine_math_axisalignedbb_ce, SL("minY"), 0.0, ZEND_ACC_PUBLIC);
 
 	/** @var float */
-	zend_declare_property_double(pocketmine_math_axisalignedbb_ce, SL("minZ"), 0.0, ZEND_ACC_PUBLIC TSRMLS_CC);
+	zend_declare_property_double(pocketmine_math_axisalignedbb_ce, SL("minZ"), 0.0, ZEND_ACC_PUBLIC);
 
 	/** @var float */
-	zend_declare_property_double(pocketmine_math_axisalignedbb_ce, SL("maxX"), 0.0, ZEND_ACC_PUBLIC TSRMLS_CC);
+	zend_declare_property_double(pocketmine_math_axisalignedbb_ce, SL("maxX"), 0.0, ZEND_ACC_PUBLIC);
 
 	/** @var float */
-	zend_declare_property_double(pocketmine_math_axisalignedbb_ce, SL("maxY"), 0.0, ZEND_ACC_PUBLIC TSRMLS_CC);
+	zend_declare_property_double(pocketmine_math_axisalignedbb_ce, SL("maxY"), 0.0, ZEND_ACC_PUBLIC);
 
 	/** @var float */
-	zend_declare_property_double(pocketmine_math_axisalignedbb_ce, SL("maxZ"), 0.0, ZEND_ACC_PUBLIC TSRMLS_CC);
+	zend_declare_property_double(pocketmine_math_axisalignedbb_ce, SL("maxZ"), 0.0, ZEND_ACC_PUBLIC);
 
 	return SUCCESS;
 
@@ -365,7 +365,7 @@ PHP_METHOD(Pocketmine_Math_AxisAlignedBB, expandedCopy) {
 
 
 	ZEPHIR_INIT_VAR(&_0);
-	if (zephir_clone(&_0, this_ptr TSRMLS_CC) == FAILURE) {
+	if (zephir_clone(&_0, this_ptr) == FAILURE) {
 		RETURN_MM();
 	}
 	ZVAL_DOUBLE(&_1, x);
@@ -454,7 +454,7 @@ PHP_METHOD(Pocketmine_Math_AxisAlignedBB, offsetCopy) {
 
 
 	ZEPHIR_INIT_VAR(&_0);
-	if (zephir_clone(&_0, this_ptr TSRMLS_CC) == FAILURE) {
+	if (zephir_clone(&_0, this_ptr) == FAILURE) {
 		RETURN_MM();
 	}
 	ZVAL_DOUBLE(&_1, x);
@@ -543,7 +543,7 @@ PHP_METHOD(Pocketmine_Math_AxisAlignedBB, contractedCopy) {
 
 
 	ZEPHIR_INIT_VAR(&_0);
-	if (zephir_clone(&_0, this_ptr TSRMLS_CC) == FAILURE) {
+	if (zephir_clone(&_0, this_ptr) == FAILURE) {
 		RETURN_MM();
 	}
 	ZVAL_DOUBLE(&_1, x);
@@ -646,7 +646,7 @@ PHP_METHOD(Pocketmine_Math_AxisAlignedBB, extendedCopy) {
 
 
 	ZEPHIR_INIT_VAR(&_0);
-	if (zephir_clone(&_0, this_ptr TSRMLS_CC) == FAILURE) {
+	if (zephir_clone(&_0, this_ptr) == FAILURE) {
 		RETURN_MM();
 	}
 	ZVAL_LONG(&_1, face);
@@ -814,7 +814,7 @@ PHP_METHOD(Pocketmine_Math_AxisAlignedBB, stretchedCopy) {
 
 
 	ZEPHIR_INIT_VAR(&_0);
-	if (zephir_clone(&_0, this_ptr TSRMLS_CC) == FAILURE) {
+	if (zephir_clone(&_0, this_ptr) == FAILURE) {
 		RETURN_MM();
 	}
 	ZVAL_LONG(&_1, axis);
@@ -1347,7 +1347,7 @@ PHP_METHOD(Pocketmine_Math_AxisAlignedBB, getAverageEdgeLength) {
 	zephir_read_property(&_0, this_ptr, SL("minZ"), PH_NOISY_CC | PH_READONLY);
 	ZEPHIR_INIT_VAR(&_4);
 	zephir_sub_function(&_4, &_3, &_0);
-	RETURN_MM_DOUBLE(zephir_safe_div_zval_long(&_4, 3 TSRMLS_CC));
+	RETURN_MM_DOUBLE(zephir_safe_div_zval_long(&_4, 3));
 
 }
 
@@ -1379,12 +1379,12 @@ PHP_METHOD(Pocketmine_Math_AxisAlignedBB, getVolume) {
 	ZEPHIR_INIT_VAR(&_3);
 	zephir_sub_function(&_3, &_0, &_1);
 	ZEPHIR_INIT_VAR(&_4);
-	mul_function(&_4, &_2, &_3 TSRMLS_CC);
+	mul_function(&_4, &_2, &_3);
 	zephir_read_property(&_0, this_ptr, SL("maxZ"), PH_NOISY_CC | PH_READONLY);
 	zephir_read_property(&_1, this_ptr, SL("minZ"), PH_NOISY_CC | PH_READONLY);
 	ZEPHIR_INIT_NVAR(&_2);
 	zephir_sub_function(&_2, &_0, &_1);
-	mul_function(return_value, &_4, &_2 TSRMLS_CC);
+	mul_function(return_value, &_4, &_2);
 	RETURN_MM();
 
 }
@@ -1688,7 +1688,7 @@ PHP_METHOD(Pocketmine_Math_AxisAlignedBB, calculateIntercept) {
 	ZEPHIR_INIT_VAR(&distance);
 	ZEPHIR_GET_CONSTANT(&distance, "PHP_INT_MAX");
 	ZEPHIR_INIT_VAR(&_22);
-	zephir_create_array(&_22, 6, 0 TSRMLS_CC);
+	zephir_create_array(&_22, 6, 0);
 	zephir_array_fast_append(&_22, &v1);
 	zephir_array_fast_append(&_22, &v2);
 	zephir_array_fast_append(&_22, &v3);

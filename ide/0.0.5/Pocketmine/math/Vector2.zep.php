@@ -32,119 +32,155 @@ class Vector2
     /**
      * @return float
      */
-    public function getX() {}
+    public function getX()
+    {
+    }
 
     /**
      * @return float
      */
-    public function getY() {}
+    public function getY()
+    {
+    }
 
     /**
      * @param double $x
      * @param double $y
      */
-    public function __construct(float $x = 0, float $y = 0) {}
+    public function __construct(float $x = 0, float $y = 0)
+    {
+    }
 
     /**
      * @return int
      */
-    public function getFloorX(): int {}
+    public function getFloorX(): int
+    {
+    }
 
     /**
      * @return int
      */
-    public function getFloorY(): int {}
+    public function getFloorY(): int
+    {
+    }
 
     /**
+     * @param Vector2|float $x
      * @param float         $y
      *
-     * @param Vector2|float $x
-     * @param double $y
      * @return Vector2
      */
-    public function add($x, float $y = 0): Vector2 {}
+    public function add($x, float $y = 0): Vector2
+    {
+    }
 
     /**
+     * @param Vector2|float $x
      * @param float         $y
      *
-     * @param Vector2|float $x
-     * @param double $y
      * @return Vector2
      */
-    public function subtract($x, float $y = 0): Vector2 {}
+    public function subtract($x, float $y = 0): Vector2
+    {
+    }
 
     /**
      * @return Vector2
      */
-    public function ceil(): Vector2 {}
+    public function ceil(): Vector2
+    {
+    }
 
     /**
      * @return Vector2
      */
-    public function floor(): Vector2 {}
+    public function floor(): Vector2
+    {
+    }
 
     /**
      * @return Vector2
      */
-    public function round(): Vector2 {}
+    public function round(): Vector2
+    {
+    }
 
     /**
      * @return Vector2
      */
-    public function abs(): Vector2 {}
+    public function abs(): Vector2
+    {
+    }
 
     /**
      * @param double $number
      * @return Vector2
      */
-    public function multiply(float $number): Vector2 {}
+    public function multiply(float $number): Vector2
+    {
+    }
 
     /**
      * @param double $number
      * @return Vector2
      */
-    public function divide(float $number): Vector2 {}
+    public function divide(float $number): Vector2
+    {
+    }
 
     /**
+     * @param Vector2|float $x
      * @param float         $y
      *
-     * @param Vector2|float $x
-     * @param double $y
-     * @return double
+     * @return float
      */
-    public function distance($x, float $y = 0): float {}
+    public function distance($x, float $y = 0): float
+    {
+    }
 
     /**
+     * @param Vector2|float $x
      * @param float         $y
      *
-     * @param Vector2|float $x
-     * @param double $y
-     * @return double
+     * @return float
      */
-    public function distanceSquared($x, float $y = 0): float {}
+    public function distanceSquared($x, float $y = 0): float
+    {
+    }
 
     /**
      * @return double
      */
-    public function length(): float {}
+    public function length(): float
+    {
+    }
 
     /**
      * @return double
      */
-    public function lengthSquared(): float {}
+    public function lengthSquared(): float
+    {
+    }
 
     /**
      * @return Vector2
      */
-    public function normalize(): Vector2 {}
+    public function normalize(): Vector2
+    {
+    }
 
     /**
      * @param Vector2 $v
      * @return double
      */
-    public function dot(Vector2 $v): float {}
+    public function dot(Vector2 $v): float
+    {
+    }
 
 
-    public function __toString() {}
+    public function __toString()
+    {
+    }
 
 }

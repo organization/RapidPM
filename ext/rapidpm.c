@@ -108,8 +108,8 @@ static PHP_RINIT_FUNCTION(rapidpm)
 #endif
 	rapidpm_globals_ptr = ZEPHIR_VGLOBAL;
 
-	php_zephir_init_globals(rapidpm_globals_ptr TSRMLS_CC);
-	zephir_initialize_memory(rapidpm_globals_ptr TSRMLS_CC);
+	php_zephir_init_globals(rapidpm_globals_ptr);
+	zephir_initialize_memory(rapidpm_globals_ptr);
 
 		zephir_init_static_properties_Pocketmine_Math_Facing(TSRMLS_C);
 	
@@ -144,8 +144,8 @@ static PHP_MINFO_FUNCTION(rapidpm)
 
 static PHP_GINIT_FUNCTION(rapidpm)
 {
-	php_zephir_init_globals(rapidpm_globals TSRMLS_CC);
-	php_zephir_init_module_globals(rapidpm_globals TSRMLS_CC);
+	php_zephir_init_globals(rapidpm_globals);
+	php_zephir_init_module_globals(rapidpm_globals);
 }
 
 static PHP_GSHUTDOWN_FUNCTION(rapidpm)

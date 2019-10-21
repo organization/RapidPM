@@ -23,6 +23,8 @@ abstract class VectorMath
      * @param double $azimuth
      * @return Vector2
      */
-    public static function getDirection2D(float $azimuth): Vector2 {}
+    public static function getDirection2D(float $azimuth): Vector2
+    {
+    }
 
 }

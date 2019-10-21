@@ -214,7 +214,7 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, betweenPoints) {
 	} else {
 		zephir_read_property(&_14, &directionVector, SL("x"), PH_NOISY_CC | PH_READONLY);
 		ZEPHIR_INIT_NVAR(&tDeltaX);
-		div_function(&tDeltaX, &stepX, &_14 TSRMLS_CC);
+		div_function(&tDeltaX, &stepX, &_14);
 	}
 	zephir_read_property(&_14, &directionVector, SL("y"), PH_NOISY_CC | PH_READONLY);
 	if (ZEPHIR_IS_LONG(&_14, 0)) {
@@ -223,7 +223,7 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, betweenPoints) {
 	} else {
 		zephir_read_property(&_15, &directionVector, SL("y"), PH_NOISY_CC | PH_READONLY);
 		ZEPHIR_INIT_NVAR(&tDeltaY);
-		div_function(&tDeltaY, &stepY, &_15 TSRMLS_CC);
+		div_function(&tDeltaY, &stepY, &_15);
 	}
 	zephir_read_property(&_15, &directionVector, SL("z"), PH_NOISY_CC | PH_READONLY);
 	if (ZEPHIR_IS_LONG(&_15, 0)) {
@@ -232,7 +232,7 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, betweenPoints) {
 	} else {
 		zephir_read_property(&_16, &directionVector, SL("z"), PH_NOISY_CC | PH_READONLY);
 		ZEPHIR_INIT_NVAR(&tDeltaZ);
-		div_function(&tDeltaZ, &stepZ, &_16 TSRMLS_CC);
+		div_function(&tDeltaZ, &stepZ, &_16);
 	}
 	ZEPHIR_INIT_VAR(&temp);
 	array_init(&temp);
@@ -311,12 +311,12 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, rayTraceDistanceToBoundary) {
 		s = -s;
 		ds = -ds;
 		ZVAL_DOUBLE(&_0$$4, s);
-		if (zephir_floor(&_0$$4 TSRMLS_CC) == s) {
+		if (zephir_floor(&_0$$4) == s) {
 			RETURN_DOUBLE(0.0);
 		}
 	}
 	ZVAL_DOUBLE(&_1, s);
-	RETURN_DOUBLE(zephir_safe_div_double_double((((double) 1 - ((s - zephir_floor(&_1 TSRMLS_CC))))), ds TSRMLS_CC));
+	RETURN_DOUBLE(zephir_safe_div_double_double((((double) 1 - ((s - zephir_floor(&_1))))), ds));
 
 }
 

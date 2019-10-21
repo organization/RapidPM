@@ -147,19 +147,19 @@ PHP_METHOD(Pocketmine_Math_Math, solveQuadratic) {
 	ZVAL_DOUBLE(&discriminant, (zephir_get_numberval(&_0) - (double) ((double) (4 * a) * c)));
 	if (ZEPHIR_GT_LONG(&discriminant, 0)) {
 		ZEPHIR_INIT_VAR(&sqrtDiscriminant);
-		ZVAL_DOUBLE(&sqrtDiscriminant, zephir_sqrt(&discriminant TSRMLS_CC));
-		zephir_create_array(return_value, 2, 0 TSRMLS_CC);
+		ZVAL_DOUBLE(&sqrtDiscriminant, zephir_sqrt(&discriminant));
+		zephir_create_array(return_value, 2, 0);
 		ZEPHIR_INIT_VAR(&_3$$3);
-		ZVAL_DOUBLE(&_3$$3, zephir_safe_div_double_long(((-b + zephir_get_numberval(&sqrtDiscriminant))), ((double) (2 * a)) TSRMLS_CC));
+		ZVAL_DOUBLE(&_3$$3, zephir_safe_div_double_long(((-b + zephir_get_numberval(&sqrtDiscriminant))), ((double) (2 * a))));
 		zephir_array_fast_append(return_value, &_3$$3);
 		ZEPHIR_INIT_NVAR(&_3$$3);
-		ZVAL_DOUBLE(&_3$$3, zephir_safe_div_double_long(((-b - zephir_get_numberval(&sqrtDiscriminant))), ((double) (2 * a)) TSRMLS_CC));
+		ZVAL_DOUBLE(&_3$$3, zephir_safe_div_double_long(((-b - zephir_get_numberval(&sqrtDiscriminant))), ((double) (2 * a))));
 		zephir_array_fast_append(return_value, &_3$$3);
 		RETURN_MM();
 	} else if (ZEPHIR_IS_LONG(&discriminant, 0)) {
-		zephir_create_array(return_value, 1, 0 TSRMLS_CC);
+		zephir_create_array(return_value, 1, 0);
 		ZEPHIR_INIT_VAR(&_4$$4);
-		ZVAL_DOUBLE(&_4$$4, zephir_safe_div_double_long(-b, ((double) (2 * a)) TSRMLS_CC));
+		ZVAL_DOUBLE(&_4$$4, zephir_safe_div_double_long(-b, ((double) (2 * a))));
 		zephir_array_fast_append(return_value, &_4$$4);
 		RETURN_MM();
 	} else {

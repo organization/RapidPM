@@ -40,11 +40,11 @@ ZEPHIR_INIT_CLASS(Pocketmine_Math_Facing) {
 
 	ZEPHIR_REGISTER_CLASS(Pocketmine\\Math, Facing, pocketmine, math_facing, pocketmine_math_facing_method_entry, 0);
 
-	zend_declare_property_null(pocketmine_math_facing_ce, SL("all"), ZEND_ACC_PUBLIC|ZEND_ACC_STATIC TSRMLS_CC);
+	zend_declare_property_null(pocketmine_math_facing_ce, SL("all"), ZEND_ACC_PUBLIC|ZEND_ACC_STATIC);
 
-	zend_declare_property_null(pocketmine_math_facing_ce, SL("horizonal"), ZEND_ACC_PUBLIC|ZEND_ACC_STATIC TSRMLS_CC);
+	zend_declare_property_null(pocketmine_math_facing_ce, SL("horizonal"), ZEND_ACC_PUBLIC|ZEND_ACC_STATIC);
 
-	zend_declare_property_null(pocketmine_math_facing_ce, SL("clockwise"), ZEND_ACC_PRIVATE|ZEND_ACC_STATIC TSRMLS_CC);
+	zend_declare_property_null(pocketmine_math_facing_ce, SL("clockwise"), ZEND_ACC_PRIVATE|ZEND_ACC_STATIC);
 
 	zephir_declare_class_constant_long(pocketmine_math_facing_ce, SL("AXIS_Y"), 0);
 
@@ -179,15 +179,15 @@ PHP_METHOD(Pocketmine_Math_Facing, rotate) {
 		return;
 	}
 	zephir_read_static_property_ce(&_1, pocketmine_math_facing_ce, SL("clockwise"), PH_NOISY_CC | PH_READONLY);
-	zephir_array_fetch_long(&_2, &_1, axis, PH_READONLY, "pocketmine/math/facing.zep", 124 TSRMLS_CC);
+	zephir_array_fetch_long(&_2, &_1, axis, PH_READONLY, "pocketmine/math/facing.zep", 124);
 	if (!(zephir_array_isset_long(&_2, direction))) {
 		ZEPHIR_THROW_EXCEPTION_DEBUG_STR(spl_ce_InvalidArgumentException, "Cannot rotate direction {direction} around axis {axis}", "pocketmine/math/facing.zep", 125);
 		return;
 	}
 	zephir_read_static_property_ce(&_3, pocketmine_math_facing_ce, SL("clockwise"), PH_NOISY_CC | PH_READONLY);
-	zephir_array_fetch_long(&_4, &_3, axis, PH_NOISY | PH_READONLY, "pocketmine/math/facing.zep", 127 TSRMLS_CC);
+	zephir_array_fetch_long(&_4, &_3, axis, PH_NOISY | PH_READONLY, "pocketmine/math/facing.zep", 127);
 	ZEPHIR_OBS_VAR(&rotated);
-	zephir_array_fetch_long(&rotated, &_4, direction, PH_NOISY, "pocketmine/math/facing.zep", 127 TSRMLS_CC);
+	zephir_array_fetch_long(&rotated, &_4, direction, PH_NOISY, "pocketmine/math/facing.zep", 127);
 	ZEPHIR_INIT_VAR(&_5);
 	if (clockwise) {
 		ZEPHIR_CPY_WRT(&_5, &rotated);
@@ -365,23 +365,23 @@ void zephir_init_static_properties_Pocketmine_Math_Facing(TSRMLS_D) {
 	ZEPHIR_MM_GROW();
 
 	ZEPHIR_INIT_VAR(&_0);
-	zephir_create_array(&_0, 3, 0 TSRMLS_CC);
+	zephir_create_array(&_0, 3, 0);
 	ZEPHIR_INIT_VAR(&_1);
-	zephir_create_array(&_1, 4, 0 TSRMLS_CC);
+	zephir_create_array(&_1, 4, 0);
 	add_index_long(&_1, 2, 5);
 	add_index_long(&_1, 5, 3);
 	add_index_long(&_1, 3, 4);
 	add_index_long(&_1, 4, 2);
 	zephir_array_fast_append(&_0, &_1);
 	ZEPHIR_INIT_NVAR(&_1);
-	zephir_create_array(&_1, 4, 0 TSRMLS_CC);
+	zephir_create_array(&_1, 4, 0);
 	add_index_long(&_1, 1, 5);
 	add_index_long(&_1, 5, 0);
 	add_index_long(&_1, 0, 4);
 	add_index_long(&_1, 4, 1);
 	zephir_array_fast_append(&_0, &_1);
 	ZEPHIR_INIT_NVAR(&_1);
-	zephir_create_array(&_1, 4, 0 TSRMLS_CC);
+	zephir_create_array(&_1, 4, 0);
 	add_index_long(&_1, 1, 2);
 	add_index_long(&_1, 2, 0);
 	add_index_long(&_1, 0, 3);
@@ -389,7 +389,7 @@ void zephir_init_static_properties_Pocketmine_Math_Facing(TSRMLS_D) {
 	zephir_array_fast_append(&_0, &_1);
 	zephir_update_static_property_ce(pocketmine_math_facing_ce, ZEND_STRL("clockwise"), &_0);
 	ZEPHIR_INIT_NVAR(&_1);
-	zephir_create_array(&_1, 4, 0 TSRMLS_CC);
+	zephir_create_array(&_1, 4, 0);
 	ZEPHIR_INIT_VAR(&_2);
 	ZVAL_LONG(&_2, 2);
 	zephir_array_fast_append(&_1, &_2);
@@ -404,7 +404,7 @@ void zephir_init_static_properties_Pocketmine_Math_Facing(TSRMLS_D) {
 	zephir_array_fast_append(&_1, &_2);
 	zephir_update_static_property_ce(pocketmine_math_facing_ce, ZEND_STRL("horizonal"), &_1);
 	ZEPHIR_INIT_VAR(&_3);
-	zephir_create_array(&_3, 6, 0 TSRMLS_CC);
+	zephir_create_array(&_3, 6, 0);
 	ZEPHIR_INIT_NVAR(&_2);
 	ZVAL_LONG(&_2, 0);
 	zephir_array_fast_append(&_3, &_2);
