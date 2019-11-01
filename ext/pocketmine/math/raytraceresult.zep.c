@@ -122,3 +122,36 @@ PHP_METHOD(Pocketmine_Math_RayTraceResult, getHitVector) {
 
 }
 
+/**
+ * @return AxisAlignedBB
+ */
+void zep_Pocketmine_Math_RayTraceResult_getBoundingBox_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used) {
+
+	
+
+	RETURN_MEMBER(getThis(), "bb");
+
+}
+
+/**
+ * @return int
+ */
+void zep_Pocketmine_Math_RayTraceResult_getHitFace_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used) {
+
+	
+
+	RETURN_MEMBER(getThis(), "hitFace");
+
+}
+
+/**
+ * @return Vector3
+ */
+void zep_Pocketmine_Math_RayTraceResult_getHitVector_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used) {
+
+	
+
+	RETURN_MEMBER(getThis(), "hitVector");
+
+}
+

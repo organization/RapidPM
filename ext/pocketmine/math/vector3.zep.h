@@ -45,6 +45,33 @@ PHP_METHOD(Pocketmine_Math_Vector3, setComponents);
 PHP_METHOD(Pocketmine_Math_Vector3, __toString);
 PHP_METHOD(Pocketmine_Math_Vector3, maxComponents);
 PHP_METHOD(Pocketmine_Math_Vector3, minComponents);
+void zep_Pocketmine_Math_Vector3_getX_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Vector3_getY_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Vector3_getZ_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Vector3_getFloorX_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Vector3_getFloorY_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Vector3_getFloorZ_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Vector3_multiply_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *number_param_ext);
+void zep_Pocketmine_Math_Vector3_divide_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *number_param_ext);
+void zep_Pocketmine_Math_Vector3_ceil_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Vector3_floor_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Vector3_abs_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Vector3_asVector3_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Vector3_distance_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *pos_ext );
+void zep_Pocketmine_Math_Vector3_distanceSquared_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *pos_ext );
+void zep_Pocketmine_Math_Vector3_length_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Vector3_lengthSquared_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Vector3_normalize_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Vector3_dot_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *v_ext );
+void zep_Pocketmine_Math_Vector3_cross_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *v_ext );
+void zep_Pocketmine_Math_Vector3_equals_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *v_ext );
+void zep_Pocketmine_Math_Vector3_getIntermediateWithXValue_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *v_ext , zval *x_param_ext);
+void zep_Pocketmine_Math_Vector3_getIntermediateWithYValue_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *v_ext , zval *y_param_ext);
+void zep_Pocketmine_Math_Vector3_getIntermediateWithZValue_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *v_ext , zval *z_param_ext);
+void zep_Pocketmine_Math_Vector3_setComponents_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *x_ext , zval *y_ext , zval *z_ext );
+void zep_Pocketmine_Math_Vector3___toString_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_Vector3_maxComponents_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *positions_param_ext);
+void zep_Pocketmine_Math_Vector3_minComponents_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *positions_param_ext);
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector3___construct, 0, 0, 0)
 	ZEND_ARG_INFO(0, x)
@@ -397,6 +424,83 @@ ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_pocketmine_math_vector3_mincompon
 #else
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_vector3_mincomponents, 0, 1, IS_OBJECT, "Pocketmine\\Math\\Vector3", 0)
 #endif
+	ZEND_ARG_ARRAY_INFO(0, positions, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector3_multiply_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, number, IS_DOUBLE, 0)
+#else
+	ZEND_ARG_INFO(0, number)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector3_divide_zephir_internal_call, 0, 0, 1)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, number, IS_DOUBLE, 0)
+#else
+	ZEND_ARG_INFO(0, number)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector3_distance_zephir_internal_call, 0, 0, 1)
+	ZEND_ARG_OBJ_INFO(0, pos, Pocketmine\\Math\\Vector3, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector3_distancesquared_zephir_internal_call, 0, 0, 1)
+	ZEND_ARG_OBJ_INFO(0, pos, Pocketmine\\Math\\Vector3, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector3_dot_zephir_internal_call, 0, 0, 1)
+	ZEND_ARG_OBJ_INFO(0, v, Pocketmine\\Math\\Vector3, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector3_cross_zephir_internal_call, 0, 0, 1)
+	ZEND_ARG_OBJ_INFO(0, v, Pocketmine\\Math\\Vector3, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector3_equals_zephir_internal_call, 0, 0, 1)
+	ZEND_ARG_OBJ_INFO(0, v, Pocketmine\\Math\\Vector3, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector3_getintermediatewithxvalue_zephir_internal_call, 0, 0, 2)
+	ZEND_ARG_OBJ_INFO(0, v, Pocketmine\\Math\\Vector3, 0)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, x, IS_DOUBLE, 0)
+#else
+	ZEND_ARG_INFO(0, x)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector3_getintermediatewithyvalue_zephir_internal_call, 0, 0, 2)
+	ZEND_ARG_OBJ_INFO(0, v, Pocketmine\\Math\\Vector3, 0)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, y, IS_DOUBLE, 0)
+#else
+	ZEND_ARG_INFO(0, y)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector3_getintermediatewithzvalue_zephir_internal_call, 0, 0, 2)
+	ZEND_ARG_OBJ_INFO(0, v, Pocketmine\\Math\\Vector3, 0)
+#if PHP_VERSION_ID >= 70200
+	ZEND_ARG_TYPE_INFO(0, z, IS_DOUBLE, 0)
+#else
+	ZEND_ARG_INFO(0, z)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector3_setcomponents_zephir_internal_call, 0, 0, 3)
+	ZEND_ARG_INFO(0, x)
+	ZEND_ARG_INFO(0, y)
+	ZEND_ARG_INFO(0, z)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector3_maxcomponents_zephir_internal_call, 0, 0, 1)
+	ZEND_ARG_ARRAY_INFO(0, positions, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_vector3_mincomponents_zephir_internal_call, 0, 0, 1)
 	ZEND_ARG_ARRAY_INFO(0, positions, 0)
 ZEND_END_ARG_INFO()
 

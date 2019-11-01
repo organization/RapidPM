@@ -7,6 +7,9 @@ PHP_METHOD(Pocketmine_Math_RayTraceResult, __construct);
 PHP_METHOD(Pocketmine_Math_RayTraceResult, getBoundingBox);
 PHP_METHOD(Pocketmine_Math_RayTraceResult, getHitFace);
 PHP_METHOD(Pocketmine_Math_RayTraceResult, getHitVector);
+void zep_Pocketmine_Math_RayTraceResult_getBoundingBox_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_RayTraceResult_getHitFace_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used);
+void zep_Pocketmine_Math_RayTraceResult_getHitVector_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used);
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_raytraceresult___construct, 0, 0, 3)
 	ZEND_ARG_OBJ_INFO(0, bb, Pocketmine\\Math\\AxisAlignedBB, 0)
