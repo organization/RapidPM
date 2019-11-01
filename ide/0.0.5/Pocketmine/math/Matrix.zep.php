@@ -16,7 +16,7 @@ namespace Pocketmine\Math;
  * You should have received a copy of the GNU General Public License
  * along with RapidPM.  If not, see <https://www.gnu.org/licenses/>.
  */
-class Matrix implements \ArrayAccess
+class Matrix implements ArrayAccess
 {
 
     private $matrix = array();
