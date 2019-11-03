@@ -2,7 +2,7 @@ dist: xenial
 language: php
 
 php:
-# - 7.2 # Segmentation fault
+ - 7.2
  - 7.3
 
 env:
@@ -10,8 +10,8 @@ env:
   - RE2C_VERSION="1.1.1"
 
 before_script:
- - LEVELDB_VERSION=f1463cb0b2486b0caf7d42ca3c7684545e875f04
- - curl -fsSL "https://github.com/pmmp/leveldb-mcpe/archive/f1463cb0b2486b0caf7d42ca3c7684545e875f04.tar.gz" | tar -zx
+ - LEVELDB_VERSION=10f59b56bec1db3ffe42ff265afe22182073e0e2
+ - curl -fsSL "https://github.com/pmmp/leveldb-mcpe/archive/10f59b56bec1db3ffe42ff265afe22182073e0e2.tar.gz" | tar -zx
  - mv leveldb-mcpe-$LEVELDB_VERSION leveldb-mcpe
  - cd leveldb-mcpe && make -j4 && mv out-shared/libleveldb.* . && cd ..
  - git clone https://github.com/reeze/php-leveldb.git leveldb
@@ -22,7 +22,7 @@ before_script:
  - cd ..
  - git clone https://github.com/pmmp/ext-chunkutils2.git chunkutils
  - cd chunkutils
- - git checkout d8d762a597ac0da6f333f862096d6af0e6286b75
+ - git checkout ab4fd12869d18fb14f5d037241fe4b9a5492beb7
  - phpize
  - ./configure && make && make install
  - cd ..
@@ -44,6 +44,7 @@ before_script:
  - echo | pecl install channel://pecl.php.net/yaml-2.0.4
  - pecl install channel://pecl.php.net/crypto-0.3.1
  - pecl install channel://pecl.php.net/ds-1.2.8
+ - pecl install channel://pecl.php.net/igbinary-3.0.1
  - git clone https://github.com/pmmp/pthreads.git
  - cd pthreads
  - git checkout 6ca019c58b4fa09ee2ff490f2444e34bef0773d0
@@ -61,4 +62,4 @@ script:
  - ./tests/travis.sh -t4
 
 notifications:
- email: false
+ email: true
