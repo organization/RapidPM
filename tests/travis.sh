@@ -15,4 +15,5 @@ cd PocketMine-MP
 
 composer install
 
+# PMMP Test script
 ./tests/travis.sh

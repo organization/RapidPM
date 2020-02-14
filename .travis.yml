@@ -11,7 +11,7 @@ env:
 
 before_script:
  - LEVELDB_VERSION=10f59b56bec1db3ffe42ff265afe22182073e0e2
- - curl -fsSL "https://github.com/pmmp/leveldb-mcpe/archive/10f59b56bec1db3ffe42ff265afe22182073e0e2.tar.gz" | tar -zx
+ - curl -fsSL "https://github.com/pmmp/leveldb-mcpe/archive/$LEVELDB_VERSION.tar.gz" | tar -zx
  - mv leveldb-mcpe-$LEVELDB_VERSION leveldb-mcpe
  - cd leveldb-mcpe && make -j4 && mv out-shared/libleveldb.* . && cd ..
  - git clone https://github.com/reeze/php-leveldb.git leveldb
@@ -22,7 +22,7 @@ before_script:
  - cd ..
  - git clone https://github.com/pmmp/ext-chunkutils2.git chunkutils
  - cd chunkutils
- - git checkout ab4fd12869d18fb14f5d037241fe4b9a5492beb7
+ - git checkout d8d762a597ac0da6f333f862096d6af0e6286b75
  - phpize
  - ./configure && make && make install
  - cd ..
@@ -43,11 +43,11 @@ before_script:
 # - pecl install channel://pecl.php.net/pthreads-3.1.6
  - echo | pecl install channel://pecl.php.net/yaml-2.0.4
  - pecl install channel://pecl.php.net/crypto-0.3.1
- - pecl install channel://pecl.php.net/ds-1.2.8
+ - pecl install channel://pecl.php.net/ds-1.2.9
  - pecl install channel://pecl.php.net/igbinary-3.0.1
  - git clone https://github.com/pmmp/pthreads.git
  - cd pthreads
- - git checkout 6ca019c58b4fa09ee2ff490f2444e34bef0773d0
+ - git checkout 1b7da492b944146fa9680f6399bd9c6c6c6095e0
  - phpize
  - ./configure
  - make
@@ -60,6 +60,11 @@ before_script:
 
 script:
  - ./tests/travis.sh -t4
+
+cache:
+  - leveldb-mcpe
+  - $HOME/.composer/cache/files
+  - $HOME/.composer/cache/vcs
 
 notifications:
  email: true
