@@ -9,9 +9,7 @@
         "optimizers"
     ],
     "extra-sources": [
-        "get_inf.c",
-        "zval_ref.c",
-        "zval_ref_read.c"
+        "get_inf.c"
     ],
     "optimizations" : {
         "internal-call-transformation": true,
