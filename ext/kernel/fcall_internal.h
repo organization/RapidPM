@@ -44,33 +44,6 @@
 		ZEPHIR_RESTORE_SCOPE(); \
 	} while (0)
 
-#define ZEPHIR_CALL_INTERNAL_METHOD_NORETURN_P6(object, method, p0, p1, p2, p3, p4, p5) \
-	do { \
-		zval rv; \
-		zval *rvp = &rv; \
-		ZVAL_UNDEF(&rv); \
-		ZEPHIR_BACKUP_SCOPE(); \
-		ZEPHIR_SET_THIS(object); \
-		ZEPHIR_SET_SCOPE((Z_OBJ_P(object) ? Z_OBJCE_P(object) : NULL), (Z_OBJ_P(object) ? Z_OBJCE_P(object) : NULL)); \
-		zval _p0, _p1, _p2, _p3, _p4, _p5; \
-		ZVAL_COPY(&_p0, p0); \
-		ZVAL_COPY(&_p1, p1); \
-		ZVAL_COPY(&_p2, p2); \
-		ZVAL_COPY(&_p3, p3); \
-		ZVAL_COPY(&_p4, p4); \
-		ZVAL_COPY(&_p5, p5); \
-		method(0, execute_data, rvp, object, 0, &_p0, &_p1, &_p2, &_p3, &_p4, &_p5); \
-		Z_TRY_DELREF_P(p0); \
-		Z_TRY_DELREF_P(p1); \
-		Z_TRY_DELREF_P(p2); \
-		Z_TRY_DELREF_P(p3); \
-		Z_TRY_DELREF_P(p4); \
-		Z_TRY_DELREF_P(p5); \
-		zval_ptr_dtor(rvp); \
-		ZEPHIR_LAST_CALL_STATUS = EG(exception) ? FAILURE : SUCCESS; \
-		ZEPHIR_RESTORE_SCOPE(); \
-	} while (0)
-
 #define ZEPHIR_CALL_INTERNAL_METHOD_P0(return_value_ptr, object, method) \
 	do { \
 		ZEPHIR_BACKUP_SCOPE(); \
@@ -136,29 +109,6 @@
 		method(0, execute_data, return_value, object, 0, &_p0, &_p1); \
 		Z_TRY_DELREF_P(p0); \
 		Z_TRY_DELREF_P(p1); \
-		ZEPHIR_LAST_CALL_STATUS = EG(exception) ? FAILURE : SUCCESS; \
-		ZEPHIR_RESTORE_SCOPE(); \
-	} while (0)
-
-#define ZEPHIR_RETURN_CALL_INTERNAL_METHOD_P6(object, method, p0, p1, p2, p3, p4, p5) \
-	do { \
-		ZEPHIR_BACKUP_SCOPE(); \
-		ZEPHIR_SET_THIS(object); \
-		ZEPHIR_SET_SCOPE((Z_OBJ_P(object) ? Z_OBJCE_P(object) : NULL), (Z_OBJ_P(object) ? Z_OBJCE_P(object) : NULL)); \
-		zval _p0, _p1, _p2, _p3, _p4, _p5; \
-		ZVAL_COPY(&_p0, p0); \
-		ZVAL_COPY(&_p1, p1); \
-		ZVAL_COPY(&_p2, p2); \
-		ZVAL_COPY(&_p3, p3); \
-		ZVAL_COPY(&_p4, p4); \
-		ZVAL_COPY(&_p5, p5); \
-		method(0, execute_data, return_value, object, 0, &_p0, &_p1, &_p2, &_p3, &_p4, &_p5); \
-		Z_TRY_DELREF_P(p0); \
-		Z_TRY_DELREF_P(p1); \
-		Z_TRY_DELREF_P(p2); \
-		Z_TRY_DELREF_P(p3); \
-		Z_TRY_DELREF_P(p4); \
-		Z_TRY_DELREF_P(p5); \
 		ZEPHIR_LAST_CALL_STATUS = EG(exception) ? FAILURE : SUCCESS; \
 		ZEPHIR_RESTORE_SCOPE(); \
 	} while (0)

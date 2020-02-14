@@ -429,7 +429,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readShort) {
 /**
  * Reads a 16-bit signed big-endian number
  *
- * @param $str
+ * @param string $str
  *
  * @return int
  */
@@ -1419,7 +1419,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeLLong) {
  * Reads a 32-bit zigzag-encoded variable-length integer.
  *
  * @param string $buffer
- * @param int    $offset
+ * @param int    $offset reference parameter
  *
  * @return int
  */
@@ -1453,7 +1453,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readVarInt) {
  * Reads a 32-bit variable-length unsigned integer.
  *
  * @param string $buffer
- * @param int    $offset
+ * @param int    $offset reference parameter
  *
  * @return int
  *
@@ -1619,7 +1619,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeUnsignedVarInt) {
  * Reads a 64-bit zigzag-encoded variable-length integer.
  *
  * @param string $buffer
- * @param int    $offset
+ * @param int    $offset reference parameter
  *
  * @return long
  */
@@ -1654,7 +1654,7 @@ PHP_METHOD(Pocketmine_Utils_Binary, readVarLong) {
  * Reads a 64-bit unsigned variable-length integer.
  *
  * @param string $buffer
- * @param int    $offset
+ * @param int    $offset reference parameter
  *
  * @return int
  *
@@ -2173,7 +2173,7 @@ void zep_Pocketmine_Utils_Binary_readShort_zephir_internal_call(int ht, zend_exe
 /**
  * Reads a 16-bit signed big-endian number
  *
- * @param $str
+ * @param string $str
  *
  * @return int
  */
@@ -3139,7 +3139,7 @@ void zep_Pocketmine_Utils_Binary_writeLLong_zephir_internal_call(int ht, zend_ex
  * Reads a 32-bit zigzag-encoded variable-length integer.
  *
  * @param string $buffer
- * @param int    $offset
+ * @param int    $offset reference parameter
  *
  * @return int
  */
@@ -3174,7 +3174,7 @@ void zep_Pocketmine_Utils_Binary_readVarInt_zephir_internal_call(int ht, zend_ex
  * Reads a 32-bit variable-length unsigned integer.
  *
  * @param string $buffer
- * @param int    $offset
+ * @param int    $offset reference parameter
  *
  * @return int
  *
@@ -3339,7 +3339,7 @@ void zep_Pocketmine_Utils_Binary_writeUnsignedVarInt_zephir_internal_call(int ht
  * Reads a 64-bit zigzag-encoded variable-length integer.
  *
  * @param string $buffer
- * @param int    $offset
+ * @param int    $offset reference parameter
  *
  * @return long
  */
@@ -3375,7 +3375,7 @@ void zep_Pocketmine_Utils_Binary_readVarLong_zephir_internal_call(int ht, zend_e
  * Reads a 64-bit unsigned variable-length integer.
  *
  * @param string $buffer
- * @param int    $offset
+ * @param int    $offset reference parameter
  *
  * @return int
  *

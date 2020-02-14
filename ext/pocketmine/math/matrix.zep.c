@@ -146,6 +146,11 @@ PHP_METHOD(Pocketmine_Math_Matrix, offsetUnset) {
 
 }
 
+/**
+ * @param int       $rows
+ * @param int       $columns
+ * @param float[][] $set
+ */
 PHP_METHOD(Pocketmine_Math_Matrix, __construct) {
 
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
@@ -190,6 +195,11 @@ PHP_METHOD(Pocketmine_Math_Matrix, __construct) {
 
 }
 
+/**
+ * @param float[][] $m
+ *
+ * @return void
+ */
 PHP_METHOD(Pocketmine_Math_Matrix, set) {
 
 	zend_long _2, _3, _7$$3, _8$$3;
@@ -251,11 +261,11 @@ PHP_METHOD(Pocketmine_Math_Matrix, set) {
 					ZEPHIR_INIT_NVAR(&c);
 					ZVAL_LONG(&c, _7$$3);
 					ZEPHIR_INIT_NVAR(&_9$$4);
-					zephir_array_fetch(&_10$$4, &m, &r, PH_READONLY, "pocketmine/math/matrix.zep", 62);
+					zephir_array_fetch(&_10$$4, &m, &r, PH_READONLY, "pocketmine/math/matrix.zep", 72);
 					if (zephir_array_isset(&_10$$4, &c)) {
-						zephir_array_fetch(&_11$$4, &m, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 62);
+						zephir_array_fetch(&_11$$4, &m, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 72);
 						ZEPHIR_OBS_NVAR(&_9$$4);
-						zephir_array_fetch(&_9$$4, &_11$$4, &c, PH_NOISY, "pocketmine/math/matrix.zep", 62);
+						zephir_array_fetch(&_9$$4, &_11$$4, &c, PH_NOISY, "pocketmine/math/matrix.zep", 72);
 					} else {
 						ZEPHIR_INIT_NVAR(&_9$$4);
 						ZVAL_LONG(&_9$$4, 0);
@@ -269,6 +279,13 @@ PHP_METHOD(Pocketmine_Math_Matrix, set) {
 
 }
 
+/**
+ * @param int   $row
+ * @param int   $column
+ * @param float $value
+ *
+ * @return bool
+ */
 PHP_METHOD(Pocketmine_Math_Matrix, setElement) {
 
 	zend_bool _1, _2, _4;
@@ -307,6 +324,12 @@ PHP_METHOD(Pocketmine_Math_Matrix, setElement) {
 
 }
 
+/**
+ * @param int $row
+ * @param int $column
+ *
+ * @return float|false
+ */
 PHP_METHOD(Pocketmine_Math_Matrix, getElement) {
 
 	zend_bool _1, _2, _4;
@@ -343,8 +366,8 @@ PHP_METHOD(Pocketmine_Math_Matrix, getElement) {
 		RETURN_BOOL(0);
 	}
 	zephir_read_property(&_5, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-	zephir_array_fetch_long(&_6, &_5, zephir_get_intval(row), PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 81);
-	zephir_array_fetch_long(&_7, &_6, zephir_get_intval(column), PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 81);
+	zephir_array_fetch_long(&_6, &_5, zephir_get_intval(row), PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 104);
+	zephir_array_fetch_long(&_7, &_6, zephir_get_intval(column), PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 104);
 	RETURN_CTORW(&_7);
 
 }
@@ -364,6 +387,9 @@ PHP_METHOD(Pocketmine_Math_Matrix, isSquare) {
 
 }
 
+/**
+ * @return Matrix|false
+ */
 PHP_METHOD(Pocketmine_Math_Matrix, add) {
 
 	zend_bool _2, _8, _12$$4;
@@ -447,8 +473,8 @@ PHP_METHOD(Pocketmine_Math_Matrix, add) {
 					ZEPHIR_INIT_NVAR(&c);
 					ZVAL_LONG(&c, _13$$4);
 					zephir_read_property(&_15$$5, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-					zephir_array_fetch(&_16$$5, &_15$$5, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 100);
-					zephir_array_fetch(&_17$$5, &_16$$5, &c, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 100);
+					zephir_array_fetch(&_16$$5, &_15$$5, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 126);
+					zephir_array_fetch(&_17$$5, &_16$$5, &c, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 126);
 					ZEPHIR_CALL_INTERNAL_METHOD_P2(&_18$$5, matrix, zep_Pocketmine_Math_Matrix_getElement_zephir_internal_call, &r, &c);
 					zephir_check_call_status();
 					ZEPHIR_INIT_NVAR(&_19$$5);
@@ -463,6 +489,9 @@ PHP_METHOD(Pocketmine_Math_Matrix, add) {
 
 }
 
+/**
+ * @return Matrix|false
+ */
 PHP_METHOD(Pocketmine_Math_Matrix, subtract) {
 
 	zend_bool _2, _6, _10$$4;
@@ -543,8 +572,8 @@ PHP_METHOD(Pocketmine_Math_Matrix, subtract) {
 					ZEPHIR_INIT_NVAR(&c);
 					ZVAL_LONG(&c, _11$$4);
 					zephir_read_property(&_13$$5, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-					zephir_array_fetch(&_14$$5, &_13$$5, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 117);
-					zephir_array_fetch(&_15$$5, &_14$$5, &c, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 117);
+					zephir_array_fetch(&_14$$5, &_13$$5, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 146);
+					zephir_array_fetch(&_15$$5, &_14$$5, &c, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 146);
 					ZEPHIR_CALL_INTERNAL_METHOD_P2(&_16$$5, matrix, zep_Pocketmine_Math_Matrix_getElement_zephir_internal_call, &r, &c);
 					zephir_check_call_status();
 					ZEPHIR_INIT_NVAR(&_17$$5);
@@ -559,6 +588,11 @@ PHP_METHOD(Pocketmine_Math_Matrix, subtract) {
 
 }
 
+/**
+ * @param float $number
+ *
+ * @return Matrix
+ */
 PHP_METHOD(Pocketmine_Math_Matrix, multiplyScalar) {
 
 	zend_bool _1, _5$$3;
@@ -621,8 +655,8 @@ PHP_METHOD(Pocketmine_Math_Matrix, multiplyScalar) {
 					ZEPHIR_INIT_NVAR(&c);
 					ZVAL_LONG(&c, _6$$3);
 					zephir_read_property(&_8$$4, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-					zephir_array_fetch(&_9$$4, &_8$$4, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 131);
-					zephir_array_fetch(&_10$$4, &_9$$4, &c, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 131);
+					zephir_array_fetch(&_9$$4, &_8$$4, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 165);
+					zephir_array_fetch(&_10$$4, &_9$$4, &c, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 165);
 					ZEPHIR_INIT_NVAR(&_11$$4);
 					mul_function(&_11$$4, &_10$$4, number);
 					ZEPHIR_CALL_METHOD(NULL, &result, "setelement", &_12, 0, &r, &c, &_11$$4);
@@ -635,6 +669,11 @@ PHP_METHOD(Pocketmine_Math_Matrix, multiplyScalar) {
 
 }
 
+/**
+ * @param float $number
+ *
+ * @return Matrix
+ */
 PHP_METHOD(Pocketmine_Math_Matrix, divideScalar) {
 
 	zend_bool _1, _5$$3;
@@ -697,8 +736,8 @@ PHP_METHOD(Pocketmine_Math_Matrix, divideScalar) {
 					ZEPHIR_INIT_NVAR(&c);
 					ZVAL_LONG(&c, _6$$3);
 					zephir_read_property(&_8$$4, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-					zephir_array_fetch(&_9$$4, &_8$$4, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 145);
-					zephir_array_fetch(&_10$$4, &_9$$4, &c, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 145);
+					zephir_array_fetch(&_9$$4, &_8$$4, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 184);
+					zephir_array_fetch(&_10$$4, &_9$$4, &c, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 184);
 					ZEPHIR_INIT_NVAR(&_11$$4);
 					div_function(&_11$$4, &_10$$4, number);
 					ZEPHIR_CALL_METHOD(NULL, &result, "setelement", &_12, 0, &r, &c, &_11$$4);
@@ -711,6 +750,9 @@ PHP_METHOD(Pocketmine_Math_Matrix, divideScalar) {
 
 }
 
+/**
+ * @return Matrix
+ */
 PHP_METHOD(Pocketmine_Math_Matrix, transpose) {
 
 	zend_bool _3, _7$$3;
@@ -771,8 +813,8 @@ PHP_METHOD(Pocketmine_Math_Matrix, transpose) {
 					ZEPHIR_INIT_NVAR(&c);
 					ZVAL_LONG(&c, _8$$3);
 					zephir_read_property(&_10$$4, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-					zephir_array_fetch(&_11$$4, &_10$$4, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 159);
-					zephir_array_fetch(&_12$$4, &_11$$4, &c, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 159);
+					zephir_array_fetch(&_11$$4, &_10$$4, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201);
+					zephir_array_fetch(&_12$$4, &_11$$4, &c, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201);
 					ZEPHIR_CALL_INTERNAL_METHOD_NORETURN_P3(&result, zep_Pocketmine_Math_Matrix_setElement_zephir_internal_call, &c, &r, &_12$$4);
 					zephir_check_call_status();
 				}
@@ -783,6 +825,11 @@ PHP_METHOD(Pocketmine_Math_Matrix, transpose) {
 
 }
 
+/**
+ * Naive Matrix product, O(n^3)
+ *
+ * @return Matrix|false
+ */
 PHP_METHOD(Pocketmine_Math_Matrix, product) {
 
 	zend_bool _4, _7$$4, _11$$5;
@@ -877,8 +924,8 @@ PHP_METHOD(Pocketmine_Math_Matrix, product) {
 							ZEPHIR_INIT_NVAR(&k);
 							ZVAL_LONG(&k, _12$$5);
 							zephir_read_property(&_14$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-							zephir_array_fetch(&_15$$6, &_14$$6, &i, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 183);
-							zephir_array_fetch(&_16$$6, &_15$$6, &k, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 183);
+							zephir_array_fetch(&_15$$6, &_14$$6, &i, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 229);
+							zephir_array_fetch(&_16$$6, &_15$$6, &k, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 229);
 							ZEPHIR_CALL_INTERNAL_METHOD_P2(&_17$$6, matrix, zep_Pocketmine_Math_Matrix_getElement_zephir_internal_call, &k, &j);
 							zephir_check_call_status();
 							ZEPHIR_INIT_NVAR(&_18$$6);
@@ -896,18 +943,23 @@ PHP_METHOD(Pocketmine_Math_Matrix, product) {
 
 }
 
+/**
+ * Computation of the determinant of 1x1, 2x2 and 3x3 matrices
+ *
+ * @return float|false
+ */
 PHP_METHOD(Pocketmine_Math_Matrix, determinant) {
 
-	zval _0, _1, _2$$5, _3$$5, _4$$5, _5$$5, _6$$5, _7$$5, _8$$5, _9$$5, _10$$5, _11$$5, _12$$5, _13$$5, _14$$6, _15$$6, _16$$6, _17$$6, _18$$6, _19$$6, _20$$6, _21$$6, _22$$6, _23$$6, _24$$6, _25$$6, _26$$6, _27$$6, _28$$6, _29$$6, _30$$6, _31$$6, _32$$6, _33$$6, _34$$6, _35$$6, _36$$6, _37$$6, _38$$6, _39$$6, _40$$6, _41$$6, _42$$6, _43$$6, _44$$6, _45$$6, _46$$6, _47$$6, _48$$6, _49$$6, _50$$6, _51$$6, _52$$6, _53$$6;
+	zval _0, _1, _2$$4, _3$$4, _4$$4, _5$$5, _6$$5, _7$$5, _8$$5, _9$$5, _10$$5, _11$$5, _12$$5, _13$$5, _14$$5, _15$$5, _16$$5, _17$$6, _18$$6, _19$$6, _20$$6, _21$$6, _22$$6, _23$$6, _24$$6, _25$$6, _26$$6, _27$$6, _28$$6, _29$$6, _30$$6, _31$$6, _32$$6, _33$$6, _34$$6, _35$$6, _36$$6, _37$$6, _38$$6, _39$$6, _40$$6, _41$$6, _42$$6, _43$$6, _44$$6, _45$$6, _46$$6, _47$$6, _48$$6, _49$$6, _50$$6, _51$$6, _52$$6, _53$$6, _54$$6, _55$$6, _56$$6;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *this_ptr = getThis();
 
 	ZVAL_UNDEF(&_0);
 	ZVAL_UNDEF(&_1);
-	ZVAL_UNDEF(&_2$$5);
-	ZVAL_UNDEF(&_3$$5);
-	ZVAL_UNDEF(&_4$$5);
+	ZVAL_UNDEF(&_2$$4);
+	ZVAL_UNDEF(&_3$$4);
+	ZVAL_UNDEF(&_4$$4);
 	ZVAL_UNDEF(&_5$$5);
 	ZVAL_UNDEF(&_6$$5);
 	ZVAL_UNDEF(&_7$$5);
@@ -917,9 +969,9 @@ PHP_METHOD(Pocketmine_Math_Matrix, determinant) {
 	ZVAL_UNDEF(&_11$$5);
 	ZVAL_UNDEF(&_12$$5);
 	ZVAL_UNDEF(&_13$$5);
-	ZVAL_UNDEF(&_14$$6);
-	ZVAL_UNDEF(&_15$$6);
-	ZVAL_UNDEF(&_16$$6);
+	ZVAL_UNDEF(&_14$$5);
+	ZVAL_UNDEF(&_15$$5);
+	ZVAL_UNDEF(&_16$$5);
 	ZVAL_UNDEF(&_17$$6);
 	ZVAL_UNDEF(&_18$$6);
 	ZVAL_UNDEF(&_19$$6);
@@ -957,6 +1009,9 @@ PHP_METHOD(Pocketmine_Math_Matrix, determinant) {
 	ZVAL_UNDEF(&_51$$6);
 	ZVAL_UNDEF(&_52$$6);
 	ZVAL_UNDEF(&_53$$6);
+	ZVAL_UNDEF(&_54$$6);
+	ZVAL_UNDEF(&_55$$6);
+	ZVAL_UNDEF(&_56$$6);
 
 	ZEPHIR_MM_GROW();
 
@@ -969,116 +1024,119 @@ PHP_METHOD(Pocketmine_Math_Matrix, determinant) {
 	zephir_read_property(&_1, this_ptr, SL("rows"), PH_NOISY_CC);
 	do {
 		if (ZEPHIR_IS_LONG(&_1, 1)) {
-			RETURN_MM_LONG(0);
+			zephir_read_property(&_2$$4, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
+			zephir_array_fetch_long(&_3$$4, &_2$$4, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 249);
+			zephir_array_fetch_long(&_4$$4, &_3$$4, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 249);
+			RETURN_CTOR(&_4$$4);
 		}
 		if (ZEPHIR_IS_LONG(&_1, 2)) {
-			zephir_read_property(&_2$$5, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_3$$5, &_2$$5, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201);
-			zephir_array_fetch_long(&_4$$5, &_3$$5, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201);
 			zephir_read_property(&_5$$5, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_6$$5, &_5$$5, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201);
-			zephir_array_fetch_long(&_7$$5, &_6$$5, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201);
-			ZEPHIR_INIT_VAR(&_8$$5);
-			mul_function(&_8$$5, &_4$$5, &_7$$5);
-			zephir_read_property(&_9$$5, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_4$$5, &_9$$5, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201);
-			zephir_array_fetch_long(&_7$$5, &_4$$5, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201);
-			zephir_read_property(&_10$$5, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_11$$5, &_10$$5, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201);
-			zephir_array_fetch_long(&_12$$5, &_11$$5, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201);
-			ZEPHIR_INIT_VAR(&_13$$5);
-			mul_function(&_13$$5, &_7$$5, &_12$$5);
-			zephir_sub_function(return_value, &_8$$5, &_13$$5);
+			zephir_array_fetch_long(&_6$$5, &_5$$5, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 251);
+			zephir_array_fetch_long(&_7$$5, &_6$$5, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 251);
+			zephir_read_property(&_8$$5, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
+			zephir_array_fetch_long(&_9$$5, &_8$$5, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 251);
+			zephir_array_fetch_long(&_10$$5, &_9$$5, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 251);
+			ZEPHIR_INIT_VAR(&_11$$5);
+			mul_function(&_11$$5, &_7$$5, &_10$$5);
+			zephir_read_property(&_12$$5, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
+			zephir_array_fetch_long(&_7$$5, &_12$$5, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 251);
+			zephir_array_fetch_long(&_10$$5, &_7$$5, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 251);
+			zephir_read_property(&_13$$5, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
+			zephir_array_fetch_long(&_14$$5, &_13$$5, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 251);
+			zephir_array_fetch_long(&_15$$5, &_14$$5, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 251);
+			ZEPHIR_INIT_VAR(&_16$$5);
+			mul_function(&_16$$5, &_10$$5, &_15$$5);
+			zephir_sub_function(return_value, &_11$$5, &_16$$5);
 			RETURN_MM();
 		}
 		if (ZEPHIR_IS_LONG(&_1, 3)) {
-			zephir_read_property(&_14$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_15$$6, &_14$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_16$$6, &_15$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
 			zephir_read_property(&_17$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_18$$6, &_17$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_19$$6, &_18$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			ZEPHIR_INIT_VAR(&_20$$6);
-			mul_function(&_20$$6, &_16$$6, &_19$$6);
-			zephir_read_property(&_21$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_16$$6, &_21$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_19$$6, &_16$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			ZEPHIR_INIT_VAR(&_22$$6);
-			mul_function(&_22$$6, &_20$$6, &_19$$6);
-			zephir_read_property(&_23$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_19$$6, &_23$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_24$$6, &_19$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_read_property(&_25$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_26$$6, &_25$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_27$$6, &_26$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			ZEPHIR_INIT_NVAR(&_20$$6);
-			mul_function(&_20$$6, &_24$$6, &_27$$6);
+			zephir_array_fetch_long(&_18$$6, &_17$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_19$$6, &_18$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_read_property(&_20$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
+			zephir_array_fetch_long(&_21$$6, &_20$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_22$$6, &_21$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			ZEPHIR_INIT_VAR(&_23$$6);
+			mul_function(&_23$$6, &_19$$6, &_22$$6);
+			zephir_read_property(&_24$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
+			zephir_array_fetch_long(&_19$$6, &_24$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_22$$6, &_19$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			ZEPHIR_INIT_VAR(&_25$$6);
+			mul_function(&_25$$6, &_23$$6, &_22$$6);
+			zephir_read_property(&_26$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
+			zephir_array_fetch_long(&_22$$6, &_26$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_27$$6, &_22$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
 			zephir_read_property(&_28$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_24$$6, &_28$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_27$$6, &_24$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			ZEPHIR_INIT_VAR(&_29$$6);
-			mul_function(&_29$$6, &_20$$6, &_27$$6);
-			ZEPHIR_INIT_NVAR(&_20$$6);
-			zephir_add_function(&_20$$6, &_22$$6, &_29$$6);
-			zephir_read_property(&_30$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_27$$6, &_30$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_31$$6, &_27$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_read_property(&_32$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_33$$6, &_32$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_34$$6, &_33$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			ZEPHIR_INIT_NVAR(&_22$$6);
-			mul_function(&_22$$6, &_31$$6, &_34$$6);
+			zephir_array_fetch_long(&_29$$6, &_28$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_30$$6, &_29$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			ZEPHIR_INIT_NVAR(&_23$$6);
+			mul_function(&_23$$6, &_27$$6, &_30$$6);
+			zephir_read_property(&_31$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
+			zephir_array_fetch_long(&_27$$6, &_31$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_30$$6, &_27$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			ZEPHIR_INIT_VAR(&_32$$6);
+			mul_function(&_32$$6, &_23$$6, &_30$$6);
+			ZEPHIR_INIT_NVAR(&_23$$6);
+			zephir_add_function(&_23$$6, &_25$$6, &_32$$6);
+			zephir_read_property(&_33$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
+			zephir_array_fetch_long(&_30$$6, &_33$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_34$$6, &_30$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
 			zephir_read_property(&_35$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_31$$6, &_35$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_34$$6, &_31$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			ZEPHIR_INIT_NVAR(&_29$$6);
-			mul_function(&_29$$6, &_22$$6, &_34$$6);
-			ZEPHIR_INIT_NVAR(&_22$$6);
-			zephir_add_function(&_22$$6, &_20$$6, &_29$$6);
-			zephir_read_property(&_36$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_34$$6, &_36$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_37$$6, &_34$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
+			zephir_array_fetch_long(&_36$$6, &_35$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_37$$6, &_36$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			ZEPHIR_INIT_NVAR(&_25$$6);
+			mul_function(&_25$$6, &_34$$6, &_37$$6);
 			zephir_read_property(&_38$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_39$$6, &_38$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_40$$6, &_39$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			ZEPHIR_INIT_NVAR(&_20$$6);
-			mul_function(&_20$$6, &_37$$6, &_40$$6);
+			zephir_array_fetch_long(&_34$$6, &_38$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_37$$6, &_34$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			ZEPHIR_INIT_NVAR(&_32$$6);
+			mul_function(&_32$$6, &_25$$6, &_37$$6);
+			ZEPHIR_INIT_NVAR(&_25$$6);
+			zephir_add_function(&_25$$6, &_23$$6, &_32$$6);
+			zephir_read_property(&_39$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
+			zephir_array_fetch_long(&_37$$6, &_39$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_40$$6, &_37$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
 			zephir_read_property(&_41$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_37$$6, &_41$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_40$$6, &_37$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			ZEPHIR_INIT_NVAR(&_29$$6);
-			mul_function(&_29$$6, &_20$$6, &_40$$6);
-			ZEPHIR_INIT_NVAR(&_20$$6);
-			zephir_sub_function(&_20$$6, &_22$$6, &_29$$6);
-			zephir_read_property(&_42$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_40$$6, &_42$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_43$$6, &_40$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
+			zephir_array_fetch_long(&_42$$6, &_41$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_43$$6, &_42$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			ZEPHIR_INIT_NVAR(&_23$$6);
+			mul_function(&_23$$6, &_40$$6, &_43$$6);
 			zephir_read_property(&_44$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_45$$6, &_44$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_46$$6, &_45$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			ZEPHIR_INIT_NVAR(&_22$$6);
-			mul_function(&_22$$6, &_43$$6, &_46$$6);
+			zephir_array_fetch_long(&_40$$6, &_44$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_43$$6, &_40$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			ZEPHIR_INIT_NVAR(&_32$$6);
+			mul_function(&_32$$6, &_23$$6, &_43$$6);
+			ZEPHIR_INIT_NVAR(&_23$$6);
+			zephir_sub_function(&_23$$6, &_25$$6, &_32$$6);
+			zephir_read_property(&_45$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
+			zephir_array_fetch_long(&_43$$6, &_45$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_46$$6, &_43$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
 			zephir_read_property(&_47$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_43$$6, &_47$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_46$$6, &_43$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			ZEPHIR_INIT_NVAR(&_29$$6);
-			mul_function(&_29$$6, &_22$$6, &_46$$6);
-			ZEPHIR_INIT_NVAR(&_22$$6);
-			zephir_sub_function(&_22$$6, &_20$$6, &_29$$6);
-			zephir_read_property(&_48$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_46$$6, &_48$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_49$$6, &_46$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
+			zephir_array_fetch_long(&_48$$6, &_47$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_49$$6, &_48$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			ZEPHIR_INIT_NVAR(&_25$$6);
+			mul_function(&_25$$6, &_46$$6, &_49$$6);
 			zephir_read_property(&_50$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_51$$6, &_50$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_52$$6, &_51$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			ZEPHIR_INIT_NVAR(&_20$$6);
-			mul_function(&_20$$6, &_49$$6, &_52$$6);
+			zephir_array_fetch_long(&_46$$6, &_50$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_49$$6, &_46$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			ZEPHIR_INIT_NVAR(&_32$$6);
+			mul_function(&_32$$6, &_25$$6, &_49$$6);
+			ZEPHIR_INIT_NVAR(&_25$$6);
+			zephir_sub_function(&_25$$6, &_23$$6, &_32$$6);
+			zephir_read_property(&_51$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
+			zephir_array_fetch_long(&_49$$6, &_51$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_52$$6, &_49$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
 			zephir_read_property(&_53$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_49$$6, &_53$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_52$$6, &_49$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			ZEPHIR_INIT_NVAR(&_29$$6);
-			mul_function(&_29$$6, &_20$$6, &_52$$6);
-			zephir_sub_function(return_value, &_22$$6, &_29$$6);
+			zephir_array_fetch_long(&_54$$6, &_53$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_55$$6, &_54$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			ZEPHIR_INIT_NVAR(&_23$$6);
+			mul_function(&_23$$6, &_52$$6, &_55$$6);
+			zephir_read_property(&_56$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
+			zephir_array_fetch_long(&_52$$6, &_56$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_55$$6, &_52$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			ZEPHIR_INIT_NVAR(&_32$$6);
+			mul_function(&_32$$6, &_23$$6, &_55$$6);
+			zephir_sub_function(return_value, &_25$$6, &_32$$6);
 			RETURN_MM();
 		}
 	} while(0);
@@ -1128,7 +1186,7 @@ PHP_METHOD(Pocketmine_Math_Matrix, __toString) {
 			ZVAL_LONG(&r, _2);
 			ZEPHIR_INIT_NVAR(&_4$$3);
 			zephir_read_property(&_5$$3, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch(&_6$$3, &_5$$3, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 214);
+			zephir_array_fetch(&_6$$3, &_5$$3, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 264);
 			zephir_fast_join_str(&_4$$3, SL(","), &_6$$3);
 			ZEPHIR_INIT_NVAR(&_7$$3);
 			ZEPHIR_CONCAT_VS(&_7$$3, &_4$$3, ";");
@@ -1233,6 +1291,11 @@ void zep_Pocketmine_Math_Matrix_offsetUnset_zephir_internal_call(int ht, zend_ex
 
 }
 
+/**
+ * @param float[][] $m
+ *
+ * @return void
+ */
 void zep_Pocketmine_Math_Matrix_set_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *m_param_ext) {
 
 	zend_long _2, _3, _7$$3, _8$$3;
@@ -1293,11 +1356,11 @@ void zep_Pocketmine_Math_Matrix_set_zephir_internal_call(int ht, zend_execute_da
 					ZEPHIR_INIT_NVAR(&c);
 					ZVAL_LONG(&c, _7$$3);
 					ZEPHIR_INIT_NVAR(&_9$$4);
-					zephir_array_fetch(&_10$$4, &m, &r, PH_READONLY, "pocketmine/math/matrix.zep", 62);
+					zephir_array_fetch(&_10$$4, &m, &r, PH_READONLY, "pocketmine/math/matrix.zep", 72);
 					if (zephir_array_isset(&_10$$4, &c)) {
-						zephir_array_fetch(&_11$$4, &m, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 62);
+						zephir_array_fetch(&_11$$4, &m, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 72);
 						ZEPHIR_OBS_NVAR(&_9$$4);
-						zephir_array_fetch(&_9$$4, &_11$$4, &c, PH_NOISY, "pocketmine/math/matrix.zep", 62);
+						zephir_array_fetch(&_9$$4, &_11$$4, &c, PH_NOISY, "pocketmine/math/matrix.zep", 72);
 					} else {
 						ZEPHIR_INIT_NVAR(&_9$$4);
 						ZVAL_LONG(&_9$$4, 0);
@@ -1311,6 +1374,13 @@ void zep_Pocketmine_Math_Matrix_set_zephir_internal_call(int ht, zend_execute_da
 
 }
 
+/**
+ * @param int   $row
+ * @param int   $column
+ * @param float $value
+ *
+ * @return bool
+ */
 void zep_Pocketmine_Math_Matrix_setElement_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *row_ext , zval *column_ext , zval *value_ext ) {
 
 	zend_bool _1, _2, _4;
@@ -1352,6 +1422,12 @@ void zep_Pocketmine_Math_Matrix_setElement_zephir_internal_call(int ht, zend_exe
 
 }
 
+/**
+ * @param int $row
+ * @param int $column
+ *
+ * @return float|false
+ */
 void zep_Pocketmine_Math_Matrix_getElement_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *row_ext , zval *column_ext ) {
 
 	zend_bool _1, _2, _4;
@@ -1389,8 +1465,8 @@ void zep_Pocketmine_Math_Matrix_getElement_zephir_internal_call(int ht, zend_exe
 		RETURN_BOOL(0);
 	}
 	zephir_read_property(&_5, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-	zephir_array_fetch_long(&_6, &_5, zephir_get_intval(row), PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 81);
-	zephir_array_fetch_long(&_7, &_6, zephir_get_intval(column), PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 81);
+	zephir_array_fetch_long(&_6, &_5, zephir_get_intval(row), PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 104);
+	zephir_array_fetch_long(&_7, &_6, zephir_get_intval(column), PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 104);
 	RETURN_CTORW(&_7);
 
 }
@@ -1408,6 +1484,9 @@ void zep_Pocketmine_Math_Matrix_isSquare_zephir_internal_call(int ht, zend_execu
 
 }
 
+/**
+ * @return Matrix|false
+ */
 void zep_Pocketmine_Math_Matrix_add_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *matrix_ext ) {
 
 	zend_bool _2, _8, _12$$4;
@@ -1490,8 +1569,8 @@ void zep_Pocketmine_Math_Matrix_add_zephir_internal_call(int ht, zend_execute_da
 					ZEPHIR_INIT_NVAR(&c);
 					ZVAL_LONG(&c, _13$$4);
 					zephir_read_property(&_15$$5, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-					zephir_array_fetch(&_16$$5, &_15$$5, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 100);
-					zephir_array_fetch(&_17$$5, &_16$$5, &c, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 100);
+					zephir_array_fetch(&_16$$5, &_15$$5, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 126);
+					zephir_array_fetch(&_17$$5, &_16$$5, &c, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 126);
 					ZEPHIR_CALL_INTERNAL_METHOD_P2(&_18$$5, matrix, zep_Pocketmine_Math_Matrix_getElement_zephir_internal_call, &r, &c);
 					zephir_check_call_status();
 					ZEPHIR_INIT_NVAR(&_19$$5);
@@ -1506,6 +1585,9 @@ void zep_Pocketmine_Math_Matrix_add_zephir_internal_call(int ht, zend_execute_da
 
 }
 
+/**
+ * @return Matrix|false
+ */
 void zep_Pocketmine_Math_Matrix_subtract_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *matrix_ext ) {
 
 	zend_bool _2, _6, _10$$4;
@@ -1585,8 +1667,8 @@ void zep_Pocketmine_Math_Matrix_subtract_zephir_internal_call(int ht, zend_execu
 					ZEPHIR_INIT_NVAR(&c);
 					ZVAL_LONG(&c, _11$$4);
 					zephir_read_property(&_13$$5, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-					zephir_array_fetch(&_14$$5, &_13$$5, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 117);
-					zephir_array_fetch(&_15$$5, &_14$$5, &c, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 117);
+					zephir_array_fetch(&_14$$5, &_13$$5, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 146);
+					zephir_array_fetch(&_15$$5, &_14$$5, &c, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 146);
 					ZEPHIR_CALL_INTERNAL_METHOD_P2(&_16$$5, matrix, zep_Pocketmine_Math_Matrix_getElement_zephir_internal_call, &r, &c);
 					zephir_check_call_status();
 					ZEPHIR_INIT_NVAR(&_17$$5);
@@ -1601,6 +1683,11 @@ void zep_Pocketmine_Math_Matrix_subtract_zephir_internal_call(int ht, zend_execu
 
 }
 
+/**
+ * @param float $number
+ *
+ * @return Matrix
+ */
 void zep_Pocketmine_Math_Matrix_multiplyScalar_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *number_ext ) {
 
 	zend_bool _1, _5$$3;
@@ -1662,8 +1749,8 @@ void zep_Pocketmine_Math_Matrix_multiplyScalar_zephir_internal_call(int ht, zend
 					ZEPHIR_INIT_NVAR(&c);
 					ZVAL_LONG(&c, _6$$3);
 					zephir_read_property(&_8$$4, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-					zephir_array_fetch(&_9$$4, &_8$$4, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 131);
-					zephir_array_fetch(&_10$$4, &_9$$4, &c, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 131);
+					zephir_array_fetch(&_9$$4, &_8$$4, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 165);
+					zephir_array_fetch(&_10$$4, &_9$$4, &c, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 165);
 					ZEPHIR_INIT_NVAR(&_11$$4);
 					mul_function(&_11$$4, &_10$$4, number);
 					ZEPHIR_CALL_METHOD(NULL, &result, "setelement", &_12, 0, &r, &c, &_11$$4);
@@ -1676,6 +1763,11 @@ void zep_Pocketmine_Math_Matrix_multiplyScalar_zephir_internal_call(int ht, zend
 
 }
 
+/**
+ * @param float $number
+ *
+ * @return Matrix
+ */
 void zep_Pocketmine_Math_Matrix_divideScalar_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *number_ext ) {
 
 	zend_bool _1, _5$$3;
@@ -1737,8 +1829,8 @@ void zep_Pocketmine_Math_Matrix_divideScalar_zephir_internal_call(int ht, zend_e
 					ZEPHIR_INIT_NVAR(&c);
 					ZVAL_LONG(&c, _6$$3);
 					zephir_read_property(&_8$$4, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-					zephir_array_fetch(&_9$$4, &_8$$4, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 145);
-					zephir_array_fetch(&_10$$4, &_9$$4, &c, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 145);
+					zephir_array_fetch(&_9$$4, &_8$$4, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 184);
+					zephir_array_fetch(&_10$$4, &_9$$4, &c, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 184);
 					ZEPHIR_INIT_NVAR(&_11$$4);
 					div_function(&_11$$4, &_10$$4, number);
 					ZEPHIR_CALL_METHOD(NULL, &result, "setelement", &_12, 0, &r, &c, &_11$$4);
@@ -1751,6 +1843,9 @@ void zep_Pocketmine_Math_Matrix_divideScalar_zephir_internal_call(int ht, zend_e
 
 }
 
+/**
+ * @return Matrix
+ */
 void zep_Pocketmine_Math_Matrix_transpose_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used) {
 
 	zend_bool _3, _7$$3;
@@ -1809,8 +1904,8 @@ void zep_Pocketmine_Math_Matrix_transpose_zephir_internal_call(int ht, zend_exec
 					ZEPHIR_INIT_NVAR(&c);
 					ZVAL_LONG(&c, _8$$3);
 					zephir_read_property(&_10$$4, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-					zephir_array_fetch(&_11$$4, &_10$$4, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 159);
-					zephir_array_fetch(&_12$$4, &_11$$4, &c, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 159);
+					zephir_array_fetch(&_11$$4, &_10$$4, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201);
+					zephir_array_fetch(&_12$$4, &_11$$4, &c, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201);
 					ZEPHIR_CALL_INTERNAL_METHOD_NORETURN_P3(&result, zep_Pocketmine_Math_Matrix_setElement_zephir_internal_call, &c, &r, &_12$$4);
 					zephir_check_call_status();
 				}
@@ -1821,6 +1916,11 @@ void zep_Pocketmine_Math_Matrix_transpose_zephir_internal_call(int ht, zend_exec
 
 }
 
+/**
+ * Naive Matrix product, O(n^3)
+ *
+ * @return Matrix|false
+ */
 void zep_Pocketmine_Math_Matrix_product_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *matrix_ext ) {
 
 	zend_bool _4, _7$$4, _11$$5;
@@ -1914,8 +2014,8 @@ void zep_Pocketmine_Math_Matrix_product_zephir_internal_call(int ht, zend_execut
 							ZEPHIR_INIT_NVAR(&k);
 							ZVAL_LONG(&k, _12$$5);
 							zephir_read_property(&_14$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-							zephir_array_fetch(&_15$$6, &_14$$6, &i, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 183);
-							zephir_array_fetch(&_16$$6, &_15$$6, &k, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 183);
+							zephir_array_fetch(&_15$$6, &_14$$6, &i, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 229);
+							zephir_array_fetch(&_16$$6, &_15$$6, &k, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 229);
 							ZEPHIR_CALL_INTERNAL_METHOD_P2(&_17$$6, matrix, zep_Pocketmine_Math_Matrix_getElement_zephir_internal_call, &k, &j);
 							zephir_check_call_status();
 							ZEPHIR_INIT_NVAR(&_18$$6);
@@ -1933,16 +2033,21 @@ void zep_Pocketmine_Math_Matrix_product_zephir_internal_call(int ht, zend_execut
 
 }
 
+/**
+ * Computation of the determinant of 1x1, 2x2 and 3x3 matrices
+ *
+ * @return float|false
+ */
 void zep_Pocketmine_Math_Matrix_determinant_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used) {
 
-	zval _0, _1, _2$$5, _3$$5, _4$$5, _5$$5, _6$$5, _7$$5, _8$$5, _9$$5, _10$$5, _11$$5, _12$$5, _13$$5, _14$$6, _15$$6, _16$$6, _17$$6, _18$$6, _19$$6, _20$$6, _21$$6, _22$$6, _23$$6, _24$$6, _25$$6, _26$$6, _27$$6, _28$$6, _29$$6, _30$$6, _31$$6, _32$$6, _33$$6, _34$$6, _35$$6, _36$$6, _37$$6, _38$$6, _39$$6, _40$$6, _41$$6, _42$$6, _43$$6, _44$$6, _45$$6, _46$$6, _47$$6, _48$$6, _49$$6, _50$$6, _51$$6, _52$$6, _53$$6;
+	zval _0, _1, _2$$4, _3$$4, _4$$4, _5$$5, _6$$5, _7$$5, _8$$5, _9$$5, _10$$5, _11$$5, _12$$5, _13$$5, _14$$5, _15$$5, _16$$5, _17$$6, _18$$6, _19$$6, _20$$6, _21$$6, _22$$6, _23$$6, _24$$6, _25$$6, _26$$6, _27$$6, _28$$6, _29$$6, _30$$6, _31$$6, _32$$6, _33$$6, _34$$6, _35$$6, _36$$6, _37$$6, _38$$6, _39$$6, _40$$6, _41$$6, _42$$6, _43$$6, _44$$6, _45$$6, _46$$6, _47$$6, _48$$6, _49$$6, _50$$6, _51$$6, _52$$6, _53$$6, _54$$6, _55$$6, _56$$6;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 		ZVAL_UNDEF(&_0);
 	ZVAL_UNDEF(&_1);
-	ZVAL_UNDEF(&_2$$5);
-	ZVAL_UNDEF(&_3$$5);
-	ZVAL_UNDEF(&_4$$5);
+	ZVAL_UNDEF(&_2$$4);
+	ZVAL_UNDEF(&_3$$4);
+	ZVAL_UNDEF(&_4$$4);
 	ZVAL_UNDEF(&_5$$5);
 	ZVAL_UNDEF(&_6$$5);
 	ZVAL_UNDEF(&_7$$5);
@@ -1952,9 +2057,9 @@ void zep_Pocketmine_Math_Matrix_determinant_zephir_internal_call(int ht, zend_ex
 	ZVAL_UNDEF(&_11$$5);
 	ZVAL_UNDEF(&_12$$5);
 	ZVAL_UNDEF(&_13$$5);
-	ZVAL_UNDEF(&_14$$6);
-	ZVAL_UNDEF(&_15$$6);
-	ZVAL_UNDEF(&_16$$6);
+	ZVAL_UNDEF(&_14$$5);
+	ZVAL_UNDEF(&_15$$5);
+	ZVAL_UNDEF(&_16$$5);
 	ZVAL_UNDEF(&_17$$6);
 	ZVAL_UNDEF(&_18$$6);
 	ZVAL_UNDEF(&_19$$6);
@@ -1992,6 +2097,9 @@ void zep_Pocketmine_Math_Matrix_determinant_zephir_internal_call(int ht, zend_ex
 	ZVAL_UNDEF(&_51$$6);
 	ZVAL_UNDEF(&_52$$6);
 	ZVAL_UNDEF(&_53$$6);
+	ZVAL_UNDEF(&_54$$6);
+	ZVAL_UNDEF(&_55$$6);
+	ZVAL_UNDEF(&_56$$6);
 
 	ZEPHIR_MM_GROW();
 
@@ -2004,116 +2112,119 @@ void zep_Pocketmine_Math_Matrix_determinant_zephir_internal_call(int ht, zend_ex
 	zephir_read_property(&_1, this_ptr, SL("rows"), PH_NOISY_CC);
 	do {
 		if (ZEPHIR_IS_LONG(&_1, 1)) {
-			RETURN_MM_LONG(0);
+			zephir_read_property(&_2$$4, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
+			zephir_array_fetch_long(&_3$$4, &_2$$4, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 249);
+			zephir_array_fetch_long(&_4$$4, &_3$$4, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 249);
+			RETURN_CTOR(&_4$$4);
 		}
 		if (ZEPHIR_IS_LONG(&_1, 2)) {
-			zephir_read_property(&_2$$5, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_3$$5, &_2$$5, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201);
-			zephir_array_fetch_long(&_4$$5, &_3$$5, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201);
 			zephir_read_property(&_5$$5, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_6$$5, &_5$$5, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201);
-			zephir_array_fetch_long(&_7$$5, &_6$$5, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201);
-			ZEPHIR_INIT_VAR(&_8$$5);
-			mul_function(&_8$$5, &_4$$5, &_7$$5);
-			zephir_read_property(&_9$$5, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_4$$5, &_9$$5, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201);
-			zephir_array_fetch_long(&_7$$5, &_4$$5, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201);
-			zephir_read_property(&_10$$5, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_11$$5, &_10$$5, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201);
-			zephir_array_fetch_long(&_12$$5, &_11$$5, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 201);
-			ZEPHIR_INIT_VAR(&_13$$5);
-			mul_function(&_13$$5, &_7$$5, &_12$$5);
-			zephir_sub_function(return_value, &_8$$5, &_13$$5);
+			zephir_array_fetch_long(&_6$$5, &_5$$5, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 251);
+			zephir_array_fetch_long(&_7$$5, &_6$$5, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 251);
+			zephir_read_property(&_8$$5, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
+			zephir_array_fetch_long(&_9$$5, &_8$$5, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 251);
+			zephir_array_fetch_long(&_10$$5, &_9$$5, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 251);
+			ZEPHIR_INIT_VAR(&_11$$5);
+			mul_function(&_11$$5, &_7$$5, &_10$$5);
+			zephir_read_property(&_12$$5, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
+			zephir_array_fetch_long(&_7$$5, &_12$$5, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 251);
+			zephir_array_fetch_long(&_10$$5, &_7$$5, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 251);
+			zephir_read_property(&_13$$5, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
+			zephir_array_fetch_long(&_14$$5, &_13$$5, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 251);
+			zephir_array_fetch_long(&_15$$5, &_14$$5, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 251);
+			ZEPHIR_INIT_VAR(&_16$$5);
+			mul_function(&_16$$5, &_10$$5, &_15$$5);
+			zephir_sub_function(return_value, &_11$$5, &_16$$5);
 			RETURN_MM();
 		}
 		if (ZEPHIR_IS_LONG(&_1, 3)) {
-			zephir_read_property(&_14$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_15$$6, &_14$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_16$$6, &_15$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
 			zephir_read_property(&_17$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_18$$6, &_17$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_19$$6, &_18$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			ZEPHIR_INIT_VAR(&_20$$6);
-			mul_function(&_20$$6, &_16$$6, &_19$$6);
-			zephir_read_property(&_21$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_16$$6, &_21$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_19$$6, &_16$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			ZEPHIR_INIT_VAR(&_22$$6);
-			mul_function(&_22$$6, &_20$$6, &_19$$6);
-			zephir_read_property(&_23$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_19$$6, &_23$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_24$$6, &_19$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_read_property(&_25$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_26$$6, &_25$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_27$$6, &_26$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			ZEPHIR_INIT_NVAR(&_20$$6);
-			mul_function(&_20$$6, &_24$$6, &_27$$6);
+			zephir_array_fetch_long(&_18$$6, &_17$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_19$$6, &_18$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_read_property(&_20$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
+			zephir_array_fetch_long(&_21$$6, &_20$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_22$$6, &_21$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			ZEPHIR_INIT_VAR(&_23$$6);
+			mul_function(&_23$$6, &_19$$6, &_22$$6);
+			zephir_read_property(&_24$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
+			zephir_array_fetch_long(&_19$$6, &_24$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_22$$6, &_19$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			ZEPHIR_INIT_VAR(&_25$$6);
+			mul_function(&_25$$6, &_23$$6, &_22$$6);
+			zephir_read_property(&_26$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
+			zephir_array_fetch_long(&_22$$6, &_26$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_27$$6, &_22$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
 			zephir_read_property(&_28$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_24$$6, &_28$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_27$$6, &_24$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			ZEPHIR_INIT_VAR(&_29$$6);
-			mul_function(&_29$$6, &_20$$6, &_27$$6);
-			ZEPHIR_INIT_NVAR(&_20$$6);
-			zephir_add_function(&_20$$6, &_22$$6, &_29$$6);
-			zephir_read_property(&_30$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_27$$6, &_30$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_31$$6, &_27$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_read_property(&_32$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_33$$6, &_32$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_34$$6, &_33$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			ZEPHIR_INIT_NVAR(&_22$$6);
-			mul_function(&_22$$6, &_31$$6, &_34$$6);
+			zephir_array_fetch_long(&_29$$6, &_28$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_30$$6, &_29$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			ZEPHIR_INIT_NVAR(&_23$$6);
+			mul_function(&_23$$6, &_27$$6, &_30$$6);
+			zephir_read_property(&_31$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
+			zephir_array_fetch_long(&_27$$6, &_31$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_30$$6, &_27$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			ZEPHIR_INIT_VAR(&_32$$6);
+			mul_function(&_32$$6, &_23$$6, &_30$$6);
+			ZEPHIR_INIT_NVAR(&_23$$6);
+			zephir_add_function(&_23$$6, &_25$$6, &_32$$6);
+			zephir_read_property(&_33$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
+			zephir_array_fetch_long(&_30$$6, &_33$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_34$$6, &_30$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
 			zephir_read_property(&_35$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_31$$6, &_35$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_34$$6, &_31$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			ZEPHIR_INIT_NVAR(&_29$$6);
-			mul_function(&_29$$6, &_22$$6, &_34$$6);
-			ZEPHIR_INIT_NVAR(&_22$$6);
-			zephir_add_function(&_22$$6, &_20$$6, &_29$$6);
-			zephir_read_property(&_36$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_34$$6, &_36$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_37$$6, &_34$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
+			zephir_array_fetch_long(&_36$$6, &_35$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_37$$6, &_36$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			ZEPHIR_INIT_NVAR(&_25$$6);
+			mul_function(&_25$$6, &_34$$6, &_37$$6);
 			zephir_read_property(&_38$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_39$$6, &_38$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_40$$6, &_39$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			ZEPHIR_INIT_NVAR(&_20$$6);
-			mul_function(&_20$$6, &_37$$6, &_40$$6);
+			zephir_array_fetch_long(&_34$$6, &_38$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_37$$6, &_34$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			ZEPHIR_INIT_NVAR(&_32$$6);
+			mul_function(&_32$$6, &_25$$6, &_37$$6);
+			ZEPHIR_INIT_NVAR(&_25$$6);
+			zephir_add_function(&_25$$6, &_23$$6, &_32$$6);
+			zephir_read_property(&_39$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
+			zephir_array_fetch_long(&_37$$6, &_39$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_40$$6, &_37$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
 			zephir_read_property(&_41$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_37$$6, &_41$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_40$$6, &_37$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			ZEPHIR_INIT_NVAR(&_29$$6);
-			mul_function(&_29$$6, &_20$$6, &_40$$6);
-			ZEPHIR_INIT_NVAR(&_20$$6);
-			zephir_sub_function(&_20$$6, &_22$$6, &_29$$6);
-			zephir_read_property(&_42$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_40$$6, &_42$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_43$$6, &_40$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
+			zephir_array_fetch_long(&_42$$6, &_41$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_43$$6, &_42$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			ZEPHIR_INIT_NVAR(&_23$$6);
+			mul_function(&_23$$6, &_40$$6, &_43$$6);
 			zephir_read_property(&_44$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_45$$6, &_44$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_46$$6, &_45$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			ZEPHIR_INIT_NVAR(&_22$$6);
-			mul_function(&_22$$6, &_43$$6, &_46$$6);
+			zephir_array_fetch_long(&_40$$6, &_44$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_43$$6, &_40$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			ZEPHIR_INIT_NVAR(&_32$$6);
+			mul_function(&_32$$6, &_23$$6, &_43$$6);
+			ZEPHIR_INIT_NVAR(&_23$$6);
+			zephir_sub_function(&_23$$6, &_25$$6, &_32$$6);
+			zephir_read_property(&_45$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
+			zephir_array_fetch_long(&_43$$6, &_45$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_46$$6, &_43$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
 			zephir_read_property(&_47$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_43$$6, &_47$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_46$$6, &_43$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			ZEPHIR_INIT_NVAR(&_29$$6);
-			mul_function(&_29$$6, &_22$$6, &_46$$6);
-			ZEPHIR_INIT_NVAR(&_22$$6);
-			zephir_sub_function(&_22$$6, &_20$$6, &_29$$6);
-			zephir_read_property(&_48$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_46$$6, &_48$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_49$$6, &_46$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
+			zephir_array_fetch_long(&_48$$6, &_47$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_49$$6, &_48$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			ZEPHIR_INIT_NVAR(&_25$$6);
+			mul_function(&_25$$6, &_46$$6, &_49$$6);
 			zephir_read_property(&_50$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_51$$6, &_50$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_52$$6, &_51$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			ZEPHIR_INIT_NVAR(&_20$$6);
-			mul_function(&_20$$6, &_49$$6, &_52$$6);
+			zephir_array_fetch_long(&_46$$6, &_50$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_49$$6, &_46$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			ZEPHIR_INIT_NVAR(&_32$$6);
+			mul_function(&_32$$6, &_25$$6, &_49$$6);
+			ZEPHIR_INIT_NVAR(&_25$$6);
+			zephir_sub_function(&_25$$6, &_23$$6, &_32$$6);
+			zephir_read_property(&_51$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
+			zephir_array_fetch_long(&_49$$6, &_51$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_52$$6, &_49$$6, 2, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
 			zephir_read_property(&_53$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch_long(&_49$$6, &_53$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			zephir_array_fetch_long(&_52$$6, &_49$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 203);
-			ZEPHIR_INIT_NVAR(&_29$$6);
-			mul_function(&_29$$6, &_20$$6, &_52$$6);
-			zephir_sub_function(return_value, &_22$$6, &_29$$6);
+			zephir_array_fetch_long(&_54$$6, &_53$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_55$$6, &_54$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			ZEPHIR_INIT_NVAR(&_23$$6);
+			mul_function(&_23$$6, &_52$$6, &_55$$6);
+			zephir_read_property(&_56$$6, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
+			zephir_array_fetch_long(&_52$$6, &_56$$6, 0, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			zephir_array_fetch_long(&_55$$6, &_52$$6, 1, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 253);
+			ZEPHIR_INIT_NVAR(&_32$$6);
+			mul_function(&_32$$6, &_23$$6, &_55$$6);
+			zephir_sub_function(return_value, &_25$$6, &_32$$6);
 			RETURN_MM();
 		}
 	} while(0);
@@ -2161,7 +2272,7 @@ void zep_Pocketmine_Math_Matrix___toString_zephir_internal_call(int ht, zend_exe
 			ZVAL_LONG(&r, _2);
 			ZEPHIR_INIT_NVAR(&_4$$3);
 			zephir_read_property(&_5$$3, this_ptr, SL("matrix"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_fetch(&_6$$3, &_5$$3, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 214);
+			zephir_array_fetch(&_6$$3, &_5$$3, &r, PH_NOISY | PH_READONLY, "pocketmine/math/matrix.zep", 264);
 			zephir_fast_join_str(&_4$$3, SL(","), &_6$$3);
 			ZEPHIR_INIT_NVAR(&_7$$3);
 			ZEPHIR_CONCAT_VS(&_7$$3, &_4$$3, ";");

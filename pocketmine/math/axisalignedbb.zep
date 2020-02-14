@@ -32,11 +32,6 @@ class AxisAlignedBB
     public maxZ = 0.0;
     public function __construct(float minX, float minY, float minZ, float maxX, float maxY, float maxZ)
     {
-        this->setBounds(minX, minY, minZ, maxX, maxY, maxZ);
-    }
-
-    public function setBounds(float minX, float minY, float minZ, float maxX, float maxY, float maxZ)
-    {
         if (minX > maxX) {
             throw new \InvalidArgumentException("minX {minX} is larger than maxX {maxX}");
         }
@@ -52,18 +47,6 @@ class AxisAlignedBB
         let this->maxX = maxX;
         let this->maxY = maxY;
         let this->maxZ = maxZ;
-        return this;
-    }
-
-    /**
-     * Sets the bounding box's bounds from another AxisAlignedBB, and returns itself
-     *
-     * @param AxisAlignedBB $bb
-     * @return $this
-     */
-    public function setBB(<AxisAlignedBB> bb) -> <AxisAlignedBB>
-    {
-        return this->setBounds((float) bb->minX, (float) bb->minY, (float) bb->minZ, (float) bb->maxX, (float) bb->maxY, (float) bb->maxZ);
     }
 
     /**

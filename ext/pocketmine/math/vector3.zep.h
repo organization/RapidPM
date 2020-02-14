@@ -111,9 +111,9 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_vector3_add, 0, 
 ZEND_END_ARG_INFO()
 
 #if PHP_VERSION_ID >= 70200
-ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_pocketmine_math_vector3_subtract, 0, 0, Pocketmine\\Math\\Vector3, 0)
+ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_pocketmine_math_vector3_subtract, 0, 1, Pocketmine\\Math\\Vector3, 0)
 #else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_vector3_subtract, 0, 0, IS_OBJECT, "Pocketmine\\Math\\Vector3", 0)
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_vector3_subtract, 0, 1, IS_OBJECT, "Pocketmine\\Math\\Vector3", 0)
 #endif
 	ZEND_ARG_INFO(0, x)
 	ZEND_ARG_INFO(0, y)
@@ -313,9 +313,9 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_vector3_distance
 ZEND_END_ARG_INFO()
 
 #if PHP_VERSION_ID >= 70200
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_vector3_maxplaindistance, 0, 0, IS_DOUBLE, 0)
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_vector3_maxplaindistance, 0, 1, IS_DOUBLE, 0)
 #else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_vector3_maxplaindistance, 0, 0, IS_DOUBLE, NULL, 0)
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_vector3_maxplaindistance, 0, 1, IS_DOUBLE, NULL, 0)
 #endif
 	ZEND_ARG_INFO(0, x)
 	ZEND_ARG_INFO(0, z)

@@ -64,9 +64,9 @@ class Vector3
     }
 
     /**
-     * @param Vector3|int $x
-     * @param int         $y
-     * @param int         $z
+     * @param Vector3|float $x
+     * @param float         $y
+     * @param float         $z
      *
      * @return Vector3
      */
@@ -80,13 +80,13 @@ class Vector3
     }
 
     /**
-     * @param Vector3|int $x
-     * @param int         $y
-     * @param int         $z
+     * @param Vector3|float $x
+     * @param float         $y
+     * @param float         $z
      *
      * @return Vector3
      */
-    public function subtract(var x = 0, var y = 0, var z = 0) -> <Vector3>
+    public function subtract(var x, var y = 0, var z = 0) -> <Vector3>
     {
         if (x instanceof Vector3) {
             return this->add(-x->x, -x->y, -x->z);
@@ -284,7 +284,11 @@ class Vector3
         return pow((this->x - pos->x), 2)+ pow((this->y - pos->y), 2) + pow((this->z - pos->z), 2);
     }
 
-    public function maxPlainDistance(var x = 0, var z = 0) -> float
+    /**
+	 * @param Vector3|Vector2|float $x
+	 * @param float                 $z
+	 */
+    public function maxPlainDistance(var x, var z = 0) -> float
     {
         if (x instanceof Vector3) {
             return this->maxPlainDistance(x->x, x->z);
@@ -409,9 +413,9 @@ class Vector3
     }
 
     /**
-     * @param $x
-     * @param $y
-     * @param $z
+     * @param float $x
+     * @param float $y
+     * @param float $z
      *
      * @return $this
      */

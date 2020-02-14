@@ -12,12 +12,12 @@
 #include <Zend/zend_interfaces.h>
 
 #include "kernel/main.h"
-#include "kernel/fcall.h"
-#include "kernel/operators.h"
-#include "kernel/memory.h"
-#include "kernel/object.h"
 #include "kernel/exception.h"
 #include "ext/spl/spl_exceptions.h"
+#include "kernel/object.h"
+#include "kernel/memory.h"
+#include "kernel/operators.h"
+#include "kernel/fcall.h"
 #include "kernel/array.h"
 
 
@@ -64,44 +64,6 @@ ZEPHIR_INIT_CLASS(Pocketmine_Math_AxisAlignedBB) {
 
 PHP_METHOD(Pocketmine_Math_AxisAlignedBB, __construct) {
 
-	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
-	zend_long ZEPHIR_LAST_CALL_STATUS;
-	zval *minX_param = NULL, *minY_param = NULL, *minZ_param = NULL, *maxX_param = NULL, *maxY_param = NULL, *maxZ_param = NULL, _0, _1, _2, _3, _4, _5;
-	double minX, minY, minZ, maxX, maxY, maxZ;
-	zval *this_ptr = getThis();
-
-	ZVAL_UNDEF(&_0);
-	ZVAL_UNDEF(&_1);
-	ZVAL_UNDEF(&_2);
-	ZVAL_UNDEF(&_3);
-	ZVAL_UNDEF(&_4);
-	ZVAL_UNDEF(&_5);
-
-	ZEPHIR_MM_GROW();
-	zephir_fetch_params(1, 6, 0, &minX_param, &minY_param, &minZ_param, &maxX_param, &maxY_param, &maxZ_param);
-
-	minX = zephir_get_doubleval(minX_param);
-	minY = zephir_get_doubleval(minY_param);
-	minZ = zephir_get_doubleval(minZ_param);
-	maxX = zephir_get_doubleval(maxX_param);
-	maxY = zephir_get_doubleval(maxY_param);
-	maxZ = zephir_get_doubleval(maxZ_param);
-
-
-	ZVAL_DOUBLE(&_0, minX);
-	ZVAL_DOUBLE(&_1, minY);
-	ZVAL_DOUBLE(&_2, minZ);
-	ZVAL_DOUBLE(&_3, maxX);
-	ZVAL_DOUBLE(&_4, maxY);
-	ZVAL_DOUBLE(&_5, maxZ);
-	ZEPHIR_CALL_INTERNAL_METHOD_NORETURN_P6(this_ptr, zep_Pocketmine_Math_AxisAlignedBB_setBounds_zephir_internal_call, &_0, &_1, &_2, &_3, &_4, &_5);
-	zephir_check_call_status();
-	ZEPHIR_MM_RESTORE();
-
-}
-
-PHP_METHOD(Pocketmine_Math_AxisAlignedBB, setBounds) {
-
 	zval *minX_param = NULL, *minY_param = NULL, *minZ_param = NULL, *maxX_param = NULL, *maxY_param = NULL, *maxZ_param = NULL, _0;
 	double minX, minY, minZ, maxX, maxY, maxZ;
 	zval *this_ptr = getThis();
@@ -119,15 +81,15 @@ PHP_METHOD(Pocketmine_Math_AxisAlignedBB, setBounds) {
 
 
 	if (minX > maxX) {
-		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "minX {minX} is larger than maxX {maxX}", "pocketmine/math/axisalignedbb.zep", 41);
+		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "minX {minX} is larger than maxX {maxX}", "pocketmine/math/axisalignedbb.zep", 36);
 		return;
 	}
 	if (minY > maxY) {
-		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "minY {minY} is larger than maxY {maxY}", "pocketmine/math/axisalignedbb.zep", 44);
+		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "minY {minY} is larger than maxY {maxY}", "pocketmine/math/axisalignedbb.zep", 39);
 		return;
 	}
 	if (minZ > maxZ) {
-		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "minZ {minZ} is larger than maxZ {maxZ}", "pocketmine/math/axisalignedbb.zep", 47);
+		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "minZ {minZ} is larger than maxZ {maxZ}", "pocketmine/math/axisalignedbb.zep", 42);
 		return;
 	}
 	ZEPHIR_INIT_ZVAL_NREF(_0);
@@ -148,63 +110,6 @@ PHP_METHOD(Pocketmine_Math_AxisAlignedBB, setBounds) {
 	ZEPHIR_INIT_ZVAL_NREF(_0);
 	ZVAL_DOUBLE(&_0, maxZ);
 	zephir_update_property_zval(this_ptr, SL("maxZ"), &_0);
-	RETURN_THISW();
-
-}
-
-/**
- * Sets the bounding box's bounds from another AxisAlignedBB, and returns itself
- *
- * @param AxisAlignedBB $bb
- * @return $this
- */
-PHP_METHOD(Pocketmine_Math_AxisAlignedBB, setBB) {
-
-	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
-	zend_long ZEPHIR_LAST_CALL_STATUS;
-	zval *bb = NULL, bb_sub, _0, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11;
-	zval *this_ptr = getThis();
-
-	ZVAL_UNDEF(&bb_sub);
-	ZVAL_UNDEF(&_0);
-	ZVAL_UNDEF(&_1);
-	ZVAL_UNDEF(&_2);
-	ZVAL_UNDEF(&_3);
-	ZVAL_UNDEF(&_4);
-	ZVAL_UNDEF(&_5);
-	ZVAL_UNDEF(&_6);
-	ZVAL_UNDEF(&_7);
-	ZVAL_UNDEF(&_8);
-	ZVAL_UNDEF(&_9);
-	ZVAL_UNDEF(&_10);
-	ZVAL_UNDEF(&_11);
-
-	ZEPHIR_MM_GROW();
-	zephir_fetch_params(1, 1, 0, &bb);
-
-
-
-	ZEPHIR_OBS_VAR(&_0);
-	zephir_read_property(&_0, bb, SL("minX"), PH_NOISY_CC);
-	ZEPHIR_OBS_VAR(&_1);
-	zephir_read_property(&_1, bb, SL("minY"), PH_NOISY_CC);
-	ZEPHIR_OBS_VAR(&_2);
-	zephir_read_property(&_2, bb, SL("minZ"), PH_NOISY_CC);
-	ZEPHIR_OBS_VAR(&_3);
-	zephir_read_property(&_3, bb, SL("maxX"), PH_NOISY_CC);
-	ZEPHIR_OBS_VAR(&_4);
-	zephir_read_property(&_4, bb, SL("maxY"), PH_NOISY_CC);
-	ZEPHIR_OBS_VAR(&_5);
-	zephir_read_property(&_5, bb, SL("maxZ"), PH_NOISY_CC);
-	ZVAL_DOUBLE(&_6, zephir_get_doubleval(&_0));
-	ZVAL_DOUBLE(&_7, zephir_get_doubleval(&_1));
-	ZVAL_DOUBLE(&_8, zephir_get_doubleval(&_2));
-	ZVAL_DOUBLE(&_9, zephir_get_doubleval(&_3));
-	ZVAL_DOUBLE(&_10, zephir_get_doubleval(&_4));
-	ZVAL_DOUBLE(&_11, zephir_get_doubleval(&_5));
-	ZEPHIR_RETURN_CALL_INTERNAL_METHOD_P6(this_ptr, zep_Pocketmine_Math_AxisAlignedBB_setBounds_zephir_internal_call, &_6, &_7, &_8, &_9, &_10, &_11);
-	zephir_check_call_status();
-	RETURN_MM();
 
 }
 
@@ -609,7 +514,7 @@ PHP_METHOD(Pocketmine_Math_AxisAlignedBB, extend) {
 		ZVAL_DOUBLE(&_5$$8, distance);
 		zephir_update_property_zval(this_ptr, SL("maxX"), &_5$$8);
 	} else {
-		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "Invalid face {face}", "pocketmine/math/axisalignedbb.zep", 232);
+		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "Invalid face {face}", "pocketmine/math/axisalignedbb.zep", 215);
 		return;
 	}
 	RETURN_THISW();
@@ -777,7 +682,7 @@ PHP_METHOD(Pocketmine_Math_AxisAlignedBB, stretch) {
 		ZVAL_DOUBLE(&_2$$5, distance);
 		zephir_update_property_zval(this_ptr, SL("maxX"), &_2$$5);
 	} else {
-		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "Invalid axis {axis}", "pocketmine/math/axisalignedbb.zep", 303);
+		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "Invalid axis {axis}", "pocketmine/math/axisalignedbb.zep", 286);
 		return;
 	}
 	RETURN_THISW();
@@ -1695,7 +1600,7 @@ PHP_METHOD(Pocketmine_Math_AxisAlignedBB, calculateIntercept) {
 	zephir_array_fast_append(&_19, &v4);
 	zephir_array_fast_append(&_19, &v5);
 	zephir_array_fast_append(&_19, &v6);
-	zephir_is_iterable(&_19, 0, "pocketmine/math/axisalignedbb.zep", 572);
+	zephir_is_iterable(&_19, 0, "pocketmine/math/axisalignedbb.zep", 555);
 	if (Z_TYPE_P(&_19) == IS_ARRAY) {
 		ZEND_HASH_FOREACH_VAL(Z_ARRVAL_P(&_19), _20)
 		{
@@ -1803,122 +1708,6 @@ PHP_METHOD(Pocketmine_Math_AxisAlignedBB, one) {
 	ZVAL_LONG(&_4, 1);
 	ZVAL_LONG(&_5, 1);
 	ZEPHIR_CALL_METHOD(NULL, return_value, "__construct", NULL, 1, &_0, &_1, &_2, &_3, &_4, &_5);
-	zephir_check_call_status();
-	RETURN_MM();
-
-}
-
-void zep_Pocketmine_Math_AxisAlignedBB_setBounds_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *minX_param_ext, zval *minY_param_ext, zval *minZ_param_ext, zval *maxX_param_ext, zval *maxY_param_ext, zval *maxZ_param_ext) {
-
-	zval *minX_param = NULL, *minY_param = NULL, *minZ_param = NULL, *maxX_param = NULL, *maxY_param = NULL, *maxZ_param = NULL, _0;
-	double minX, minY, minZ, maxX, maxY, maxZ;
-		ZVAL_UNDEF(&_0);
-
-	minX_param = minX_param_ext;
-
-	minY_param = minY_param_ext;
-
-	minZ_param = minZ_param_ext;
-
-	maxX_param = maxX_param_ext;
-
-	maxY_param = maxY_param_ext;
-
-	maxZ_param = maxZ_param_ext;
-
-
-	minX = zephir_get_doubleval(minX_param);
-	minY = zephir_get_doubleval(minY_param);
-	minZ = zephir_get_doubleval(minZ_param);
-	maxX = zephir_get_doubleval(maxX_param);
-	maxY = zephir_get_doubleval(maxY_param);
-	maxZ = zephir_get_doubleval(maxZ_param);
-
-
-	if (minX > maxX) {
-		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "minX {minX} is larger than maxX {maxX}", "pocketmine/math/axisalignedbb.zep", 41);
-		return;
-	}
-	if (minY > maxY) {
-		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "minY {minY} is larger than maxY {maxY}", "pocketmine/math/axisalignedbb.zep", 44);
-		return;
-	}
-	if (minZ > maxZ) {
-		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "minZ {minZ} is larger than maxZ {maxZ}", "pocketmine/math/axisalignedbb.zep", 47);
-		return;
-	}
-	ZEPHIR_INIT_ZVAL_NREF(_0);
-	ZVAL_DOUBLE(&_0, minX);
-	zephir_update_property_zval(this_ptr, SL("minX"), &_0);
-	ZEPHIR_INIT_ZVAL_NREF(_0);
-	ZVAL_DOUBLE(&_0, minY);
-	zephir_update_property_zval(this_ptr, SL("minY"), &_0);
-	ZEPHIR_INIT_ZVAL_NREF(_0);
-	ZVAL_DOUBLE(&_0, minZ);
-	zephir_update_property_zval(this_ptr, SL("minZ"), &_0);
-	ZEPHIR_INIT_ZVAL_NREF(_0);
-	ZVAL_DOUBLE(&_0, maxX);
-	zephir_update_property_zval(this_ptr, SL("maxX"), &_0);
-	ZEPHIR_INIT_ZVAL_NREF(_0);
-	ZVAL_DOUBLE(&_0, maxY);
-	zephir_update_property_zval(this_ptr, SL("maxY"), &_0);
-	ZEPHIR_INIT_ZVAL_NREF(_0);
-	ZVAL_DOUBLE(&_0, maxZ);
-	zephir_update_property_zval(this_ptr, SL("maxZ"), &_0);
-	RETURN_THISW();
-
-}
-
-/**
- * Sets the bounding box's bounds from another AxisAlignedBB, and returns itself
- *
- * @param AxisAlignedBB $bb
- * @return $this
- */
-void zep_Pocketmine_Math_AxisAlignedBB_setBB_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *bb_ext ) {
-
-	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
-	zend_long ZEPHIR_LAST_CALL_STATUS;
-	zval *bb = NULL, bb_sub, _0, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11;
-		ZVAL_UNDEF(&bb_sub);
-	ZVAL_UNDEF(&_0);
-	ZVAL_UNDEF(&_1);
-	ZVAL_UNDEF(&_2);
-	ZVAL_UNDEF(&_3);
-	ZVAL_UNDEF(&_4);
-	ZVAL_UNDEF(&_5);
-	ZVAL_UNDEF(&_6);
-	ZVAL_UNDEF(&_7);
-	ZVAL_UNDEF(&_8);
-	ZVAL_UNDEF(&_9);
-	ZVAL_UNDEF(&_10);
-	ZVAL_UNDEF(&_11);
-
-	ZEPHIR_MM_GROW();
-	bb = bb_ext;
-
-
-
-
-	ZEPHIR_OBS_VAR(&_0);
-	zephir_read_property(&_0, bb, SL("minX"), PH_NOISY_CC);
-	ZEPHIR_OBS_VAR(&_1);
-	zephir_read_property(&_1, bb, SL("minY"), PH_NOISY_CC);
-	ZEPHIR_OBS_VAR(&_2);
-	zephir_read_property(&_2, bb, SL("minZ"), PH_NOISY_CC);
-	ZEPHIR_OBS_VAR(&_3);
-	zephir_read_property(&_3, bb, SL("maxX"), PH_NOISY_CC);
-	ZEPHIR_OBS_VAR(&_4);
-	zephir_read_property(&_4, bb, SL("maxY"), PH_NOISY_CC);
-	ZEPHIR_OBS_VAR(&_5);
-	zephir_read_property(&_5, bb, SL("maxZ"), PH_NOISY_CC);
-	ZVAL_DOUBLE(&_6, zephir_get_doubleval(&_0));
-	ZVAL_DOUBLE(&_7, zephir_get_doubleval(&_1));
-	ZVAL_DOUBLE(&_8, zephir_get_doubleval(&_2));
-	ZVAL_DOUBLE(&_9, zephir_get_doubleval(&_3));
-	ZVAL_DOUBLE(&_10, zephir_get_doubleval(&_4));
-	ZVAL_DOUBLE(&_11, zephir_get_doubleval(&_5));
-	ZEPHIR_RETURN_CALL_INTERNAL_METHOD_P6(this_ptr, zep_Pocketmine_Math_AxisAlignedBB_setBounds_zephir_internal_call, &_6, &_7, &_8, &_9, &_10, &_11);
 	zephir_check_call_status();
 	RETURN_MM();
 
@@ -2347,7 +2136,7 @@ void zep_Pocketmine_Math_AxisAlignedBB_extend_zephir_internal_call(int ht, zend_
 		ZVAL_DOUBLE(&_5$$8, distance);
 		zephir_update_property_zval(this_ptr, SL("maxX"), &_5$$8);
 	} else {
-		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "Invalid face {face}", "pocketmine/math/axisalignedbb.zep", 232);
+		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "Invalid face {face}", "pocketmine/math/axisalignedbb.zep", 215);
 		return;
 	}
 	RETURN_THISW();
@@ -2519,7 +2308,7 @@ void zep_Pocketmine_Math_AxisAlignedBB_stretch_zephir_internal_call(int ht, zend
 		ZVAL_DOUBLE(&_2$$5, distance);
 		zephir_update_property_zval(this_ptr, SL("maxX"), &_2$$5);
 	} else {
-		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "Invalid axis {axis}", "pocketmine/math/axisalignedbb.zep", 303);
+		ZEPHIR_THROW_EXCEPTION_DEBUG_STRW(spl_ce_InvalidArgumentException, "Invalid axis {axis}", "pocketmine/math/axisalignedbb.zep", 286);
 		return;
 	}
 	RETURN_THISW();
@@ -3351,7 +3140,7 @@ void zep_Pocketmine_Math_AxisAlignedBB_calculateIntercept_zephir_internal_call(i
 	zephir_array_fast_append(&_19, &v4);
 	zephir_array_fast_append(&_19, &v5);
 	zephir_array_fast_append(&_19, &v6);
-	zephir_is_iterable(&_19, 0, "pocketmine/math/axisalignedbb.zep", 572);
+	zephir_is_iterable(&_19, 0, "pocketmine/math/axisalignedbb.zep", 555);
 	if (Z_TYPE_P(&_19) == IS_ARRAY) {
 		ZEND_HASH_FOREACH_VAL(Z_ARRVAL_P(&_19), _20)
 		{

@@ -53,7 +53,7 @@ ZEPHIR_INIT_CLASS(Pocketmine_Math_Vector3) {
 
 }
 
-/**
+/**
  */
 PHP_METHOD(Pocketmine_Math_Vector3, getX) {
 
@@ -64,7 +64,7 @@ PHP_METHOD(Pocketmine_Math_Vector3, getX) {
 
 }
 
-/**
+/**
  */
 PHP_METHOD(Pocketmine_Math_Vector3, getY) {
 
@@ -75,7 +75,7 @@ PHP_METHOD(Pocketmine_Math_Vector3, getY) {
 
 }
 
-/**
+/**
  */
 PHP_METHOD(Pocketmine_Math_Vector3, getZ) {
 
@@ -174,9 +174,9 @@ PHP_METHOD(Pocketmine_Math_Vector3, getFloorZ) {
 }
 
 /**
- * @param Vector3|int $x
- * @param int         $y
- * @param int         $z
+ * @param Vector3|float $x
+ * @param float         $y
+ * @param float         $z
  *
  * @return Vector3
  */
@@ -252,9 +252,9 @@ PHP_METHOD(Pocketmine_Math_Vector3, add) {
 }
 
 /**
- * @param Vector3|int $x
- * @param int         $y
- * @param int         $z
+ * @param Vector3|float $x
+ * @param float         $y
+ * @param float         $z
  *
  * @return Vector3
  */
@@ -274,13 +274,8 @@ PHP_METHOD(Pocketmine_Math_Vector3, subtract) {
 	ZVAL_UNDEF(&_2$$3);
 
 	ZEPHIR_MM_GROW();
-	zephir_fetch_params(1, 0, 3, &x, &y, &z);
+	zephir_fetch_params(1, 1, 2, &x, &y, &z);
 
-	if (!x) {
-		x = &x_sub;
-		ZEPHIR_INIT_VAR(x);
-		ZVAL_LONG(x, 0);
-	}
 	if (!y) {
 		y = &y_sub;
 		ZEPHIR_INIT_VAR(y);
@@ -1193,6 +1188,10 @@ PHP_METHOD(Pocketmine_Math_Vector3, distanceSquared) {
 
 }
 
+/**
+ * @param Vector3|Vector2|float $x
+ * @param float                 $z
+ */
 PHP_METHOD(Pocketmine_Math_Vector3, maxPlainDistance) {
 
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
@@ -1214,13 +1213,8 @@ PHP_METHOD(Pocketmine_Math_Vector3, maxPlainDistance) {
 	ZVAL_UNDEF(&_9$$5);
 
 	ZEPHIR_MM_GROW();
-	zephir_fetch_params(1, 0, 2, &x, &z);
+	zephir_fetch_params(1, 1, 1, &x, &z);
 
-	if (!x) {
-		x = &x_sub;
-		ZEPHIR_INIT_VAR(x);
-		ZVAL_LONG(x, 0);
-	}
 	if (!z) {
 		z = &z_sub;
 		ZEPHIR_INIT_VAR(z);
@@ -1704,9 +1698,9 @@ PHP_METHOD(Pocketmine_Math_Vector3, getIntermediateWithZValue) {
 }
 
 /**
- * @param $x
- * @param $y
- * @param $z
+ * @param float $x
+ * @param float $y
+ * @param float $z
  *
  * @return $this
  */
@@ -1792,18 +1786,18 @@ PHP_METHOD(Pocketmine_Math_Vector3, maxComponents) {
 	array_init(&yList);
 	ZEPHIR_INIT_VAR(&xList);
 	array_init(&xList);
-	zephir_is_iterable(&positions, 0, "pocketmine/math/vector3.zep", 450);
+	zephir_is_iterable(&positions, 0, "pocketmine/math/vector3.zep", 454);
 	if (Z_TYPE_P(&positions) == IS_ARRAY) {
 		ZEND_HASH_FOREACH_VAL(Z_ARRVAL_P(&positions), _0)
 		{
 			ZEPHIR_INIT_NVAR(&position);
 			ZVAL_COPY(&position, _0);
 			zephir_read_property(&_2$$3, &position, SL("x"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_append(&xList, &_2$$3, PH_SEPARATE, "pocketmine/math/vector3.zep", 446);
+			zephir_array_append(&xList, &_2$$3, PH_SEPARATE, "pocketmine/math/vector3.zep", 450);
 			zephir_read_property(&_3$$3, &position, SL("y"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_append(&yList, &_3$$3, PH_SEPARATE, "pocketmine/math/vector3.zep", 447);
+			zephir_array_append(&yList, &_3$$3, PH_SEPARATE, "pocketmine/math/vector3.zep", 451);
 			zephir_read_property(&_4$$3, &position, SL("z"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_append(&zList, &_4$$3, PH_SEPARATE, "pocketmine/math/vector3.zep", 448);
+			zephir_array_append(&zList, &_4$$3, PH_SEPARATE, "pocketmine/math/vector3.zep", 452);
 		} ZEND_HASH_FOREACH_END();
 	} else {
 		ZEPHIR_CALL_METHOD(NULL, &positions, "rewind", NULL, 0);
@@ -1817,11 +1811,11 @@ PHP_METHOD(Pocketmine_Math_Vector3, maxComponents) {
 			ZEPHIR_CALL_METHOD(&position, &positions, "current", NULL, 0);
 			zephir_check_call_status();
 				zephir_read_property(&_5$$4, &position, SL("x"), PH_NOISY_CC | PH_READONLY);
-				zephir_array_append(&xList, &_5$$4, PH_SEPARATE, "pocketmine/math/vector3.zep", 446);
+				zephir_array_append(&xList, &_5$$4, PH_SEPARATE, "pocketmine/math/vector3.zep", 450);
 				zephir_read_property(&_6$$4, &position, SL("y"), PH_NOISY_CC | PH_READONLY);
-				zephir_array_append(&yList, &_6$$4, PH_SEPARATE, "pocketmine/math/vector3.zep", 447);
+				zephir_array_append(&yList, &_6$$4, PH_SEPARATE, "pocketmine/math/vector3.zep", 451);
 				zephir_read_property(&_7$$4, &position, SL("z"), PH_NOISY_CC | PH_READONLY);
-				zephir_array_append(&zList, &_7$$4, PH_SEPARATE, "pocketmine/math/vector3.zep", 448);
+				zephir_array_append(&zList, &_7$$4, PH_SEPARATE, "pocketmine/math/vector3.zep", 452);
 			ZEPHIR_CALL_METHOD(NULL, &positions, "next", NULL, 0);
 			zephir_check_call_status();
 		}
@@ -1884,18 +1878,18 @@ PHP_METHOD(Pocketmine_Math_Vector3, minComponents) {
 	array_init(&yList);
 	ZEPHIR_INIT_VAR(&xList);
 	array_init(&xList);
-	zephir_is_iterable(&positions, 0, "pocketmine/math/vector3.zep", 472);
+	zephir_is_iterable(&positions, 0, "pocketmine/math/vector3.zep", 476);
 	if (Z_TYPE_P(&positions) == IS_ARRAY) {
 		ZEND_HASH_FOREACH_VAL(Z_ARRVAL_P(&positions), _0)
 		{
 			ZEPHIR_INIT_NVAR(&position);
 			ZVAL_COPY(&position, _0);
 			zephir_read_property(&_2$$3, &position, SL("x"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_append(&xList, &_2$$3, PH_SEPARATE, "pocketmine/math/vector3.zep", 468);
+			zephir_array_append(&xList, &_2$$3, PH_SEPARATE, "pocketmine/math/vector3.zep", 472);
 			zephir_read_property(&_3$$3, &position, SL("y"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_append(&yList, &_3$$3, PH_SEPARATE, "pocketmine/math/vector3.zep", 469);
+			zephir_array_append(&yList, &_3$$3, PH_SEPARATE, "pocketmine/math/vector3.zep", 473);
 			zephir_read_property(&_4$$3, &position, SL("z"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_append(&zList, &_4$$3, PH_SEPARATE, "pocketmine/math/vector3.zep", 470);
+			zephir_array_append(&zList, &_4$$3, PH_SEPARATE, "pocketmine/math/vector3.zep", 474);
 		} ZEND_HASH_FOREACH_END();
 	} else {
 		ZEPHIR_CALL_METHOD(NULL, &positions, "rewind", NULL, 0);
@@ -1909,11 +1903,11 @@ PHP_METHOD(Pocketmine_Math_Vector3, minComponents) {
 			ZEPHIR_CALL_METHOD(&position, &positions, "current", NULL, 0);
 			zephir_check_call_status();
 				zephir_read_property(&_5$$4, &position, SL("x"), PH_NOISY_CC | PH_READONLY);
-				zephir_array_append(&xList, &_5$$4, PH_SEPARATE, "pocketmine/math/vector3.zep", 468);
+				zephir_array_append(&xList, &_5$$4, PH_SEPARATE, "pocketmine/math/vector3.zep", 472);
 				zephir_read_property(&_6$$4, &position, SL("y"), PH_NOISY_CC | PH_READONLY);
-				zephir_array_append(&yList, &_6$$4, PH_SEPARATE, "pocketmine/math/vector3.zep", 469);
+				zephir_array_append(&yList, &_6$$4, PH_SEPARATE, "pocketmine/math/vector3.zep", 473);
 				zephir_read_property(&_7$$4, &position, SL("z"), PH_NOISY_CC | PH_READONLY);
-				zephir_array_append(&zList, &_7$$4, PH_SEPARATE, "pocketmine/math/vector3.zep", 470);
+				zephir_array_append(&zList, &_7$$4, PH_SEPARATE, "pocketmine/math/vector3.zep", 474);
 			ZEPHIR_CALL_METHOD(NULL, &positions, "next", NULL, 0);
 			zephir_check_call_status();
 		}
@@ -1932,7 +1926,7 @@ PHP_METHOD(Pocketmine_Math_Vector3, minComponents) {
 
 }
 
-/**
+/**
  */
 void zep_Pocketmine_Math_Vector3_getX_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used) {
 
@@ -1942,7 +1936,7 @@ void zep_Pocketmine_Math_Vector3_getX_zephir_internal_call(int ht, zend_execute_
 
 }
 
-/**
+/**
  */
 void zep_Pocketmine_Math_Vector3_getY_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used) {
 
@@ -1952,7 +1946,7 @@ void zep_Pocketmine_Math_Vector3_getY_zephir_internal_call(int ht, zend_execute_
 
 }
 
-/**
+/**
  */
 void zep_Pocketmine_Math_Vector3_getZ_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used) {
 
@@ -2681,9 +2675,9 @@ void zep_Pocketmine_Math_Vector3_getIntermediateWithZValue_zephir_internal_call(
 }
 
 /**
- * @param $x
- * @param $y
- * @param $z
+ * @param float $x
+ * @param float $y
+ * @param float $z
  *
  * @return $this
  */
@@ -2768,18 +2762,18 @@ void zep_Pocketmine_Math_Vector3_maxComponents_zephir_internal_call(int ht, zend
 	array_init(&yList);
 	ZEPHIR_INIT_VAR(&xList);
 	array_init(&xList);
-	zephir_is_iterable(&positions, 0, "pocketmine/math/vector3.zep", 450);
+	zephir_is_iterable(&positions, 0, "pocketmine/math/vector3.zep", 454);
 	if (Z_TYPE_P(&positions) == IS_ARRAY) {
 		ZEND_HASH_FOREACH_VAL(Z_ARRVAL_P(&positions), _0)
 		{
 			ZEPHIR_INIT_NVAR(&position);
 			ZVAL_COPY(&position, _0);
 			zephir_read_property(&_2$$3, &position, SL("x"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_append(&xList, &_2$$3, PH_SEPARATE, "pocketmine/math/vector3.zep", 446);
+			zephir_array_append(&xList, &_2$$3, PH_SEPARATE, "pocketmine/math/vector3.zep", 450);
 			zephir_read_property(&_3$$3, &position, SL("y"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_append(&yList, &_3$$3, PH_SEPARATE, "pocketmine/math/vector3.zep", 447);
+			zephir_array_append(&yList, &_3$$3, PH_SEPARATE, "pocketmine/math/vector3.zep", 451);
 			zephir_read_property(&_4$$3, &position, SL("z"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_append(&zList, &_4$$3, PH_SEPARATE, "pocketmine/math/vector3.zep", 448);
+			zephir_array_append(&zList, &_4$$3, PH_SEPARATE, "pocketmine/math/vector3.zep", 452);
 		} ZEND_HASH_FOREACH_END();
 	} else {
 		ZEPHIR_CALL_METHOD(NULL, &positions, "rewind", NULL, 0);
@@ -2793,11 +2787,11 @@ void zep_Pocketmine_Math_Vector3_maxComponents_zephir_internal_call(int ht, zend
 			ZEPHIR_CALL_METHOD(&position, &positions, "current", NULL, 0);
 			zephir_check_call_status();
 				zephir_read_property(&_5$$4, &position, SL("x"), PH_NOISY_CC | PH_READONLY);
-				zephir_array_append(&xList, &_5$$4, PH_SEPARATE, "pocketmine/math/vector3.zep", 446);
+				zephir_array_append(&xList, &_5$$4, PH_SEPARATE, "pocketmine/math/vector3.zep", 450);
 				zephir_read_property(&_6$$4, &position, SL("y"), PH_NOISY_CC | PH_READONLY);
-				zephir_array_append(&yList, &_6$$4, PH_SEPARATE, "pocketmine/math/vector3.zep", 447);
+				zephir_array_append(&yList, &_6$$4, PH_SEPARATE, "pocketmine/math/vector3.zep", 451);
 				zephir_read_property(&_7$$4, &position, SL("z"), PH_NOISY_CC | PH_READONLY);
-				zephir_array_append(&zList, &_7$$4, PH_SEPARATE, "pocketmine/math/vector3.zep", 448);
+				zephir_array_append(&zList, &_7$$4, PH_SEPARATE, "pocketmine/math/vector3.zep", 452);
 			ZEPHIR_CALL_METHOD(NULL, &positions, "next", NULL, 0);
 			zephir_check_call_status();
 		}
@@ -2858,18 +2852,18 @@ void zep_Pocketmine_Math_Vector3_minComponents_zephir_internal_call(int ht, zend
 	array_init(&yList);
 	ZEPHIR_INIT_VAR(&xList);
 	array_init(&xList);
-	zephir_is_iterable(&positions, 0, "pocketmine/math/vector3.zep", 472);
+	zephir_is_iterable(&positions, 0, "pocketmine/math/vector3.zep", 476);
 	if (Z_TYPE_P(&positions) == IS_ARRAY) {
 		ZEND_HASH_FOREACH_VAL(Z_ARRVAL_P(&positions), _0)
 		{
 			ZEPHIR_INIT_NVAR(&position);
 			ZVAL_COPY(&position, _0);
 			zephir_read_property(&_2$$3, &position, SL("x"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_append(&xList, &_2$$3, PH_SEPARATE, "pocketmine/math/vector3.zep", 468);
+			zephir_array_append(&xList, &_2$$3, PH_SEPARATE, "pocketmine/math/vector3.zep", 472);
 			zephir_read_property(&_3$$3, &position, SL("y"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_append(&yList, &_3$$3, PH_SEPARATE, "pocketmine/math/vector3.zep", 469);
+			zephir_array_append(&yList, &_3$$3, PH_SEPARATE, "pocketmine/math/vector3.zep", 473);
 			zephir_read_property(&_4$$3, &position, SL("z"), PH_NOISY_CC | PH_READONLY);
-			zephir_array_append(&zList, &_4$$3, PH_SEPARATE, "pocketmine/math/vector3.zep", 470);
+			zephir_array_append(&zList, &_4$$3, PH_SEPARATE, "pocketmine/math/vector3.zep", 474);
 		} ZEND_HASH_FOREACH_END();
 	} else {
 		ZEPHIR_CALL_METHOD(NULL, &positions, "rewind", NULL, 0);
@@ -2883,11 +2877,11 @@ void zep_Pocketmine_Math_Vector3_minComponents_zephir_internal_call(int ht, zend
 			ZEPHIR_CALL_METHOD(&position, &positions, "current", NULL, 0);
 			zephir_check_call_status();
 				zephir_read_property(&_5$$4, &position, SL("x"), PH_NOISY_CC | PH_READONLY);
-				zephir_array_append(&xList, &_5$$4, PH_SEPARATE, "pocketmine/math/vector3.zep", 468);
+				zephir_array_append(&xList, &_5$$4, PH_SEPARATE, "pocketmine/math/vector3.zep", 472);
 				zephir_read_property(&_6$$4, &position, SL("y"), PH_NOISY_CC | PH_READONLY);
-				zephir_array_append(&yList, &_6$$4, PH_SEPARATE, "pocketmine/math/vector3.zep", 469);
+				zephir_array_append(&yList, &_6$$4, PH_SEPARATE, "pocketmine/math/vector3.zep", 473);
 				zephir_read_property(&_7$$4, &position, SL("z"), PH_NOISY_CC | PH_READONLY);
-				zephir_array_append(&zList, &_7$$4, PH_SEPARATE, "pocketmine/math/vector3.zep", 470);
+				zephir_array_append(&zList, &_7$$4, PH_SEPARATE, "pocketmine/math/vector3.zep", 474);
 			ZEPHIR_CALL_METHOD(NULL, &positions, "next", NULL, 0);
 			zephir_check_call_status();
 		}

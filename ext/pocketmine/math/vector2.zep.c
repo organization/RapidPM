@@ -49,7 +49,7 @@ ZEPHIR_INIT_CLASS(Pocketmine_Math_Vector2) {
 
 }
 
-/**
+/**
  */
 PHP_METHOD(Pocketmine_Math_Vector2, getX) {
 
@@ -60,7 +60,7 @@ PHP_METHOD(Pocketmine_Math_Vector2, getX) {
 
 }
 
-/**
+/**
  */
 PHP_METHOD(Pocketmine_Math_Vector2, getY) {
 
@@ -646,7 +646,7 @@ PHP_METHOD(Pocketmine_Math_Vector2, __toString) {
 
 }
 
-/**
+/**
  */
 void zep_Pocketmine_Math_Vector2_getX_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used) {
 
@@ -656,7 +656,7 @@ void zep_Pocketmine_Math_Vector2_getX_zephir_internal_call(int ht, zend_execute_
 
 }
 
-/**
+/**
  */
 void zep_Pocketmine_Math_Vector2_getY_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used) {
 

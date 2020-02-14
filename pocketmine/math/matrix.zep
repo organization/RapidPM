@@ -45,6 +45,11 @@ class Matrix implements \ArrayAccess
         unset(this->matrix[(int) offset]);
     }
 
+    /**
+	 * @param int       $rows
+	 * @param int       $columns
+	 * @param float[][] $set
+	 */
     public function __construct(var rows, var columns, array set = [])
     {
         let this->rows = max(1, (int) rows);
@@ -52,6 +57,11 @@ class Matrix implements \ArrayAccess
         this->set(set);
     }
 
+    /**
+	 * @param float[][] $m
+	 *
+	 * @return void
+	 */
     public function set(array m)
     {
         var c;
@@ -64,6 +74,13 @@ class Matrix implements \ArrayAccess
         }
     }
 
+    /**
+	 * @param int   $row
+	 * @param int   $column
+	 * @param float $value
+	 *
+	 * @return bool
+	 */
     public function setElement(var row, var column, var value)
     {
         if (row > this->rows || row < 0 || column > this->columns || column < 0) {
@@ -73,6 +90,12 @@ class Matrix implements \ArrayAccess
         return true;
     }
 
+    /**
+	 * @param int $row
+	 * @param int $column
+	 *
+	 * @return float|false
+	 */
     public function getElement(var row, var column)
     {
         if (row > this->rows || row < 0 || column > this->columns || column < 0) {
@@ -86,6 +109,9 @@ class Matrix implements \ArrayAccess
         return this->rows === this->columns;
     }
 
+    /**
+	 * @return Matrix|false
+	 */
     public function add(<Matrix> matrix)
     {
         var c;
@@ -103,6 +129,9 @@ class Matrix implements \ArrayAccess
         return result;
     }
 
+    /**
+	 * @return Matrix|false
+	 */
     public function subtract(<Matrix> matrix)
     {
         var c;
@@ -120,6 +149,11 @@ class Matrix implements \ArrayAccess
         return result;
     }
 
+    /**
+	 * @param float $number
+	 *
+	 * @return Matrix
+	 */
     public function multiplyScalar(var number)
     {
         var c;
@@ -134,6 +168,11 @@ class Matrix implements \ArrayAccess
         return result;
     }
 
+    /**
+	 * @param float $number
+	 *
+	 * @return Matrix
+	 */
     public function divideScalar(var number)
     {
         var c;
@@ -148,6 +187,9 @@ class Matrix implements \ArrayAccess
         return result;
     }
 
+    /**
+	 * @return Matrix
+	 */
     public function transpose()
     {
         var c;
@@ -162,7 +204,11 @@ class Matrix implements \ArrayAccess
         return result;
     }
 
-    //Naive Matrix product, O(n^3)
+    /**
+	 * Naive Matrix product, O(n^3)
+	 *
+	 * @return Matrix|false
+	 */
     public function product(<Matrix> matrix)
     {
         var k;
@@ -188,7 +234,11 @@ class Matrix implements \ArrayAccess
         return result;
     }
 
-    //Computation of the determinant of 2x2 and 3x3 matrices
+    /**
+	 * Computation of the determinant of 1x1, 2x2 and 3x3 matrices
+	 *
+	 * @return float|false
+	 */
     public function determinant()
     {
         if (this->isSquare() !== true) {
@@ -196,7 +246,7 @@ class Matrix implements \ArrayAccess
         }
         switch (this->rows) {
             case 1:
-                return 0;
+                return this->matrix[0][0];
             case 2:
                 return this->matrix[0][0] * this->matrix[1][1] - this->matrix[0][1] * this->matrix[1][0];
             case 3:

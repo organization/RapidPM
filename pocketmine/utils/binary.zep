@@ -149,7 +149,7 @@ class Binary
     /**
      * Reads a 16-bit signed big-endian number
      *
-     * @param $str
+     * @param string $str
      *
      * @return int
      */
@@ -488,7 +488,7 @@ class Binary
      * Reads a 32-bit zigzag-encoded variable-length integer.
      *
      * @param string $buffer
-     * @param int    $offset
+     * @param int    $offset reference parameter
      *
      * @return int
      */
@@ -504,7 +504,7 @@ class Binary
      * Reads a 32-bit variable-length unsigned integer.
      *
      * @param string $buffer
-     * @param int    $offset
+     * @param int    $offset reference parameter
      *
      * @return int
      *
@@ -572,7 +572,7 @@ class Binary
      * Reads a 64-bit zigzag-encoded variable-length integer.
      *
      * @param string $buffer
-     * @param int    $offset
+     * @param int    $offset reference parameter
      *
      * @return long
      */
@@ -588,7 +588,7 @@ class Binary
      * Reads a 64-bit unsigned variable-length integer.
      *
      * @param string $buffer
-     * @param int    $offset
+     * @param int    $offset reference parameter
      *
      * @return int
      *

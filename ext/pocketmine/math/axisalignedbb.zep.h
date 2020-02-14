@@ -4,8 +4,6 @@ extern zend_class_entry *pocketmine_math_axisalignedbb_ce;
 ZEPHIR_INIT_CLASS(Pocketmine_Math_AxisAlignedBB);
 
 PHP_METHOD(Pocketmine_Math_AxisAlignedBB, __construct);
-PHP_METHOD(Pocketmine_Math_AxisAlignedBB, setBounds);
-PHP_METHOD(Pocketmine_Math_AxisAlignedBB, setBB);
 PHP_METHOD(Pocketmine_Math_AxisAlignedBB, addCoord);
 PHP_METHOD(Pocketmine_Math_AxisAlignedBB, expand);
 PHP_METHOD(Pocketmine_Math_AxisAlignedBB, expandedCopy);
@@ -34,8 +32,6 @@ PHP_METHOD(Pocketmine_Math_AxisAlignedBB, isVectorInXY);
 PHP_METHOD(Pocketmine_Math_AxisAlignedBB, calculateIntercept);
 PHP_METHOD(Pocketmine_Math_AxisAlignedBB, __toString);
 PHP_METHOD(Pocketmine_Math_AxisAlignedBB, one);
-void zep_Pocketmine_Math_AxisAlignedBB_setBounds_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *minX_param_ext, zval *minY_param_ext, zval *minZ_param_ext, zval *maxX_param_ext, zval *maxY_param_ext, zval *maxZ_param_ext);
-void zep_Pocketmine_Math_AxisAlignedBB_setBB_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *bb_ext );
 void zep_Pocketmine_Math_AxisAlignedBB_addCoord_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *x_param_ext, zval *y_param_ext, zval *z_param_ext);
 void zep_Pocketmine_Math_AxisAlignedBB_expand_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *x_param_ext, zval *y_param_ext, zval *z_param_ext);
 void zep_Pocketmine_Math_AxisAlignedBB_expandedCopy_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *x_param_ext, zval *y_param_ext, zval *z_param_ext);
@@ -95,47 +91,6 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_axisalignedbb___construct, 0, 0, 
 #else
 	ZEND_ARG_INFO(0, maxZ)
 #endif
-ZEND_END_ARG_INFO()
-
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_axisalignedbb_setbounds, 0, 0, 6)
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, minX, IS_DOUBLE, 0)
-#else
-	ZEND_ARG_INFO(0, minX)
-#endif
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, minY, IS_DOUBLE, 0)
-#else
-	ZEND_ARG_INFO(0, minY)
-#endif
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, minZ, IS_DOUBLE, 0)
-#else
-	ZEND_ARG_INFO(0, minZ)
-#endif
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, maxX, IS_DOUBLE, 0)
-#else
-	ZEND_ARG_INFO(0, maxX)
-#endif
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, maxY, IS_DOUBLE, 0)
-#else
-	ZEND_ARG_INFO(0, maxY)
-#endif
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, maxZ, IS_DOUBLE, 0)
-#else
-	ZEND_ARG_INFO(0, maxZ)
-#endif
-ZEND_END_ARG_INFO()
-
-#if PHP_VERSION_ID >= 70200
-ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_pocketmine_math_axisalignedbb_setbb, 0, 1, Pocketmine\\Math\\AxisAlignedBB, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_axisalignedbb_setbb, 0, 1, IS_OBJECT, "Pocketmine\\Math\\AxisAlignedBB", 0)
-#endif
-	ZEND_ARG_OBJ_INFO(0, bb, Pocketmine\\Math\\AxisAlignedBB, 0)
 ZEND_END_ARG_INFO()
 
 #if PHP_VERSION_ID >= 70200
@@ -530,43 +485,6 @@ ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_axisalignedbb_on
 #endif
 ZEND_END_ARG_INFO()
 
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_axisalignedbb_setbounds_zephir_internal_call, 0, 0, 6)
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, minX, IS_DOUBLE, 0)
-#else
-	ZEND_ARG_INFO(0, minX)
-#endif
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, minY, IS_DOUBLE, 0)
-#else
-	ZEND_ARG_INFO(0, minY)
-#endif
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, minZ, IS_DOUBLE, 0)
-#else
-	ZEND_ARG_INFO(0, minZ)
-#endif
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, maxX, IS_DOUBLE, 0)
-#else
-	ZEND_ARG_INFO(0, maxX)
-#endif
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, maxY, IS_DOUBLE, 0)
-#else
-	ZEND_ARG_INFO(0, maxY)
-#endif
-#if PHP_VERSION_ID >= 70200
-	ZEND_ARG_TYPE_INFO(0, maxZ, IS_DOUBLE, 0)
-#else
-	ZEND_ARG_INFO(0, maxZ)
-#endif
-ZEND_END_ARG_INFO()
-
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_axisalignedbb_setbb_zephir_internal_call, 0, 0, 1)
-	ZEND_ARG_OBJ_INFO(0, bb, Pocketmine\\Math\\AxisAlignedBB, 0)
-ZEND_END_ARG_INFO()
-
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_axisalignedbb_addcoord_zephir_internal_call, 0, 0, 3)
 #if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, x, IS_DOUBLE, 0)
@@ -847,8 +765,6 @@ ZEND_END_ARG_INFO()
 
 ZEPHIR_INIT_FUNCS(pocketmine_math_axisalignedbb_method_entry) {
 	PHP_ME(Pocketmine_Math_AxisAlignedBB, __construct, arginfo_pocketmine_math_axisalignedbb___construct, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_ME(Pocketmine_Math_AxisAlignedBB, setBounds, arginfo_pocketmine_math_axisalignedbb_setbounds, ZEND_ACC_PUBLIC)
-	PHP_ME(Pocketmine_Math_AxisAlignedBB, setBB, arginfo_pocketmine_math_axisalignedbb_setbb, ZEND_ACC_PUBLIC)
 	PHP_ME(Pocketmine_Math_AxisAlignedBB, addCoord, arginfo_pocketmine_math_axisalignedbb_addcoord, ZEND_ACC_PUBLIC)
 	PHP_ME(Pocketmine_Math_AxisAlignedBB, expand, arginfo_pocketmine_math_axisalignedbb_expand, ZEND_ACC_PUBLIC)
 	PHP_ME(Pocketmine_Math_AxisAlignedBB, expandedCopy, arginfo_pocketmine_math_axisalignedbb_expandedcopy, ZEND_ACC_PUBLIC)

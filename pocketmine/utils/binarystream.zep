@@ -38,7 +38,7 @@ class BinaryStream
         let this->offset = offset;
     }
 
-    public function reset()
+    public function reset() -> void
     {
         let this->buffer = "";
         let this->offset = 0;
@@ -52,7 +52,7 @@ class BinaryStream
         let this->offset = 0;
     }
 
-    public function setBuffer(string buffer = "", long offset = 0)
+    public function setBuffer(string buffer = "", long offset = 0) -> void
     {
         let this->buffer = buffer;
         let this->offset = offset;
@@ -92,15 +92,16 @@ class BinaryStream
      */
     public function getRemaining() -> string
     {
-        var str = substr(this->buffer, this->offset);
-        if (str === false) {
+        var buflen = strlen(this->buffer);
+        if (this->offset >= buflen) {
             throw new BinaryDataException("No bytes left to read");
         }
-        let this->offset = strlen(this->buffer);
+        var str = substr(this->buffer, this->offset);
+        let this->offset = buflen;
         return str;
     }
 
-    public function put(string str)
+    public function put(string str) -> void
     {
         let this->buffer = this->buffer . str;
     }
@@ -110,7 +111,7 @@ class BinaryStream
         return this->get(1) !== '\0';
     }
 
-    public function putBool(bool v)
+    public function putBool(bool v) -> void
     {
         let this->buffer = this->buffer . (v ? '\1' : '\0');
     }
@@ -120,7 +121,7 @@ class BinaryStream
         return ord(this->get(1));
     }
 
-    public function putByte(int v)
+    public function putByte(int v) -> void
     {
         let this->buffer = this->buffer . chr(v);
     }
@@ -136,7 +137,7 @@ class BinaryStream
         return ((int) temp << 48) >> 48;
     }
 
-    public function putShort(int v)
+    public function putShort(int v) -> void
     {
         let this->buffer = this->buffer . pack("n", v);
     }
@@ -152,7 +153,7 @@ class BinaryStream
         return ((int) temp << 48) >> 48;
     }
 
-    public function putLShort(int v)
+    public function putLShort(int v) -> void
     {
         let this->buffer = this->buffer . pack("v", v);
     }
@@ -162,7 +163,7 @@ class BinaryStream
         return unpack("N", chr('\0') . this->get(3))[1];
     }
 
-    public function putTriad(long v)
+    public function putTriad(long v) -> void
     {
         let this->buffer = this->buffer . substr(pack("N", v), 1);
     }
@@ -172,7 +173,7 @@ class BinaryStream
         return unpack("V", this->get(3) . chr('\0'))[1];
     }
 
-    public function putLTriad(long v)
+    public function putLTriad(long v) -> void
     {
         let this->buffer = this->buffer . substr(pack("V", v), 0, -1);
     }
@@ -183,7 +184,7 @@ class BinaryStream
         return ((int) temp << 48) >> 48;
     }
 
-    public function putInt(int v)
+    public function putInt(int v) -> void
     {
         let this->buffer = this->buffer . pack("N", v);
     }
@@ -194,7 +195,7 @@ class BinaryStream
         return ((long) temp << 48) >> 48;
     }
 
-    public function putLInt(long v)
+    public function putLInt(long v) -> void
     {
         let this->buffer = this->buffer . pack("V", v);
     }
@@ -209,7 +210,7 @@ class BinaryStream
         return round(unpack("G", this->get(4))[1], accuracy);
     }
 
-    public function putFloat(float v)
+    public function putFloat(float v) -> void
     {
         let this->buffer = this->buffer . pack("G", v);
     }
@@ -224,7 +225,7 @@ class BinaryStream
         return round(unpack("g", this->get(4))[1], accuracy);
     }
 
-    public function putLFloat(float v)
+    public function putLFloat(float v) -> void
     {
         let this->buffer = this->buffer . pack("g", v);
     }
@@ -260,7 +261,7 @@ class BinaryStream
     /**
      * @param int $v
      */
-    public function putLong(int v)
+    public function putLong(int v) -> void
     {
         let this->buffer = this->buffer . pack("NN", v >> 32, v & 0xffffffff);
     }
@@ -276,7 +277,7 @@ class BinaryStream
     /**
      * @param int $v
      */
-    public function putLLong(int v)
+    public function putLLong(int v) -> void
     {
         let this->buffer = this->buffer . pack("VV", v & 0xffffffff, v >> 32);
     }
@@ -298,7 +299,7 @@ class BinaryStream
      * Writes a 32-bit variable-length unsigned integer to the end of the buffer.
      * @param int $v
      */
-    public function putUnsignedVarInt(int v)
+    public function putUnsignedVarInt(int v) -> void
     {
         let this->buffer = this->buffer . Binary::writeUnsignedVarInt(v);
     }
@@ -320,7 +321,7 @@ class BinaryStream
      * Writes a 32-bit zigzag-encoded variable-length integer to the end of the buffer.
      * @param int $v
      */
-    public function putVarInt(int v)
+    public function putVarInt(int v) -> void
     {
         let this->buffer = this->buffer . Binary::writeVarInt(v);
     }
@@ -342,7 +343,7 @@ class BinaryStream
      * Writes a 64-bit variable-length integer to the end of the buffer.
      * @param int $v
      */
-    public function putUnsignedVarLong(long v)
+    public function putUnsignedVarLong(long v) -> void
     {
         let this->buffer = this->buffer . Binary::writeUnsignedVarLong(v);
     }
@@ -364,7 +365,7 @@ class BinaryStream
      * Writes a 64-bit zigzag-encoded variable-length integer to the end of the buffer.
      * @param int
      */
-    public function putVarLong(long v)
+    public function putVarLong(long v) -> void
     {
         let this->buffer = this->buffer . Binary::writeVarLong(v);
     }
