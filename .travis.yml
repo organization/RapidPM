@@ -2,7 +2,7 @@ dist: xenial
 language: php
 
 php:
- - 7.2
+# - 7.2 # Segmentation fault
  - 7.3
 
 env:

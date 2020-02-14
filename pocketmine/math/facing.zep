@@ -34,7 +34,7 @@ class Facing
     const SOUTH      = 3; /* self::AXIS_Z << 1 | self::FLAG_AXIS_POSITIVE; */
     const WEST       = 4; /* self::AXIS_X << 1; */
     const EAST       = 5; /* self::AXIS_X << 1 | self::FLAG_AXIS_POSITIVE; */
-    public static all        = [
+    public static all = [
         self::DOWN,
         self::UP,
         self::NORTH,

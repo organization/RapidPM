@@ -288,8 +288,8 @@ class BinaryStream
      */
     public function getUnsignedVarInt() -> int
     {
-        var temp = this->offset;
-        zval_ref(temp);
+        var funcValToRef = eval("return function &($v) { return $v; };");
+        var temp = {funcValToRef}(this->offset);
         var result = Binary::readUnsignedVarInt(this->buffer, temp);
         let this->offset = temp;
         return (int) result;
@@ -310,8 +310,8 @@ class BinaryStream
      */
     public function getVarInt() -> int
     {
-        var temp = this->offset;
-        zval_ref(temp);
+        var funcValToRef = eval("return function &($v) { return $v; };");
+        var temp = {funcValToRef}(this->offset);
         var result = Binary::readVarInt(this->buffer, temp);
         let this->offset = temp;
         return (int) result;
@@ -332,8 +332,8 @@ class BinaryStream
      */
     public function getUnsignedVarLong() -> long
     {
-        var temp = this->offset;
-        zval_ref(temp);
+        var funcValToRef = eval("return function &($v) { return $v; };");
+        var temp = {funcValToRef}(this->offset);
         var result = Binary::readUnsignedVarLong(this->buffer, temp);
         let this->offset = temp;
         return (long) result;
@@ -354,8 +354,8 @@ class BinaryStream
      */
     public function getVarLong() -> long
     {
-        var temp = this->offset;
-        zval_ref(temp);
+        var funcValToRef = eval("return function &($v) { return $v; };");
+        var temp = {funcValToRef}(this->offset);
         var result = Binary::readVarLong(this->buffer, temp);
         let this->offset = temp;
         return (long) result;
