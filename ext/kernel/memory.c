@@ -1,7 +1,7 @@
 /*
  * This file is part of the Zephir.
  *
- * (c) Zephir Team <team@zephir-lang.com>
+ * (c) Phalcon Team <team@zephir-lang.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code. If you did not receive
@@ -299,7 +299,7 @@ int zephir_cleanup_fcache(void *pDest, int num_args, va_list args, zend_hash_key
 {
 	zephir_fcall_cache_entry **entry = (zephir_fcall_cache_entry**) pDest;
 	zend_class_entry *scope;
-	uint len = ZSTR_LEN(hash_key->key);
+	size_t len = ZSTR_LEN(hash_key->key);
 
 	assert(hash_key->key != NULL);
 	assert(len > 2 * sizeof(zend_class_entry**));

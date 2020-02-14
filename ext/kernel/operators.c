@@ -3,7 +3,7 @@
   +------------------------------------------------------------------------+
   | Zephir Language                                                        |
   +------------------------------------------------------------------------+
-  | Copyright (c) 2011-2017 Zephir Team (http://www.zephir-lang.com)       |
+  | Copyright (c) 2011-2017 Phalcon Team (http://www.zephir-lang.com)       |
   +------------------------------------------------------------------------+
   | This source file is subject to the New BSD License that is bundled     |
   | with this package in the file docs/LICENSE.txt.                        |
@@ -40,7 +40,7 @@
 void zephir_concat_self(zval *left, zval *right)
 {
 	zval left_copy, right_copy;
-	uint length, left_length, right_length;
+	size_t length, left_length, right_length;
 	int use_copy_left = 0, use_copy_right = 0;
 	zend_string *target;
 
@@ -131,7 +131,7 @@ void zephir_concat_self_char(zval *left, unsigned char right)
 void zephir_concat_self_str(zval *left, const char *right, int right_length)
 {
 	zval left_copy;
-	uint length, left_length;
+	size_t length, left_length;
 	int use_copy = 0;
 	zend_string *target;
 

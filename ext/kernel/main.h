@@ -1,7 +1,7 @@
 /*
  * This file is part of the Zephir.
  *
- * (c) Zephir Team <team@zephir-lang.com>
+ * (c) Phalcon Team <team@zephir-lang.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code. If you did not receive
@@ -36,8 +36,9 @@ extern zend_string* i_self;
 #define PH_COPY 1024
 #define PH_CTOR 4096
 
+/* Deprecated */
 #ifndef zend_uint
- #define zend_uint uint
+ #define zend_uint uint32_t
 #endif
 
 #ifndef ZEND_ACC_FINAL_CLASS
