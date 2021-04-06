@@ -40,7 +40,13 @@ void zep_Pocketmine_Math_Matrix_transpose_zephir_internal_call(int ht, zend_exec
 void zep_Pocketmine_Math_Matrix_product_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *matrix_ext );
 void zep_Pocketmine_Math_Matrix_determinant_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used);
 void zep_Pocketmine_Math_Matrix___toString_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used);
-zend_object *zephir_init_properties_Pocketmine_Math_Matrix(zend_class_entry *class_type TSRMLS_DC);
+zend_object *zephir_init_properties_Pocketmine_Math_Matrix(zend_class_entry *class_type);
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_getrows, 0, 0, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_getcolumns, 0, 0, 0)
+ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_offsetexists, 0, 0, 1)
 	ZEND_ARG_INFO(0, offset)
@@ -80,6 +86,9 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_getelement, 0, 0, 2)
 	ZEND_ARG_INFO(0, column)
 ZEND_END_ARG_INFO()
 
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_issquare, 0, 0, 0)
+ZEND_END_ARG_INFO()
+
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_add, 0, 0, 1)
 	ZEND_ARG_OBJ_INFO(0, matrix, Pocketmine\\Math\\Matrix, 0)
 ZEND_END_ARG_INFO()
@@ -96,8 +105,27 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_dividescalar, 0, 0, 1)
 	ZEND_ARG_INFO(0, number)
 ZEND_END_ARG_INFO()
 
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_transpose, 0, 0, 0)
+ZEND_END_ARG_INFO()
+
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_product, 0, 0, 1)
 	ZEND_ARG_OBJ_INFO(0, matrix, Pocketmine\\Math\\Matrix, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_determinant, 0, 0, 0)
+ZEND_END_ARG_INFO()
+
+#if PHP_VERSION_ID >= 80000
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_matrix___tostring, 0, 0, IS_STRING, 0)
+#else
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix___tostring, 0, 0, 0)
+#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_getrows_zephir_internal_call, 0, 0, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_getcolumns_zephir_internal_call, 0, 0, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_offsetexists_zephir_internal_call, 0, 0, 1)
@@ -132,6 +160,9 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_getelement_zephir_internal
 	ZEND_ARG_INFO(0, column)
 ZEND_END_ARG_INFO()
 
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_issquare_zephir_internal_call, 0, 0, 0)
+ZEND_END_ARG_INFO()
+
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_add_zephir_internal_call, 0, 0, 1)
 	ZEND_ARG_OBJ_INFO(0, matrix, Pocketmine\\Math\\Matrix, 0)
 ZEND_END_ARG_INFO()
@@ -148,13 +179,33 @@ ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_dividescalar_zephir_intern
 	ZEND_ARG_INFO(0, number)
 ZEND_END_ARG_INFO()
 
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_transpose_zephir_internal_call, 0, 0, 0)
+ZEND_END_ARG_INFO()
+
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_product_zephir_internal_call, 0, 0, 1)
 	ZEND_ARG_OBJ_INFO(0, matrix, Pocketmine\\Math\\Matrix, 0)
 ZEND_END_ARG_INFO()
 
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_determinant_zephir_internal_call, 0, 0, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix___tostring_zephir_internal_call, 0, 0, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_matrix_zephir_init_properties_pocketmine_math_matrix, 0, 0, 0)
+ZEND_END_ARG_INFO()
+
 ZEPHIR_INIT_FUNCS(pocketmine_math_matrix_method_entry) {
+#if PHP_VERSION_ID >= 80000
+	PHP_ME(Pocketmine_Math_Matrix, getRows, arginfo_pocketmine_math_matrix_getrows, ZEND_ACC_PUBLIC)
+#else
 	PHP_ME(Pocketmine_Math_Matrix, getRows, NULL, ZEND_ACC_PUBLIC)
+#endif
+#if PHP_VERSION_ID >= 80000
+	PHP_ME(Pocketmine_Math_Matrix, getColumns, arginfo_pocketmine_math_matrix_getcolumns, ZEND_ACC_PUBLIC)
+#else
 	PHP_ME(Pocketmine_Math_Matrix, getColumns, NULL, ZEND_ACC_PUBLIC)
+#endif
 	PHP_ME(Pocketmine_Math_Matrix, offsetExists, arginfo_pocketmine_math_matrix_offsetexists, ZEND_ACC_PUBLIC)
 	PHP_ME(Pocketmine_Math_Matrix, offsetGet, arginfo_pocketmine_math_matrix_offsetget, ZEND_ACC_PUBLIC)
 	PHP_ME(Pocketmine_Math_Matrix, offsetSet, arginfo_pocketmine_math_matrix_offsetset, ZEND_ACC_PUBLIC)
@@ -163,14 +214,30 @@ ZEPHIR_INIT_FUNCS(pocketmine_math_matrix_method_entry) {
 	PHP_ME(Pocketmine_Math_Matrix, set, arginfo_pocketmine_math_matrix_set, ZEND_ACC_PUBLIC)
 	PHP_ME(Pocketmine_Math_Matrix, setElement, arginfo_pocketmine_math_matrix_setelement, ZEND_ACC_PUBLIC)
 	PHP_ME(Pocketmine_Math_Matrix, getElement, arginfo_pocketmine_math_matrix_getelement, ZEND_ACC_PUBLIC)
+#if PHP_VERSION_ID >= 80000
+	PHP_ME(Pocketmine_Math_Matrix, isSquare, arginfo_pocketmine_math_matrix_issquare, ZEND_ACC_PUBLIC)
+#else
 	PHP_ME(Pocketmine_Math_Matrix, isSquare, NULL, ZEND_ACC_PUBLIC)
+#endif
 	PHP_ME(Pocketmine_Math_Matrix, add, arginfo_pocketmine_math_matrix_add, ZEND_ACC_PUBLIC)
 	PHP_ME(Pocketmine_Math_Matrix, subtract, arginfo_pocketmine_math_matrix_subtract, ZEND_ACC_PUBLIC)
 	PHP_ME(Pocketmine_Math_Matrix, multiplyScalar, arginfo_pocketmine_math_matrix_multiplyscalar, ZEND_ACC_PUBLIC)
 	PHP_ME(Pocketmine_Math_Matrix, divideScalar, arginfo_pocketmine_math_matrix_dividescalar, ZEND_ACC_PUBLIC)
+#if PHP_VERSION_ID >= 80000
+	PHP_ME(Pocketmine_Math_Matrix, transpose, arginfo_pocketmine_math_matrix_transpose, ZEND_ACC_PUBLIC)
+#else
 	PHP_ME(Pocketmine_Math_Matrix, transpose, NULL, ZEND_ACC_PUBLIC)
+#endif
 	PHP_ME(Pocketmine_Math_Matrix, product, arginfo_pocketmine_math_matrix_product, ZEND_ACC_PUBLIC)
+#if PHP_VERSION_ID >= 80000
+	PHP_ME(Pocketmine_Math_Matrix, determinant, arginfo_pocketmine_math_matrix_determinant, ZEND_ACC_PUBLIC)
+#else
 	PHP_ME(Pocketmine_Math_Matrix, determinant, NULL, ZEND_ACC_PUBLIC)
+#endif
+#if PHP_VERSION_ID >= 80000
+	PHP_ME(Pocketmine_Math_Matrix, __toString, arginfo_pocketmine_math_matrix___tostring, ZEND_ACC_PUBLIC)
+#else
 	PHP_ME(Pocketmine_Math_Matrix, __toString, NULL, ZEND_ACC_PUBLIC)
+#endif
 	PHP_FE_END
 };

@@ -145,7 +145,7 @@ class Facing
      * @throws \InvalidArgumentException if the argument is not a valid Facing constant
      * @return void
      */
-    public static function validate(int $facing)
+    public static function validate(int $facing): void
     {
     }
 

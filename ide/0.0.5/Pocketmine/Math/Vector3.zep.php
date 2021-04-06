@@ -398,9 +398,6 @@ class Vector3
      * @param Vector3[] $positions
      *
      * @return Vector3
-     * @param array $positions
-     * @param Vector3  [] $positions
-     *
      */
     public static function maxComponents(array $positions): Vector3
     {
@@ -412,9 +409,6 @@ class Vector3
      * @param Vector3[] $positions
      *
      * @return Vector3
-     * @param array $positions
-     * @param Vector3  [] $positions
-     *
      */
     public static function minComponents(array $positions): Vector3
     {

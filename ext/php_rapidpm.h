@@ -14,7 +14,7 @@
 #define PHP_RAPIDPM_VERSION     "0.0.5"
 #define PHP_RAPIDPM_EXTNAME     "rapidpm"
 #define PHP_RAPIDPM_AUTHOR      "Organization"
-#define PHP_RAPIDPM_ZEPVERSION  "0.13.0-$Id$"
+#define PHP_RAPIDPM_ZEPVERSION  "0.13.0-96aa0559"
 #define PHP_RAPIDPM_DESCRIPTION "Extension that implements parts of PocketMine-MP"
 
 
@@ -50,7 +50,7 @@ ZEND_EXTERN_MODULE_GLOBALS(rapidpm)
 #endif
 
 #ifdef ZTS
-	void ***tsrm_ls;
+	ZEND_TSRMLS_CACHE_EXTERN()
 	#define ZEPHIR_VGLOBAL ((zend_rapidpm_globals *) (*((void ***) tsrm_get_ls_cache()))[TSRM_UNSHUFFLE_RSRC_ID(rapidpm_globals_id)])
 #else
 	#define ZEPHIR_VGLOBAL &(rapidpm_globals)

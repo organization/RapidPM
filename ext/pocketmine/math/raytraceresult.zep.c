@@ -72,17 +72,27 @@ PHP_METHOD(Pocketmine_Math_RayTraceResult, __construct) {
 	ZVAL_UNDEF(&bb_sub);
 	ZVAL_UNDEF(&hitVector_sub);
 	ZVAL_UNDEF(&_0);
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(3, 3)
+		Z_PARAM_OBJECT_OF_CLASS(bb, pocketmine_math_axisalignedbb_ce)
+		Z_PARAM_LONG(hitFace)
+		Z_PARAM_OBJECT_OF_CLASS(hitVector, pocketmine_math_vector3_ce)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	zephir_fetch_params_without_memory_grow(3, 0, &bb, &hitFace_param, &hitVector);
 
 	hitFace = zephir_get_intval(hitFace_param);
 
 
-	zephir_update_property_zval(this_ptr, SL("bb"), bb);
+	zephir_update_property_zval(this_ptr, ZEND_STRL("bb"), bb);
 	ZEPHIR_INIT_ZVAL_NREF(_0);
 	ZVAL_LONG(&_0, hitFace);
-	zephir_update_property_zval(this_ptr, SL("hitFace"), &_0);
-	zephir_update_property_zval(this_ptr, SL("hitVector"), hitVector);
+	zephir_update_property_zval(this_ptr, ZEND_STRL("hitFace"), &_0);
+	zephir_update_property_zval(this_ptr, ZEND_STRL("hitVector"), hitVector);
 
 }
 
@@ -92,6 +102,7 @@ PHP_METHOD(Pocketmine_Math_RayTraceResult, __construct) {
 PHP_METHOD(Pocketmine_Math_RayTraceResult, getBoundingBox) {
 
 	zval *this_ptr = getThis();
+
 
 
 	RETURN_MEMBER(getThis(), "bb");
@@ -106,6 +117,7 @@ PHP_METHOD(Pocketmine_Math_RayTraceResult, getHitFace) {
 	zval *this_ptr = getThis();
 
 
+
 	RETURN_MEMBER(getThis(), "hitFace");
 
 }
@@ -116,6 +128,7 @@ PHP_METHOD(Pocketmine_Math_RayTraceResult, getHitFace) {
 PHP_METHOD(Pocketmine_Math_RayTraceResult, getHitVector) {
 
 	zval *this_ptr = getThis();
+
 
 
 	RETURN_MEMBER(getThis(), "hitVector");
@@ -129,6 +142,7 @@ void zep_Pocketmine_Math_RayTraceResult_getBoundingBox_zephir_internal_call(int 
 
 	
 
+
 	RETURN_MEMBER(getThis(), "bb");
 
 }
@@ -140,6 +154,7 @@ void zep_Pocketmine_Math_RayTraceResult_getHitFace_zephir_internal_call(int ht, 
 
 	
 
+
 	RETURN_MEMBER(getThis(), "hitFace");
 
 }
@@ -150,6 +165,7 @@ void zep_Pocketmine_Math_RayTraceResult_getHitFace_zephir_internal_call(int ht, 
 void zep_Pocketmine_Math_RayTraceResult_getHitVector_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used) {
 
 	
+
 
 	RETURN_MEMBER(getThis(), "hitVector");
 

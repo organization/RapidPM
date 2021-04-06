@@ -59,6 +59,14 @@ PHP_METHOD(Pocketmine_Math_Math, floorFloat) {
 
 	ZVAL_UNDEF(&n_sub);
 	ZVAL_UNDEF(&_0);
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(1, 1)
+		Z_PARAM_ZVAL(n)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &n);
@@ -90,6 +98,14 @@ PHP_METHOD(Pocketmine_Math_Math, ceilFloat) {
 
 	ZVAL_UNDEF(&n_sub);
 	ZVAL_UNDEF(&_0);
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(1, 1)
+		Z_PARAM_ZVAL(n)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &n);
@@ -130,6 +146,16 @@ PHP_METHOD(Pocketmine_Math_Math, solveQuadratic) {
 	ZVAL_UNDEF(&_2);
 	ZVAL_UNDEF(&_3$$3);
 	ZVAL_UNDEF(&_4$$4);
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(3, 3)
+		Z_PARAM_ZVAL(a)
+		Z_PARAM_ZVAL(b)
+		Z_PARAM_ZVAL(c)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 3, 0, &a_param, &b_param, &c_param);
@@ -181,6 +207,15 @@ void zep_Pocketmine_Math_Math_floorFloat_zephir_internal_call(int ht, zend_execu
 	zval *n = NULL, n_sub, _0;
 		ZVAL_UNDEF(&n_sub);
 	ZVAL_UNDEF(&_0);
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(2, 1)
+		Z_PARAM_ZVAL(n)
+		Z_PARAM_ZVAL(n)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	ZEPHIR_MM_GROW();
 	n = n_ext;
@@ -211,6 +246,15 @@ void zep_Pocketmine_Math_Math_ceilFloat_zephir_internal_call(int ht, zend_execut
 	zval *n = NULL, n_sub, _0;
 		ZVAL_UNDEF(&n_sub);
 	ZVAL_UNDEF(&_0);
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(2, 1)
+		Z_PARAM_ZVAL(n)
+		Z_PARAM_ZVAL(n)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	ZEPHIR_MM_GROW();
 	n = n_ext;
@@ -250,6 +294,19 @@ void zep_Pocketmine_Math_Math_solveQuadratic_zephir_internal_call(int ht, zend_e
 	ZVAL_UNDEF(&_2);
 	ZVAL_UNDEF(&_3$$3);
 	ZVAL_UNDEF(&_4$$4);
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(6, 3)
+		Z_PARAM_ZVAL(a)
+		Z_PARAM_ZVAL(b)
+		Z_PARAM_ZVAL(c)
+		Z_PARAM_ZVAL(a)
+		Z_PARAM_ZVAL(b)
+		Z_PARAM_ZVAL(c)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	ZEPHIR_MM_GROW();
 	a_param = a_param_ext;
@@ -259,6 +316,9 @@ void zep_Pocketmine_Math_Math_solveQuadratic_zephir_internal_call(int ht, zend_e
 	c_param = c_param_ext;
 
 
+	a = zephir_get_doubleval(a_param);
+	b = zephir_get_doubleval(b_param);
+	c = zephir_get_doubleval(c_param);
 	a = zephir_get_doubleval(a_param);
 	b = zephir_get_doubleval(b_param);
 	c = zephir_get_doubleval(c_param);

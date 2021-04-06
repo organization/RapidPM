@@ -83,6 +83,14 @@ PHP_METHOD(Pocketmine_Math_Facing, axis) {
 	zend_long direction;
 	zval *this_ptr = getThis();
 
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(1, 1)
+		Z_PARAM_LONG(direction)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	zephir_fetch_params_without_memory_grow(1, 0, &direction_param);
 
@@ -106,6 +114,14 @@ PHP_METHOD(Pocketmine_Math_Facing, isPositive) {
 	zend_long direction;
 	zval *this_ptr = getThis();
 
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(1, 1)
+		Z_PARAM_LONG(direction)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	zephir_fetch_params_without_memory_grow(1, 0, &direction_param);
 
@@ -128,6 +144,14 @@ PHP_METHOD(Pocketmine_Math_Facing, opposite) {
 	zval *direction_param = NULL;
 	zend_long direction;
 	zval *this_ptr = getThis();
+
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(1, 1)
+		Z_PARAM_LONG(direction)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
 
 
 	zephir_fetch_params_without_memory_grow(1, 0, &direction_param);
@@ -164,6 +188,16 @@ PHP_METHOD(Pocketmine_Math_Facing, rotate) {
 	ZVAL_UNDEF(&_3);
 	ZVAL_UNDEF(&_4);
 	ZVAL_UNDEF(&_5);
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(3, 3)
+		Z_PARAM_LONG(direction)
+		Z_PARAM_LONG(axis)
+		Z_PARAM_BOOL(clockwise)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 3, 0, &direction_param, &axis_param, &clockwise_param);
@@ -217,6 +251,15 @@ PHP_METHOD(Pocketmine_Math_Facing, rotateY) {
 	ZVAL_UNDEF(&_0);
 	ZVAL_UNDEF(&_1);
 	ZVAL_UNDEF(&_2);
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(2, 2)
+		Z_PARAM_LONG(direction)
+		Z_PARAM_BOOL(clockwise)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 2, 0, &direction_param, &clockwise_param);
@@ -256,6 +299,15 @@ PHP_METHOD(Pocketmine_Math_Facing, rotateZ) {
 	ZVAL_UNDEF(&_0);
 	ZVAL_UNDEF(&_1);
 	ZVAL_UNDEF(&_2);
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(2, 2)
+		Z_PARAM_LONG(direction)
+		Z_PARAM_BOOL(clockwise)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 2, 0, &direction_param, &clockwise_param);
@@ -295,6 +347,15 @@ PHP_METHOD(Pocketmine_Math_Facing, rotateX) {
 	ZVAL_UNDEF(&_0);
 	ZVAL_UNDEF(&_1);
 	ZVAL_UNDEF(&_2);
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(2, 2)
+		Z_PARAM_LONG(direction)
+		Z_PARAM_BOOL(clockwise)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 2, 0, &direction_param, &clockwise_param);
@@ -333,6 +394,14 @@ PHP_METHOD(Pocketmine_Math_Facing, validate) {
 	ZVAL_UNDEF(&_0);
 	ZVAL_UNDEF(&_1);
 	ZVAL_UNDEF(&_2);
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(1, 1)
+		Z_PARAM_LONG(facing)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &facing_param);
@@ -363,10 +432,20 @@ void zep_Pocketmine_Math_Facing_axis_zephir_internal_call(int ht, zend_execute_d
 
 	zval *direction_param = NULL;
 	zend_long direction;
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(2, 1)
+		Z_PARAM_LONG(direction)
+		Z_PARAM_LONG(direction)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	direction_param = direction_param_ext;
 
 
+	direction = zephir_get_intval(direction_param);
 	direction = zephir_get_intval(direction_param);
 
 
@@ -385,10 +464,20 @@ void zep_Pocketmine_Math_Facing_isPositive_zephir_internal_call(int ht, zend_exe
 
 	zval *direction_param = NULL;
 	zend_long direction;
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(2, 1)
+		Z_PARAM_LONG(direction)
+		Z_PARAM_LONG(direction)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	direction_param = direction_param_ext;
 
 
+	direction = zephir_get_intval(direction_param);
 	direction = zephir_get_intval(direction_param);
 
 
@@ -407,10 +496,20 @@ void zep_Pocketmine_Math_Facing_opposite_zephir_internal_call(int ht, zend_execu
 
 	zval *direction_param = NULL;
 	zend_long direction;
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(2, 1)
+		Z_PARAM_LONG(direction)
+		Z_PARAM_LONG(direction)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	direction_param = direction_param_ext;
 
 
+	direction = zephir_get_intval(direction_param);
 	direction = zephir_get_intval(direction_param);
 
 
@@ -441,6 +540,19 @@ void zep_Pocketmine_Math_Facing_rotate_zephir_internal_call(int ht, zend_execute
 	ZVAL_UNDEF(&_3);
 	ZVAL_UNDEF(&_4);
 	ZVAL_UNDEF(&_5);
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(6, 3)
+		Z_PARAM_LONG(direction)
+		Z_PARAM_LONG(axis)
+		Z_PARAM_BOOL(clockwise)
+		Z_PARAM_LONG(direction)
+		Z_PARAM_LONG(axis)
+		Z_PARAM_BOOL(clockwise)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	ZEPHIR_MM_GROW();
 	direction_param = direction_param_ext;
@@ -450,6 +562,9 @@ void zep_Pocketmine_Math_Facing_rotate_zephir_internal_call(int ht, zend_execute
 	clockwise_param = clockwise_param_ext;
 
 
+	direction = zephir_get_intval(direction_param);
+	axis = zephir_get_intval(axis_param);
+	clockwise = zephir_get_boolval(clockwise_param);
 	direction = zephir_get_intval(direction_param);
 	axis = zephir_get_intval(axis_param);
 	clockwise = zephir_get_boolval(clockwise_param);
@@ -497,6 +612,17 @@ void zep_Pocketmine_Math_Facing_rotateY_zephir_internal_call(int ht, zend_execut
 		ZVAL_UNDEF(&_0);
 	ZVAL_UNDEF(&_1);
 	ZVAL_UNDEF(&_2);
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(4, 2)
+		Z_PARAM_LONG(direction)
+		Z_PARAM_BOOL(clockwise)
+		Z_PARAM_LONG(direction)
+		Z_PARAM_BOOL(clockwise)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	ZEPHIR_MM_GROW();
 	direction_param = direction_param_ext;
@@ -504,6 +630,8 @@ void zep_Pocketmine_Math_Facing_rotateY_zephir_internal_call(int ht, zend_execut
 	clockwise_param = clockwise_param_ext;
 
 
+	direction = zephir_get_intval(direction_param);
+	clockwise = zephir_get_boolval(clockwise_param);
 	direction = zephir_get_intval(direction_param);
 	clockwise = zephir_get_boolval(clockwise_param);
 
@@ -537,6 +665,17 @@ void zep_Pocketmine_Math_Facing_rotateZ_zephir_internal_call(int ht, zend_execut
 		ZVAL_UNDEF(&_0);
 	ZVAL_UNDEF(&_1);
 	ZVAL_UNDEF(&_2);
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(4, 2)
+		Z_PARAM_LONG(direction)
+		Z_PARAM_BOOL(clockwise)
+		Z_PARAM_LONG(direction)
+		Z_PARAM_BOOL(clockwise)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	ZEPHIR_MM_GROW();
 	direction_param = direction_param_ext;
@@ -544,6 +683,8 @@ void zep_Pocketmine_Math_Facing_rotateZ_zephir_internal_call(int ht, zend_execut
 	clockwise_param = clockwise_param_ext;
 
 
+	direction = zephir_get_intval(direction_param);
+	clockwise = zephir_get_boolval(clockwise_param);
 	direction = zephir_get_intval(direction_param);
 	clockwise = zephir_get_boolval(clockwise_param);
 
@@ -577,6 +718,17 @@ void zep_Pocketmine_Math_Facing_rotateX_zephir_internal_call(int ht, zend_execut
 		ZVAL_UNDEF(&_0);
 	ZVAL_UNDEF(&_1);
 	ZVAL_UNDEF(&_2);
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(4, 2)
+		Z_PARAM_LONG(direction)
+		Z_PARAM_BOOL(clockwise)
+		Z_PARAM_LONG(direction)
+		Z_PARAM_BOOL(clockwise)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	ZEPHIR_MM_GROW();
 	direction_param = direction_param_ext;
@@ -584,6 +736,8 @@ void zep_Pocketmine_Math_Facing_rotateX_zephir_internal_call(int ht, zend_execut
 	clockwise_param = clockwise_param_ext;
 
 
+	direction = zephir_get_intval(direction_param);
+	clockwise = zephir_get_boolval(clockwise_param);
 	direction = zephir_get_intval(direction_param);
 	clockwise = zephir_get_boolval(clockwise_param);
 
@@ -616,11 +770,21 @@ void zep_Pocketmine_Math_Facing_validate_zephir_internal_call(int ht, zend_execu
 	ZVAL_UNDEF(&_0);
 	ZVAL_UNDEF(&_1);
 	ZVAL_UNDEF(&_2);
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(2, 1)
+		Z_PARAM_LONG(facing)
+		Z_PARAM_LONG(facing)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	ZEPHIR_MM_GROW();
 	facing_param = facing_param_ext;
 
 
+	facing = zephir_get_intval(facing_param);
 	facing = zephir_get_intval(facing_param);
 
 
@@ -636,7 +800,7 @@ void zep_Pocketmine_Math_Facing_validate_zephir_internal_call(int ht, zend_execu
 
 }
 
-void zephir_init_static_properties_Pocketmine_Math_Facing(TSRMLS_D) {
+void zephir_init_static_properties_Pocketmine_Math_Facing() {
 
 	zval _2;
 	zval _0, _1, _3;
@@ -645,6 +809,7 @@ void zephir_init_static_properties_Pocketmine_Math_Facing(TSRMLS_D) {
 	ZVAL_UNDEF(&_1);
 	ZVAL_UNDEF(&_3);
 	ZVAL_UNDEF(&_2);
+
 
 	ZEPHIR_MM_GROW();
 

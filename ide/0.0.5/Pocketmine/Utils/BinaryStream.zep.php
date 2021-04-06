@@ -55,14 +55,14 @@ class BinaryStream
      * @param long $offset
      * @return void
      */
-    public function setOffset(int $offset)
+    public function setOffset(int $offset): void
     {
     }
 
     /**
      * @return void
      */
-    public function reset()
+    public function reset(): void
     {
     }
 
@@ -71,7 +71,7 @@ class BinaryStream
      *
      * @return void
      */
-    public function rewind()
+    public function rewind(): void
     {
     }
 
@@ -80,7 +80,7 @@ class BinaryStream
      * @param long $offset
      * @return void
      */
-    public function setBuffer(string $buffer = '', int $offset = 0)
+    public function setBuffer(string $buffer = '', int $offset = 0): void
     {
     }
 
@@ -107,7 +107,7 @@ class BinaryStream
      * @param string $str
      * @return void
      */
-    public function put(string $str)
+    public function put(string $str): void
     {
     }
 
@@ -122,7 +122,7 @@ class BinaryStream
      * @param bool $v
      * @return void
      */
-    public function putBool(bool $v)
+    public function putBool(bool $v): void
     {
     }
 
@@ -137,7 +137,7 @@ class BinaryStream
      * @param int $v
      * @return void
      */
-    public function putByte(int $v)
+    public function putByte(int $v): void
     {
     }
 
@@ -159,7 +159,7 @@ class BinaryStream
      * @param int $v
      * @return void
      */
-    public function putShort(int $v)
+    public function putShort(int $v): void
     {
     }
 
@@ -181,7 +181,7 @@ class BinaryStream
      * @param int $v
      * @return void
      */
-    public function putLShort(int $v)
+    public function putLShort(int $v): void
     {
     }
 
@@ -196,7 +196,7 @@ class BinaryStream
      * @param long $v
      * @return void
      */
-    public function putTriad(int $v)
+    public function putTriad(int $v): void
     {
     }
 
@@ -211,7 +211,7 @@ class BinaryStream
      * @param long $v
      * @return void
      */
-    public function putLTriad(int $v)
+    public function putLTriad(int $v): void
     {
     }
 
@@ -226,7 +226,7 @@ class BinaryStream
      * @param int $v
      * @return void
      */
-    public function putInt(int $v)
+    public function putInt(int $v): void
     {
     }
 
@@ -241,7 +241,7 @@ class BinaryStream
      * @param long $v
      * @return void
      */
-    public function putLInt(int $v)
+    public function putLInt(int $v): void
     {
     }
 
@@ -264,7 +264,7 @@ class BinaryStream
      * @param double $v
      * @return void
      */
-    public function putFloat(float $v)
+    public function putFloat(float $v): void
     {
     }
 
@@ -287,7 +287,7 @@ class BinaryStream
      * @param double $v
      * @return void
      */
-    public function putLFloat(float $v)
+    public function putLFloat(float $v): void
     {
     }
 
@@ -302,7 +302,7 @@ class BinaryStream
      * @param double $v
      * @return void
      */
-    public function putDouble(float $v)
+    public function putDouble(float $v): void
     {
     }
 
@@ -317,7 +317,7 @@ class BinaryStream
      * @param double $v
      * @return void
      */
-    public function putLDouble(float $v)
+    public function putLDouble(float $v): void
     {
     }
 
@@ -332,7 +332,7 @@ class BinaryStream
      * @param int $v
      * @return void
      */
-    public function putLong(int $v)
+    public function putLong(int $v): void
     {
     }
 
@@ -347,7 +347,7 @@ class BinaryStream
      * @param int $v
      * @return void
      */
-    public function putLLong(int $v)
+    public function putLLong(int $v): void
     {
     }
 
@@ -366,7 +366,7 @@ class BinaryStream
      * @param int $v
      * @return void
      */
-    public function putUnsignedVarInt(int $v)
+    public function putUnsignedVarInt(int $v): void
     {
     }
 
@@ -385,7 +385,7 @@ class BinaryStream
      * @param int $v
      * @return void
      */
-    public function putVarInt(int $v)
+    public function putVarInt(int $v): void
     {
     }
 
@@ -404,7 +404,7 @@ class BinaryStream
      * @param int $v
      * @return void
      */
-    public function putUnsignedVarLong(int $v)
+    public function putUnsignedVarLong(int $v): void
     {
     }
 
@@ -424,7 +424,7 @@ class BinaryStream
      * @param long $v
      * @return void
      */
-    public function putVarLong(int $v)
+    public function putVarLong(int $v): void
     {
     }
 

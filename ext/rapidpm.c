@@ -66,7 +66,7 @@ static PHP_MINIT_FUNCTION(rapidpm)
 static PHP_MSHUTDOWN_FUNCTION(rapidpm)
 {
 	
-	zephir_deinitialize_memory(TSRMLS_C);
+	zephir_deinitialize_memory();
 	UNREGISTER_INI_ENTRIES();
 	return SUCCESS;
 }
@@ -75,7 +75,7 @@ static PHP_MSHUTDOWN_FUNCTION(rapidpm)
 /**
  * Initialize globals on each request or each thread started
  */
-static void php_zephir_init_globals(zend_rapidpm_globals *rapidpm_globals TSRMLS_DC)
+static void php_zephir_init_globals(zend_rapidpm_globals *rapidpm_globals)
 {
 	rapidpm_globals->initialized = 0;
 
@@ -95,7 +95,7 @@ static void php_zephir_init_globals(zend_rapidpm_globals *rapidpm_globals TSRMLS
 /**
  * Initialize globals only on each thread started
  */
-static void php_zephir_init_module_globals(zend_rapidpm_globals *rapidpm_globals TSRMLS_DC)
+static void php_zephir_init_module_globals(zend_rapidpm_globals *rapidpm_globals)
 {
 	
 }
@@ -103,15 +103,12 @@ static void php_zephir_init_module_globals(zend_rapidpm_globals *rapidpm_globals
 static PHP_RINIT_FUNCTION(rapidpm)
 {
 	zend_rapidpm_globals *rapidpm_globals_ptr;
-#ifdef ZTS
-	tsrm_ls = ts_resource(0);
-#endif
 	rapidpm_globals_ptr = ZEPHIR_VGLOBAL;
 
 	php_zephir_init_globals(rapidpm_globals_ptr);
 	zephir_initialize_memory(rapidpm_globals_ptr);
 
-		zephir_init_static_properties_Pocketmine_Math_Facing(TSRMLS_C);
+		zephir_init_static_properties_Pocketmine_Math_Facing();
 	
 	return SUCCESS;
 }
@@ -119,7 +116,7 @@ static PHP_RINIT_FUNCTION(rapidpm)
 static PHP_RSHUTDOWN_FUNCTION(rapidpm)
 {
 	
-	zephir_deinitialize_memory(TSRMLS_C);
+	zephir_deinitialize_memory();
 	return SUCCESS;
 }
 
@@ -144,6 +141,10 @@ static PHP_MINFO_FUNCTION(rapidpm)
 
 static PHP_GINIT_FUNCTION(rapidpm)
 {
+#if defined(COMPILE_DL_RAPIDPM) && defined(ZTS)
+	ZEND_TSRMLS_CACHE_UPDATE();
+#endif
+
 	php_zephir_init_globals(rapidpm_globals);
 	php_zephir_init_module_globals(rapidpm_globals);
 }
@@ -191,6 +192,10 @@ zend_module_entry rapidpm_module_entry = {
 	STANDARD_MODULE_PROPERTIES_EX
 };
 
+/* implement standard "stub" routine to introduce ourselves to Zend */
 #ifdef COMPILE_DL_RAPIDPM
+# ifdef ZTS
+ZEND_TSRMLS_CACHE_DEFINE()
+# endif
 ZEND_GET_MODULE(rapidpm)
 #endif

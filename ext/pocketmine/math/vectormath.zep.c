@@ -54,6 +54,14 @@ PHP_METHOD(Pocketmine_Math_VectorMath, getDirection2D) {
 	ZVAL_UNDEF(&_1);
 	ZVAL_UNDEF(&_2);
 	ZVAL_UNDEF(&_3);
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(1, 1)
+		Z_PARAM_ZVAL(azimuth)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &azimuth_param);
@@ -82,11 +90,21 @@ void zep_Pocketmine_Math_VectorMath_getDirection2D_zephir_internal_call(int ht, 
 	ZVAL_UNDEF(&_1);
 	ZVAL_UNDEF(&_2);
 	ZVAL_UNDEF(&_3);
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(2, 1)
+		Z_PARAM_ZVAL(azimuth)
+		Z_PARAM_ZVAL(azimuth)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	ZEPHIR_MM_GROW();
 	azimuth_param = azimuth_param_ext;
 
 
+	azimuth = zephir_get_doubleval(azimuth_param);
 	azimuth = zephir_get_doubleval(azimuth_param);
 
 

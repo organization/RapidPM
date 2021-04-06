@@ -71,8 +71,6 @@ class Matrix implements \ArrayAccess
      * @param int       $rows
      * @param int       $columns
      * @param float[][] $set
-     * @param array $set
-     * @param float  [][] $set
      */
     public function __construct($rows, $columns, array $set = array())
     {
@@ -82,9 +80,6 @@ class Matrix implements \ArrayAccess
      * @param float[][] $m
      *
      * @return void
-     * @param array $m
-     * @param float  [][] $m
-     *
      */
     public function set(array $m)
     {

@@ -13,33 +13,26 @@ void zep_Pocketmine_Math_RayTraceResult_getHitVector_zephir_internal_call(int ht
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_raytraceresult___construct, 0, 0, 3)
 	ZEND_ARG_OBJ_INFO(0, bb, Pocketmine\\Math\\AxisAlignedBB, 0)
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, hitFace, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, hitFace)
-#endif
 	ZEND_ARG_OBJ_INFO(0, hitVector, Pocketmine\\Math\\Vector3, 0)
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_pocketmine_math_raytraceresult_getboundingbox, 0, 0, Pocketmine\\Math\\AxisAlignedBB, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_raytraceresult_getboundingbox, 0, 0, IS_OBJECT, "Pocketmine\\Math\\AxisAlignedBB", 0)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_raytraceresult_gethitface, 0, 0, IS_LONG, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_raytraceresult_gethitface, 0, 0, IS_LONG, NULL, 0)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_OBJ_INFO_EX(arginfo_pocketmine_math_raytraceresult_gethitvector, 0, 0, Pocketmine\\Math\\Vector3, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_math_raytraceresult_gethitvector, 0, 0, IS_OBJECT, "Pocketmine\\Math\\Vector3", 0)
-#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_raytraceresult_getboundingbox_zephir_internal_call, 0, 0, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_raytraceresult_gethitface_zephir_internal_call, 0, 0, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_math_raytraceresult_gethitvector_zephir_internal_call, 0, 0, 0)
 ZEND_END_ARG_INFO()
 
 ZEPHIR_INIT_FUNCS(pocketmine_math_raytraceresult_method_entry) {

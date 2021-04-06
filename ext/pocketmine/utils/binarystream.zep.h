@@ -104,810 +104,375 @@ void zep_Pocketmine_Utils_BinaryStream_getVarLong_zephir_internal_call(int ht, z
 void zep_Pocketmine_Utils_BinaryStream_putVarLong_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *v_param_ext);
 void zep_Pocketmine_Utils_BinaryStream_feof_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used);
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getoffset, 0, 0, IS_LONG, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getoffset, 0, 0, IS_LONG, NULL, 0)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getbuffer, 0, 0, IS_STRING, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getbuffer, 0, 0, IS_STRING, NULL, 0)
-#endif
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream___construct, 0, 0, 0)
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, buffer, IS_STRING, 0)
-#else
-	ZEND_ARG_INFO(0, buffer)
-#endif
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, offset, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, offset)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70100
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_setoffset, 0, 1, IS_VOID, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_setoffset, 0, 1, IS_VOID, NULL, 0)
-#endif
-#else
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_setoffset, 0, 0, 1)
-#define arginfo_pocketmine_utils_binarystream_setoffset NULL
-#endif
 
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, offset, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, offset)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70100
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_reset, 0, 0, IS_VOID, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_reset, 0, 0, IS_VOID, NULL, 0)
-#endif
 ZEND_END_ARG_INFO()
-#else
-#define arginfo_pocketmine_utils_binarystream_reset NULL
-#endif
 
-#if PHP_VERSION_ID >= 70100
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_rewind, 0, 0, IS_VOID, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_rewind, 0, 0, IS_VOID, NULL, 0)
-#endif
 ZEND_END_ARG_INFO()
-#else
-#define arginfo_pocketmine_utils_binarystream_rewind NULL
-#endif
 
-#if PHP_VERSION_ID >= 70100
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_setbuffer, 0, 0, IS_VOID, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_setbuffer, 0, 0, IS_VOID, NULL, 0)
-#endif
-#else
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_setbuffer, 0, 0, 0)
-#define arginfo_pocketmine_utils_binarystream_setbuffer NULL
-#endif
 
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, buffer, IS_STRING, 0)
-#else
-	ZEND_ARG_INFO(0, buffer)
-#endif
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, offset, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, offset)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_get, 0, 1, IS_STRING, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_get, 0, 1, IS_STRING, NULL, 0)
-#endif
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, len, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, len)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getremaining, 0, 0, IS_STRING, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getremaining, 0, 0, IS_STRING, NULL, 0)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70100
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_put, 0, 1, IS_VOID, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_put, 0, 1, IS_VOID, NULL, 0)
-#endif
-#else
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_put, 0, 0, 1)
-#define arginfo_pocketmine_utils_binarystream_put NULL
-#endif
 
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, str, IS_STRING, 0)
-#else
-	ZEND_ARG_INFO(0, str)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getbool, 0, 0, _IS_BOOL, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getbool, 0, 0, _IS_BOOL, NULL, 0)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70100
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putbool, 0, 1, IS_VOID, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putbool, 0, 1, IS_VOID, NULL, 0)
-#endif
-#else
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putbool, 0, 0, 1)
-#define arginfo_pocketmine_utils_binarystream_putbool NULL
-#endif
 
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, _IS_BOOL, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getbyte, 0, 0, IS_LONG, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getbyte, 0, 0, IS_LONG, NULL, 0)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70100
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putbyte, 0, 1, IS_VOID, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putbyte, 0, 1, IS_VOID, NULL, 0)
-#endif
-#else
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putbyte, 0, 0, 1)
-#define arginfo_pocketmine_utils_binarystream_putbyte NULL
-#endif
 
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getshort, 0, 0, IS_LONG, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getshort, 0, 0, IS_LONG, NULL, 0)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getsignedshort, 0, 0, IS_LONG, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getsignedshort, 0, 0, IS_LONG, NULL, 0)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70100
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putshort, 0, 1, IS_VOID, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putshort, 0, 1, IS_VOID, NULL, 0)
-#endif
-#else
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putshort, 0, 0, 1)
-#define arginfo_pocketmine_utils_binarystream_putshort NULL
-#endif
 
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getlshort, 0, 0, IS_LONG, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getlshort, 0, 0, IS_LONG, NULL, 0)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getsignedlshort, 0, 0, IS_LONG, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getsignedlshort, 0, 0, IS_LONG, NULL, 0)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70100
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putlshort, 0, 1, IS_VOID, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putlshort, 0, 1, IS_VOID, NULL, 0)
-#endif
-#else
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putlshort, 0, 0, 1)
-#define arginfo_pocketmine_utils_binarystream_putlshort NULL
-#endif
 
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_gettriad, 0, 0, IS_LONG, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_gettriad, 0, 0, IS_LONG, NULL, 0)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70100
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_puttriad, 0, 1, IS_VOID, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_puttriad, 0, 1, IS_VOID, NULL, 0)
-#endif
-#else
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_puttriad, 0, 0, 1)
-#define arginfo_pocketmine_utils_binarystream_puttriad NULL
-#endif
 
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getltriad, 0, 0, IS_LONG, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getltriad, 0, 0, IS_LONG, NULL, 0)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70100
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putltriad, 0, 1, IS_VOID, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putltriad, 0, 1, IS_VOID, NULL, 0)
-#endif
-#else
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putltriad, 0, 0, 1)
-#define arginfo_pocketmine_utils_binarystream_putltriad NULL
-#endif
 
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getint, 0, 0, IS_LONG, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getint, 0, 0, IS_LONG, NULL, 0)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70100
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putint, 0, 1, IS_VOID, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putint, 0, 1, IS_VOID, NULL, 0)
-#endif
-#else
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putint, 0, 0, 1)
-#define arginfo_pocketmine_utils_binarystream_putint NULL
-#endif
 
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getlint, 0, 0, IS_LONG, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getlint, 0, 0, IS_LONG, NULL, 0)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70100
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putlint, 0, 1, IS_VOID, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putlint, 0, 1, IS_VOID, NULL, 0)
-#endif
-#else
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putlint, 0, 0, 1)
-#define arginfo_pocketmine_utils_binarystream_putlint NULL
-#endif
 
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getfloat, 0, 0, IS_DOUBLE, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getfloat, 0, 0, IS_DOUBLE, NULL, 0)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getroundedfloat, 0, 1, IS_DOUBLE, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getroundedfloat, 0, 1, IS_DOUBLE, NULL, 0)
-#endif
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, accuracy, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, accuracy)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70100
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putfloat, 0, 1, IS_VOID, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putfloat, 0, 1, IS_VOID, NULL, 0)
-#endif
-#else
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putfloat, 0, 0, 1)
-#define arginfo_pocketmine_utils_binarystream_putfloat NULL
-#endif
 
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_DOUBLE, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getlfloat, 0, 0, IS_DOUBLE, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getlfloat, 0, 0, IS_DOUBLE, NULL, 0)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getroundedlfloat, 0, 1, IS_DOUBLE, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getroundedlfloat, 0, 1, IS_DOUBLE, NULL, 0)
-#endif
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, accuracy, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, accuracy)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70100
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putlfloat, 0, 1, IS_VOID, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putlfloat, 0, 1, IS_VOID, NULL, 0)
-#endif
-#else
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putlfloat, 0, 0, 1)
-#define arginfo_pocketmine_utils_binarystream_putlfloat NULL
-#endif
 
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_DOUBLE, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getdouble, 0, 0, IS_DOUBLE, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getdouble, 0, 0, IS_DOUBLE, NULL, 0)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70100
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putdouble, 0, 1, IS_VOID, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putdouble, 0, 1, IS_VOID, NULL, 0)
-#endif
-#else
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putdouble, 0, 0, 1)
-#define arginfo_pocketmine_utils_binarystream_putdouble NULL
-#endif
 
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_DOUBLE, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getldouble, 0, 0, IS_DOUBLE, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getldouble, 0, 0, IS_DOUBLE, NULL, 0)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70100
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putldouble, 0, 1, IS_VOID, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putldouble, 0, 1, IS_VOID, NULL, 0)
-#endif
-#else
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putldouble, 0, 0, 1)
-#define arginfo_pocketmine_utils_binarystream_putldouble NULL
-#endif
 
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_DOUBLE, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getlong, 0, 0, IS_LONG, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getlong, 0, 0, IS_LONG, NULL, 0)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70100
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putlong, 0, 1, IS_VOID, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putlong, 0, 1, IS_VOID, NULL, 0)
-#endif
-#else
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putlong, 0, 0, 1)
-#define arginfo_pocketmine_utils_binarystream_putlong NULL
-#endif
 
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getllong, 0, 0, IS_LONG, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getllong, 0, 0, IS_LONG, NULL, 0)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70100
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putllong, 0, 1, IS_VOID, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putllong, 0, 1, IS_VOID, NULL, 0)
-#endif
-#else
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putllong, 0, 0, 1)
-#define arginfo_pocketmine_utils_binarystream_putllong NULL
-#endif
 
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getunsignedvarint, 0, 0, IS_LONG, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getunsignedvarint, 0, 0, IS_LONG, NULL, 0)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70100
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putunsignedvarint, 0, 1, IS_VOID, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putunsignedvarint, 0, 1, IS_VOID, NULL, 0)
-#endif
-#else
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putunsignedvarint, 0, 0, 1)
-#define arginfo_pocketmine_utils_binarystream_putunsignedvarint NULL
-#endif
 
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getvarint, 0, 0, IS_LONG, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getvarint, 0, 0, IS_LONG, NULL, 0)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70100
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putvarint, 0, 1, IS_VOID, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putvarint, 0, 1, IS_VOID, NULL, 0)
-#endif
-#else
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putvarint, 0, 0, 1)
-#define arginfo_pocketmine_utils_binarystream_putvarint NULL
-#endif
 
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getunsignedvarlong, 0, 0, IS_LONG, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getunsignedvarlong, 0, 0, IS_LONG, NULL, 0)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70100
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putunsignedvarlong, 0, 1, IS_VOID, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putunsignedvarlong, 0, 1, IS_VOID, NULL, 0)
-#endif
-#else
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putunsignedvarlong, 0, 0, 1)
-#define arginfo_pocketmine_utils_binarystream_putunsignedvarlong NULL
-#endif
 
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getvarlong, 0, 0, IS_LONG, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_getvarlong, 0, 0, IS_LONG, NULL, 0)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70100
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putvarlong, 0, 1, IS_VOID, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_putvarlong, 0, 1, IS_VOID, NULL, 0)
-#endif
-#else
-ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putvarlong, 0, 0, 1)
-#define arginfo_pocketmine_utils_binarystream_putvarlong NULL
-#endif
 
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
 ZEND_END_ARG_INFO()
 
-#if PHP_VERSION_ID >= 70200
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_feof, 0, 0, _IS_BOOL, 0)
-#else
-ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binarystream_feof, 0, 0, _IS_BOOL, NULL, 0)
-#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_getoffset_zephir_internal_call, 0, 0, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_getbuffer_zephir_internal_call, 0, 0, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_setoffset_zephir_internal_call, 0, 0, 1)
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, offset, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, offset)
-#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_reset_zephir_internal_call, 0, 0, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_rewind_zephir_internal_call, 0, 0, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_get_zephir_internal_call, 0, 0, 1)
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, len, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, len)
-#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_getremaining_zephir_internal_call, 0, 0, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_put_zephir_internal_call, 0, 0, 1)
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, str, IS_STRING, 0)
-#else
-	ZEND_ARG_INFO(0, str)
-#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_getbool_zephir_internal_call, 0, 0, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putbool_zephir_internal_call, 0, 0, 1)
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, _IS_BOOL, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_getbyte_zephir_internal_call, 0, 0, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putbyte_zephir_internal_call, 0, 0, 1)
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_getshort_zephir_internal_call, 0, 0, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_getsignedshort_zephir_internal_call, 0, 0, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putshort_zephir_internal_call, 0, 0, 1)
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_getlshort_zephir_internal_call, 0, 0, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_getsignedlshort_zephir_internal_call, 0, 0, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putlshort_zephir_internal_call, 0, 0, 1)
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_gettriad_zephir_internal_call, 0, 0, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_puttriad_zephir_internal_call, 0, 0, 1)
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_getltriad_zephir_internal_call, 0, 0, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putltriad_zephir_internal_call, 0, 0, 1)
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_getint_zephir_internal_call, 0, 0, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putint_zephir_internal_call, 0, 0, 1)
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_getlint_zephir_internal_call, 0, 0, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putlint_zephir_internal_call, 0, 0, 1)
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_getfloat_zephir_internal_call, 0, 0, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_getroundedfloat_zephir_internal_call, 0, 0, 1)
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, accuracy, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, accuracy)
-#endif
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putfloat_zephir_internal_call, 0, 0, 1)
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_DOUBLE, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_getlfloat_zephir_internal_call, 0, 0, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_getroundedlfloat_zephir_internal_call, 0, 0, 1)
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, accuracy, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, accuracy)
-#endif
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putlfloat_zephir_internal_call, 0, 0, 1)
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_DOUBLE, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_getdouble_zephir_internal_call, 0, 0, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putdouble_zephir_internal_call, 0, 0, 1)
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_DOUBLE, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_getldouble_zephir_internal_call, 0, 0, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putldouble_zephir_internal_call, 0, 0, 1)
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_DOUBLE, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_getlong_zephir_internal_call, 0, 0, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putlong_zephir_internal_call, 0, 0, 1)
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_getllong_zephir_internal_call, 0, 0, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putllong_zephir_internal_call, 0, 0, 1)
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_getunsignedvarint_zephir_internal_call, 0, 0, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putunsignedvarint_zephir_internal_call, 0, 0, 1)
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_getvarint_zephir_internal_call, 0, 0, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putvarint_zephir_internal_call, 0, 0, 1)
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_getunsignedvarlong_zephir_internal_call, 0, 0, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putunsignedvarlong_zephir_internal_call, 0, 0, 1)
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_getvarlong_zephir_internal_call, 0, 0, 0)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_putvarlong_zephir_internal_call, 0, 0, 1)
-#if PHP_VERSION_ID >= 70200
 	ZEND_ARG_TYPE_INFO(0, v, IS_LONG, 0)
-#else
-	ZEND_ARG_INFO(0, v)
-#endif
+ZEND_END_ARG_INFO()
+
+ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binarystream_feof_zephir_internal_call, 0, 0, 0)
 ZEND_END_ARG_INFO()
 
 ZEPHIR_INIT_FUNCS(pocketmine_utils_binarystream_method_entry) {

@@ -69,6 +69,16 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, inDirection) {
 	ZVAL_UNDEF(&_0);
 	ZVAL_UNDEF(&_1);
 	ZVAL_UNDEF(&_2);
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(3, 3)
+		Z_PARAM_OBJECT_OF_CLASS(start, pocketmine_math_vector3_ce)
+		Z_PARAM_OBJECT_OF_CLASS(directionVector, pocketmine_math_vector3_ce)
+		Z_PARAM_ZVAL(maxDistance)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 3, 0, &start, &directionVector, &maxDistance_param);
@@ -97,6 +107,15 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, spaceShip) {
 
 	ZVAL_UNDEF(&a_sub);
 	ZVAL_UNDEF(&b_sub);
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(2, 2)
+		Z_PARAM_ZVAL(a)
+		Z_PARAM_ZVAL(b)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	zephir_fetch_params_without_memory_grow(2, 0, &a, &b);
 
@@ -162,6 +181,15 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, betweenPoints) {
 	ZVAL_UNDEF(&_13);
 	ZVAL_UNDEF(&_14);
 	ZVAL_UNDEF(&temp);
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(2, 2)
+		Z_PARAM_OBJECT_OF_CLASS(start, pocketmine_math_vector3_ce)
+		Z_PARAM_OBJECT_OF_CLASS(end, pocketmine_math_vector3_ce)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 2, 0, &start, &end);
@@ -182,54 +210,54 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, betweenPoints) {
 	}
 	ZEPHIR_CALL_INTERNAL_METHOD_P1(&radius, start, zep_Pocketmine_Math_Vector3_distance_zephir_internal_call, end);
 	zephir_check_call_status();
-	zephir_read_property(&_2, &directionVector, SL("x"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_2, &directionVector, ZEND_STRL("x"), PH_NOISY_CC | PH_READONLY);
 	ZVAL_LONG(&_3, 0);
 	ZEPHIR_STATIC_CALL_INTERNAL_METHOD_P2(&stepX, pocketmine_math_voxelraytrace_ce, zep_Pocketmine_Math_VoxelRayTrace_spaceShip_zephir_internal_call, &_2, &_3);
 	zephir_check_call_status();
-	zephir_read_property(&_3, &directionVector, SL("y"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_3, &directionVector, ZEND_STRL("y"), PH_NOISY_CC | PH_READONLY);
 	ZVAL_LONG(&_4, 0);
 	ZEPHIR_STATIC_CALL_INTERNAL_METHOD_P2(&stepY, pocketmine_math_voxelraytrace_ce, zep_Pocketmine_Math_VoxelRayTrace_spaceShip_zephir_internal_call, &_3, &_4);
 	zephir_check_call_status();
-	zephir_read_property(&_4, &directionVector, SL("z"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_4, &directionVector, ZEND_STRL("z"), PH_NOISY_CC | PH_READONLY);
 	ZVAL_LONG(&_5, 0);
 	ZEPHIR_STATIC_CALL_INTERNAL_METHOD_P2(&stepZ, pocketmine_math_voxelraytrace_ce, zep_Pocketmine_Math_VoxelRayTrace_spaceShip_zephir_internal_call, &_4, &_5);
 	zephir_check_call_status();
-	zephir_read_property(&_5, start, SL("x"), PH_NOISY_CC | PH_READONLY);
-	zephir_read_property(&_6, &directionVector, SL("x"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_5, start, ZEND_STRL("x"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_6, &directionVector, ZEND_STRL("x"), PH_NOISY_CC | PH_READONLY);
 	ZEPHIR_STATIC_CALL_INTERNAL_METHOD_P2(&tMaxX, pocketmine_math_voxelraytrace_ce, zep_Pocketmine_Math_VoxelRayTrace_rayTraceDistanceToBoundary_zephir_internal_call, &_5, &_6);
 	zephir_check_call_status();
-	zephir_read_property(&_7, start, SL("y"), PH_NOISY_CC | PH_READONLY);
-	zephir_read_property(&_8, &directionVector, SL("y"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_7, start, ZEND_STRL("y"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_8, &directionVector, ZEND_STRL("y"), PH_NOISY_CC | PH_READONLY);
 	ZEPHIR_STATIC_CALL_INTERNAL_METHOD_P2(&tMaxY, pocketmine_math_voxelraytrace_ce, zep_Pocketmine_Math_VoxelRayTrace_rayTraceDistanceToBoundary_zephir_internal_call, &_7, &_8);
 	zephir_check_call_status();
-	zephir_read_property(&_9, start, SL("z"), PH_NOISY_CC | PH_READONLY);
-	zephir_read_property(&_10, &directionVector, SL("z"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_9, start, ZEND_STRL("z"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_10, &directionVector, ZEND_STRL("z"), PH_NOISY_CC | PH_READONLY);
 	ZEPHIR_STATIC_CALL_INTERNAL_METHOD_P2(&tMaxZ, pocketmine_math_voxelraytrace_ce, zep_Pocketmine_Math_VoxelRayTrace_rayTraceDistanceToBoundary_zephir_internal_call, &_9, &_10);
 	zephir_check_call_status();
-	zephir_read_property(&_11, &directionVector, SL("x"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_11, &directionVector, ZEND_STRL("x"), PH_NOISY_CC | PH_READONLY);
 	if (ZEPHIR_IS_LONG(&_11, 0)) {
 		ZEPHIR_INIT_VAR(&tDeltaX);
 		ZVAL_LONG(&tDeltaX, 0);
 	} else {
-		zephir_read_property(&_12, &directionVector, SL("x"), PH_NOISY_CC | PH_READONLY);
+		zephir_read_property(&_12, &directionVector, ZEND_STRL("x"), PH_NOISY_CC | PH_READONLY);
 		ZEPHIR_INIT_NVAR(&tDeltaX);
 		div_function(&tDeltaX, &stepX, &_12);
 	}
-	zephir_read_property(&_12, &directionVector, SL("y"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_12, &directionVector, ZEND_STRL("y"), PH_NOISY_CC | PH_READONLY);
 	if (ZEPHIR_IS_LONG(&_12, 0)) {
 		ZEPHIR_INIT_VAR(&tDeltaY);
 		ZVAL_LONG(&tDeltaY, 0);
 	} else {
-		zephir_read_property(&_13, &directionVector, SL("y"), PH_NOISY_CC | PH_READONLY);
+		zephir_read_property(&_13, &directionVector, ZEND_STRL("y"), PH_NOISY_CC | PH_READONLY);
 		ZEPHIR_INIT_NVAR(&tDeltaY);
 		div_function(&tDeltaY, &stepY, &_13);
 	}
-	zephir_read_property(&_13, &directionVector, SL("z"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_13, &directionVector, ZEND_STRL("z"), PH_NOISY_CC | PH_READONLY);
 	if (ZEPHIR_IS_LONG(&_13, 0)) {
 		ZEPHIR_INIT_VAR(&tDeltaZ);
 		ZVAL_LONG(&tDeltaZ, 0);
 	} else {
-		zephir_read_property(&_14, &directionVector, SL("z"), PH_NOISY_CC | PH_READONLY);
+		zephir_read_property(&_14, &directionVector, ZEND_STRL("z"), PH_NOISY_CC | PH_READONLY);
 		ZEPHIR_INIT_NVAR(&tDeltaZ);
 		div_function(&tDeltaZ, &stepZ, &_14);
 	}
@@ -250,19 +278,19 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, betweenPoints) {
 			if (ZEPHIR_GT(&tMaxX, &radius)) {
 				break;
 			}
-			zephir_update_property_zval(&currentBlock, SL("x"), &stepX);
+			zephir_update_property_zval(&currentBlock, ZEND_STRL("x"), &stepX);
 			ZEPHIR_ADD_ASSIGN(&tMaxX, &tDeltaX);
 		} else if (ZEPHIR_LT(&tMaxY, &tMaxZ)) {
 			if (ZEPHIR_GT(&tMaxY, &radius)) {
 				break;
 			}
-			zephir_update_property_zval(&currentBlock, SL("y"), &stepY);
+			zephir_update_property_zval(&currentBlock, ZEND_STRL("y"), &stepY);
 			ZEPHIR_ADD_ASSIGN(&tMaxY, &tDeltaY);
 		} else {
 			if (ZEPHIR_GT(&tMaxZ, &radius)) {
 				break;
 			}
-			zephir_update_property_zval(&currentBlock, SL("z"), &stepZ);
+			zephir_update_property_zval(&currentBlock, ZEND_STRL("z"), &stepZ);
 			ZEPHIR_ADD_ASSIGN(&tMaxZ, &tDeltaZ);
 		}
 	}
@@ -295,6 +323,15 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, rayTraceDistanceToBoundary) {
 
 	ZVAL_UNDEF(&_0$$4);
 	ZVAL_UNDEF(&_1);
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(2, 2)
+		Z_PARAM_ZVAL(s)
+		Z_PARAM_ZVAL(ds)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	zephir_fetch_params_without_memory_grow(2, 0, &s_param, &ds_param);
 
@@ -340,6 +377,19 @@ void zep_Pocketmine_Math_VoxelRayTrace_inDirection_zephir_internal_call(int ht, 
 	ZVAL_UNDEF(&_0);
 	ZVAL_UNDEF(&_1);
 	ZVAL_UNDEF(&_2);
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(6, 3)
+		Z_PARAM_OBJECT_OF_CLASS(start, pocketmine_math_vector3_ce)
+		Z_PARAM_OBJECT_OF_CLASS(directionVector, pocketmine_math_vector3_ce)
+		Z_PARAM_ZVAL(maxDistance)
+		Z_PARAM_OBJECT_OF_CLASS(start, pocketmine_math_vector3_ce)
+		Z_PARAM_OBJECT_OF_CLASS(directionVector, pocketmine_math_vector3_ce)
+		Z_PARAM_ZVAL(maxDistance)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	ZEPHIR_MM_GROW();
 	start = start_ext;
@@ -349,6 +399,7 @@ void zep_Pocketmine_Math_VoxelRayTrace_inDirection_zephir_internal_call(int ht, 
 	maxDistance_param = maxDistance_param_ext;
 
 
+	maxDistance = zephir_get_doubleval(maxDistance_param);
 	maxDistance = zephir_get_doubleval(maxDistance_param);
 
 
@@ -371,6 +422,17 @@ void zep_Pocketmine_Math_VoxelRayTrace_spaceShip_zephir_internal_call(int ht, ze
 	zval *a = NULL, a_sub, *b = NULL, b_sub;
 		ZVAL_UNDEF(&a_sub);
 	ZVAL_UNDEF(&b_sub);
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(4, 2)
+		Z_PARAM_ZVAL(a)
+		Z_PARAM_ZVAL(b)
+		Z_PARAM_ZVAL(a)
+		Z_PARAM_ZVAL(b)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	a = a_ext;
 
@@ -437,6 +499,17 @@ void zep_Pocketmine_Math_VoxelRayTrace_betweenPoints_zephir_internal_call(int ht
 	ZVAL_UNDEF(&_13);
 	ZVAL_UNDEF(&_14);
 	ZVAL_UNDEF(&temp);
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(4, 2)
+		Z_PARAM_OBJECT_OF_CLASS(start, pocketmine_math_vector3_ce)
+		Z_PARAM_OBJECT_OF_CLASS(end, pocketmine_math_vector3_ce)
+		Z_PARAM_OBJECT_OF_CLASS(start, pocketmine_math_vector3_ce)
+		Z_PARAM_OBJECT_OF_CLASS(end, pocketmine_math_vector3_ce)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	ZEPHIR_MM_GROW();
 	start = start_ext;
@@ -460,54 +533,54 @@ void zep_Pocketmine_Math_VoxelRayTrace_betweenPoints_zephir_internal_call(int ht
 	}
 	ZEPHIR_CALL_INTERNAL_METHOD_P1(&radius, start, zep_Pocketmine_Math_Vector3_distance_zephir_internal_call, end);
 	zephir_check_call_status();
-	zephir_read_property(&_2, &directionVector, SL("x"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_2, &directionVector, ZEND_STRL("x"), PH_NOISY_CC | PH_READONLY);
 	ZVAL_LONG(&_3, 0);
 	ZEPHIR_STATIC_CALL_INTERNAL_METHOD_P2(&stepX, pocketmine_math_voxelraytrace_ce, zep_Pocketmine_Math_VoxelRayTrace_spaceShip_zephir_internal_call, &_2, &_3);
 	zephir_check_call_status();
-	zephir_read_property(&_3, &directionVector, SL("y"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_3, &directionVector, ZEND_STRL("y"), PH_NOISY_CC | PH_READONLY);
 	ZVAL_LONG(&_4, 0);
 	ZEPHIR_STATIC_CALL_INTERNAL_METHOD_P2(&stepY, pocketmine_math_voxelraytrace_ce, zep_Pocketmine_Math_VoxelRayTrace_spaceShip_zephir_internal_call, &_3, &_4);
 	zephir_check_call_status();
-	zephir_read_property(&_4, &directionVector, SL("z"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_4, &directionVector, ZEND_STRL("z"), PH_NOISY_CC | PH_READONLY);
 	ZVAL_LONG(&_5, 0);
 	ZEPHIR_STATIC_CALL_INTERNAL_METHOD_P2(&stepZ, pocketmine_math_voxelraytrace_ce, zep_Pocketmine_Math_VoxelRayTrace_spaceShip_zephir_internal_call, &_4, &_5);
 	zephir_check_call_status();
-	zephir_read_property(&_5, start, SL("x"), PH_NOISY_CC | PH_READONLY);
-	zephir_read_property(&_6, &directionVector, SL("x"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_5, start, ZEND_STRL("x"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_6, &directionVector, ZEND_STRL("x"), PH_NOISY_CC | PH_READONLY);
 	ZEPHIR_STATIC_CALL_INTERNAL_METHOD_P2(&tMaxX, pocketmine_math_voxelraytrace_ce, zep_Pocketmine_Math_VoxelRayTrace_rayTraceDistanceToBoundary_zephir_internal_call, &_5, &_6);
 	zephir_check_call_status();
-	zephir_read_property(&_7, start, SL("y"), PH_NOISY_CC | PH_READONLY);
-	zephir_read_property(&_8, &directionVector, SL("y"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_7, start, ZEND_STRL("y"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_8, &directionVector, ZEND_STRL("y"), PH_NOISY_CC | PH_READONLY);
 	ZEPHIR_STATIC_CALL_INTERNAL_METHOD_P2(&tMaxY, pocketmine_math_voxelraytrace_ce, zep_Pocketmine_Math_VoxelRayTrace_rayTraceDistanceToBoundary_zephir_internal_call, &_7, &_8);
 	zephir_check_call_status();
-	zephir_read_property(&_9, start, SL("z"), PH_NOISY_CC | PH_READONLY);
-	zephir_read_property(&_10, &directionVector, SL("z"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_9, start, ZEND_STRL("z"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_10, &directionVector, ZEND_STRL("z"), PH_NOISY_CC | PH_READONLY);
 	ZEPHIR_STATIC_CALL_INTERNAL_METHOD_P2(&tMaxZ, pocketmine_math_voxelraytrace_ce, zep_Pocketmine_Math_VoxelRayTrace_rayTraceDistanceToBoundary_zephir_internal_call, &_9, &_10);
 	zephir_check_call_status();
-	zephir_read_property(&_11, &directionVector, SL("x"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_11, &directionVector, ZEND_STRL("x"), PH_NOISY_CC | PH_READONLY);
 	if (ZEPHIR_IS_LONG(&_11, 0)) {
 		ZEPHIR_INIT_VAR(&tDeltaX);
 		ZVAL_LONG(&tDeltaX, 0);
 	} else {
-		zephir_read_property(&_12, &directionVector, SL("x"), PH_NOISY_CC | PH_READONLY);
+		zephir_read_property(&_12, &directionVector, ZEND_STRL("x"), PH_NOISY_CC | PH_READONLY);
 		ZEPHIR_INIT_NVAR(&tDeltaX);
 		div_function(&tDeltaX, &stepX, &_12);
 	}
-	zephir_read_property(&_12, &directionVector, SL("y"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_12, &directionVector, ZEND_STRL("y"), PH_NOISY_CC | PH_READONLY);
 	if (ZEPHIR_IS_LONG(&_12, 0)) {
 		ZEPHIR_INIT_VAR(&tDeltaY);
 		ZVAL_LONG(&tDeltaY, 0);
 	} else {
-		zephir_read_property(&_13, &directionVector, SL("y"), PH_NOISY_CC | PH_READONLY);
+		zephir_read_property(&_13, &directionVector, ZEND_STRL("y"), PH_NOISY_CC | PH_READONLY);
 		ZEPHIR_INIT_NVAR(&tDeltaY);
 		div_function(&tDeltaY, &stepY, &_13);
 	}
-	zephir_read_property(&_13, &directionVector, SL("z"), PH_NOISY_CC | PH_READONLY);
+	zephir_read_property(&_13, &directionVector, ZEND_STRL("z"), PH_NOISY_CC | PH_READONLY);
 	if (ZEPHIR_IS_LONG(&_13, 0)) {
 		ZEPHIR_INIT_VAR(&tDeltaZ);
 		ZVAL_LONG(&tDeltaZ, 0);
 	} else {
-		zephir_read_property(&_14, &directionVector, SL("z"), PH_NOISY_CC | PH_READONLY);
+		zephir_read_property(&_14, &directionVector, ZEND_STRL("z"), PH_NOISY_CC | PH_READONLY);
 		ZEPHIR_INIT_NVAR(&tDeltaZ);
 		div_function(&tDeltaZ, &stepZ, &_14);
 	}
@@ -528,19 +601,19 @@ void zep_Pocketmine_Math_VoxelRayTrace_betweenPoints_zephir_internal_call(int ht
 			if (ZEPHIR_GT(&tMaxX, &radius)) {
 				break;
 			}
-			zephir_update_property_zval(&currentBlock, SL("x"), &stepX);
+			zephir_update_property_zval(&currentBlock, ZEND_STRL("x"), &stepX);
 			ZEPHIR_ADD_ASSIGN(&tMaxX, &tDeltaX);
 		} else if (ZEPHIR_LT(&tMaxY, &tMaxZ)) {
 			if (ZEPHIR_GT(&tMaxY, &radius)) {
 				break;
 			}
-			zephir_update_property_zval(&currentBlock, SL("y"), &stepY);
+			zephir_update_property_zval(&currentBlock, ZEND_STRL("y"), &stepY);
 			ZEPHIR_ADD_ASSIGN(&tMaxY, &tDeltaY);
 		} else {
 			if (ZEPHIR_GT(&tMaxZ, &radius)) {
 				break;
 			}
-			zephir_update_property_zval(&currentBlock, SL("z"), &stepZ);
+			zephir_update_property_zval(&currentBlock, ZEND_STRL("z"), &stepZ);
 			ZEPHIR_ADD_ASSIGN(&tMaxZ, &tDeltaZ);
 		}
 	}
@@ -571,12 +644,25 @@ void zep_Pocketmine_Math_VoxelRayTrace_rayTraceDistanceToBoundary_zephir_interna
 	double s, ds, inf$$3;
 		ZVAL_UNDEF(&_0$$4);
 	ZVAL_UNDEF(&_1);
+#if PHP_VERSION_ID >= 80000
+	bool is_null_true = 1;
+	ZEND_PARSE_PARAMETERS_START(4, 2)
+		Z_PARAM_ZVAL(s)
+		Z_PARAM_ZVAL(ds)
+		Z_PARAM_ZVAL(s)
+		Z_PARAM_ZVAL(ds)
+	ZEND_PARSE_PARAMETERS_END();
+
+#endif
+
 
 	s_param = s_param_ext;
 
 	ds_param = ds_param_ext;
 
 
+	s = zephir_get_doubleval(s_param);
+	ds = zephir_get_doubleval(ds_param);
 	s = zephir_get_doubleval(s_param);
 	ds = zephir_get_doubleval(ds_param);
 

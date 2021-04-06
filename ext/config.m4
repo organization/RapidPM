@@ -9,21 +9,23 @@ if test "$PHP_RAPIDPM" = "yes"; then
 	fi
 
 	AC_DEFINE(HAVE_RAPIDPM, 1, [Whether you have Rapidpm])
-	rapidpm_sources="rapidpm.c kernel/main.c kernel/memory.c kernel/exception.c kernel/debug.c kernel/backtrace.c kernel/object.c kernel/array.c kernel/string.c kernel/fcall.c kernel/require.c kernel/file.c kernel/operators.c kernel/math.c kernel/concat.c kernel/variables.c kernel/filter.c kernel/iterator.c kernel/time.c kernel/exit.c pocketmine\math\axisalignedbb.zep.c
-	pocketmine\math\facing.zep.c
-	pocketmine\math\math.zep.c
-	pocketmine\math\matrix.zep.c
-	pocketmine\math\raytraceresult.zep.c
-	pocketmine\math\vector2.zep.c
-	pocketmine\math\vector3.zep.c
-	pocketmine\math\vectormath.zep.c
-	pocketmine\math\voxelraytrace.zep.c
-	pocketmine\utils\binary.zep.c
-	pocketmine\utils\binarydataexception.zep.c
-	pocketmine\utils\binarystream.zep.c get_inf.c
-	zval_ref.c
-	zval_ref_read.c"
+	rapidpm_sources="rapidpm.c kernel/main.c kernel/memory.c kernel/exception.c kernel/debug.c kernel/backtrace.c kernel/object.c kernel/array.c kernel/string.c kernel/fcall.c kernel/require.c kernel/file.c kernel/operators.c kernel/math.c kernel/concat.c kernel/variables.c kernel/filter.c kernel/iterator.c kernel/time.c kernel/exit.c pocketmine/math/axisalignedbb.zep.c
+	pocketmine/math/facing.zep.c
+	pocketmine/math/math.zep.c
+	pocketmine/math/matrix.zep.c
+	pocketmine/math/raytraceresult.zep.c
+	pocketmine/math/vector2.zep.c
+	pocketmine/math/vector3.zep.c
+	pocketmine/math/vectormath.zep.c
+	pocketmine/math/voxelraytrace.zep.c
+	pocketmine/utils/binary.zep.c
+	pocketmine/utils/binarydataexception.zep.c
+	pocketmine/utils/binarystream.zep.c get_inf.c"
 	PHP_NEW_EXTENSION(rapidpm, $rapidpm_sources, $ext_shared,, )
+	PHP_ADD_BUILD_DIR([$ext_builddir/kernel/])
+	for dir in "pocketmine/math pocketmine/utils"; do
+		PHP_ADD_BUILD_DIR([$ext_builddir/$dir])
+	done
 	PHP_SUBST(RAPIDPM_SHARED_LIBADD)
 
 	old_CPPFLAGS=$CPPFLAGS
