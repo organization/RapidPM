@@ -11,7 +11,7 @@ env:
 
 before_script:
  - LEVELDB_VERSION=623f633d3a588f9e478b95a12dc794d25968234f
- - curl -fsSL "https://github.com/pmmp/leveldb-mcpe/archive/${LEVELDB_VERSION}.tar.gz" | tar -zx
+ - curl -fsSL "https://github.com/pmmp/leveldb/archive/${LEVELDB_VERSION}.tar.gz" | tar -zx
  - mv leveldb-mcpe-$LEVELDB_VERSION leveldb-mcpe
  - cd leveldb-mcpe && make -j4 sharedlibs && mv out-shared/libleveldb.* . && cd ..
  - git clone https://github.com/reeze/php-leveldb.git leveldb
