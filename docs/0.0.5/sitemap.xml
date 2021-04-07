@@ -4,189 +4,189 @@
         <loc>/index.html</loc>
         <changefreq>daily</changefreq>
         <priority>1</priority>
-        <lastmod>2021-04-06</lastmod>
+        <lastmod>2021-04-07</lastmod>
     </url>
 
     <url>
         <loc>/namespaces.html</loc>
         <changefreq>daily</changefreq>
         <priority>1</priority>
-        <lastmod>2021-04-06</lastmod>
+        <lastmod>2021-04-07</lastmod>
     </url>
 
     <url>
         <loc>/classes.html</loc>
         <changefreq>daily</changefreq>
         <priority>1</priority>
-        <lastmod>2021-04-06</lastmod>
+        <lastmod>2021-04-07</lastmod>
     </url>
 
             <url>
             <loc>/class/Pocketmine/Math/AxisAlignedBB.html</loc>
             <changefreq>daily</changefreq>
             <priority>1</priority>
-            <lastmod>2021-04-06</lastmod>
+            <lastmod>2021-04-07</lastmod>
         </url>
 
         <url>
             <loc>/source/Pocketmine/Math/AxisAlignedBB.html</loc>
             <changefreq>daily</changefreq>
             <priority>1</priority>
-            <lastmod>2021-04-06</lastmod>
+            <lastmod>2021-04-07</lastmod>
         </url>
 
             <url>
             <loc>/class/Pocketmine/Math/Facing.html</loc>
             <changefreq>daily</changefreq>
             <priority>1</priority>
-            <lastmod>2021-04-06</lastmod>
+            <lastmod>2021-04-07</lastmod>
         </url>
 
         <url>
             <loc>/source/Pocketmine/Math/Facing.html</loc>
             <changefreq>daily</changefreq>
             <priority>1</priority>
-            <lastmod>2021-04-06</lastmod>
+            <lastmod>2021-04-07</lastmod>
         </url>
 
             <url>
             <loc>/class/Pocketmine/Math/Math.html</loc>
             <changefreq>daily</changefreq>
             <priority>1</priority>
-            <lastmod>2021-04-06</lastmod>
+            <lastmod>2021-04-07</lastmod>
         </url>
 
         <url>
             <loc>/source/Pocketmine/Math/Math.html</loc>
             <changefreq>daily</changefreq>
             <priority>1</priority>
-            <lastmod>2021-04-06</lastmod>
+            <lastmod>2021-04-07</lastmod>
         </url>
 
             <url>
             <loc>/class/Pocketmine/Math/Matrix.html</loc>
             <changefreq>daily</changefreq>
             <priority>1</priority>
-            <lastmod>2021-04-06</lastmod>
+            <lastmod>2021-04-07</lastmod>
         </url>
 
         <url>
             <loc>/source/Pocketmine/Math/Matrix.html</loc>
             <changefreq>daily</changefreq>
             <priority>1</priority>
-            <lastmod>2021-04-06</lastmod>
+            <lastmod>2021-04-07</lastmod>
         </url>
 
             <url>
             <loc>/class/Pocketmine/Math/RayTraceResult.html</loc>
             <changefreq>daily</changefreq>
             <priority>1</priority>
-            <lastmod>2021-04-06</lastmod>
+            <lastmod>2021-04-07</lastmod>
         </url>
 
         <url>
             <loc>/source/Pocketmine/Math/RayTraceResult.html</loc>
             <changefreq>daily</changefreq>
             <priority>1</priority>
-            <lastmod>2021-04-06</lastmod>
+            <lastmod>2021-04-07</lastmod>
         </url>
 
             <url>
             <loc>/class/Pocketmine/Math/Vector2.html</loc>
             <changefreq>daily</changefreq>
             <priority>1</priority>
-            <lastmod>2021-04-06</lastmod>
+            <lastmod>2021-04-07</lastmod>
         </url>
 
         <url>
             <loc>/source/Pocketmine/Math/Vector2.html</loc>
             <changefreq>daily</changefreq>
             <priority>1</priority>
-            <lastmod>2021-04-06</lastmod>
+            <lastmod>2021-04-07</lastmod>
         </url>
 
             <url>
             <loc>/class/Pocketmine/Math/Vector3.html</loc>
             <changefreq>daily</changefreq>
             <priority>1</priority>
-            <lastmod>2021-04-06</lastmod>
+            <lastmod>2021-04-07</lastmod>
         </url>
 
         <url>
             <loc>/source/Pocketmine/Math/Vector3.html</loc>
             <changefreq>daily</changefreq>
             <priority>1</priority>
-            <lastmod>2021-04-06</lastmod>
+            <lastmod>2021-04-07</lastmod>
         </url>
 
             <url>
             <loc>/class/Pocketmine/Math/VectorMath.html</loc>
             <changefreq>daily</changefreq>
             <priority>1</priority>
-            <lastmod>2021-04-06</lastmod>
+            <lastmod>2021-04-07</lastmod>
         </url>
 
         <url>
             <loc>/source/Pocketmine/Math/VectorMath.html</loc>
             <changefreq>daily</changefreq>
             <priority>1</priority>
-            <lastmod>2021-04-06</lastmod>
+            <lastmod>2021-04-07</lastmod>
         </url>
 
             <url>
             <loc>/class/Pocketmine/Math/VoxelRayTrace.html</loc>
             <changefreq>daily</changefreq>
             <priority>1</priority>
-            <lastmod>2021-04-06</lastmod>
+            <lastmod>2021-04-07</lastmod>
         </url>
 
         <url>
             <loc>/source/Pocketmine/Math/VoxelRayTrace.html</loc>
             <changefreq>daily</changefreq>
             <priority>1</priority>
-            <lastmod>2021-04-06</lastmod>
+            <lastmod>2021-04-07</lastmod>
         </url>
 
             <url>
             <loc>/class/Pocketmine/Utils/Binary.html</loc>
             <changefreq>daily</changefreq>
             <priority>1</priority>
-            <lastmod>2021-04-06</lastmod>
+            <lastmod>2021-04-07</lastmod>
         </url>
 
         <url>
             <loc>/source/Pocketmine/Utils/Binary.html</loc>
             <changefreq>daily</changefreq>
             <priority>1</priority>
-            <lastmod>2021-04-06</lastmod>
+            <lastmod>2021-04-07</lastmod>
         </url>
 
             <url>
             <loc>/class/Pocketmine/Utils/BinaryDataException.html</loc>
             <changefreq>daily</changefreq>
             <priority>1</priority>
-            <lastmod>2021-04-06</lastmod>
+            <lastmod>2021-04-07</lastmod>
         </url>
 
         <url>
             <loc>/source/Pocketmine/Utils/BinaryDataException.html</loc>
             <changefreq>daily</changefreq>
             <priority>1</priority>
-            <lastmod>2021-04-06</lastmod>
+            <lastmod>2021-04-07</lastmod>
         </url>
 
             <url>
             <loc>/class/Pocketmine/Utils/BinaryStream.html</loc>
             <changefreq>daily</changefreq>
             <priority>1</priority>
-            <lastmod>2021-04-06</lastmod>
+            <lastmod>2021-04-07</lastmod>
         </url>
 
         <url>
             <loc>/source/Pocketmine/Utils/BinaryStream.html</loc>
             <changefreq>daily</changefreq>
             <priority>1</priority>
-            <lastmod>2021-04-06</lastmod>
+            <lastmod>2021-04-07</lastmod>
         </url>
 
     
@@ -194,19 +194,19 @@
             <loc>/namespace/Pocketmine.html</loc>
             <changefreq>daily</changefreq>
             <priority>1</priority>
-            <lastmod>2021-04-06</lastmod>
+            <lastmod>2021-04-07</lastmod>
         </url>
             <url>
             <loc>/namespace/Pocketmine/Math.html</loc>
             <changefreq>daily</changefreq>
             <priority>1</priority>
-            <lastmod>2021-04-06</lastmod>
+            <lastmod>2021-04-07</lastmod>
         </url>
             <url>
             <loc>/namespace/Pocketmine/Utils.html</loc>
             <changefreq>daily</changefreq>
             <priority>1</priority>
-            <lastmod>2021-04-06</lastmod>
+            <lastmod>2021-04-07</lastmod>
         </url>
     
 </urlset>
