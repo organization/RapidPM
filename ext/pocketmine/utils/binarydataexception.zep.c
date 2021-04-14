@@ -30,11 +30,10 @@
  * along with RapidPM.  If not, see <https://www.gnu.org/licenses/>.
  *
 */
-ZEPHIR_INIT_CLASS(Pocketmine_Utils_BinaryDataException) {
-
+ZEPHIR_INIT_CLASS(Pocketmine_Utils_BinaryDataException)
+{
 	ZEPHIR_REGISTER_CLASS_EX(Pocketmine\\Utils, BinaryDataException, pocketmine, utils_binarydataexception, spl_ce_RuntimeException, NULL, 0);
 
 	return SUCCESS;
-
 }
 

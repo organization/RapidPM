@@ -34,16 +34,15 @@
  * along with RapidPM.  If not, see <https://www.gnu.org/licenses/>.
  *
 */
-ZEPHIR_INIT_CLASS(Pocketmine_Math_VectorMath) {
-
+ZEPHIR_INIT_CLASS(Pocketmine_Math_VectorMath)
+{
 	ZEPHIR_REGISTER_CLASS(Pocketmine\\Math, VectorMath, pocketmine, math_vectormath, pocketmine_math_vectormath_method_entry, ZEND_ACC_EXPLICIT_ABSTRACT_CLASS);
 
 	return SUCCESS;
-
 }
 
-PHP_METHOD(Pocketmine_Math_VectorMath, getDirection2D) {
-
+PHP_METHOD(Pocketmine_Math_VectorMath, getDirection2D)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *azimuth_param = NULL, _0, _1, _2, _3;
@@ -59,13 +58,11 @@ PHP_METHOD(Pocketmine_Math_VectorMath, getDirection2D) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_ZVAL(azimuth)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &azimuth_param);
-
 	azimuth = zephir_get_doubleval(azimuth_param);
 
 
@@ -77,11 +74,10 @@ PHP_METHOD(Pocketmine_Math_VectorMath, getDirection2D) {
 	ZEPHIR_CALL_METHOD(NULL, return_value, "__construct", NULL, 7, &_2, &_3);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
-void zep_Pocketmine_Math_VectorMath_getDirection2D_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *azimuth_param_ext) {
-
+void zep_Pocketmine_Math_VectorMath_getDirection2D_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *azimuth_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *azimuth_param = NULL, _0, _1, _2, _3;
@@ -96,13 +92,11 @@ void zep_Pocketmine_Math_VectorMath_getDirection2D_zephir_internal_call(int ht, 
 		Z_PARAM_ZVAL(azimuth)
 		Z_PARAM_ZVAL(azimuth)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	azimuth_param = azimuth_param_ext;
-
 
 	azimuth = zephir_get_doubleval(azimuth_param);
 	azimuth = zephir_get_doubleval(azimuth_param);
@@ -116,6 +110,5 @@ void zep_Pocketmine_Math_VectorMath_getDirection2D_zephir_internal_call(int ht, 
 	ZEPHIR_CALL_METHOD(NULL, return_value, "__construct", NULL, 7, &_2, &_3);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 

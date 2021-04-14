@@ -492,7 +492,7 @@ class Binary
      *
      * @return int
      */
-    public static function readVarInt(string buffer, offset) -> int
+    public static function readVarInt(string buffer, int& offset) -> int
     {
         var raw = self::readUnsignedVarInt(buffer, offset);
         int temp = ((((int) raw << 63) >> 63) ^ (int) raw) >> 1;
@@ -574,7 +574,7 @@ class Binary
      *
      * @return long
      */
-    public static function readVarLong(string buffer, offset) -> long
+    public static function readVarLong(string buffer, int& offset) -> long
     {
         var raw = self::readUnsignedVarLong(buffer, offset);
         long temp = ((((long) raw << 63) >> 63) ^ (long) raw) >> 1;
@@ -591,7 +591,7 @@ class Binary
      *
      * @throws BinaryDataException if the var-int did not end after 10 bytes or there were not enough bytes
      */
-    public static function readUnsignedVarLong(var buffer, offset) -> long
+    public static function readUnsignedVarLong(var buffer, int& offset) -> long
     {
         var i = 0;
         var value = 0;

@@ -38,12 +38,11 @@
  * along with RapidPM.  If not, see <https://www.gnu.org/licenses/>.
  *
 */
-ZEPHIR_INIT_CLASS(Pocketmine_Math_VoxelRayTrace) {
-
+ZEPHIR_INIT_CLASS(Pocketmine_Math_VoxelRayTrace)
+{
 	ZEPHIR_REGISTER_CLASS(Pocketmine\\Math, VoxelRayTrace, pocketmine, math_voxelraytrace, pocketmine_math_voxelraytrace_method_entry, ZEND_ACC_EXPLICIT_ABSTRACT_CLASS);
 
 	return SUCCESS;
-
 }
 
 /**
@@ -56,8 +55,8 @@ ZEPHIR_INIT_CLASS(Pocketmine_Math_VoxelRayTrace) {
  *
  * @return \Generator|Vector3[]
  */
-PHP_METHOD(Pocketmine_Math_VoxelRayTrace, inDirection) {
-
+PHP_METHOD(Pocketmine_Math_VoxelRayTrace, inDirection)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	double maxDistance;
@@ -76,13 +75,11 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, inDirection) {
 		Z_PARAM_OBJECT_OF_CLASS(directionVector, pocketmine_math_vector3_ce)
 		Z_PARAM_ZVAL(maxDistance)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 3, 0, &start, &directionVector, &maxDistance_param);
-
 	maxDistance = zephir_get_doubleval(maxDistance_param);
 
 
@@ -94,14 +91,13 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, inDirection) {
 	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P2(pocketmine_math_voxelraytrace_ce, zep_Pocketmine_Math_VoxelRayTrace_betweenPoints_zephir_internal_call, start, &_0);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
  * Spaceship operator
  */
-PHP_METHOD(Pocketmine_Math_VoxelRayTrace, spaceShip) {
-
+PHP_METHOD(Pocketmine_Math_VoxelRayTrace, spaceShip)
+{
 	zval *a = NULL, a_sub, *b = NULL, b_sub;
 	zval *this_ptr = getThis();
 
@@ -113,12 +109,10 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, spaceShip) {
 		Z_PARAM_ZVAL(a)
 		Z_PARAM_ZVAL(b)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	zephir_fetch_params_without_memory_grow(2, 0, &a, &b);
-
 
 
 	if (ZEPHIR_IS_EQUAL(a, b)) {
@@ -128,7 +122,6 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, spaceShip) {
 	} else {
 		RETURN_LONG(1);
 	}
-
 }
 
 /**
@@ -143,8 +136,8 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, spaceShip) {
  *
  * @return \Generator|Vector3[]
  */
-PHP_METHOD(Pocketmine_Math_VoxelRayTrace, betweenPoints) {
-
+PHP_METHOD(Pocketmine_Math_VoxelRayTrace, betweenPoints)
+{
 	zend_bool _15$$4;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS, counter;
@@ -187,13 +180,11 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, betweenPoints) {
 		Z_PARAM_OBJECT_OF_CLASS(start, pocketmine_math_vector3_ce)
 		Z_PARAM_OBJECT_OF_CLASS(end, pocketmine_math_vector3_ce)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 2, 0, &start, &end);
-
 
 
 	ZEPHIR_CALL_INTERNAL_METHOD_P0(&currentBlock, start, zep_Pocketmine_Math_Vector3_floor_zephir_internal_call);
@@ -298,7 +289,6 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, betweenPoints) {
 	ZEPHIR_CALL_METHOD(NULL, return_value, "__construct", NULL, 11, &temp);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -315,8 +305,8 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, betweenPoints) {
  *
  * @return float Distance along the ray trace that must be travelled to cross a boundary.
  */
-PHP_METHOD(Pocketmine_Math_VoxelRayTrace, rayTraceDistanceToBoundary) {
-
+PHP_METHOD(Pocketmine_Math_VoxelRayTrace, rayTraceDistanceToBoundary)
+{
 	zval *s_param = NULL, *ds_param = NULL, _0$$4, _1;
 	double s, ds, inf$$3;
 	zval *this_ptr = getThis();
@@ -329,12 +319,10 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, rayTraceDistanceToBoundary) {
 		Z_PARAM_ZVAL(s)
 		Z_PARAM_ZVAL(ds)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	zephir_fetch_params_without_memory_grow(2, 0, &s_param, &ds_param);
-
 	s = zephir_get_doubleval(s_param);
 	ds = zephir_get_doubleval(ds_param);
 
@@ -353,7 +341,6 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, rayTraceDistanceToBoundary) {
 	}
 	ZVAL_DOUBLE(&_1, s);
 	RETURN_DOUBLE(zephir_safe_div_double_double((((double) 1 - ((s - zephir_floor(&_1))))), ds));
-
 }
 
 /**
@@ -366,8 +353,8 @@ PHP_METHOD(Pocketmine_Math_VoxelRayTrace, rayTraceDistanceToBoundary) {
  *
  * @return \Generator|Vector3[]
  */
-void zep_Pocketmine_Math_VoxelRayTrace_inDirection_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *start_ext , zval *directionVector_ext , zval *maxDistance_param_ext) {
-
+void zep_Pocketmine_Math_VoxelRayTrace_inDirection_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *start_ext , zval *directionVector_ext , zval *maxDistance_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	double maxDistance;
@@ -387,7 +374,6 @@ void zep_Pocketmine_Math_VoxelRayTrace_inDirection_zephir_internal_call(int ht, 
 		Z_PARAM_OBJECT_OF_CLASS(directionVector, pocketmine_math_vector3_ce)
 		Z_PARAM_ZVAL(maxDistance)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
@@ -397,7 +383,6 @@ void zep_Pocketmine_Math_VoxelRayTrace_inDirection_zephir_internal_call(int ht, 
 	directionVector = directionVector_ext;
 
 	maxDistance_param = maxDistance_param_ext;
-
 
 	maxDistance = zephir_get_doubleval(maxDistance_param);
 	maxDistance = zephir_get_doubleval(maxDistance_param);
@@ -411,14 +396,13 @@ void zep_Pocketmine_Math_VoxelRayTrace_inDirection_zephir_internal_call(int ht, 
 	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P2(pocketmine_math_voxelraytrace_ce, zep_Pocketmine_Math_VoxelRayTrace_betweenPoints_zephir_internal_call, start, &_0);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
  * Spaceship operator
  */
-void zep_Pocketmine_Math_VoxelRayTrace_spaceShip_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *a_ext , zval *b_ext ) {
-
+void zep_Pocketmine_Math_VoxelRayTrace_spaceShip_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *a_ext , zval *b_ext )
+{
 	zval *a = NULL, a_sub, *b = NULL, b_sub;
 		ZVAL_UNDEF(&a_sub);
 	ZVAL_UNDEF(&b_sub);
@@ -430,14 +414,12 @@ void zep_Pocketmine_Math_VoxelRayTrace_spaceShip_zephir_internal_call(int ht, ze
 		Z_PARAM_ZVAL(a)
 		Z_PARAM_ZVAL(b)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	a = a_ext;
 
 	b = b_ext;
-
 
 
 
@@ -448,7 +430,6 @@ void zep_Pocketmine_Math_VoxelRayTrace_spaceShip_zephir_internal_call(int ht, ze
 	} else {
 		RETURN_LONG(1);
 	}
-
 }
 
 /**
@@ -463,8 +444,8 @@ void zep_Pocketmine_Math_VoxelRayTrace_spaceShip_zephir_internal_call(int ht, ze
  *
  * @return \Generator|Vector3[]
  */
-void zep_Pocketmine_Math_VoxelRayTrace_betweenPoints_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *start_ext , zval *end_ext ) {
-
+void zep_Pocketmine_Math_VoxelRayTrace_betweenPoints_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *start_ext , zval *end_ext )
+{
 	zend_bool _15$$4;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS, counter;
@@ -507,7 +488,6 @@ void zep_Pocketmine_Math_VoxelRayTrace_betweenPoints_zephir_internal_call(int ht
 		Z_PARAM_OBJECT_OF_CLASS(start, pocketmine_math_vector3_ce)
 		Z_PARAM_OBJECT_OF_CLASS(end, pocketmine_math_vector3_ce)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
@@ -515,7 +495,6 @@ void zep_Pocketmine_Math_VoxelRayTrace_betweenPoints_zephir_internal_call(int ht
 	start = start_ext;
 
 	end = end_ext;
-
 
 
 
@@ -621,7 +600,6 @@ void zep_Pocketmine_Math_VoxelRayTrace_betweenPoints_zephir_internal_call(int ht
 	ZEPHIR_CALL_METHOD(NULL, return_value, "__construct", NULL, 11, &temp);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -638,8 +616,8 @@ void zep_Pocketmine_Math_VoxelRayTrace_betweenPoints_zephir_internal_call(int ht
  *
  * @return float Distance along the ray trace that must be travelled to cross a boundary.
  */
-void zep_Pocketmine_Math_VoxelRayTrace_rayTraceDistanceToBoundary_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *s_param_ext, zval *ds_param_ext) {
-
+void zep_Pocketmine_Math_VoxelRayTrace_rayTraceDistanceToBoundary_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *s_param_ext, zval *ds_param_ext)
+{
 	zval *s_param = NULL, *ds_param = NULL, _0$$4, _1;
 	double s, ds, inf$$3;
 		ZVAL_UNDEF(&_0$$4);
@@ -652,14 +630,12 @@ void zep_Pocketmine_Math_VoxelRayTrace_rayTraceDistanceToBoundary_zephir_interna
 		Z_PARAM_ZVAL(s)
 		Z_PARAM_ZVAL(ds)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	s_param = s_param_ext;
 
 	ds_param = ds_param_ext;
-
 
 	s = zephir_get_doubleval(s_param);
 	ds = zephir_get_doubleval(ds_param);
@@ -681,6 +657,5 @@ void zep_Pocketmine_Math_VoxelRayTrace_rayTraceDistanceToBoundary_zephir_interna
 	}
 	ZVAL_DOUBLE(&_1, s);
 	RETURN_DOUBLE(zephir_safe_div_double_double((((double) 1 - ((s - zephir_floor(&_1))))), ds));
-
 }
 

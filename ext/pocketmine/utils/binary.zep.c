@@ -42,8 +42,8 @@
 /**
  * Methods for working with binary strings
  */
-ZEPHIR_INIT_CLASS(Pocketmine_Utils_Binary) {
-
+ZEPHIR_INIT_CLASS(Pocketmine_Utils_Binary)
+{
 	ZEPHIR_REGISTER_CLASS(Pocketmine\\Utils, Binary, pocketmine, utils_binary, pocketmine_utils_binary_method_entry, 0);
 
 	zephir_declare_class_constant_long(pocketmine_utils_binary_ce, SL("BIG_ENDIAN"), 0x0);
@@ -51,11 +51,10 @@ ZEPHIR_INIT_CLASS(Pocketmine_Utils_Binary) {
 	zephir_declare_class_constant_long(pocketmine_utils_binary_ce, SL("LITTLE_ENDIAN"), 0x1);
 
 	return SUCCESS;
-
 }
 
-PHP_METHOD(Pocketmine_Utils_Binary, signByte) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, signByte)
+{
 	zval *value_param = NULL;
 	zend_long value;
 	zval *this_ptr = getThis();
@@ -65,21 +64,18 @@ PHP_METHOD(Pocketmine_Utils_Binary, signByte) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	zephir_fetch_params_without_memory_grow(1, 0, &value_param);
-
 	value = zephir_get_intval(value_param);
 
 
 	RETURN_LONG(((value << 56) >> 56));
-
 }
 
-PHP_METHOD(Pocketmine_Utils_Binary, unsignByte) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, unsignByte)
+{
 	zval *value_param = NULL;
 	zend_long value;
 	zval *this_ptr = getThis();
@@ -89,21 +85,18 @@ PHP_METHOD(Pocketmine_Utils_Binary, unsignByte) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	zephir_fetch_params_without_memory_grow(1, 0, &value_param);
-
 	value = zephir_get_intval(value_param);
 
 
 	RETURN_LONG((value & 0xff));
-
 }
 
-PHP_METHOD(Pocketmine_Utils_Binary, signShort) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, signShort)
+{
 	zval *value_param = NULL;
 	zend_long value;
 	zval *this_ptr = getThis();
@@ -113,21 +106,18 @@ PHP_METHOD(Pocketmine_Utils_Binary, signShort) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	zephir_fetch_params_without_memory_grow(1, 0, &value_param);
-
 	value = zephir_get_intval(value_param);
 
 
 	RETURN_LONG(((value << 48) >> 48));
-
 }
 
-PHP_METHOD(Pocketmine_Utils_Binary, unsignShort) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, unsignShort)
+{
 	zval *value_param = NULL;
 	zend_long value;
 	zval *this_ptr = getThis();
@@ -137,21 +127,18 @@ PHP_METHOD(Pocketmine_Utils_Binary, unsignShort) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	zephir_fetch_params_without_memory_grow(1, 0, &value_param);
-
 	value = zephir_get_intval(value_param);
 
 
 	RETURN_LONG((value & 0xffff));
-
 }
 
-PHP_METHOD(Pocketmine_Utils_Binary, signInt) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, signInt)
+{
 	zval *value_param = NULL;
 	zend_long value;
 	zval *this_ptr = getThis();
@@ -161,21 +148,18 @@ PHP_METHOD(Pocketmine_Utils_Binary, signInt) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	zephir_fetch_params_without_memory_grow(1, 0, &value_param);
-
 	value = zephir_get_intval(value_param);
 
 
 	RETURN_LONG(((value << 32) >> 32));
-
 }
 
-PHP_METHOD(Pocketmine_Utils_Binary, unsignInt) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, unsignInt)
+{
 	zval *value_param = NULL;
 	zend_long value;
 	zval *this_ptr = getThis();
@@ -185,21 +169,18 @@ PHP_METHOD(Pocketmine_Utils_Binary, unsignInt) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	zephir_fetch_params_without_memory_grow(1, 0, &value_param);
-
 	value = zephir_get_intval(value_param);
 
 
 	RETURN_LONG((value & 0xffffffff));
-
 }
 
-PHP_METHOD(Pocketmine_Utils_Binary, flipShortEndianness) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, flipShortEndianness)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zval *value_param = NULL, _0, _1;
 	zend_long value, ZEPHIR_LAST_CALL_STATUS;
@@ -212,13 +193,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, flipShortEndianness) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &value_param);
-
 	value = zephir_get_intval(value_param);
 
 
@@ -228,11 +207,10 @@ PHP_METHOD(Pocketmine_Utils_Binary, flipShortEndianness) {
 	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P1(pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_readLShort_zephir_internal_call, &_0);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
-PHP_METHOD(Pocketmine_Utils_Binary, flipIntEndianness) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, flipIntEndianness)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zval *value_param = NULL, _0, _1;
 	zend_long value, ZEPHIR_LAST_CALL_STATUS;
@@ -245,13 +223,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, flipIntEndianness) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &value_param);
-
 	value = zephir_get_intval(value_param);
 
 
@@ -261,11 +237,10 @@ PHP_METHOD(Pocketmine_Utils_Binary, flipIntEndianness) {
 	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P1(pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_readLInt_zephir_internal_call, &_0);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
-PHP_METHOD(Pocketmine_Utils_Binary, flipLongEndianness) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, flipLongEndianness)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zval *value_param = NULL, _0, _1;
 	zend_long value, ZEPHIR_LAST_CALL_STATUS;
@@ -278,13 +253,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, flipLongEndianness) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &value_param);
-
 	value = zephir_get_intval(value_param);
 
 
@@ -294,7 +267,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, flipLongEndianness) {
 	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P1(pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_readLLong_zephir_internal_call, &_0);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -304,8 +276,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, flipLongEndianness) {
  *
  * @return bool
  */
-PHP_METHOD(Pocketmine_Utils_Binary, readBool) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, readBool)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *b_param = NULL, _0, _1;
@@ -320,13 +292,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, readBool) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_STR(b)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &b_param);
-
 	zephir_get_strval(&b, b_param);
 
 
@@ -335,7 +305,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, readBool) {
 	ZEPHIR_CALL_FUNCTION(&_1, "chr", NULL, 15, &_0);
 	zephir_check_call_status();
 	RETURN_MM_BOOL(!ZEPHIR_IS_IDENTICAL(&b, &_1));
-
 }
 
 /**
@@ -345,8 +314,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, readBool) {
  *
  * @return string
  */
-PHP_METHOD(Pocketmine_Utils_Binary, writeBool) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, writeBool)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zval *b_param = NULL, _0;
 	zend_bool b;
@@ -358,13 +327,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeBool) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_BOOL(b)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &b_param);
-
 	b = zephir_get_boolval(b_param);
 
 
@@ -375,7 +342,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeBool) {
 		ZVAL_LONG(&_0, '\0');
 	}
 	RETURN_CCTOR(&_0);
-
 }
 
 /**
@@ -385,8 +351,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeBool) {
  *
  * @return int
  */
-PHP_METHOD(Pocketmine_Utils_Binary, readByte) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, readByte)
+{
 	unsigned char _0;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
@@ -401,13 +367,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, readByte) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_STR(c)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &c_param);
-
 	zephir_get_strval(&c, c_param);
 
 
@@ -417,7 +381,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, readByte) {
 	ZEPHIR_RETURN_CALL_FUNCTION("ord", NULL, 16, &_1);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -427,8 +390,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, readByte) {
  *
  * @return int
  */
-PHP_METHOD(Pocketmine_Utils_Binary, readSignedByte) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, readSignedByte)
+{
 	unsigned char _0;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
@@ -444,13 +407,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, readSignedByte) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_STR(c)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &c_param);
-
 	zephir_get_strval(&c, c_param);
 
 
@@ -462,7 +423,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, readSignedByte) {
 	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P1(pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_signByte_zephir_internal_call, &_2);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -472,8 +432,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, readSignedByte) {
  *
  * @return string
  */
-PHP_METHOD(Pocketmine_Utils_Binary, writeByte) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, writeByte)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zval *c_param = NULL, _0;
 	zend_long c, ZEPHIR_LAST_CALL_STATUS;
@@ -485,13 +445,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeByte) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_LONG(c)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &c_param);
-
 	c = zephir_get_intval(c_param);
 
 
@@ -499,7 +457,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeByte) {
 	ZEPHIR_RETURN_CALL_FUNCTION("chr", NULL, 15, &_0);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -509,8 +466,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeByte) {
  *
  * @return int
  */
-PHP_METHOD(Pocketmine_Utils_Binary, readShort) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, readShort)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2;
@@ -526,13 +483,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, readShort) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &str_param);
-
 	zephir_get_strval(&str, str_param);
 
 
@@ -542,7 +497,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, readShort) {
 	zephir_check_call_status();
 	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 146);
 	RETURN_CTOR(&_2);
-
 }
 
 /**
@@ -552,8 +506,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, readShort) {
  *
  * @return int
  */
-PHP_METHOD(Pocketmine_Utils_Binary, readSignedShort) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, readSignedShort)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2;
@@ -569,13 +523,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, readSignedShort) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &str_param);
-
 	zephir_get_strval(&str, str_param);
 
 
@@ -587,7 +539,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, readSignedShort) {
 	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P1(pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_signShort_zephir_internal_call, &_2);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -597,8 +548,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, readSignedShort) {
  *
  * @return string
  */
-PHP_METHOD(Pocketmine_Utils_Binary, writeShort) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, writeShort)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zval *value_param = NULL, _0, _1;
 	zend_long value, ZEPHIR_LAST_CALL_STATUS;
@@ -611,13 +562,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeShort) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &value_param);
-
 	value = zephir_get_intval(value_param);
 
 
@@ -627,7 +576,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeShort) {
 	ZEPHIR_RETURN_CALL_FUNCTION("pack", NULL, 18, &_0, &_1);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -637,8 +585,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeShort) {
  *
  * @return int
  */
-PHP_METHOD(Pocketmine_Utils_Binary, readLShort) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, readLShort)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2;
@@ -654,13 +602,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLShort) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &str_param);
-
 	zephir_get_strval(&str, str_param);
 
 
@@ -670,7 +616,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLShort) {
 	zephir_check_call_status();
 	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 182);
 	RETURN_CTOR(&_2);
-
 }
 
 /**
@@ -680,8 +625,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLShort) {
  *
  * @return int
  */
-PHP_METHOD(Pocketmine_Utils_Binary, readSignedLShort) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, readSignedLShort)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2;
@@ -697,13 +642,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, readSignedLShort) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &str_param);
-
 	zephir_get_strval(&str, str_param);
 
 
@@ -715,7 +658,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, readSignedLShort) {
 	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P1(pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_signShort_zephir_internal_call, &_2);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -725,8 +667,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, readSignedLShort) {
  *
  * @return string
  */
-PHP_METHOD(Pocketmine_Utils_Binary, writeLShort) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, writeLShort)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zval *value_param = NULL, _0, _1;
 	zend_long value, ZEPHIR_LAST_CALL_STATUS;
@@ -739,13 +681,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeLShort) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &value_param);
-
 	value = zephir_get_intval(value_param);
 
 
@@ -755,7 +695,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeLShort) {
 	ZEPHIR_RETURN_CALL_FUNCTION("pack", NULL, 18, &_0, &_1);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -765,8 +704,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeLShort) {
  *
  * @return int
  */
-PHP_METHOD(Pocketmine_Utils_Binary, readTriad) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, readTriad)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2, _3, _4;
@@ -784,13 +723,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, readTriad) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &str_param);
-
 	zephir_get_strval(&str, str_param);
 
 
@@ -806,7 +743,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, readTriad) {
 	zephir_check_call_status();
 	zephir_array_fetch_long(&_4, &_3, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 218);
 	RETURN_CTOR(&_4);
-
 }
 
 /**
@@ -816,8 +752,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, readTriad) {
  *
  * @return string
  */
-PHP_METHOD(Pocketmine_Utils_Binary, writeTriad) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, writeTriad)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zval *value_param = NULL, _0, _1, _2;
 	zend_long value, ZEPHIR_LAST_CALL_STATUS;
@@ -831,13 +767,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeTriad) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &value_param);
-
 	value = zephir_get_intval(value_param);
 
 
@@ -849,7 +783,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeTriad) {
 	ZVAL_LONG(&_1, 1);
 	zephir_substr(return_value, &_2, 1 , 0, ZEPHIR_SUBSTR_NO_LENGTH);
 	RETURN_MM();
-
 }
 
 /**
@@ -859,8 +792,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeTriad) {
  *
  * @return int
  */
-PHP_METHOD(Pocketmine_Utils_Binary, readLTriad) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, readLTriad)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2, _3, _4;
@@ -878,13 +811,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLTriad) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &str_param);
-
 	zephir_get_strval(&str, str_param);
 
 
@@ -900,7 +831,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLTriad) {
 	zephir_check_call_status();
 	zephir_array_fetch_long(&_4, &_3, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 242);
 	RETURN_CTOR(&_4);
-
 }
 
 /**
@@ -910,8 +840,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLTriad) {
  *
  * @return string
  */
-PHP_METHOD(Pocketmine_Utils_Binary, writeLTriad) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, writeLTriad)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *value_param = NULL, _0, _1, _2, _3;
@@ -925,15 +855,13 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeLTriad) {
 #if PHP_VERSION_ID >= 80000
 	bool is_null_true = 1;
 	ZEND_PARSE_PARAMETERS_START(1, 1)
-		Z_PARAM_ZVAL(value)
+		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &value_param);
-
 	value = zephir_get_intval(value_param);
 
 
@@ -946,7 +874,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeLTriad) {
 	ZVAL_LONG(&_3, -1);
 	zephir_substr(return_value, &_2, 0 , -1 , 0);
 	RETURN_MM();
-
 }
 
 /**
@@ -956,8 +883,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeLTriad) {
  *
  * @return int
  */
-PHP_METHOD(Pocketmine_Utils_Binary, readInt) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, readInt)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2;
@@ -973,13 +900,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, readInt) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &str_param);
-
 	zephir_get_strval(&str, str_param);
 
 
@@ -991,7 +916,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, readInt) {
 	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P1(pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_signInt_zephir_internal_call, &_2);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -1001,8 +925,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, readInt) {
  *
  * @return string
  */
-PHP_METHOD(Pocketmine_Utils_Binary, writeInt) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, writeInt)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *value_param = NULL, _0, _1;
@@ -1014,15 +938,13 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeInt) {
 #if PHP_VERSION_ID >= 80000
 	bool is_null_true = 1;
 	ZEND_PARSE_PARAMETERS_START(1, 1)
-		Z_PARAM_ZVAL(value)
+		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &value_param);
-
 	value = zephir_get_intval(value_param);
 
 
@@ -1032,7 +954,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeInt) {
 	ZEPHIR_RETURN_CALL_FUNCTION("pack", NULL, 18, &_0, &_1);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -1042,8 +963,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeInt) {
  *
  * @return int
  */
-PHP_METHOD(Pocketmine_Utils_Binary, readLInt) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, readLInt)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2;
@@ -1059,13 +980,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLInt) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &str_param);
-
 	zephir_get_strval(&str, str_param);
 
 
@@ -1077,7 +996,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLInt) {
 	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P1(pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_signInt_zephir_internal_call, &_2);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -1087,8 +1005,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLInt) {
  *
  * @return string
  */
-PHP_METHOD(Pocketmine_Utils_Binary, writeLInt) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, writeLInt)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *value_param = NULL, _0, _1;
@@ -1100,15 +1018,13 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeLInt) {
 #if PHP_VERSION_ID >= 80000
 	bool is_null_true = 1;
 	ZEND_PARSE_PARAMETERS_START(1, 1)
-		Z_PARAM_ZVAL(value)
+		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &value_param);
-
 	value = zephir_get_intval(value_param);
 
 
@@ -1118,7 +1034,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeLInt) {
 	ZEPHIR_RETURN_CALL_FUNCTION("pack", NULL, 18, &_0, &_1);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -1128,8 +1043,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeLInt) {
  *
  * @return float
  */
-PHP_METHOD(Pocketmine_Utils_Binary, readFloat) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, readFloat)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2;
@@ -1145,13 +1060,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, readFloat) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &str_param);
-
 	zephir_get_strval(&str, str_param);
 
 
@@ -1161,7 +1074,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, readFloat) {
 	zephir_check_call_status();
 	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 314);
 	RETURN_CTOR(&_2);
-
 }
 
 /**
@@ -1172,8 +1084,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, readFloat) {
  *
  * @return float
  */
-PHP_METHOD(Pocketmine_Utils_Binary, readRoundedFloat) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, readRoundedFloat)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long accuracy, ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, *accuracy_param = NULL, _0, _1;
@@ -1189,13 +1101,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, readRoundedFloat) {
 		Z_PARAM_STR(str)
 		Z_PARAM_LONG(accuracy)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 2, 0, &str_param, &accuracy_param);
-
 	zephir_get_strval(&str, str_param);
 	accuracy = zephir_get_intval(accuracy_param);
 
@@ -1205,7 +1115,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, readRoundedFloat) {
 	ZVAL_LONG(&_1, accuracy);
 	zephir_round(return_value, &_0, &_1, NULL);
 	RETURN_MM();
-
 }
 
 /**
@@ -1215,8 +1124,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, readRoundedFloat) {
  *
  * @return string
  */
-PHP_METHOD(Pocketmine_Utils_Binary, writeFloat) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, writeFloat)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *value_param = NULL, _0, _1;
@@ -1230,13 +1139,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeFloat) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_ZVAL(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &value_param);
-
 	value = zephir_get_doubleval(value_param);
 
 
@@ -1246,7 +1153,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeFloat) {
 	ZEPHIR_RETURN_CALL_FUNCTION("pack", NULL, 18, &_0, &_1);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -1256,8 +1162,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeFloat) {
  *
  * @return float
  */
-PHP_METHOD(Pocketmine_Utils_Binary, readLFloat) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, readLFloat)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2;
@@ -1273,13 +1179,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLFloat) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &str_param);
-
 	zephir_get_strval(&str, str_param);
 
 
@@ -1289,7 +1193,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLFloat) {
 	zephir_check_call_status();
 	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 351);
 	RETURN_CTOR(&_2);
-
 }
 
 /**
@@ -1300,8 +1203,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLFloat) {
  *
  * @return float
  */
-PHP_METHOD(Pocketmine_Utils_Binary, readRoundedLFloat) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, readRoundedLFloat)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long accuracy, ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, *accuracy_param = NULL, _0, _1;
@@ -1317,13 +1220,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, readRoundedLFloat) {
 		Z_PARAM_STR(str)
 		Z_PARAM_LONG(accuracy)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 2, 0, &str_param, &accuracy_param);
-
 	zephir_get_strval(&str, str_param);
 	accuracy = zephir_get_intval(accuracy_param);
 
@@ -1333,7 +1234,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, readRoundedLFloat) {
 	ZVAL_LONG(&_1, accuracy);
 	zephir_round(return_value, &_0, &_1, NULL);
 	RETURN_MM();
-
 }
 
 /**
@@ -1343,8 +1243,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, readRoundedLFloat) {
  *
  * @return string
  */
-PHP_METHOD(Pocketmine_Utils_Binary, writeLFloat) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, writeLFloat)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *value_param = NULL, _0, _1;
@@ -1358,13 +1258,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeLFloat) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_ZVAL(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &value_param);
-
 	value = zephir_get_doubleval(value_param);
 
 
@@ -1374,7 +1272,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeLFloat) {
 	ZEPHIR_RETURN_CALL_FUNCTION("pack", NULL, 18, &_0, &_1);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -1384,8 +1281,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeLFloat) {
  *
  * @return string
  */
-PHP_METHOD(Pocketmine_Utils_Binary, printFloat) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, printFloat)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *value_param = NULL, _0, _1, _2, _3;
@@ -1401,13 +1298,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, printFloat) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_ZVAL(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &value_param);
-
 	value = zephir_get_doubleval(value_param);
 
 
@@ -1423,7 +1318,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, printFloat) {
 	ZEPHIR_RETURN_CALL_FUNCTION("preg_replace", NULL, 20, &_0, &_3, &_2);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -1433,8 +1327,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, printFloat) {
  *
  * @return float
  */
-PHP_METHOD(Pocketmine_Utils_Binary, readDouble) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, readDouble)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2;
@@ -1450,13 +1344,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, readDouble) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &str_param);
-
 	zephir_get_strval(&str, str_param);
 
 
@@ -1466,7 +1358,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, readDouble) {
 	zephir_check_call_status();
 	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 400);
 	RETURN_CTOR(&_2);
-
 }
 
 /**
@@ -1476,8 +1367,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, readDouble) {
  *
  * @return string
  */
-PHP_METHOD(Pocketmine_Utils_Binary, writeDouble) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, writeDouble)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *value_param = NULL, _0, _1;
@@ -1491,13 +1382,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeDouble) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_ZVAL(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &value_param);
-
 	value = zephir_get_doubleval(value_param);
 
 
@@ -1507,7 +1396,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeDouble) {
 	ZEPHIR_RETURN_CALL_FUNCTION("pack", NULL, 18, &_0, &_1);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -1517,8 +1405,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeDouble) {
  *
  * @return float
  */
-PHP_METHOD(Pocketmine_Utils_Binary, readLDouble) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, readLDouble)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2;
@@ -1534,13 +1422,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLDouble) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &str_param);
-
 	zephir_get_strval(&str, str_param);
 
 
@@ -1550,7 +1436,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLDouble) {
 	zephir_check_call_status();
 	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 424);
 	RETURN_CTOR(&_2);
-
 }
 
 /**
@@ -1560,8 +1445,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLDouble) {
  *
  * @return string
  */
-PHP_METHOD(Pocketmine_Utils_Binary, writeLDouble) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, writeLDouble)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *value_param = NULL, _0, _1;
@@ -1575,13 +1460,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeLDouble) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_ZVAL(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &value_param);
-
 	value = zephir_get_doubleval(value_param);
 
 
@@ -1591,7 +1474,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeLDouble) {
 	ZEPHIR_RETURN_CALL_FUNCTION("pack", NULL, 18, &_0, &_1);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -1601,8 +1483,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeLDouble) {
  *
  * @return int
  */
-PHP_METHOD(Pocketmine_Utils_Binary, readLong) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, readLong)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2;
@@ -1618,13 +1500,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLong) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &str_param);
-
 	zephir_get_strval(&str, str_param);
 
 
@@ -1634,7 +1514,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLong) {
 	zephir_check_call_status();
 	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 448);
 	RETURN_CTOR(&_2);
-
 }
 
 /**
@@ -1644,8 +1523,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLong) {
  *
  * @return string
  */
-PHP_METHOD(Pocketmine_Utils_Binary, writeLong) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, writeLong)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zval *value_param = NULL, _0, _1;
 	zend_long value, ZEPHIR_LAST_CALL_STATUS;
@@ -1658,13 +1537,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeLong) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &value_param);
-
 	value = zephir_get_intval(value_param);
 
 
@@ -1674,7 +1551,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeLong) {
 	ZEPHIR_RETURN_CALL_FUNCTION("pack", NULL, 18, &_0, &_1);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -1684,8 +1560,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeLong) {
  *
  * @return int
  */
-PHP_METHOD(Pocketmine_Utils_Binary, readLLong) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, readLLong)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2;
@@ -1701,13 +1577,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLLong) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &str_param);
-
 	zephir_get_strval(&str, str_param);
 
 
@@ -1717,7 +1591,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLLong) {
 	zephir_check_call_status();
 	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 472);
 	RETURN_CTOR(&_2);
-
 }
 
 /**
@@ -1727,8 +1600,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, readLLong) {
  *
  * @return string
  */
-PHP_METHOD(Pocketmine_Utils_Binary, writeLLong) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, writeLLong)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zval *value_param = NULL, _0, _1;
 	zend_long value, ZEPHIR_LAST_CALL_STATUS;
@@ -1741,13 +1614,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeLLong) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &value_param);
-
 	value = zephir_get_intval(value_param);
 
 
@@ -1757,7 +1628,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeLLong) {
 	ZEPHIR_RETURN_CALL_FUNCTION("pack", NULL, 18, &_0, &_1);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -1768,38 +1638,37 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeLLong) {
  *
  * @return int
  */
-PHP_METHOD(Pocketmine_Utils_Binary, readVarInt) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, readVarInt)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
-	zend_long ZEPHIR_LAST_CALL_STATUS, temp;
-	zval *buffer_param = NULL, *offset = NULL, offset_sub, raw;
+	zend_long offset, ZEPHIR_LAST_CALL_STATUS, temp;
+	zval *buffer_param = NULL, *offset_param = NULL, raw, _0;
 	zval buffer;
 	zval *this_ptr = getThis();
 
 	ZVAL_UNDEF(&buffer);
-	ZVAL_UNDEF(&offset_sub);
 	ZVAL_UNDEF(&raw);
+	ZVAL_UNDEF(&_0);
 #if PHP_VERSION_ID >= 80000
 	bool is_null_true = 1;
 	ZEND_PARSE_PARAMETERS_START(2, 2)
 		Z_PARAM_STR(buffer)
-		Z_PARAM_ZVAL(offset)
+		Z_PARAM_LONG(offset)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
-	zephir_fetch_params(1, 2, 0, &buffer_param, &offset);
-
+	zephir_fetch_params(1, 2, 0, &buffer_param, &offset_param);
 	zephir_get_strval(&buffer, buffer_param);
+	offset = zephir_get_intval(offset_param);
 
 
-	ZEPHIR_STATIC_CALL_INTERNAL_METHOD_P2(&raw, pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_readUnsignedVarInt_zephir_internal_call, &buffer, offset);
+	ZVAL_LONG(&_0, offset);
+	ZEPHIR_STATIC_CALL_INTERNAL_METHOD_P2(&raw, pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_readUnsignedVarInt_zephir_internal_call, &buffer, &_0);
 	zephir_check_call_status();
 	temp = (((((((zephir_get_intval(&raw) << 63)) >> 63)) ^ zephir_get_intval(&raw))) >> 1);
 	RETURN_MM_LONG((temp ^ (zephir_get_intval(&raw) & -9223372036854775808)));
-
 }
 
 /**
@@ -1812,8 +1681,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, readVarInt) {
  *
  * @throws BinaryDataException if the var-int did not end after 5 bytes or there were not enough bytes
  */
-PHP_METHOD(Pocketmine_Utils_Binary, readUnsignedVarInt) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, readUnsignedVarInt)
+{
 	zval _0$$3;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS, i, value;
@@ -1834,13 +1703,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, readUnsignedVarInt) {
 		Z_PARAM_ZVAL(buffer)
 		Z_PARAM_ZVAL(offset)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 2, 0, &buffer, &offset);
-
 	ZEPHIR_SEPARATE_PARAM(offset);
 
 
@@ -1872,7 +1739,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, readUnsignedVarInt) {
 	}
 	ZEPHIR_THROW_EXCEPTION_DEBUG_STR(pocketmine_utils_binarydataexception_ce, "VarInt did not terminate after 5 bytes!", "pocketmine/utils/binary.zep", 528);
 	return;
-
 }
 
 /**
@@ -1882,8 +1748,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, readUnsignedVarInt) {
  *
  * @return string
  */
-PHP_METHOD(Pocketmine_Utils_Binary, writeVarInt) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, writeVarInt)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zval *v_param = NULL, _0;
 	zend_long v, ZEPHIR_LAST_CALL_STATUS;
@@ -1895,13 +1761,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeVarInt) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_LONG(v)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &v_param);
-
 	v = zephir_get_intval(v_param);
 
 
@@ -1910,7 +1774,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeVarInt) {
 	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P1(pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_writeUnsignedVarInt_zephir_internal_call, &_0);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -1920,8 +1783,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeVarInt) {
  *
  * @return string up to 5 bytes
  */
-PHP_METHOD(Pocketmine_Utils_Binary, writeUnsignedVarInt) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, writeUnsignedVarInt)
+{
 	zend_bool _0;
 	zval buf;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
@@ -1942,13 +1805,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeUnsignedVarInt) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &value_param);
-
 	value = zephir_get_intval(value_param);
 
 
@@ -1988,7 +1849,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeUnsignedVarInt) {
 	}
 	ZEPHIR_THROW_EXCEPTION_DEBUG_STR(spl_ce_InvalidArgumentException, "Value too large to be encoded as a VarInt", "pocketmine/utils/binary.zep", 566);
 	return;
-
 }
 
 /**
@@ -1999,39 +1859,38 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeUnsignedVarInt) {
  *
  * @return long
  */
-PHP_METHOD(Pocketmine_Utils_Binary, readVarLong) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, readVarLong)
+{
 	long temp;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
-	zend_long ZEPHIR_LAST_CALL_STATUS;
-	zval *buffer_param = NULL, *offset = NULL, offset_sub, raw;
+	zend_long offset, ZEPHIR_LAST_CALL_STATUS;
+	zval *buffer_param = NULL, *offset_param = NULL, raw, _0;
 	zval buffer;
 	zval *this_ptr = getThis();
 
 	ZVAL_UNDEF(&buffer);
-	ZVAL_UNDEF(&offset_sub);
 	ZVAL_UNDEF(&raw);
+	ZVAL_UNDEF(&_0);
 #if PHP_VERSION_ID >= 80000
 	bool is_null_true = 1;
 	ZEND_PARSE_PARAMETERS_START(2, 2)
 		Z_PARAM_STR(buffer)
-		Z_PARAM_ZVAL(offset)
+		Z_PARAM_LONG(offset)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
-	zephir_fetch_params(1, 2, 0, &buffer_param, &offset);
-
+	zephir_fetch_params(1, 2, 0, &buffer_param, &offset_param);
 	zephir_get_strval(&buffer, buffer_param);
+	offset = zephir_get_intval(offset_param);
 
 
-	ZEPHIR_STATIC_CALL_INTERNAL_METHOD_P2(&raw, pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_readUnsignedVarLong_zephir_internal_call, &buffer, offset);
+	ZVAL_LONG(&_0, offset);
+	ZEPHIR_STATIC_CALL_INTERNAL_METHOD_P2(&raw, pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_readUnsignedVarLong_zephir_internal_call, &buffer, &_0);
 	zephir_check_call_status();
 	temp = (((((((zephir_get_intval(&raw) << 63)) >> 63)) ^ zephir_get_intval(&raw))) >> 1);
 	RETURN_MM_LONG((temp ^ (zephir_get_intval(&raw) & -9223372036854775808)));
-
 }
 
 /**
@@ -2044,36 +1903,34 @@ PHP_METHOD(Pocketmine_Utils_Binary, readVarLong) {
  *
  * @throws BinaryDataException if the var-int did not end after 10 bytes or there were not enough bytes
  */
-PHP_METHOD(Pocketmine_Utils_Binary, readUnsignedVarLong) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, readUnsignedVarLong)
+{
 	zval _0$$3;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
-	zend_long ZEPHIR_LAST_CALL_STATUS, i, value;
-	zephir_fcall_cache_entry *_2 = NULL, *_5 = NULL;
-	zval *buffer = NULL, buffer_sub, *offset = NULL, offset_sub, _1$$3, b$$3, _3$$3, _4$$3;
+	zephir_fcall_cache_entry *_2 = NULL, *_6 = NULL;
+	zend_long offset, ZEPHIR_LAST_CALL_STATUS, i, value;
+	zval *buffer = NULL, buffer_sub, *offset_param = NULL, _1$$3, b$$3, _3$$3, _4$$3, _5$$3;
 	zval *this_ptr = getThis();
 
 	ZVAL_UNDEF(&buffer_sub);
-	ZVAL_UNDEF(&offset_sub);
 	ZVAL_UNDEF(&_1$$3);
 	ZVAL_UNDEF(&b$$3);
 	ZVAL_UNDEF(&_3$$3);
 	ZVAL_UNDEF(&_4$$3);
+	ZVAL_UNDEF(&_5$$3);
 	ZVAL_UNDEF(&_0$$3);
 #if PHP_VERSION_ID >= 80000
 	bool is_null_true = 1;
 	ZEND_PARSE_PARAMETERS_START(2, 2)
 		Z_PARAM_ZVAL(buffer)
-		Z_PARAM_ZVAL(offset)
+		Z_PARAM_LONG(offset)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
-	zephir_fetch_params(1, 2, 0, &buffer, &offset);
-
-	ZEPHIR_SEPARATE_PARAM(offset);
+	zephir_fetch_params(1, 2, 0, &buffer, &offset_param);
+	offset = zephir_get_intval(offset_param);
 
 
 	i = 0;
@@ -2085,17 +1942,17 @@ PHP_METHOD(Pocketmine_Utils_Binary, readUnsignedVarLong) {
 		zephir_get_strval(&_0$$3, buffer);
 		ZEPHIR_CALL_FUNCTION(&_1$$3, "str_split", &_2, 21, &_0$$3);
 		zephir_check_call_status();
-		if (!(zephir_array_isset_long(&_1$$3, zephir_get_intval(offset)))) {
+		if (!(zephir_array_isset_long(&_1$$3, offset))) {
 			ZEPHIR_THROW_EXCEPTION_DEBUG_STR(pocketmine_utils_binarydataexception_ce, "No bytes left in buffer", "pocketmine/utils/binary.zep", 600);
 			return;
 		}
-		ZVAL_LONG(&_3$$3, 1);
-		ZEPHIR_INIT_NVAR(&_4$$3);
-		zephir_substr(&_4$$3, buffer, zephir_get_intval(offset), 1 , 0);
-		ZEPHIR_CALL_FUNCTION(&b$$3, "ord", &_5, 16, &_4$$3);
+		ZVAL_LONG(&_3$$3, offset);
+		ZVAL_LONG(&_4$$3, 1);
+		ZEPHIR_INIT_NVAR(&_5$$3);
+		zephir_substr(&_5$$3, buffer, zephir_get_intval(&_3$$3), 1 , 0);
+		ZEPHIR_CALL_FUNCTION(&b$$3, "ord", &_6, 16, &_5$$3);
 		zephir_check_call_status();
-		ZEPHIR_SEPARATE(offset);
-		zephir_increment(offset);
+		offset++;
 		value = (value | (((((int) (zephir_get_numberval(&b$$3)) & 0x7f)) << i)));
 		if ((((int) (zephir_get_numberval(&b$$3)) & 0x80)) == 0) {
 			RETURN_MM_LONG(value);
@@ -2104,7 +1961,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, readUnsignedVarLong) {
 	}
 	ZEPHIR_THROW_EXCEPTION_DEBUG_STR(pocketmine_utils_binarydataexception_ce, "VarLong did not terminate after 10 bytes!", "pocketmine/utils/binary.zep", 610);
 	return;
-
 }
 
 /**
@@ -2114,8 +1970,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, readUnsignedVarLong) {
  *
  * @return string
  */
-PHP_METHOD(Pocketmine_Utils_Binary, writeVarLong) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, writeVarLong)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zval *v_param = NULL, _0;
 	zend_long v, ZEPHIR_LAST_CALL_STATUS;
@@ -2127,13 +1983,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeVarLong) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_LONG(v)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &v_param);
-
 	v = zephir_get_intval(v_param);
 
 
@@ -2141,7 +1995,6 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeVarLong) {
 	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P1(pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_writeUnsignedVarLong_zephir_internal_call, &_0);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -2151,8 +2004,8 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeVarLong) {
  *
  * @return string
  */
-PHP_METHOD(Pocketmine_Utils_Binary, writeUnsignedVarLong) {
-
+PHP_METHOD(Pocketmine_Utils_Binary, writeUnsignedVarLong)
+{
 	zend_bool _0;
 	zval buf;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
@@ -2173,13 +2026,11 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeUnsignedVarLong) {
 	ZEND_PARSE_PARAMETERS_START(1, 1)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	zephir_fetch_params(1, 1, 0, &value_param);
-
 	value = zephir_get_intval(value_param);
 
 
@@ -2218,11 +2069,10 @@ PHP_METHOD(Pocketmine_Utils_Binary, writeUnsignedVarLong) {
 	}
 	ZEPHIR_THROW_EXCEPTION_DEBUG_STR(spl_ce_InvalidArgumentException, "Value too large to be encoded as a VarLong", "pocketmine/utils/binary.zep", 647);
 	return;
-
 }
 
-void zep_Pocketmine_Utils_Binary_signByte_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_signByte_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext)
+{
 	zval *value_param = NULL;
 	zend_long value;
 #if PHP_VERSION_ID >= 80000
@@ -2231,23 +2081,20 @@ void zep_Pocketmine_Utils_Binary_signByte_zephir_internal_call(int ht, zend_exec
 		Z_PARAM_LONG(value)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	value_param = value_param_ext;
-
 
 	value = zephir_get_intval(value_param);
 	value = zephir_get_intval(value_param);
 
 
 	RETURN_LONG(((value << 56) >> 56));
-
 }
 
-void zep_Pocketmine_Utils_Binary_unsignByte_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_unsignByte_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext)
+{
 	zval *value_param = NULL;
 	zend_long value;
 #if PHP_VERSION_ID >= 80000
@@ -2256,23 +2103,20 @@ void zep_Pocketmine_Utils_Binary_unsignByte_zephir_internal_call(int ht, zend_ex
 		Z_PARAM_LONG(value)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	value_param = value_param_ext;
-
 
 	value = zephir_get_intval(value_param);
 	value = zephir_get_intval(value_param);
 
 
 	RETURN_LONG((value & 0xff));
-
 }
 
-void zep_Pocketmine_Utils_Binary_signShort_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_signShort_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext)
+{
 	zval *value_param = NULL;
 	zend_long value;
 #if PHP_VERSION_ID >= 80000
@@ -2281,23 +2125,20 @@ void zep_Pocketmine_Utils_Binary_signShort_zephir_internal_call(int ht, zend_exe
 		Z_PARAM_LONG(value)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	value_param = value_param_ext;
-
 
 	value = zephir_get_intval(value_param);
 	value = zephir_get_intval(value_param);
 
 
 	RETURN_LONG(((value << 48) >> 48));
-
 }
 
-void zep_Pocketmine_Utils_Binary_unsignShort_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_unsignShort_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext)
+{
 	zval *value_param = NULL;
 	zend_long value;
 #if PHP_VERSION_ID >= 80000
@@ -2306,23 +2147,20 @@ void zep_Pocketmine_Utils_Binary_unsignShort_zephir_internal_call(int ht, zend_e
 		Z_PARAM_LONG(value)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	value_param = value_param_ext;
-
 
 	value = zephir_get_intval(value_param);
 	value = zephir_get_intval(value_param);
 
 
 	RETURN_LONG((value & 0xffff));
-
 }
 
-void zep_Pocketmine_Utils_Binary_signInt_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_signInt_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext)
+{
 	zval *value_param = NULL;
 	zend_long value;
 #if PHP_VERSION_ID >= 80000
@@ -2331,23 +2169,20 @@ void zep_Pocketmine_Utils_Binary_signInt_zephir_internal_call(int ht, zend_execu
 		Z_PARAM_LONG(value)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	value_param = value_param_ext;
-
 
 	value = zephir_get_intval(value_param);
 	value = zephir_get_intval(value_param);
 
 
 	RETURN_LONG(((value << 32) >> 32));
-
 }
 
-void zep_Pocketmine_Utils_Binary_unsignInt_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_unsignInt_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext)
+{
 	zval *value_param = NULL;
 	zend_long value;
 #if PHP_VERSION_ID >= 80000
@@ -2356,23 +2191,20 @@ void zep_Pocketmine_Utils_Binary_unsignInt_zephir_internal_call(int ht, zend_exe
 		Z_PARAM_LONG(value)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	value_param = value_param_ext;
-
 
 	value = zephir_get_intval(value_param);
 	value = zephir_get_intval(value_param);
 
 
 	RETURN_LONG((value & 0xffffffff));
-
 }
 
-void zep_Pocketmine_Utils_Binary_flipShortEndianness_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_flipShortEndianness_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zval *value_param = NULL, _0, _1;
 	zend_long value, ZEPHIR_LAST_CALL_STATUS;
@@ -2384,13 +2216,11 @@ void zep_Pocketmine_Utils_Binary_flipShortEndianness_zephir_internal_call(int ht
 		Z_PARAM_LONG(value)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	value_param = value_param_ext;
-
 
 	value = zephir_get_intval(value_param);
 	value = zephir_get_intval(value_param);
@@ -2402,11 +2232,10 @@ void zep_Pocketmine_Utils_Binary_flipShortEndianness_zephir_internal_call(int ht
 	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P1(pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_readLShort_zephir_internal_call, &_0);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
-void zep_Pocketmine_Utils_Binary_flipIntEndianness_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_flipIntEndianness_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zval *value_param = NULL, _0, _1;
 	zend_long value, ZEPHIR_LAST_CALL_STATUS;
@@ -2418,13 +2247,11 @@ void zep_Pocketmine_Utils_Binary_flipIntEndianness_zephir_internal_call(int ht, 
 		Z_PARAM_LONG(value)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	value_param = value_param_ext;
-
 
 	value = zephir_get_intval(value_param);
 	value = zephir_get_intval(value_param);
@@ -2436,11 +2263,10 @@ void zep_Pocketmine_Utils_Binary_flipIntEndianness_zephir_internal_call(int ht, 
 	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P1(pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_readLInt_zephir_internal_call, &_0);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
-void zep_Pocketmine_Utils_Binary_flipLongEndianness_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_flipLongEndianness_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zval *value_param = NULL, _0, _1;
 	zend_long value, ZEPHIR_LAST_CALL_STATUS;
@@ -2452,13 +2278,11 @@ void zep_Pocketmine_Utils_Binary_flipLongEndianness_zephir_internal_call(int ht,
 		Z_PARAM_LONG(value)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	value_param = value_param_ext;
-
 
 	value = zephir_get_intval(value_param);
 	value = zephir_get_intval(value_param);
@@ -2470,7 +2294,6 @@ void zep_Pocketmine_Utils_Binary_flipLongEndianness_zephir_internal_call(int ht,
 	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P1(pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_readLLong_zephir_internal_call, &_0);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -2480,8 +2303,8 @@ void zep_Pocketmine_Utils_Binary_flipLongEndianness_zephir_internal_call(int ht,
  *
  * @return bool
  */
-void zep_Pocketmine_Utils_Binary_readBool_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *b_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_readBool_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *b_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *b_param = NULL, _0, _1;
@@ -2495,13 +2318,11 @@ void zep_Pocketmine_Utils_Binary_readBool_zephir_internal_call(int ht, zend_exec
 		Z_PARAM_STR(b)
 		Z_PARAM_STR(b)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	b_param = b_param_ext;
-
 
 	zephir_get_strval(&b, b_param);
 	zephir_get_strval(&b, b_param);
@@ -2512,7 +2333,6 @@ void zep_Pocketmine_Utils_Binary_readBool_zephir_internal_call(int ht, zend_exec
 	ZEPHIR_CALL_FUNCTION(&_1, "chr", NULL, 15, &_0);
 	zephir_check_call_status();
 	RETURN_MM_BOOL(!ZEPHIR_IS_IDENTICAL(&b, &_1));
-
 }
 
 /**
@@ -2522,8 +2342,8 @@ void zep_Pocketmine_Utils_Binary_readBool_zephir_internal_call(int ht, zend_exec
  *
  * @return string
  */
-void zep_Pocketmine_Utils_Binary_writeBool_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *b_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_writeBool_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *b_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zval *b_param = NULL, _0;
 	zend_bool b;
@@ -2534,13 +2354,11 @@ void zep_Pocketmine_Utils_Binary_writeBool_zephir_internal_call(int ht, zend_exe
 		Z_PARAM_BOOL(b)
 		Z_PARAM_BOOL(b)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	b_param = b_param_ext;
-
 
 	b = zephir_get_boolval(b_param);
 	b = zephir_get_boolval(b_param);
@@ -2553,7 +2371,6 @@ void zep_Pocketmine_Utils_Binary_writeBool_zephir_internal_call(int ht, zend_exe
 		ZVAL_LONG(&_0, '\0');
 	}
 	RETURN_CCTOR(&_0);
-
 }
 
 /**
@@ -2563,8 +2380,8 @@ void zep_Pocketmine_Utils_Binary_writeBool_zephir_internal_call(int ht, zend_exe
  *
  * @return int
  */
-void zep_Pocketmine_Utils_Binary_readByte_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *c_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_readByte_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *c_param_ext)
+{
 	unsigned char _0;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
@@ -2578,13 +2395,11 @@ void zep_Pocketmine_Utils_Binary_readByte_zephir_internal_call(int ht, zend_exec
 		Z_PARAM_STR(c)
 		Z_PARAM_STR(c)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	c_param = c_param_ext;
-
 
 	zephir_get_strval(&c, c_param);
 	zephir_get_strval(&c, c_param);
@@ -2596,7 +2411,6 @@ void zep_Pocketmine_Utils_Binary_readByte_zephir_internal_call(int ht, zend_exec
 	ZEPHIR_RETURN_CALL_FUNCTION("ord", NULL, 16, &_1);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -2606,8 +2420,8 @@ void zep_Pocketmine_Utils_Binary_readByte_zephir_internal_call(int ht, zend_exec
  *
  * @return int
  */
-void zep_Pocketmine_Utils_Binary_readSignedByte_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *c_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_readSignedByte_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *c_param_ext)
+{
 	unsigned char _0;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
@@ -2622,13 +2436,11 @@ void zep_Pocketmine_Utils_Binary_readSignedByte_zephir_internal_call(int ht, zen
 		Z_PARAM_STR(c)
 		Z_PARAM_STR(c)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	c_param = c_param_ext;
-
 
 	zephir_get_strval(&c, c_param);
 	zephir_get_strval(&c, c_param);
@@ -2642,7 +2454,6 @@ void zep_Pocketmine_Utils_Binary_readSignedByte_zephir_internal_call(int ht, zen
 	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P1(pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_signByte_zephir_internal_call, &_2);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -2652,8 +2463,8 @@ void zep_Pocketmine_Utils_Binary_readSignedByte_zephir_internal_call(int ht, zen
  *
  * @return string
  */
-void zep_Pocketmine_Utils_Binary_writeByte_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *c_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_writeByte_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *c_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zval *c_param = NULL, _0;
 	zend_long c, ZEPHIR_LAST_CALL_STATUS;
@@ -2664,13 +2475,11 @@ void zep_Pocketmine_Utils_Binary_writeByte_zephir_internal_call(int ht, zend_exe
 		Z_PARAM_LONG(c)
 		Z_PARAM_LONG(c)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	c_param = c_param_ext;
-
 
 	c = zephir_get_intval(c_param);
 	c = zephir_get_intval(c_param);
@@ -2680,7 +2489,6 @@ void zep_Pocketmine_Utils_Binary_writeByte_zephir_internal_call(int ht, zend_exe
 	ZEPHIR_RETURN_CALL_FUNCTION("chr", NULL, 15, &_0);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -2690,8 +2498,8 @@ void zep_Pocketmine_Utils_Binary_writeByte_zephir_internal_call(int ht, zend_exe
  *
  * @return int
  */
-void zep_Pocketmine_Utils_Binary_readShort_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_readShort_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2;
@@ -2706,13 +2514,11 @@ void zep_Pocketmine_Utils_Binary_readShort_zephir_internal_call(int ht, zend_exe
 		Z_PARAM_STR(str)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	str_param = str_param_ext;
-
 
 	zephir_get_strval(&str, str_param);
 	zephir_get_strval(&str, str_param);
@@ -2724,7 +2530,6 @@ void zep_Pocketmine_Utils_Binary_readShort_zephir_internal_call(int ht, zend_exe
 	zephir_check_call_status();
 	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 146);
 	RETURN_CTOR(&_2);
-
 }
 
 /**
@@ -2734,8 +2539,8 @@ void zep_Pocketmine_Utils_Binary_readShort_zephir_internal_call(int ht, zend_exe
  *
  * @return int
  */
-void zep_Pocketmine_Utils_Binary_readSignedShort_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_readSignedShort_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2;
@@ -2750,13 +2555,11 @@ void zep_Pocketmine_Utils_Binary_readSignedShort_zephir_internal_call(int ht, ze
 		Z_PARAM_STR(str)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	str_param = str_param_ext;
-
 
 	zephir_get_strval(&str, str_param);
 	zephir_get_strval(&str, str_param);
@@ -2770,7 +2573,6 @@ void zep_Pocketmine_Utils_Binary_readSignedShort_zephir_internal_call(int ht, ze
 	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P1(pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_signShort_zephir_internal_call, &_2);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -2780,8 +2582,8 @@ void zep_Pocketmine_Utils_Binary_readSignedShort_zephir_internal_call(int ht, ze
  *
  * @return string
  */
-void zep_Pocketmine_Utils_Binary_writeShort_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_writeShort_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zval *value_param = NULL, _0, _1;
 	zend_long value, ZEPHIR_LAST_CALL_STATUS;
@@ -2793,13 +2595,11 @@ void zep_Pocketmine_Utils_Binary_writeShort_zephir_internal_call(int ht, zend_ex
 		Z_PARAM_LONG(value)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	value_param = value_param_ext;
-
 
 	value = zephir_get_intval(value_param);
 	value = zephir_get_intval(value_param);
@@ -2811,7 +2611,6 @@ void zep_Pocketmine_Utils_Binary_writeShort_zephir_internal_call(int ht, zend_ex
 	ZEPHIR_RETURN_CALL_FUNCTION("pack", NULL, 18, &_0, &_1);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -2821,8 +2620,8 @@ void zep_Pocketmine_Utils_Binary_writeShort_zephir_internal_call(int ht, zend_ex
  *
  * @return int
  */
-void zep_Pocketmine_Utils_Binary_readLShort_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_readLShort_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2;
@@ -2837,13 +2636,11 @@ void zep_Pocketmine_Utils_Binary_readLShort_zephir_internal_call(int ht, zend_ex
 		Z_PARAM_STR(str)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	str_param = str_param_ext;
-
 
 	zephir_get_strval(&str, str_param);
 	zephir_get_strval(&str, str_param);
@@ -2855,7 +2652,6 @@ void zep_Pocketmine_Utils_Binary_readLShort_zephir_internal_call(int ht, zend_ex
 	zephir_check_call_status();
 	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 182);
 	RETURN_CTOR(&_2);
-
 }
 
 /**
@@ -2865,8 +2661,8 @@ void zep_Pocketmine_Utils_Binary_readLShort_zephir_internal_call(int ht, zend_ex
  *
  * @return int
  */
-void zep_Pocketmine_Utils_Binary_readSignedLShort_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_readSignedLShort_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2;
@@ -2881,13 +2677,11 @@ void zep_Pocketmine_Utils_Binary_readSignedLShort_zephir_internal_call(int ht, z
 		Z_PARAM_STR(str)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	str_param = str_param_ext;
-
 
 	zephir_get_strval(&str, str_param);
 	zephir_get_strval(&str, str_param);
@@ -2901,7 +2695,6 @@ void zep_Pocketmine_Utils_Binary_readSignedLShort_zephir_internal_call(int ht, z
 	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P1(pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_signShort_zephir_internal_call, &_2);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -2911,8 +2704,8 @@ void zep_Pocketmine_Utils_Binary_readSignedLShort_zephir_internal_call(int ht, z
  *
  * @return string
  */
-void zep_Pocketmine_Utils_Binary_writeLShort_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_writeLShort_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zval *value_param = NULL, _0, _1;
 	zend_long value, ZEPHIR_LAST_CALL_STATUS;
@@ -2924,13 +2717,11 @@ void zep_Pocketmine_Utils_Binary_writeLShort_zephir_internal_call(int ht, zend_e
 		Z_PARAM_LONG(value)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	value_param = value_param_ext;
-
 
 	value = zephir_get_intval(value_param);
 	value = zephir_get_intval(value_param);
@@ -2942,7 +2733,6 @@ void zep_Pocketmine_Utils_Binary_writeLShort_zephir_internal_call(int ht, zend_e
 	ZEPHIR_RETURN_CALL_FUNCTION("pack", NULL, 18, &_0, &_1);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -2952,8 +2742,8 @@ void zep_Pocketmine_Utils_Binary_writeLShort_zephir_internal_call(int ht, zend_e
  *
  * @return int
  */
-void zep_Pocketmine_Utils_Binary_readTriad_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_readTriad_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2, _3, _4;
@@ -2970,13 +2760,11 @@ void zep_Pocketmine_Utils_Binary_readTriad_zephir_internal_call(int ht, zend_exe
 		Z_PARAM_STR(str)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	str_param = str_param_ext;
-
 
 	zephir_get_strval(&str, str_param);
 	zephir_get_strval(&str, str_param);
@@ -2994,7 +2782,6 @@ void zep_Pocketmine_Utils_Binary_readTriad_zephir_internal_call(int ht, zend_exe
 	zephir_check_call_status();
 	zephir_array_fetch_long(&_4, &_3, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 218);
 	RETURN_CTOR(&_4);
-
 }
 
 /**
@@ -3004,8 +2791,8 @@ void zep_Pocketmine_Utils_Binary_readTriad_zephir_internal_call(int ht, zend_exe
  *
  * @return string
  */
-void zep_Pocketmine_Utils_Binary_writeTriad_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_writeTriad_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zval *value_param = NULL, _0, _1, _2;
 	zend_long value, ZEPHIR_LAST_CALL_STATUS;
@@ -3018,13 +2805,11 @@ void zep_Pocketmine_Utils_Binary_writeTriad_zephir_internal_call(int ht, zend_ex
 		Z_PARAM_LONG(value)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	value_param = value_param_ext;
-
 
 	value = zephir_get_intval(value_param);
 	value = zephir_get_intval(value_param);
@@ -3038,7 +2823,6 @@ void zep_Pocketmine_Utils_Binary_writeTriad_zephir_internal_call(int ht, zend_ex
 	ZVAL_LONG(&_1, 1);
 	zephir_substr(return_value, &_2, 1 , 0, ZEPHIR_SUBSTR_NO_LENGTH);
 	RETURN_MM();
-
 }
 
 /**
@@ -3048,8 +2832,8 @@ void zep_Pocketmine_Utils_Binary_writeTriad_zephir_internal_call(int ht, zend_ex
  *
  * @return int
  */
-void zep_Pocketmine_Utils_Binary_readLTriad_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_readLTriad_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2, _3, _4;
@@ -3066,13 +2850,11 @@ void zep_Pocketmine_Utils_Binary_readLTriad_zephir_internal_call(int ht, zend_ex
 		Z_PARAM_STR(str)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	str_param = str_param_ext;
-
 
 	zephir_get_strval(&str, str_param);
 	zephir_get_strval(&str, str_param);
@@ -3090,7 +2872,6 @@ void zep_Pocketmine_Utils_Binary_readLTriad_zephir_internal_call(int ht, zend_ex
 	zephir_check_call_status();
 	zephir_array_fetch_long(&_4, &_3, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 242);
 	RETURN_CTOR(&_4);
-
 }
 
 /**
@@ -3100,8 +2881,8 @@ void zep_Pocketmine_Utils_Binary_readLTriad_zephir_internal_call(int ht, zend_ex
  *
  * @return string
  */
-void zep_Pocketmine_Utils_Binary_writeLTriad_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_writeLTriad_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *value_param = NULL, _0, _1, _2, _3;
@@ -3113,16 +2894,14 @@ void zep_Pocketmine_Utils_Binary_writeLTriad_zephir_internal_call(int ht, zend_e
 #if PHP_VERSION_ID >= 80000
 	bool is_null_true = 1;
 	ZEND_PARSE_PARAMETERS_START(2, 1)
-		Z_PARAM_ZVAL(value)
-		Z_PARAM_ZVAL(value)
+		Z_PARAM_LONG(value)
+		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	value_param = value_param_ext;
-
 
 	value = zephir_get_intval(value_param);
 	value = zephir_get_intval(value_param);
@@ -3137,7 +2916,6 @@ void zep_Pocketmine_Utils_Binary_writeLTriad_zephir_internal_call(int ht, zend_e
 	ZVAL_LONG(&_3, -1);
 	zephir_substr(return_value, &_2, 0 , -1 , 0);
 	RETURN_MM();
-
 }
 
 /**
@@ -3147,8 +2925,8 @@ void zep_Pocketmine_Utils_Binary_writeLTriad_zephir_internal_call(int ht, zend_e
  *
  * @return int
  */
-void zep_Pocketmine_Utils_Binary_readInt_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_readInt_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2;
@@ -3163,13 +2941,11 @@ void zep_Pocketmine_Utils_Binary_readInt_zephir_internal_call(int ht, zend_execu
 		Z_PARAM_STR(str)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	str_param = str_param_ext;
-
 
 	zephir_get_strval(&str, str_param);
 	zephir_get_strval(&str, str_param);
@@ -3183,7 +2959,6 @@ void zep_Pocketmine_Utils_Binary_readInt_zephir_internal_call(int ht, zend_execu
 	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P1(pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_signInt_zephir_internal_call, &_2);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -3193,8 +2968,8 @@ void zep_Pocketmine_Utils_Binary_readInt_zephir_internal_call(int ht, zend_execu
  *
  * @return string
  */
-void zep_Pocketmine_Utils_Binary_writeInt_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_writeInt_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *value_param = NULL, _0, _1;
@@ -3204,16 +2979,14 @@ void zep_Pocketmine_Utils_Binary_writeInt_zephir_internal_call(int ht, zend_exec
 #if PHP_VERSION_ID >= 80000
 	bool is_null_true = 1;
 	ZEND_PARSE_PARAMETERS_START(2, 1)
-		Z_PARAM_ZVAL(value)
-		Z_PARAM_ZVAL(value)
+		Z_PARAM_LONG(value)
+		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	value_param = value_param_ext;
-
 
 	value = zephir_get_intval(value_param);
 	value = zephir_get_intval(value_param);
@@ -3225,7 +2998,6 @@ void zep_Pocketmine_Utils_Binary_writeInt_zephir_internal_call(int ht, zend_exec
 	ZEPHIR_RETURN_CALL_FUNCTION("pack", NULL, 18, &_0, &_1);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -3235,8 +3007,8 @@ void zep_Pocketmine_Utils_Binary_writeInt_zephir_internal_call(int ht, zend_exec
  *
  * @return int
  */
-void zep_Pocketmine_Utils_Binary_readLInt_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_readLInt_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2;
@@ -3251,13 +3023,11 @@ void zep_Pocketmine_Utils_Binary_readLInt_zephir_internal_call(int ht, zend_exec
 		Z_PARAM_STR(str)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	str_param = str_param_ext;
-
 
 	zephir_get_strval(&str, str_param);
 	zephir_get_strval(&str, str_param);
@@ -3271,7 +3041,6 @@ void zep_Pocketmine_Utils_Binary_readLInt_zephir_internal_call(int ht, zend_exec
 	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P1(pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_signInt_zephir_internal_call, &_2);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -3281,8 +3050,8 @@ void zep_Pocketmine_Utils_Binary_readLInt_zephir_internal_call(int ht, zend_exec
  *
  * @return string
  */
-void zep_Pocketmine_Utils_Binary_writeLInt_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_writeLInt_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *value_param = NULL, _0, _1;
@@ -3292,16 +3061,14 @@ void zep_Pocketmine_Utils_Binary_writeLInt_zephir_internal_call(int ht, zend_exe
 #if PHP_VERSION_ID >= 80000
 	bool is_null_true = 1;
 	ZEND_PARSE_PARAMETERS_START(2, 1)
-		Z_PARAM_ZVAL(value)
-		Z_PARAM_ZVAL(value)
+		Z_PARAM_LONG(value)
+		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	value_param = value_param_ext;
-
 
 	value = zephir_get_intval(value_param);
 	value = zephir_get_intval(value_param);
@@ -3313,7 +3080,6 @@ void zep_Pocketmine_Utils_Binary_writeLInt_zephir_internal_call(int ht, zend_exe
 	ZEPHIR_RETURN_CALL_FUNCTION("pack", NULL, 18, &_0, &_1);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -3323,8 +3089,8 @@ void zep_Pocketmine_Utils_Binary_writeLInt_zephir_internal_call(int ht, zend_exe
  *
  * @return float
  */
-void zep_Pocketmine_Utils_Binary_readFloat_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_readFloat_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2;
@@ -3339,13 +3105,11 @@ void zep_Pocketmine_Utils_Binary_readFloat_zephir_internal_call(int ht, zend_exe
 		Z_PARAM_STR(str)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	str_param = str_param_ext;
-
 
 	zephir_get_strval(&str, str_param);
 	zephir_get_strval(&str, str_param);
@@ -3357,7 +3121,6 @@ void zep_Pocketmine_Utils_Binary_readFloat_zephir_internal_call(int ht, zend_exe
 	zephir_check_call_status();
 	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 314);
 	RETURN_CTOR(&_2);
-
 }
 
 /**
@@ -3368,8 +3131,8 @@ void zep_Pocketmine_Utils_Binary_readFloat_zephir_internal_call(int ht, zend_exe
  *
  * @return float
  */
-void zep_Pocketmine_Utils_Binary_readRoundedFloat_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext, zval *accuracy_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_readRoundedFloat_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext, zval *accuracy_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long accuracy, ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, *accuracy_param = NULL, _0, _1;
@@ -3385,7 +3148,6 @@ void zep_Pocketmine_Utils_Binary_readRoundedFloat_zephir_internal_call(int ht, z
 		Z_PARAM_STR(str)
 		Z_PARAM_LONG(accuracy)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
@@ -3393,7 +3155,6 @@ void zep_Pocketmine_Utils_Binary_readRoundedFloat_zephir_internal_call(int ht, z
 	str_param = str_param_ext;
 
 	accuracy_param = accuracy_param_ext;
-
 
 	zephir_get_strval(&str, str_param);
 	accuracy = zephir_get_intval(accuracy_param);
@@ -3406,7 +3167,6 @@ void zep_Pocketmine_Utils_Binary_readRoundedFloat_zephir_internal_call(int ht, z
 	ZVAL_LONG(&_1, accuracy);
 	zephir_round(return_value, &_0, &_1, NULL);
 	RETURN_MM();
-
 }
 
 /**
@@ -3416,8 +3176,8 @@ void zep_Pocketmine_Utils_Binary_readRoundedFloat_zephir_internal_call(int ht, z
  *
  * @return string
  */
-void zep_Pocketmine_Utils_Binary_writeFloat_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_writeFloat_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *value_param = NULL, _0, _1;
@@ -3430,13 +3190,11 @@ void zep_Pocketmine_Utils_Binary_writeFloat_zephir_internal_call(int ht, zend_ex
 		Z_PARAM_ZVAL(value)
 		Z_PARAM_ZVAL(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	value_param = value_param_ext;
-
 
 	value = zephir_get_doubleval(value_param);
 	value = zephir_get_doubleval(value_param);
@@ -3448,7 +3206,6 @@ void zep_Pocketmine_Utils_Binary_writeFloat_zephir_internal_call(int ht, zend_ex
 	ZEPHIR_RETURN_CALL_FUNCTION("pack", NULL, 18, &_0, &_1);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -3458,8 +3215,8 @@ void zep_Pocketmine_Utils_Binary_writeFloat_zephir_internal_call(int ht, zend_ex
  *
  * @return float
  */
-void zep_Pocketmine_Utils_Binary_readLFloat_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_readLFloat_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2;
@@ -3474,13 +3231,11 @@ void zep_Pocketmine_Utils_Binary_readLFloat_zephir_internal_call(int ht, zend_ex
 		Z_PARAM_STR(str)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	str_param = str_param_ext;
-
 
 	zephir_get_strval(&str, str_param);
 	zephir_get_strval(&str, str_param);
@@ -3492,7 +3247,6 @@ void zep_Pocketmine_Utils_Binary_readLFloat_zephir_internal_call(int ht, zend_ex
 	zephir_check_call_status();
 	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 351);
 	RETURN_CTOR(&_2);
-
 }
 
 /**
@@ -3503,8 +3257,8 @@ void zep_Pocketmine_Utils_Binary_readLFloat_zephir_internal_call(int ht, zend_ex
  *
  * @return float
  */
-void zep_Pocketmine_Utils_Binary_readRoundedLFloat_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext, zval *accuracy_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_readRoundedLFloat_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext, zval *accuracy_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long accuracy, ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, *accuracy_param = NULL, _0, _1;
@@ -3520,7 +3274,6 @@ void zep_Pocketmine_Utils_Binary_readRoundedLFloat_zephir_internal_call(int ht, 
 		Z_PARAM_STR(str)
 		Z_PARAM_LONG(accuracy)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
@@ -3528,7 +3281,6 @@ void zep_Pocketmine_Utils_Binary_readRoundedLFloat_zephir_internal_call(int ht, 
 	str_param = str_param_ext;
 
 	accuracy_param = accuracy_param_ext;
-
 
 	zephir_get_strval(&str, str_param);
 	accuracy = zephir_get_intval(accuracy_param);
@@ -3541,7 +3293,6 @@ void zep_Pocketmine_Utils_Binary_readRoundedLFloat_zephir_internal_call(int ht, 
 	ZVAL_LONG(&_1, accuracy);
 	zephir_round(return_value, &_0, &_1, NULL);
 	RETURN_MM();
-
 }
 
 /**
@@ -3551,8 +3302,8 @@ void zep_Pocketmine_Utils_Binary_readRoundedLFloat_zephir_internal_call(int ht, 
  *
  * @return string
  */
-void zep_Pocketmine_Utils_Binary_writeLFloat_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_writeLFloat_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *value_param = NULL, _0, _1;
@@ -3565,13 +3316,11 @@ void zep_Pocketmine_Utils_Binary_writeLFloat_zephir_internal_call(int ht, zend_e
 		Z_PARAM_ZVAL(value)
 		Z_PARAM_ZVAL(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	value_param = value_param_ext;
-
 
 	value = zephir_get_doubleval(value_param);
 	value = zephir_get_doubleval(value_param);
@@ -3583,7 +3332,6 @@ void zep_Pocketmine_Utils_Binary_writeLFloat_zephir_internal_call(int ht, zend_e
 	ZEPHIR_RETURN_CALL_FUNCTION("pack", NULL, 18, &_0, &_1);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -3593,8 +3341,8 @@ void zep_Pocketmine_Utils_Binary_writeLFloat_zephir_internal_call(int ht, zend_e
  *
  * @return string
  */
-void zep_Pocketmine_Utils_Binary_printFloat_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_printFloat_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *value_param = NULL, _0, _1, _2, _3;
@@ -3609,13 +3357,11 @@ void zep_Pocketmine_Utils_Binary_printFloat_zephir_internal_call(int ht, zend_ex
 		Z_PARAM_ZVAL(value)
 		Z_PARAM_ZVAL(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	value_param = value_param_ext;
-
 
 	value = zephir_get_doubleval(value_param);
 	value = zephir_get_doubleval(value_param);
@@ -3633,7 +3379,6 @@ void zep_Pocketmine_Utils_Binary_printFloat_zephir_internal_call(int ht, zend_ex
 	ZEPHIR_RETURN_CALL_FUNCTION("preg_replace", NULL, 20, &_0, &_3, &_2);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -3643,8 +3388,8 @@ void zep_Pocketmine_Utils_Binary_printFloat_zephir_internal_call(int ht, zend_ex
  *
  * @return float
  */
-void zep_Pocketmine_Utils_Binary_readDouble_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_readDouble_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2;
@@ -3659,13 +3404,11 @@ void zep_Pocketmine_Utils_Binary_readDouble_zephir_internal_call(int ht, zend_ex
 		Z_PARAM_STR(str)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	str_param = str_param_ext;
-
 
 	zephir_get_strval(&str, str_param);
 	zephir_get_strval(&str, str_param);
@@ -3677,7 +3420,6 @@ void zep_Pocketmine_Utils_Binary_readDouble_zephir_internal_call(int ht, zend_ex
 	zephir_check_call_status();
 	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 400);
 	RETURN_CTOR(&_2);
-
 }
 
 /**
@@ -3687,8 +3429,8 @@ void zep_Pocketmine_Utils_Binary_readDouble_zephir_internal_call(int ht, zend_ex
  *
  * @return string
  */
-void zep_Pocketmine_Utils_Binary_writeDouble_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_writeDouble_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *value_param = NULL, _0, _1;
@@ -3701,13 +3443,11 @@ void zep_Pocketmine_Utils_Binary_writeDouble_zephir_internal_call(int ht, zend_e
 		Z_PARAM_ZVAL(value)
 		Z_PARAM_ZVAL(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	value_param = value_param_ext;
-
 
 	value = zephir_get_doubleval(value_param);
 	value = zephir_get_doubleval(value_param);
@@ -3719,7 +3459,6 @@ void zep_Pocketmine_Utils_Binary_writeDouble_zephir_internal_call(int ht, zend_e
 	ZEPHIR_RETURN_CALL_FUNCTION("pack", NULL, 18, &_0, &_1);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -3729,8 +3468,8 @@ void zep_Pocketmine_Utils_Binary_writeDouble_zephir_internal_call(int ht, zend_e
  *
  * @return float
  */
-void zep_Pocketmine_Utils_Binary_readLDouble_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_readLDouble_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2;
@@ -3745,13 +3484,11 @@ void zep_Pocketmine_Utils_Binary_readLDouble_zephir_internal_call(int ht, zend_e
 		Z_PARAM_STR(str)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	str_param = str_param_ext;
-
 
 	zephir_get_strval(&str, str_param);
 	zephir_get_strval(&str, str_param);
@@ -3763,7 +3500,6 @@ void zep_Pocketmine_Utils_Binary_readLDouble_zephir_internal_call(int ht, zend_e
 	zephir_check_call_status();
 	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 424);
 	RETURN_CTOR(&_2);
-
 }
 
 /**
@@ -3773,8 +3509,8 @@ void zep_Pocketmine_Utils_Binary_readLDouble_zephir_internal_call(int ht, zend_e
  *
  * @return string
  */
-void zep_Pocketmine_Utils_Binary_writeLDouble_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_writeLDouble_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *value_param = NULL, _0, _1;
@@ -3787,13 +3523,11 @@ void zep_Pocketmine_Utils_Binary_writeLDouble_zephir_internal_call(int ht, zend_
 		Z_PARAM_ZVAL(value)
 		Z_PARAM_ZVAL(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	value_param = value_param_ext;
-
 
 	value = zephir_get_doubleval(value_param);
 	value = zephir_get_doubleval(value_param);
@@ -3805,7 +3539,6 @@ void zep_Pocketmine_Utils_Binary_writeLDouble_zephir_internal_call(int ht, zend_
 	ZEPHIR_RETURN_CALL_FUNCTION("pack", NULL, 18, &_0, &_1);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -3815,8 +3548,8 @@ void zep_Pocketmine_Utils_Binary_writeLDouble_zephir_internal_call(int ht, zend_
  *
  * @return int
  */
-void zep_Pocketmine_Utils_Binary_readLong_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_readLong_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2;
@@ -3831,13 +3564,11 @@ void zep_Pocketmine_Utils_Binary_readLong_zephir_internal_call(int ht, zend_exec
 		Z_PARAM_STR(str)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	str_param = str_param_ext;
-
 
 	zephir_get_strval(&str, str_param);
 	zephir_get_strval(&str, str_param);
@@ -3849,7 +3580,6 @@ void zep_Pocketmine_Utils_Binary_readLong_zephir_internal_call(int ht, zend_exec
 	zephir_check_call_status();
 	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 448);
 	RETURN_CTOR(&_2);
-
 }
 
 /**
@@ -3859,8 +3589,8 @@ void zep_Pocketmine_Utils_Binary_readLong_zephir_internal_call(int ht, zend_exec
  *
  * @return string
  */
-void zep_Pocketmine_Utils_Binary_writeLong_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_writeLong_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zval *value_param = NULL, _0, _1;
 	zend_long value, ZEPHIR_LAST_CALL_STATUS;
@@ -3872,13 +3602,11 @@ void zep_Pocketmine_Utils_Binary_writeLong_zephir_internal_call(int ht, zend_exe
 		Z_PARAM_LONG(value)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	value_param = value_param_ext;
-
 
 	value = zephir_get_intval(value_param);
 	value = zephir_get_intval(value_param);
@@ -3890,7 +3618,6 @@ void zep_Pocketmine_Utils_Binary_writeLong_zephir_internal_call(int ht, zend_exe
 	ZEPHIR_RETURN_CALL_FUNCTION("pack", NULL, 18, &_0, &_1);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -3900,8 +3627,8 @@ void zep_Pocketmine_Utils_Binary_writeLong_zephir_internal_call(int ht, zend_exe
  *
  * @return int
  */
-void zep_Pocketmine_Utils_Binary_readLLong_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_readLLong_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS;
 	zval *str_param = NULL, _0, _1, _2;
@@ -3916,13 +3643,11 @@ void zep_Pocketmine_Utils_Binary_readLLong_zephir_internal_call(int ht, zend_exe
 		Z_PARAM_STR(str)
 		Z_PARAM_STR(str)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	str_param = str_param_ext;
-
 
 	zephir_get_strval(&str, str_param);
 	zephir_get_strval(&str, str_param);
@@ -3934,7 +3659,6 @@ void zep_Pocketmine_Utils_Binary_readLLong_zephir_internal_call(int ht, zend_exe
 	zephir_check_call_status();
 	zephir_array_fetch_long(&_2, &_1, 1, PH_NOISY | PH_READONLY, "pocketmine/utils/binary.zep", 472);
 	RETURN_CTOR(&_2);
-
 }
 
 /**
@@ -3944,8 +3668,8 @@ void zep_Pocketmine_Utils_Binary_readLLong_zephir_internal_call(int ht, zend_exe
  *
  * @return string
  */
-void zep_Pocketmine_Utils_Binary_writeLLong_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_writeLLong_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zval *value_param = NULL, _0, _1;
 	zend_long value, ZEPHIR_LAST_CALL_STATUS;
@@ -3957,13 +3681,11 @@ void zep_Pocketmine_Utils_Binary_writeLLong_zephir_internal_call(int ht, zend_ex
 		Z_PARAM_LONG(value)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	value_param = value_param_ext;
-
 
 	value = zephir_get_intval(value_param);
 	value = zephir_get_intval(value_param);
@@ -3975,7 +3697,6 @@ void zep_Pocketmine_Utils_Binary_writeLLong_zephir_internal_call(int ht, zend_ex
 	ZEPHIR_RETURN_CALL_FUNCTION("pack", NULL, 18, &_0, &_1);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -3986,42 +3707,42 @@ void zep_Pocketmine_Utils_Binary_writeLLong_zephir_internal_call(int ht, zend_ex
  *
  * @return int
  */
-void zep_Pocketmine_Utils_Binary_readVarInt_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *buffer_param_ext, zval *offset_ext ) {
-
+void zep_Pocketmine_Utils_Binary_readVarInt_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *buffer_param_ext, zval *offset_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
-	zend_long ZEPHIR_LAST_CALL_STATUS, temp;
-	zval *buffer_param = NULL, *offset = NULL, offset_sub, raw;
+	zend_long offset, ZEPHIR_LAST_CALL_STATUS, temp;
+	zval *buffer_param = NULL, *offset_param = NULL, raw, _0;
 	zval buffer;
 		ZVAL_UNDEF(&buffer);
-	ZVAL_UNDEF(&offset_sub);
 	ZVAL_UNDEF(&raw);
+	ZVAL_UNDEF(&_0);
 #if PHP_VERSION_ID >= 80000
 	bool is_null_true = 1;
 	ZEND_PARSE_PARAMETERS_START(4, 2)
 		Z_PARAM_STR(buffer)
-		Z_PARAM_ZVAL(offset)
+		Z_PARAM_LONG(offset)
 		Z_PARAM_STR(buffer)
-		Z_PARAM_ZVAL(offset)
+		Z_PARAM_LONG(offset)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	buffer_param = buffer_param_ext;
 
-	offset = offset_ext;
-
+	offset_param = offset_param_ext;
 
 	zephir_get_strval(&buffer, buffer_param);
+	offset = zephir_get_intval(offset_param);
 	zephir_get_strval(&buffer, buffer_param);
+	offset = zephir_get_intval(offset_param);
 
 
-	ZEPHIR_STATIC_CALL_INTERNAL_METHOD_P2(&raw, pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_readUnsignedVarInt_zephir_internal_call, &buffer, offset);
+	ZVAL_LONG(&_0, offset);
+	ZEPHIR_STATIC_CALL_INTERNAL_METHOD_P2(&raw, pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_readUnsignedVarInt_zephir_internal_call, &buffer, &_0);
 	zephir_check_call_status();
 	temp = (((((((zephir_get_intval(&raw) << 63)) >> 63)) ^ zephir_get_intval(&raw))) >> 1);
 	RETURN_MM_LONG((temp ^ (zephir_get_intval(&raw) & -9223372036854775808)));
-
 }
 
 /**
@@ -4034,8 +3755,8 @@ void zep_Pocketmine_Utils_Binary_readVarInt_zephir_internal_call(int ht, zend_ex
  *
  * @throws BinaryDataException if the var-int did not end after 5 bytes or there were not enough bytes
  */
-void zep_Pocketmine_Utils_Binary_readUnsignedVarInt_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *buffer_ext , zval *offset_ext ) {
-
+void zep_Pocketmine_Utils_Binary_readUnsignedVarInt_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *buffer_ext , zval *offset_ext )
+{
 	zval _0$$3;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zend_long ZEPHIR_LAST_CALL_STATUS, i, value;
@@ -4056,7 +3777,6 @@ void zep_Pocketmine_Utils_Binary_readUnsignedVarInt_zephir_internal_call(int ht,
 		Z_PARAM_ZVAL(buffer)
 		Z_PARAM_ZVAL(offset)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
@@ -4064,7 +3784,6 @@ void zep_Pocketmine_Utils_Binary_readUnsignedVarInt_zephir_internal_call(int ht,
 	buffer = buffer_ext;
 
 	offset = offset_ext;
-
 
 	ZEPHIR_SEPARATE_PARAM(offset);
 	ZEPHIR_SEPARATE_PARAM(offset);
@@ -4098,7 +3817,6 @@ void zep_Pocketmine_Utils_Binary_readUnsignedVarInt_zephir_internal_call(int ht,
 	}
 	ZEPHIR_THROW_EXCEPTION_DEBUG_STR(pocketmine_utils_binarydataexception_ce, "VarInt did not terminate after 5 bytes!", "pocketmine/utils/binary.zep", 528);
 	return;
-
 }
 
 /**
@@ -4108,8 +3826,8 @@ void zep_Pocketmine_Utils_Binary_readUnsignedVarInt_zephir_internal_call(int ht,
  *
  * @return string
  */
-void zep_Pocketmine_Utils_Binary_writeVarInt_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *v_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_writeVarInt_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *v_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zval *v_param = NULL, _0;
 	zend_long v, ZEPHIR_LAST_CALL_STATUS;
@@ -4120,13 +3838,11 @@ void zep_Pocketmine_Utils_Binary_writeVarInt_zephir_internal_call(int ht, zend_e
 		Z_PARAM_LONG(v)
 		Z_PARAM_LONG(v)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	v_param = v_param_ext;
-
 
 	v = zephir_get_intval(v_param);
 	v = zephir_get_intval(v_param);
@@ -4137,7 +3853,6 @@ void zep_Pocketmine_Utils_Binary_writeVarInt_zephir_internal_call(int ht, zend_e
 	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P1(pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_writeUnsignedVarInt_zephir_internal_call, &_0);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -4147,8 +3862,8 @@ void zep_Pocketmine_Utils_Binary_writeVarInt_zephir_internal_call(int ht, zend_e
  *
  * @return string up to 5 bytes
  */
-void zep_Pocketmine_Utils_Binary_writeUnsignedVarInt_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_writeUnsignedVarInt_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext)
+{
 	zend_bool _0;
 	zval buf;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
@@ -4168,13 +3883,11 @@ void zep_Pocketmine_Utils_Binary_writeUnsignedVarInt_zephir_internal_call(int ht
 		Z_PARAM_LONG(value)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	value_param = value_param_ext;
-
 
 	value = zephir_get_intval(value_param);
 	value = zephir_get_intval(value_param);
@@ -4216,7 +3929,6 @@ void zep_Pocketmine_Utils_Binary_writeUnsignedVarInt_zephir_internal_call(int ht
 	}
 	ZEPHIR_THROW_EXCEPTION_DEBUG_STR(spl_ce_InvalidArgumentException, "Value too large to be encoded as a VarInt", "pocketmine/utils/binary.zep", 566);
 	return;
-
 }
 
 /**
@@ -4227,43 +3939,43 @@ void zep_Pocketmine_Utils_Binary_writeUnsignedVarInt_zephir_internal_call(int ht
  *
  * @return long
  */
-void zep_Pocketmine_Utils_Binary_readVarLong_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *buffer_param_ext, zval *offset_ext ) {
-
+void zep_Pocketmine_Utils_Binary_readVarLong_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *buffer_param_ext, zval *offset_param_ext)
+{
 	long temp;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
-	zend_long ZEPHIR_LAST_CALL_STATUS;
-	zval *buffer_param = NULL, *offset = NULL, offset_sub, raw;
+	zend_long offset, ZEPHIR_LAST_CALL_STATUS;
+	zval *buffer_param = NULL, *offset_param = NULL, raw, _0;
 	zval buffer;
 		ZVAL_UNDEF(&buffer);
-	ZVAL_UNDEF(&offset_sub);
 	ZVAL_UNDEF(&raw);
+	ZVAL_UNDEF(&_0);
 #if PHP_VERSION_ID >= 80000
 	bool is_null_true = 1;
 	ZEND_PARSE_PARAMETERS_START(4, 2)
 		Z_PARAM_STR(buffer)
-		Z_PARAM_ZVAL(offset)
+		Z_PARAM_LONG(offset)
 		Z_PARAM_STR(buffer)
-		Z_PARAM_ZVAL(offset)
+		Z_PARAM_LONG(offset)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	buffer_param = buffer_param_ext;
 
-	offset = offset_ext;
-
+	offset_param = offset_param_ext;
 
 	zephir_get_strval(&buffer, buffer_param);
+	offset = zephir_get_intval(offset_param);
 	zephir_get_strval(&buffer, buffer_param);
+	offset = zephir_get_intval(offset_param);
 
 
-	ZEPHIR_STATIC_CALL_INTERNAL_METHOD_P2(&raw, pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_readUnsignedVarLong_zephir_internal_call, &buffer, offset);
+	ZVAL_LONG(&_0, offset);
+	ZEPHIR_STATIC_CALL_INTERNAL_METHOD_P2(&raw, pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_readUnsignedVarLong_zephir_internal_call, &buffer, &_0);
 	zephir_check_call_status();
 	temp = (((((((zephir_get_intval(&raw) << 63)) >> 63)) ^ zephir_get_intval(&raw))) >> 1);
 	RETURN_MM_LONG((temp ^ (zephir_get_intval(&raw) & -9223372036854775808)));
-
 }
 
 /**
@@ -4276,40 +3988,38 @@ void zep_Pocketmine_Utils_Binary_readVarLong_zephir_internal_call(int ht, zend_e
  *
  * @throws BinaryDataException if the var-int did not end after 10 bytes or there were not enough bytes
  */
-void zep_Pocketmine_Utils_Binary_readUnsignedVarLong_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *buffer_ext , zval *offset_ext ) {
-
+void zep_Pocketmine_Utils_Binary_readUnsignedVarLong_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *buffer_ext , zval *offset_param_ext)
+{
 	zval _0$$3;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
-	zend_long ZEPHIR_LAST_CALL_STATUS, i, value;
-	zephir_fcall_cache_entry *_2 = NULL, *_5 = NULL;
-	zval *buffer = NULL, buffer_sub, *offset = NULL, offset_sub, _1$$3, b$$3, _3$$3, _4$$3;
+	zephir_fcall_cache_entry *_2 = NULL, *_6 = NULL;
+	zend_long offset, ZEPHIR_LAST_CALL_STATUS, i, value;
+	zval *buffer = NULL, buffer_sub, *offset_param = NULL, _1$$3, b$$3, _3$$3, _4$$3, _5$$3;
 		ZVAL_UNDEF(&buffer_sub);
-	ZVAL_UNDEF(&offset_sub);
 	ZVAL_UNDEF(&_1$$3);
 	ZVAL_UNDEF(&b$$3);
 	ZVAL_UNDEF(&_3$$3);
 	ZVAL_UNDEF(&_4$$3);
+	ZVAL_UNDEF(&_5$$3);
 	ZVAL_UNDEF(&_0$$3);
 #if PHP_VERSION_ID >= 80000
 	bool is_null_true = 1;
 	ZEND_PARSE_PARAMETERS_START(4, 2)
 		Z_PARAM_ZVAL(buffer)
-		Z_PARAM_ZVAL(offset)
+		Z_PARAM_LONG(offset)
 		Z_PARAM_ZVAL(buffer)
-		Z_PARAM_ZVAL(offset)
+		Z_PARAM_LONG(offset)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	buffer = buffer_ext;
 
-	offset = offset_ext;
+	offset_param = offset_param_ext;
 
-
-	ZEPHIR_SEPARATE_PARAM(offset);
-	ZEPHIR_SEPARATE_PARAM(offset);
+	offset = zephir_get_intval(offset_param);
+	offset = zephir_get_intval(offset_param);
 
 
 	i = 0;
@@ -4321,17 +4031,17 @@ void zep_Pocketmine_Utils_Binary_readUnsignedVarLong_zephir_internal_call(int ht
 		zephir_get_strval(&_0$$3, buffer);
 		ZEPHIR_CALL_FUNCTION(&_1$$3, "str_split", &_2, 21, &_0$$3);
 		zephir_check_call_status();
-		if (!(zephir_array_isset_long(&_1$$3, zephir_get_intval(offset)))) {
+		if (!(zephir_array_isset_long(&_1$$3, offset))) {
 			ZEPHIR_THROW_EXCEPTION_DEBUG_STR(pocketmine_utils_binarydataexception_ce, "No bytes left in buffer", "pocketmine/utils/binary.zep", 600);
 			return;
 		}
-		ZVAL_LONG(&_3$$3, 1);
-		ZEPHIR_INIT_NVAR(&_4$$3);
-		zephir_substr(&_4$$3, buffer, zephir_get_intval(offset), 1 , 0);
-		ZEPHIR_CALL_FUNCTION(&b$$3, "ord", &_5, 16, &_4$$3);
+		ZVAL_LONG(&_3$$3, offset);
+		ZVAL_LONG(&_4$$3, 1);
+		ZEPHIR_INIT_NVAR(&_5$$3);
+		zephir_substr(&_5$$3, buffer, zephir_get_intval(&_3$$3), 1 , 0);
+		ZEPHIR_CALL_FUNCTION(&b$$3, "ord", &_6, 16, &_5$$3);
 		zephir_check_call_status();
-		ZEPHIR_SEPARATE(offset);
-		zephir_increment(offset);
+		offset++;
 		value = (value | (((((int) (zephir_get_numberval(&b$$3)) & 0x7f)) << i)));
 		if ((((int) (zephir_get_numberval(&b$$3)) & 0x80)) == 0) {
 			RETURN_MM_LONG(value);
@@ -4340,7 +4050,6 @@ void zep_Pocketmine_Utils_Binary_readUnsignedVarLong_zephir_internal_call(int ht
 	}
 	ZEPHIR_THROW_EXCEPTION_DEBUG_STR(pocketmine_utils_binarydataexception_ce, "VarLong did not terminate after 10 bytes!", "pocketmine/utils/binary.zep", 610);
 	return;
-
 }
 
 /**
@@ -4350,8 +4059,8 @@ void zep_Pocketmine_Utils_Binary_readUnsignedVarLong_zephir_internal_call(int ht
  *
  * @return string
  */
-void zep_Pocketmine_Utils_Binary_writeVarLong_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *v_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_writeVarLong_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *v_param_ext)
+{
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
 	zval *v_param = NULL, _0;
 	zend_long v, ZEPHIR_LAST_CALL_STATUS;
@@ -4362,13 +4071,11 @@ void zep_Pocketmine_Utils_Binary_writeVarLong_zephir_internal_call(int ht, zend_
 		Z_PARAM_LONG(v)
 		Z_PARAM_LONG(v)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	v_param = v_param_ext;
-
 
 	v = zephir_get_intval(v_param);
 	v = zephir_get_intval(v_param);
@@ -4378,7 +4085,6 @@ void zep_Pocketmine_Utils_Binary_writeVarLong_zephir_internal_call(int ht, zend_
 	ZEPHIR_STATIC_RETURN_CALL_INTERNAL_METHOD_P1(pocketmine_utils_binary_ce, zep_Pocketmine_Utils_Binary_writeUnsignedVarLong_zephir_internal_call, &_0);
 	zephir_check_call_status();
 	RETURN_MM();
-
 }
 
 /**
@@ -4388,8 +4094,8 @@ void zep_Pocketmine_Utils_Binary_writeVarLong_zephir_internal_call(int ht, zend_
  *
  * @return string
  */
-void zep_Pocketmine_Utils_Binary_writeUnsignedVarLong_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext) {
-
+void zep_Pocketmine_Utils_Binary_writeUnsignedVarLong_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext)
+{
 	zend_bool _0;
 	zval buf;
 	zephir_method_globals *ZEPHIR_METHOD_GLOBALS_PTR = NULL;
@@ -4409,13 +4115,11 @@ void zep_Pocketmine_Utils_Binary_writeUnsignedVarLong_zephir_internal_call(int h
 		Z_PARAM_LONG(value)
 		Z_PARAM_LONG(value)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	ZEPHIR_MM_GROW();
 	value_param = value_param_ext;
-
 
 	value = zephir_get_intval(value_param);
 	value = zephir_get_intval(value_param);
@@ -4456,6 +4160,5 @@ void zep_Pocketmine_Utils_Binary_writeUnsignedVarLong_zephir_internal_call(int h
 	}
 	ZEPHIR_THROW_EXCEPTION_DEBUG_STR(spl_ce_InvalidArgumentException, "Value too large to be encoded as a VarLong", "pocketmine/utils/binary.zep", 647);
 	return;
-
 }
 

@@ -470,7 +470,7 @@ class Binary
      *
      * @return int
      */
-    public static function readVarInt(string $buffer, $offset): int
+    public static function readVarInt(string $buffer, int $offset): int
     {
     }
 
@@ -518,7 +518,7 @@ class Binary
      *
      * @return long
      */
-    public static function readVarLong(string $buffer, $offset): int
+    public static function readVarLong(string $buffer, int $offset): int
     {
     }
 
@@ -532,7 +532,7 @@ class Binary
      *
      * @throws BinaryDataException if the var-int did not end after 10 bytes or there were not enough bytes
      */
-    public static function readUnsignedVarLong($buffer, $offset): int
+    public static function readUnsignedVarLong($buffer, int $offset): int
     {
     }
 

@@ -35,27 +35,23 @@
 /**
  * Class representing a ray trace collision with an AxisAlignedBB
  */
-ZEPHIR_INIT_CLASS(Pocketmine_Math_RayTraceResult) {
-
+ZEPHIR_INIT_CLASS(Pocketmine_Math_RayTraceResult)
+{
 	ZEPHIR_REGISTER_CLASS(Pocketmine\\Math, RayTraceResult, pocketmine, math_raytraceresult, pocketmine_math_raytraceresult_method_entry, 0);
 
 	/**
 	 * @var AxisAlignedBB
 	 */
 	zend_declare_property_null(pocketmine_math_raytraceresult_ce, SL("bb"), ZEND_ACC_PUBLIC);
-
 	/**
 	 * @var int
 	 */
 	zend_declare_property_null(pocketmine_math_raytraceresult_ce, SL("hitFace"), ZEND_ACC_PUBLIC);
-
 	/**
 	 * @var Vector3
 	 */
 	zend_declare_property_null(pocketmine_math_raytraceresult_ce, SL("hitVector"), ZEND_ACC_PUBLIC);
-
 	return SUCCESS;
-
 }
 
 /**
@@ -63,8 +59,8 @@ ZEPHIR_INIT_CLASS(Pocketmine_Math_RayTraceResult) {
  * @param int           $hitFace one of the Facing::* constants
  * @param Vector3       $hitVector
  */
-PHP_METHOD(Pocketmine_Math_RayTraceResult, __construct) {
-
+PHP_METHOD(Pocketmine_Math_RayTraceResult, __construct)
+{
 	zend_long hitFace;
 	zval *bb = NULL, bb_sub, *hitFace_param = NULL, *hitVector = NULL, hitVector_sub, _0;
 	zval *this_ptr = getThis();
@@ -79,12 +75,10 @@ PHP_METHOD(Pocketmine_Math_RayTraceResult, __construct) {
 		Z_PARAM_LONG(hitFace)
 		Z_PARAM_OBJECT_OF_CLASS(hitVector, pocketmine_math_vector3_ce)
 	ZEND_PARSE_PARAMETERS_END();
-
 #endif
 
 
 	zephir_fetch_params_without_memory_grow(3, 0, &bb, &hitFace_param, &hitVector);
-
 	hitFace = zephir_get_intval(hitFace_param);
 
 
@@ -93,81 +87,74 @@ PHP_METHOD(Pocketmine_Math_RayTraceResult, __construct) {
 	ZVAL_LONG(&_0, hitFace);
 	zephir_update_property_zval(this_ptr, ZEND_STRL("hitFace"), &_0);
 	zephir_update_property_zval(this_ptr, ZEND_STRL("hitVector"), hitVector);
-
 }
 
 /**
  * @return AxisAlignedBB
  */
-PHP_METHOD(Pocketmine_Math_RayTraceResult, getBoundingBox) {
-
+PHP_METHOD(Pocketmine_Math_RayTraceResult, getBoundingBox)
+{
 	zval *this_ptr = getThis();
 
 
 
 	RETURN_MEMBER(getThis(), "bb");
-
 }
 
 /**
  * @return int
  */
-PHP_METHOD(Pocketmine_Math_RayTraceResult, getHitFace) {
-
+PHP_METHOD(Pocketmine_Math_RayTraceResult, getHitFace)
+{
 	zval *this_ptr = getThis();
 
 
 
 	RETURN_MEMBER(getThis(), "hitFace");
-
 }
 
 /**
  * @return Vector3
  */
-PHP_METHOD(Pocketmine_Math_RayTraceResult, getHitVector) {
-
+PHP_METHOD(Pocketmine_Math_RayTraceResult, getHitVector)
+{
 	zval *this_ptr = getThis();
 
 
 
 	RETURN_MEMBER(getThis(), "hitVector");
-
 }
 
 /**
  * @return AxisAlignedBB
  */
-void zep_Pocketmine_Math_RayTraceResult_getBoundingBox_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used) {
-
+void zep_Pocketmine_Math_RayTraceResult_getBoundingBox_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used)
+{
 	
 
 
 	RETURN_MEMBER(getThis(), "bb");
-
 }
 
 /**
  * @return int
  */
-void zep_Pocketmine_Math_RayTraceResult_getHitFace_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used) {
-
+void zep_Pocketmine_Math_RayTraceResult_getHitFace_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used)
+{
 	
 
 
 	RETURN_MEMBER(getThis(), "hitFace");
-
 }
 
 /**
  * @return Vector3
  */
-void zep_Pocketmine_Math_RayTraceResult_getHitVector_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used) {
-
+void zep_Pocketmine_Math_RayTraceResult_getHitVector_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used)
+{
 	
 
 
 	RETURN_MEMBER(getThis(), "hitVector");
-
 }
 
