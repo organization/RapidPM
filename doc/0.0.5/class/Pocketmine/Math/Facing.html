@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta content="rapidpm API doc" name="description">
+    <title>
+                    rapidpm API Documentation
+            </title>
+    <link rel="stylesheet" type="text/css" href="../../../asset/static/prettify.css" />
+
+<script src="../../../asset/static/prettify.js"></script>
+<script src="../../../asset/api_definition.js"></script>
+
+
+                        <link rel="stylesheet" type="text/css" href="../../../asset/static/prettify.css" />
+                    <link rel="stylesheet" type="text/css" href="../../../asset/static/zephir-theme.css" />
+            
+    
+
+                        <script src="../../../asset/static/prettify.js"></script>
+                                    <script src="../../../asset/api_definition.js"></script>
+                    <script src="../../../asset/static/jquery.min.js"></script>
+                    <script src="../../../asset/static/zephir-doc.js"></script>
+                <script type="application/javascript">let ZepCurrentPath = '../../../'</script>
+    </head>
+ <body onload="prettyPrint()">
+        <div id="top-bar">
+            <div id="top-left">
+                                    rapidpm Documentation <span class="version">v0.0.5</span>
+                            </div>
+            <div id="top-right">
+            </div>
+        </div>
+        <div id="body">
+            <div id="body-left">
+                <div class="header-search">
+                    <input class="search-box" placeholder="Search for a class or namespace " type="text" />
+                    <div id="menu-wrapper">
+                    </div>
+                </div>
+            </div>
+            <div id="body-right">
+                <div class="content">
+                    
+<div class="breadcrumb">
+    
+    <ul>
+        
+        <li><a href="../../../index.html">Home</a></li>
+        
+                <li><a href="../../../classes.html">Classes</a></li>
+                <li><a >Pocketmine\Math\Facing</a></li>
+                
+    </ul>
+    
+</div>
+<div class="class-header clearfix">
+
+    <div class="access-buttons">
+        <a class="zep-button" href="../../../source/Pocketmine/Math/Facing.html">Source</a>
+            </div>
+    
+    <div class="class-full-name">
+        <span class="class-type">Class</span>
+        
+                <span class="namespace-piece">
+            <a href="../../../namespace/Pocketmine.html">
+                Pocketmine            </a>
+        </span>
+                <span class="namespace-piece">
+            <a href="../../../namespace/Pocketmine/Math.html">
+                Math            </a>
+        </span>
+        
+        <h1 class="class-name">Facing</h1>
+    </div>
+</div>
+
+
+<div class="hidden-anchor"  id="methods"></div>
+<div class="methods-summary standard-bandeau">Methods</div>
+
+<ul class="method-summary-list">
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-axis">axis</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    int                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns the axis of the given direction.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-isPositive">isPositive</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    bool                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns whether the direction is facing the positive of its axis.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-opposite">opposite</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    int                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns the opposite Facing of the specified one.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-rotate">rotate</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>, <span class="param-data-type">int</span> <span class="variable param-name">$axis</span>, <span class="param-data-type">bool</span> <span class="variable param-name">$clockwise</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    int                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Rotates the given direction around the axis.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-rotateY">rotateY</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>, <span class="param-data-type">bool</span> <span class="variable param-name">$clockwise</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    int                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-rotateZ">rotateZ</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>, <span class="param-data-type">bool</span> <span class="variable param-name">$clockwise</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    int                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-rotateX">rotateX</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>, <span class="param-data-type">bool</span> <span class="variable param-name">$clockwise</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    int                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-validate">validate</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$facing</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Validates the given integer as a Facing direction.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-axis_zephir_internal_call">axis_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns the axis of the given direction.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-isPositive_zephir_internal_call">isPositive_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns whether the direction is facing the positive of its axis.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-opposite_zephir_internal_call">opposite_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns the opposite Facing of the specified one.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-rotate_zephir_internal_call">rotate_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>, <span class="param-data-type">int</span> <span class="variable param-name">$axis</span>, <span class="param-data-type">bool</span> <span class="variable param-name">$clockwise</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Rotates the given direction around the axis.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-rotateY_zephir_internal_call">rotateY_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>, <span class="param-data-type">bool</span> <span class="variable param-name">$clockwise</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-rotateZ_zephir_internal_call">rotateZ_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>, <span class="param-data-type">bool</span> <span class="variable param-name">$clockwise</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-rotateX_zephir_internal_call">rotateX_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>, <span class="param-data-type">bool</span> <span class="variable param-name">$clockwise</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                                    </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-validate_zephir_internal_call">validate_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$facing</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Validates the given integer as a Facing direction.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-zephir_init_static_properties_Pocketmine_Math_Facing">zephir_init_static_properties_Pocketmine_Math_Facing</a><!--
+            --></span><!--
+            -->()<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+            </div>
+</li>
+    </ul>
+
+<div class="hidden-anchor" id="methods-details"></div>
+<div class="methods-summary standard-bandeau">Methods Details</div>
+
+<ul class="method-details-list">
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-axis"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                    <span class="visibility-static keyword">static</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">axis</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns the axis of the given direction.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-isPositive"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                    <span class="visibility-static keyword">static</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">isPositive</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns whether the direction is facing the positive of its axis.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-opposite"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                    <span class="visibility-static keyword">static</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">opposite</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns the opposite Facing of the specified one.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-rotate"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                    <span class="visibility-static keyword">static</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">rotate</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>, <span class="param-data-type">int</span> <span class="variable param-name">$axis</span>, <span class="param-data-type">bool</span> <span class="variable param-name">$clockwise</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Rotates the given direction around the axis.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-rotateY"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                    <span class="visibility-static keyword">static</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">rotateY</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>, <span class="param-data-type">bool</span> <span class="variable param-name">$clockwise</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-rotateZ"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                    <span class="visibility-static keyword">static</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">rotateZ</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>, <span class="param-data-type">bool</span> <span class="variable param-name">$clockwise</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-rotateX"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                    <span class="visibility-static keyword">static</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">rotateX</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>, <span class="param-data-type">bool</span> <span class="variable param-name">$clockwise</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-validate"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                    <span class="visibility-static keyword">static</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">validate</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$facing</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Validates the given integer as a Facing direction.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-axis_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">axis_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns the axis of the given direction.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-isPositive_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">isPositive_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns whether the direction is facing the positive of its axis.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-opposite_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">opposite_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns the opposite Facing of the specified one.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-rotate_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">rotate_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>, <span class="param-data-type">int</span> <span class="variable param-name">$axis</span>, <span class="param-data-type">bool</span> <span class="variable param-name">$clockwise</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Rotates the given direction around the axis.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-rotateY_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">rotateY_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>, <span class="param-data-type">bool</span> <span class="variable param-name">$clockwise</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-rotateZ_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">rotateZ_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>, <span class="param-data-type">bool</span> <span class="variable param-name">$clockwise</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-rotateX_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">rotateX_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$direction</span>, <span class="param-data-type">bool</span> <span class="variable param-name">$clockwise</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                                            </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-validate_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">validate_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$facing</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Validates the given integer as a Facing direction.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-zephir_init_static_properties_Pocketmine_Math_Facing"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">zephir_init_static_properties_Pocketmine_Math_Facing</span><!--
+                -->()
+            </p>
+
+            <div class="method-doc">
+                                            </div>
+
+        </div>
+    </div>
+</li>
+    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

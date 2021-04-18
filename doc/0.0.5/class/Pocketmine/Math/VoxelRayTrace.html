@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta content="rapidpm API doc" name="description">
+    <title>
+                    rapidpm API Documentation
+            </title>
+    <link rel="stylesheet" type="text/css" href="../../../asset/static/prettify.css" />
+
+<script src="../../../asset/static/prettify.js"></script>
+<script src="../../../asset/api_definition.js"></script>
+
+
+                        <link rel="stylesheet" type="text/css" href="../../../asset/static/prettify.css" />
+                    <link rel="stylesheet" type="text/css" href="../../../asset/static/zephir-theme.css" />
+            
+    
+
+                        <script src="../../../asset/static/prettify.js"></script>
+                                    <script src="../../../asset/api_definition.js"></script>
+                    <script src="../../../asset/static/jquery.min.js"></script>
+                    <script src="../../../asset/static/zephir-doc.js"></script>
+                <script type="application/javascript">let ZepCurrentPath = '../../../'</script>
+    </head>
+ <body onload="prettyPrint()">
+        <div id="top-bar">
+            <div id="top-left">
+                                    rapidpm Documentation <span class="version">v0.0.5</span>
+                            </div>
+            <div id="top-right">
+            </div>
+        </div>
+        <div id="body">
+            <div id="body-left">
+                <div class="header-search">
+                    <input class="search-box" placeholder="Search for a class or namespace " type="text" />
+                    <div id="menu-wrapper">
+                    </div>
+                </div>
+            </div>
+            <div id="body-right">
+                <div class="content">
+                    
+<div class="breadcrumb">
+    
+    <ul>
+        
+        <li><a href="../../../index.html">Home</a></li>
+        
+                <li><a href="../../../classes.html">Classes</a></li>
+                <li><a >Pocketmine\Math\VoxelRayTrace</a></li>
+                
+    </ul>
+    
+</div>
+<div class="class-header clearfix">
+
+    <div class="access-buttons">
+        <a class="zep-button" href="../../../source/Pocketmine/Math/VoxelRayTrace.html">Source</a>
+            </div>
+    
+    <div class="class-full-name">
+        <span class="class-type">Class</span>
+        
+                <span class="namespace-piece">
+            <a href="../../../namespace/Pocketmine.html">
+                Pocketmine            </a>
+        </span>
+                <span class="namespace-piece">
+            <a href="../../../namespace/Pocketmine/Math.html">
+                Math            </a>
+        </span>
+        
+        <h1 class="class-name">VoxelRayTrace</h1>
+    </div>
+</div>
+
+
+<div class="hidden-anchor"  id="methods"></div>
+<div class="methods-summary standard-bandeau">Methods</div>
+
+<ul class="method-summary-list">
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-inDirection">inDirection</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">variable</span> <span class="variable param-name">$start</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$directionVector</span>, <span class="param-data-type">double</span> <span class="variable param-name">$maxDistance</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    Generator                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Performs a ray trace from the start position in the given direction, for a distance of $maxDistance. This                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-spaceShip">spaceShip</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">variable</span> <span class="variable param-name">$a</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$b</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    int                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Spaceship operator                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-betweenPoints">betweenPoints</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">variable</span> <span class="variable param-name">$start</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$end</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    Generator                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Performs a ray trace between the start and end coordinates. This returns a Generator which yields Vector3s                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-rayTraceDistanceToBoundary">rayTraceDistanceToBoundary</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">double</span> <span class="variable param-name">$s</span>, <span class="param-data-type">double</span> <span class="variable param-name">$ds</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    double                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns the distance that must be travelled on an axis from the start point with the direction vector component to                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-inDirection_zephir_internal_call">inDirection_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">variable</span> <span class="variable param-name">$start</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$directionVector</span>, <span class="param-data-type">double</span> <span class="variable param-name">$maxDistance</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Performs a ray trace from the start position in the given direction, for a distance of $maxDistance. This                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-spaceShip_zephir_internal_call">spaceShip_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">variable</span> <span class="variable param-name">$a</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$b</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Spaceship operator                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-betweenPoints_zephir_internal_call">betweenPoints_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">variable</span> <span class="variable param-name">$start</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$end</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Performs a ray trace between the start and end coordinates. This returns a Generator which yields Vector3s                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-rayTraceDistanceToBoundary_zephir_internal_call">rayTraceDistanceToBoundary_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">double</span> <span class="variable param-name">$s</span>, <span class="param-data-type">double</span> <span class="variable param-name">$ds</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns the distance that must be travelled on an axis from the start point with the direction vector component to                </div>
+            </div>
+            </div>
+</li>
+    </ul>
+
+<div class="hidden-anchor" id="methods-details"></div>
+<div class="methods-summary standard-bandeau">Methods Details</div>
+
+<ul class="method-details-list">
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-inDirection"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                    <span class="visibility-static keyword">static</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">inDirection</span><!--
+                -->(<span class="param-data-type">variable</span> <span class="variable param-name">$start</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$directionVector</span>, <span class="param-data-type">double</span> <span class="variable param-name">$maxDistance</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Performs a ray trace from the start position in the given direction, for a distance of $maxDistance. This                    </div>
+                    <div class="description">
+                        returns a Generator which yields Vector3s containing the coordinates of voxels it passes through.                    </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-spaceShip"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-private keyword">private</span>
+                                    <span class="visibility-static keyword">static</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">spaceShip</span><!--
+                -->(<span class="param-data-type">variable</span> <span class="variable param-name">$a</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$b</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Spaceship operator                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-betweenPoints"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                    <span class="visibility-static keyword">static</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">betweenPoints</span><!--
+                -->(<span class="param-data-type">variable</span> <span class="variable param-name">$start</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$end</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Performs a ray trace between the start and end coordinates. This returns a Generator which yields Vector3s                    </div>
+                    <div class="description">
+                        containing the coordinates of voxels it passes through.
+     
+     This is an implementation of the algorithm described in the link below.                    </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-rayTraceDistanceToBoundary"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-private keyword">private</span>
+                                    <span class="visibility-static keyword">static</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">rayTraceDistanceToBoundary</span><!--
+                -->(<span class="param-data-type">double</span> <span class="variable param-name">$s</span>, <span class="param-data-type">double</span> <span class="variable param-name">$ds</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns the distance that must be travelled on an axis from the start point with the direction vector component to                    </div>
+                    <div class="description">
+                        cross a block boundary.
+     
+     For example, given an X coordinate inside a block and the X component of a direction vector, will return the distance
+     travelled by that direction component to reach a block with a different X coordinate.
+     
+     Find the smallest positive t such that s+tds is an integer.                    </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-inDirection_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">inDirection_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">variable</span> <span class="variable param-name">$start</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$directionVector</span>, <span class="param-data-type">double</span> <span class="variable param-name">$maxDistance</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Performs a ray trace from the start position in the given direction, for a distance of $maxDistance. This                    </div>
+                    <div class="description">
+                        returns a Generator which yields Vector3s containing the coordinates of voxels it passes through.                    </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-spaceShip_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">spaceShip_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">variable</span> <span class="variable param-name">$a</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$b</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Spaceship operator                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-betweenPoints_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">betweenPoints_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">variable</span> <span class="variable param-name">$start</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$end</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Performs a ray trace between the start and end coordinates. This returns a Generator which yields Vector3s                    </div>
+                    <div class="description">
+                        containing the coordinates of voxels it passes through.
+     
+     This is an implementation of the algorithm described in the link below.                    </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-rayTraceDistanceToBoundary_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">rayTraceDistanceToBoundary_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">double</span> <span class="variable param-name">$s</span>, <span class="param-data-type">double</span> <span class="variable param-name">$ds</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns the distance that must be travelled on an axis from the start point with the direction vector component to                    </div>
+                    <div class="description">
+                        cross a block boundary.
+     
+     For example, given an X coordinate inside a block and the X component of a direction vector, will return the distance
+     travelled by that direction component to reach a block with a different X coordinate.
+     
+     Find the smallest positive t such that s+tds is an integer.                    </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

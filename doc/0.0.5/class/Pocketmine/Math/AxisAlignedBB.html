@@ -1,0 +1,2581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta content="rapidpm API doc" name="description">
+    <title>
+                    rapidpm API Documentation
+            </title>
+    <link rel="stylesheet" type="text/css" href="../../../asset/static/prettify.css" />
+
+<script src="../../../asset/static/prettify.js"></script>
+<script src="../../../asset/api_definition.js"></script>
+
+
+                        <link rel="stylesheet" type="text/css" href="../../../asset/static/prettify.css" />
+                    <link rel="stylesheet" type="text/css" href="../../../asset/static/zephir-theme.css" />
+            
+    
+
+                        <script src="../../../asset/static/prettify.js"></script>
+                                    <script src="../../../asset/api_definition.js"></script>
+                    <script src="../../../asset/static/jquery.min.js"></script>
+                    <script src="../../../asset/static/zephir-doc.js"></script>
+                <script type="application/javascript">let ZepCurrentPath = '../../../'</script>
+    </head>
+ <body onload="prettyPrint()">
+        <div id="top-bar">
+            <div id="top-left">
+                                    rapidpm Documentation <span class="version">v0.0.5</span>
+                            </div>
+            <div id="top-right">
+            </div>
+        </div>
+        <div id="body">
+            <div id="body-left">
+                <div class="header-search">
+                    <input class="search-box" placeholder="Search for a class or namespace " type="text" />
+                    <div id="menu-wrapper">
+                    </div>
+                </div>
+            </div>
+            <div id="body-right">
+                <div class="content">
+                    
+<div class="breadcrumb">
+    
+    <ul>
+        
+        <li><a href="../../../index.html">Home</a></li>
+        
+                <li><a href="../../../classes.html">Classes</a></li>
+                <li><a >Pocketmine\Math\AxisAlignedBB</a></li>
+                
+    </ul>
+    
+</div>
+<div class="class-header clearfix">
+
+    <div class="access-buttons">
+        <a class="zep-button" href="../../../source/Pocketmine/Math/AxisAlignedBB.html">Source</a>
+            </div>
+    
+    <div class="class-full-name">
+        <span class="class-type">Class</span>
+        
+                <span class="namespace-piece">
+            <a href="../../../namespace/Pocketmine.html">
+                Pocketmine            </a>
+        </span>
+                <span class="namespace-piece">
+            <a href="../../../namespace/Pocketmine/Math.html">
+                Math            </a>
+        </span>
+        
+        <h1 class="class-name">AxisAlignedBB</h1>
+    </div>
+</div>
+
+
+<div class="hidden-anchor"  id="methods"></div>
+<div class="methods-summary standard-bandeau">Methods</div>
+
+<ul class="method-summary-list">
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-__construct">__construct</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">double</span> <span class="variable param-name">$minX</span>, <span class="param-data-type">double</span> <span class="variable param-name">$minY</span>, <span class="param-data-type">double</span> <span class="variable param-name">$minZ</span>, <span class="param-data-type">double</span> <span class="variable param-name">$maxX</span>, <span class="param-data-type">double</span> <span class="variable param-name">$maxY</span>, <span class="param-data-type">double</span> <span class="variable param-name">$maxZ</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-addCoord">addCoord</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    <a href="../../../class/Pocketmine/Math/AxisAlignedBB.html">Pocketmine\Math\AxisAlignedBB</a>                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns a new AxisAlignedBB extended by the specified X, Y and Z.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-expand">expand</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Outsets the bounds of this AxisAlignedBB by the specified X, Y and Z.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-expandedCopy">expandedCopy</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    <a href="../../../class/Pocketmine/Math/AxisAlignedBB.html">Pocketmine\Math\AxisAlignedBB</a>                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns an expanded clone of this AxisAlignedBB.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-offset">offset</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Shifts this AxisAlignedBB by the given X, Y and Z.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-offsetCopy">offsetCopy</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    <a href="../../../class/Pocketmine/Math/AxisAlignedBB.html">Pocketmine\Math\AxisAlignedBB</a>                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns an offset clone of this AxisAlignedBB.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-contract">contract</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Insets the bounds of this AxisAlignedBB by the specified X, Y and Z.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-contractedCopy">contractedCopy</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    <a href="../../../class/Pocketmine/Math/AxisAlignedBB.html">Pocketmine\Math\AxisAlignedBB</a>                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns a contracted clone of this AxisAlignedBB.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-extend">extend</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$face</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    <a href="../../../class/Pocketmine/Math/AxisAlignedBB.html">Pocketmine\Math\AxisAlignedBB</a>                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Extends the AABB in the given direction.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-extendedCopy">extendedCopy</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$face</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    <a href="../../../class/Pocketmine/Math/AxisAlignedBB.html">Pocketmine\Math\AxisAlignedBB</a>                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns an extended clone of this bounding box.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-trim">trim</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$face</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    <a href="../../../class/Pocketmine/Math/AxisAlignedBB.html">Pocketmine\Math\AxisAlignedBB</a>                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Inverse of extend().                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-trimmedCopy">trimmedCopy</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$face</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    <a href="../../../class/Pocketmine/Math/AxisAlignedBB.html">Pocketmine\Math\AxisAlignedBB</a>                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns a trimmed clone of this bounding box.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-stretch">stretch</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$axis</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    <a href="../../../class/Pocketmine/Math/AxisAlignedBB.html">Pocketmine\Math\AxisAlignedBB</a>                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Increases the dimension of the AABB along the given axis.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-stretchedCopy">stretchedCopy</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$axis</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    <a href="../../../class/Pocketmine/Math/AxisAlignedBB.html">Pocketmine\Math\AxisAlignedBB</a>                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns a stretched copy of this bounding box.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-squash">squash</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$axis</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    <a href="../../../class/Pocketmine/Math/AxisAlignedBB.html">Pocketmine\Math\AxisAlignedBB</a>                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Reduces the dimension of the AABB on the given axis. Inverse of stretch().                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-squashedCopy">squashedCopy</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$axis</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    <a href="../../../class/Pocketmine/Math/AxisAlignedBB.html">Pocketmine\Math\AxisAlignedBB</a>                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns a squashed copy of this bounding box.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-calculateXOffset">calculateXOffset</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">variable</span> <span class="variable param-name">$bb</span>, <span class="param-data-type">double</span> <span class="variable param-name">$x</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    double                            </span>
+        </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-calculateYOffset">calculateYOffset</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">variable</span> <span class="variable param-name">$bb</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    double                            </span>
+        </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-calculateZOffset">calculateZOffset</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">variable</span> <span class="variable param-name">$bb</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    double                            </span>
+        </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-intersectsWith">intersectsWith</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">variable</span> <span class="variable param-name">$bb</span>, <span class="param-data-type">double</span> <span class="variable param-name">$epsilon</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    bool                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns whether any part of the specified AABB is inside (intersects with) this one.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-isVectorInside">isVectorInside</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">variable</span> <span class="variable param-name">$vector</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    bool                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns whether the specified vector is within the bounds of this AABB on all axes.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-getAverageEdgeLength">getAverageEdgeLength</a><!--
+            --></span><!--
+            -->()<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    double                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns the mean average of the AABB's X, Y and Z lengths.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-getVolume">getVolume</a><!--
+            --></span><!--
+            -->()<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    double                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns the interior volume of the AABB.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-isVectorInYZ">isVectorInYZ</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">variable</span> <span class="variable param-name">$vector</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    bool                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns whether the specified vector is within the Y and Z bounds of this AABB.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-isVectorInXZ">isVectorInXZ</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">variable</span> <span class="variable param-name">$vector</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    bool                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns whether the specified vector is within the X and Z bounds of this AABB.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-isVectorInXY">isVectorInXY</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">variable</span> <span class="variable param-name">$vector</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    bool                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns whether the specified vector is within the X and Y bounds of this AABB.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-calculateIntercept">calculateIntercept</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">variable</span> <span class="variable param-name">$pos1</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$pos2</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    <a href="../../../class/Pocketmine/Math/RayTraceResult.html">Pocketmine\Math\RayTraceResult</a> | null                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Performs a ray-trace and calculates the point on the AABB's edge nearest the start position that the ray-trace                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-__toString">__toString</a><!--
+            --></span><!--
+            -->()<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-one">one</a><!--
+            --></span><!--
+            -->()<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    <a href="../../../class/Pocketmine/Math/AxisAlignedBB.html">Pocketmine\Math\AxisAlignedBB</a>                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns a 1x1x1 bounding box starting at grid position 0,0,0.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-addCoord_zephir_internal_call">addCoord_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns a new AxisAlignedBB extended by the specified X, Y and Z.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-expand_zephir_internal_call">expand_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Outsets the bounds of this AxisAlignedBB by the specified X, Y and Z.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-expandedCopy_zephir_internal_call">expandedCopy_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns an expanded clone of this AxisAlignedBB.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-offset_zephir_internal_call">offset_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Shifts this AxisAlignedBB by the given X, Y and Z.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-offsetCopy_zephir_internal_call">offsetCopy_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns an offset clone of this AxisAlignedBB.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-contract_zephir_internal_call">contract_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Insets the bounds of this AxisAlignedBB by the specified X, Y and Z.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-contractedCopy_zephir_internal_call">contractedCopy_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns a contracted clone of this AxisAlignedBB.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-extend_zephir_internal_call">extend_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$face</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Extends the AABB in the given direction.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-extendedCopy_zephir_internal_call">extendedCopy_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$face</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns an extended clone of this bounding box.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-trim_zephir_internal_call">trim_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$face</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Inverse of extend().                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-trimmedCopy_zephir_internal_call">trimmedCopy_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$face</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns a trimmed clone of this bounding box.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-stretch_zephir_internal_call">stretch_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$axis</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Increases the dimension of the AABB along the given axis.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-stretchedCopy_zephir_internal_call">stretchedCopy_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$axis</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns a stretched copy of this bounding box.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-squash_zephir_internal_call">squash_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$axis</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Reduces the dimension of the AABB on the given axis. Inverse of stretch().                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-squashedCopy_zephir_internal_call">squashedCopy_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">int</span> <span class="variable param-name">$axis</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns a squashed copy of this bounding box.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-calculateXOffset_zephir_internal_call">calculateXOffset_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">variable</span> <span class="variable param-name">$bb</span>, <span class="param-data-type">double</span> <span class="variable param-name">$x</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-calculateYOffset_zephir_internal_call">calculateYOffset_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">variable</span> <span class="variable param-name">$bb</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-calculateZOffset_zephir_internal_call">calculateZOffset_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">variable</span> <span class="variable param-name">$bb</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-isVectorInside_zephir_internal_call">isVectorInside_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">variable</span> <span class="variable param-name">$vector</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns whether the specified vector is within the bounds of this AABB on all axes.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-getAverageEdgeLength_zephir_internal_call">getAverageEdgeLength_zephir_internal_call</a><!--
+            --></span><!--
+            -->()<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns the mean average of the AABB's X, Y and Z lengths.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-getVolume_zephir_internal_call">getVolume_zephir_internal_call</a><!--
+            --></span><!--
+            -->()<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns the interior volume of the AABB.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-isVectorInYZ_zephir_internal_call">isVectorInYZ_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">variable</span> <span class="variable param-name">$vector</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns whether the specified vector is within the Y and Z bounds of this AABB.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-isVectorInXZ_zephir_internal_call">isVectorInXZ_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">variable</span> <span class="variable param-name">$vector</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns whether the specified vector is within the X and Z bounds of this AABB.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-isVectorInXY_zephir_internal_call">isVectorInXY_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">variable</span> <span class="variable param-name">$vector</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns whether the specified vector is within the X and Y bounds of this AABB.                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-calculateIntercept_zephir_internal_call">calculateIntercept_zephir_internal_call</a><!--
+            --></span><!--
+            -->(<span class="param-data-type">variable</span> <span class="variable param-name">$pos1</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$pos2</span>)<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Performs a ray-trace and calculates the point on the AABB's edge nearest the start position that the ray-trace                </div>
+            </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-__toString_zephir_internal_call">__toString_zephir_internal_call</a><!--
+            --></span><!--
+            -->()<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+            </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="method-summary">
+        <div class="method-signature">
+            <!-- method-summary -->
+            <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+            <span class="method-name">
+                <a href="#method-details-one_zephir_internal_call">one_zephir_internal_call</a><!--
+            --></span><!--
+            -->()<!--
+            --><span class="method-return">
+                <strong>:</strong>
+                                    void
+                            </span>
+        </div>
+                    <div class="method-doc">
+                <div class="summary-text">
+                    Returns a 1x1x1 bounding box starting at grid position 0,0,0.                </div>
+            </div>
+            </div>
+</li>
+    </ul>
+
+<div class="hidden-anchor" id="methods-details"></div>
+<div class="methods-summary standard-bandeau">Methods Details</div>
+
+<ul class="method-details-list">
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-__construct"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">__construct</span><!--
+                -->(<span class="param-data-type">double</span> <span class="variable param-name">$minX</span>, <span class="param-data-type">double</span> <span class="variable param-name">$minY</span>, <span class="param-data-type">double</span> <span class="variable param-name">$minZ</span>, <span class="param-data-type">double</span> <span class="variable param-name">$maxX</span>, <span class="param-data-type">double</span> <span class="variable param-name">$maxY</span>, <span class="param-data-type">double</span> <span class="variable param-name">$maxZ</span>)
+            </p>
+
+            <div class="method-doc">
+                                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-addCoord"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">addCoord</span><!--
+                -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns a new AxisAlignedBB extended by the specified X, Y and Z.                    </div>
+                    <div class="description">
+                        If each of X, Y and Z are positive, the relevant max bound will be increased. If negative, the relevant min
+     bound will be decreased.                    </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-expand"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">expand</span><!--
+                -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Outsets the bounds of this AxisAlignedBB by the specified X, Y and Z.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-expandedCopy"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">expandedCopy</span><!--
+                -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns an expanded clone of this AxisAlignedBB.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-offset"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">offset</span><!--
+                -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Shifts this AxisAlignedBB by the given X, Y and Z.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-offsetCopy"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">offsetCopy</span><!--
+                -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns an offset clone of this AxisAlignedBB.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-contract"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">contract</span><!--
+                -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Insets the bounds of this AxisAlignedBB by the specified X, Y and Z.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-contractedCopy"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">contractedCopy</span><!--
+                -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns a contracted clone of this AxisAlignedBB.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-extend"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">extend</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$face</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Extends the AABB in the given direction.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-extendedCopy"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">extendedCopy</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$face</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns an extended clone of this bounding box.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-trim"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">trim</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$face</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Inverse of extend().                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-trimmedCopy"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">trimmedCopy</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$face</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns a trimmed clone of this bounding box.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-stretch"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">stretch</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$axis</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Increases the dimension of the AABB along the given axis.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-stretchedCopy"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">stretchedCopy</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$axis</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns a stretched copy of this bounding box.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-squash"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">squash</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$axis</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Reduces the dimension of the AABB on the given axis. Inverse of stretch().                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-squashedCopy"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">squashedCopy</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$axis</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns a squashed copy of this bounding box.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-calculateXOffset"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">calculateXOffset</span><!--
+                -->(<span class="param-data-type">variable</span> <span class="variable param-name">$bb</span>, <span class="param-data-type">double</span> <span class="variable param-name">$x</span>)
+            </p>
+
+            <div class="method-doc">
+                                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-calculateYOffset"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">calculateYOffset</span><!--
+                -->(<span class="param-data-type">variable</span> <span class="variable param-name">$bb</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>)
+            </p>
+
+            <div class="method-doc">
+                                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-calculateZOffset"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">calculateZOffset</span><!--
+                -->(<span class="param-data-type">variable</span> <span class="variable param-name">$bb</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)
+            </p>
+
+            <div class="method-doc">
+                                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-intersectsWith"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">intersectsWith</span><!--
+                -->(<span class="param-data-type">variable</span> <span class="variable param-name">$bb</span>, <span class="param-data-type">double</span> <span class="variable param-name">$epsilon</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns whether any part of the specified AABB is inside (intersects with) this one.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-isVectorInside"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">isVectorInside</span><!--
+                -->(<span class="param-data-type">variable</span> <span class="variable param-name">$vector</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns whether the specified vector is within the bounds of this AABB on all axes.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getAverageEdgeLength"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">getAverageEdgeLength</span><!--
+                -->()
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns the mean average of the AABB's X, Y and Z lengths.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getVolume"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">getVolume</span><!--
+                -->()
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns the interior volume of the AABB.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-isVectorInYZ"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">isVectorInYZ</span><!--
+                -->(<span class="param-data-type">variable</span> <span class="variable param-name">$vector</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns whether the specified vector is within the Y and Z bounds of this AABB.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-isVectorInXZ"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">isVectorInXZ</span><!--
+                -->(<span class="param-data-type">variable</span> <span class="variable param-name">$vector</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns whether the specified vector is within the X and Z bounds of this AABB.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-isVectorInXY"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">isVectorInXY</span><!--
+                -->(<span class="param-data-type">variable</span> <span class="variable param-name">$vector</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns whether the specified vector is within the X and Y bounds of this AABB.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-calculateIntercept"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">calculateIntercept</span><!--
+                -->(<span class="param-data-type">variable</span> <span class="variable param-name">$pos1</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$pos2</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Performs a ray-trace and calculates the point on the AABB's edge nearest the start position that the ray-trace                    </div>
+                    <div class="description">
+                        collided with. Returns a RayTraceResult with colliding vector closest to the start position.
+     Returns null if no colliding point was found.                    </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-__toString"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">__toString</span><!--
+                -->()
+            </p>
+
+            <div class="method-doc">
+                                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-one"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-public keyword">public</span>
+                                    <span class="visibility-static keyword">static</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">one</span><!--
+                -->()
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns a 1x1x1 bounding box starting at grid position 0,0,0.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-addCoord_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">addCoord_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns a new AxisAlignedBB extended by the specified X, Y and Z.                    </div>
+                    <div class="description">
+                        If each of X, Y and Z are positive, the relevant max bound will be increased. If negative, the relevant min
+     bound will be decreased.                    </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-expand_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">expand_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Outsets the bounds of this AxisAlignedBB by the specified X, Y and Z.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-expandedCopy_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">expandedCopy_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns an expanded clone of this AxisAlignedBB.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-offset_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">offset_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Shifts this AxisAlignedBB by the given X, Y and Z.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-offsetCopy_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">offsetCopy_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns an offset clone of this AxisAlignedBB.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-contract_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">contract_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Insets the bounds of this AxisAlignedBB by the specified X, Y and Z.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-contractedCopy_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">contractedCopy_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">double</span> <span class="variable param-name">$x</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns a contracted clone of this AxisAlignedBB.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-extend_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">extend_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$face</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Extends the AABB in the given direction.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-extendedCopy_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">extendedCopy_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$face</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns an extended clone of this bounding box.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-trim_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">trim_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$face</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Inverse of extend().                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-trimmedCopy_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">trimmedCopy_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$face</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns a trimmed clone of this bounding box.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-stretch_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">stretch_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$axis</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Increases the dimension of the AABB along the given axis.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-stretchedCopy_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">stretchedCopy_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$axis</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns a stretched copy of this bounding box.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-squash_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">squash_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$axis</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Reduces the dimension of the AABB on the given axis. Inverse of stretch().                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-squashedCopy_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">squashedCopy_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">int</span> <span class="variable param-name">$axis</span>, <span class="param-data-type">double</span> <span class="variable param-name">$distance</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns a squashed copy of this bounding box.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-calculateXOffset_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">calculateXOffset_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">variable</span> <span class="variable param-name">$bb</span>, <span class="param-data-type">double</span> <span class="variable param-name">$x</span>)
+            </p>
+
+            <div class="method-doc">
+                                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-calculateYOffset_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">calculateYOffset_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">variable</span> <span class="variable param-name">$bb</span>, <span class="param-data-type">double</span> <span class="variable param-name">$y</span>)
+            </p>
+
+            <div class="method-doc">
+                                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-calculateZOffset_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">calculateZOffset_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">variable</span> <span class="variable param-name">$bb</span>, <span class="param-data-type">double</span> <span class="variable param-name">$z</span>)
+            </p>
+
+            <div class="method-doc">
+                                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-isVectorInside_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">isVectorInside_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">variable</span> <span class="variable param-name">$vector</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns whether the specified vector is within the bounds of this AABB on all axes.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getAverageEdgeLength_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">getAverageEdgeLength_zephir_internal_call</span><!--
+                -->()
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns the mean average of the AABB's X, Y and Z lengths.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-getVolume_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">getVolume_zephir_internal_call</span><!--
+                -->()
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns the interior volume of the AABB.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-isVectorInYZ_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">isVectorInYZ_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">variable</span> <span class="variable param-name">$vector</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns whether the specified vector is within the Y and Z bounds of this AABB.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-isVectorInXZ_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">isVectorInXZ_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">variable</span> <span class="variable param-name">$vector</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns whether the specified vector is within the X and Z bounds of this AABB.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-isVectorInXY_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">isVectorInXY_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">variable</span> <span class="variable param-name">$vector</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns whether the specified vector is within the X and Y bounds of this AABB.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-calculateIntercept_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">calculateIntercept_zephir_internal_call</span><!--
+                -->(<span class="param-data-type">variable</span> <span class="variable param-name">$pos1</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$pos2</span>)
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Performs a ray-trace and calculates the point on the AABB's edge nearest the start position that the ray-trace                    </div>
+                    <div class="description">
+                        collided with. Returns a RayTraceResult with colliding vector closest to the start position.
+     Returns null if no colliding point was found.                    </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-__toString_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">__toString_zephir_internal_call</span><!--
+                -->()
+            </p>
+
+            <div class="method-doc">
+                                            </div>
+
+        </div>
+    </div>
+</li>
+            
+<li class="class-method clearfix">
+    <div class="hidden-anchor" id="method-details-one_zephir_internal_call"></div>
+    <div class="method-details">
+        <div class="method-details-details">
+
+            <p class="method-signature">
+                                    <span class="visibility-internal keyword">internal</span>
+                                <span class="keyword">function</span>
+                <!-- method-details -->
+                <!-- Do not remove comments below. It's a trick to remove the spaces. -->
+                <span class="method-name">one_zephir_internal_call</span><!--
+                -->()
+            </p>
+
+            <div class="method-doc">
+                                                    <div class="summary">
+                        Returns a 1x1x1 bounding box starting at grid position 0,0,0.                    </div>
+                    <div class="description">
+                                            </div>
+                            </div>
+
+        </div>
+    </div>
+</li>
+    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
