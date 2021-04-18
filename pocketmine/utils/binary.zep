@@ -492,11 +492,11 @@ class Binary
      *
      * @return int
      */
-    public static function readVarInt(string buffer, int& offset) -> int
+    public static function readVarInt(string buffer, var& offset) -> int
     {
         var raw = self::readUnsignedVarInt(buffer, offset);
-        int temp = ((((int) raw << 63) >> 63) ^ (int) raw) >> 1;
-        return temp ^ (int) raw & 1 << 63;
+        uint temp = (((raw << 63) >> 63) ^ raw) >> 1;
+        return temp ^ raw & 1 << 63;
     }
 
     /**
@@ -509,15 +509,16 @@ class Binary
      *
      * @throws BinaryDataException if the var-int did not end after 5 bytes or there were not enough bytes
      */
-    public static function readUnsignedVarInt(var buffer, offset) -> int
+    public static function readUnsignedVarInt(string buffer, var& offset) -> uint
     {
-        var i = 0;
-        var value = 0;
+        int i = 0;
+        uint value = 0;
         while i <= 28 {
-            if (!isset str_split((string) buffer)[(int) offset]) {
+            if (!isset str_split(buffer)[offset]) {
                 throw new BinaryDataException("No bytes left in buffer");
             }
-            var b = ord(substr(buffer, offset, 1));
+            var bVar = ord(buffer[(int) offset]);
+            int b = (int) bVar;
             let offset++;
             let value = value | ((b & 0x7f) << i);
             if ((b & 0x80) === 0) {
@@ -548,11 +549,11 @@ class Binary
      *
      * @return string up to 5 bytes
      */
-    public static function writeUnsignedVarInt(int value) -> string
+    public static function writeUnsignedVarInt(uint value) -> string
     {
-        var i;
+        int i;
         string buf = "";
-        int value = value & 0xffffffff;
+        uint value = value & 0xffffffff;
         for i in range(0, 4) {
             if ((value >> 7) !== 0) {
                 let buf .= chr(value | 0x80);
@@ -560,7 +561,7 @@ class Binary
                 let buf .= chr(value & 0x7f);
                 return buf;
             }
-            let value = value >> 7 & (long) PHP_INT_MAX >> 6;
+            let value = value >> 7 & PHP_INT_MAX >> 6;
             //PHP really needs a logical right-shift operator
         }
         throw new \InvalidArgumentException("Value too large to be encoded as a VarInt");
@@ -574,11 +575,11 @@ class Binary
      *
      * @return long
      */
-    public static function readVarLong(string buffer, int& offset) -> long
+    public static function readVarLong(string buffer, var& offset) -> long
     {
         var raw = self::readUnsignedVarLong(buffer, offset);
-        long temp = ((((long) raw << 63) >> 63) ^ (long) raw) >> 1;
-        return temp ^ (long) raw & 1 << 63;
+        ulong temp = ((((long) raw << 63) >> 63) ^ raw) >> 1;
+        return temp ^ raw & 1 << 63;
     }
 
     /**
@@ -591,15 +592,16 @@ class Binary
      *
      * @throws BinaryDataException if the var-int did not end after 10 bytes or there were not enough bytes
      */
-    public static function readUnsignedVarLong(var buffer, int& offset) -> long
+    public static function readUnsignedVarLong(string buffer, var& offset) -> ulong
     {
-        var i = 0;
-        var value = 0;
+        int i = 0;
+        ulong value = 0;
         while i <= 63 {
-            if (!isset str_split((string) buffer)[(int) offset]) {
+            if (!isset str_split(buffer)[(int) offset]) {
                 throw new BinaryDataException("No bytes left in buffer");
             }
-            var b = ord(substr(buffer, offset, 1));
+            var bVar = ord(buffer[(int) offset]);
+            int b = (int) bVar;
             let offset++;
             let value = value | ((b & 0x7f) << i);
             if ((b & 0x80) === 0) {
@@ -617,7 +619,7 @@ class Binary
      *
      * @return string
      */
-    public static function writeVarLong(int v) -> string
+    public static function writeVarLong(long v) -> string
     {
         return self::writeUnsignedVarLong(v << 1 ^ v >> 63);
     }
@@ -629,9 +631,9 @@ class Binary
      *
      * @return string
      */
-    public static function writeUnsignedVarLong(int value) -> string
+    public static function writeUnsignedVarLong(ulong value) -> string
     {
-        var i;
+        int i;
         string buf = "";
         for i in range(0, 9)  {
             if ((value >> 7) !== 0) {
@@ -641,7 +643,7 @@ class Binary
                 let buf .= chr(value & 0x7f);
                 return buf;
             }
-            let value = value >> 7 & (long) PHP_INT_MAX >> 6;
+            let value = value >> 7 & PHP_INT_MAX >> 6;
             //PHP really needs a logical right-shift operator
         }
         throw new \InvalidArgumentException("Value too large to be encoded as a VarLong");

@@ -97,14 +97,14 @@ void zep_Pocketmine_Utils_Binary_readLong_zephir_internal_call(int ht, zend_exec
 void zep_Pocketmine_Utils_Binary_writeLong_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
 void zep_Pocketmine_Utils_Binary_readLLong_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *str_param_ext);
 void zep_Pocketmine_Utils_Binary_writeLLong_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
-void zep_Pocketmine_Utils_Binary_readVarInt_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *buffer_param_ext, zval *offset_param_ext);
-void zep_Pocketmine_Utils_Binary_readUnsignedVarInt_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *buffer_ext , zval *offset_ext );
+void zep_Pocketmine_Utils_Binary_readVarInt_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *buffer_param_ext, zval *offset_ext );
+void zep_Pocketmine_Utils_Binary_readUnsignedVarInt_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *buffer_param_ext, zval *offset_ext );
 void zep_Pocketmine_Utils_Binary_writeVarInt_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *v_param_ext);
 void zep_Pocketmine_Utils_Binary_writeUnsignedVarInt_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
-void zep_Pocketmine_Utils_Binary_readVarLong_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *buffer_param_ext, zval *offset_param_ext);
-void zep_Pocketmine_Utils_Binary_readUnsignedVarLong_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *buffer_ext , zval *offset_param_ext);
+void zep_Pocketmine_Utils_Binary_readVarLong_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *buffer_param_ext, zval *offset_ext );
+void zep_Pocketmine_Utils_Binary_readUnsignedVarLong_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *buffer_param_ext, zval *offset_ext );
 void zep_Pocketmine_Utils_Binary_writeVarLong_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *v_param_ext);
-void zep_Pocketmine_Utils_Binary_writeUnsignedVarLong_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_param_ext);
+void zep_Pocketmine_Utils_Binary_writeUnsignedVarLong_zephir_internal_call(int ht, zend_execute_data *execute_data, zval *return_value, zval *this_ptr, int return_value_used, zval *value_ext );
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binary_signbyte, 0, 1, IS_LONG, 0)
 	ZEND_ARG_TYPE_INFO(0, value, IS_LONG, 0)
@@ -282,12 +282,12 @@ ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binary_readvarint, 0, 2, IS_LONG, 0)
 	ZEND_ARG_TYPE_INFO(0, buffer, IS_STRING, 0)
-	ZEND_ARG_TYPE_INFO(1, offset, IS_LONG, 0)
+	ZEND_ARG_INFO(1, offset)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binary_readunsignedvarint, 0, 2, IS_LONG, 0)
-	ZEND_ARG_INFO(0, buffer)
-	ZEND_ARG_INFO(0, offset)
+	ZEND_ARG_TYPE_INFO(0, buffer, IS_STRING, 0)
+	ZEND_ARG_INFO(1, offset)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binary_writevarint, 0, 1, IS_STRING, 0)
@@ -300,12 +300,12 @@ ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binary_readvarlong, 0, 2, IS_LONG, 0)
 	ZEND_ARG_TYPE_INFO(0, buffer, IS_STRING, 0)
-	ZEND_ARG_TYPE_INFO(1, offset, IS_LONG, 0)
+	ZEND_ARG_INFO(1, offset)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binary_readunsignedvarlong, 0, 2, IS_LONG, 0)
-	ZEND_ARG_INFO(0, buffer)
-	ZEND_ARG_TYPE_INFO(1, offset, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, buffer, IS_STRING, 0)
+	ZEND_ARG_INFO(1, offset)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_pocketmine_utils_binary_writevarlong, 0, 1, IS_STRING, 0)
@@ -492,12 +492,12 @@ ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_readvarint_zephir_internal_call, 0, 0, 2)
 	ZEND_ARG_TYPE_INFO(0, buffer, IS_STRING, 0)
-	ZEND_ARG_TYPE_INFO(1, offset, IS_LONG, 0)
+	ZEND_ARG_INFO(1, offset)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_readunsignedvarint_zephir_internal_call, 0, 0, 2)
-	ZEND_ARG_INFO(0, buffer)
-	ZEND_ARG_INFO(0, offset)
+	ZEND_ARG_TYPE_INFO(0, buffer, IS_STRING, 0)
+	ZEND_ARG_INFO(1, offset)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_writevarint_zephir_internal_call, 0, 0, 1)
@@ -510,12 +510,12 @@ ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_readvarlong_zephir_internal_call, 0, 0, 2)
 	ZEND_ARG_TYPE_INFO(0, buffer, IS_STRING, 0)
-	ZEND_ARG_TYPE_INFO(1, offset, IS_LONG, 0)
+	ZEND_ARG_INFO(1, offset)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_readunsignedvarlong_zephir_internal_call, 0, 0, 2)
-	ZEND_ARG_INFO(0, buffer)
-	ZEND_ARG_TYPE_INFO(1, offset, IS_LONG, 0)
+	ZEND_ARG_TYPE_INFO(0, buffer, IS_STRING, 0)
+	ZEND_ARG_INFO(1, offset)
 ZEND_END_ARG_INFO()
 
 ZEND_BEGIN_ARG_INFO_EX(arginfo_pocketmine_utils_binary_writevarlong_zephir_internal_call, 0, 0, 1)
