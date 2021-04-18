@@ -935,10 +935,10 @@
             <span class="method-name">
                 <a href="#method-details-readUnsignedVarInt">readUnsignedVarInt</a><!--
             --></span><!--
-            -->(<span class="param-data-type">variable</span> <span class="variable param-name">$buffer</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$offset</span>)<!--
+            -->(<span class="param-data-type">string</span> <span class="variable param-name">$buffer</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$offset</span>)<!--
             --><span class="method-return">
                 <strong>:</strong>
-                                    int                            </span>
+                                    uint                            </span>
         </div>
                     <div class="method-doc">
                 <div class="summary-text">
@@ -975,7 +975,7 @@
             <span class="method-name">
                 <a href="#method-details-writeUnsignedVarInt">writeUnsignedVarInt</a><!--
             --></span><!--
-            -->(<span class="param-data-type">int</span> <span class="variable param-name">$value</span>)<!--
+            -->(<span class="param-data-type">uint</span> <span class="variable param-name">$value</span>)<!--
             --><span class="method-return">
                 <strong>:</strong>
                                     string                            </span>
@@ -1015,10 +1015,10 @@
             <span class="method-name">
                 <a href="#method-details-readUnsignedVarLong">readUnsignedVarLong</a><!--
             --></span><!--
-            -->(<span class="param-data-type">variable</span> <span class="variable param-name">$buffer</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$offset</span>)<!--
+            -->(<span class="param-data-type">string</span> <span class="variable param-name">$buffer</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$offset</span>)<!--
             --><span class="method-return">
                 <strong>:</strong>
-                                    long                            </span>
+                                    ulong                            </span>
         </div>
                     <div class="method-doc">
                 <div class="summary-text">
@@ -1035,7 +1035,7 @@
             <span class="method-name">
                 <a href="#method-details-writeVarLong">writeVarLong</a><!--
             --></span><!--
-            -->(<span class="param-data-type">int</span> <span class="variable param-name">$v</span>)<!--
+            -->(<span class="param-data-type">long</span> <span class="variable param-name">$v</span>)<!--
             --><span class="method-return">
                 <strong>:</strong>
                                     string                            </span>
@@ -1055,7 +1055,7 @@
             <span class="method-name">
                 <a href="#method-details-writeUnsignedVarLong">writeUnsignedVarLong</a><!--
             --></span><!--
-            -->(<span class="param-data-type">int</span> <span class="variable param-name">$value</span>)<!--
+            -->(<span class="param-data-type">ulong</span> <span class="variable param-name">$value</span>)<!--
             --><span class="method-return">
                 <strong>:</strong>
                                     string                            </span>
@@ -1963,7 +1963,7 @@
             <span class="method-name">
                 <a href="#method-details-readUnsignedVarInt_zephir_internal_call">readUnsignedVarInt_zephir_internal_call</a><!--
             --></span><!--
-            -->(<span class="param-data-type">variable</span> <span class="variable param-name">$buffer</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$offset</span>)<!--
+            -->(<span class="param-data-type">string</span> <span class="variable param-name">$buffer</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$offset</span>)<!--
             --><span class="method-return">
                 <strong>:</strong>
                                     void
@@ -2005,7 +2005,7 @@
             <span class="method-name">
                 <a href="#method-details-writeUnsignedVarInt_zephir_internal_call">writeUnsignedVarInt_zephir_internal_call</a><!--
             --></span><!--
-            -->(<span class="param-data-type">int</span> <span class="variable param-name">$value</span>)<!--
+            -->(<span class="param-data-type">uint</span> <span class="variable param-name">$value</span>)<!--
             --><span class="method-return">
                 <strong>:</strong>
                                     void
@@ -2047,7 +2047,7 @@
             <span class="method-name">
                 <a href="#method-details-readUnsignedVarLong_zephir_internal_call">readUnsignedVarLong_zephir_internal_call</a><!--
             --></span><!--
-            -->(<span class="param-data-type">variable</span> <span class="variable param-name">$buffer</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$offset</span>)<!--
+            -->(<span class="param-data-type">string</span> <span class="variable param-name">$buffer</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$offset</span>)<!--
             --><span class="method-return">
                 <strong>:</strong>
                                     void
@@ -2068,7 +2068,7 @@
             <span class="method-name">
                 <a href="#method-details-writeVarLong_zephir_internal_call">writeVarLong_zephir_internal_call</a><!--
             --></span><!--
-            -->(<span class="param-data-type">int</span> <span class="variable param-name">$v</span>)<!--
+            -->(<span class="param-data-type">long</span> <span class="variable param-name">$v</span>)<!--
             --><span class="method-return">
                 <strong>:</strong>
                                     void
@@ -2089,7 +2089,7 @@
             <span class="method-name">
                 <a href="#method-details-writeUnsignedVarLong_zephir_internal_call">writeUnsignedVarLong_zephir_internal_call</a><!--
             --></span><!--
-            -->(<span class="param-data-type">int</span> <span class="variable param-name">$value</span>)<!--
+            -->(<span class="param-data-type">ulong</span> <span class="variable param-name">$value</span>)<!--
             --><span class="method-return">
                 <strong>:</strong>
                                     void
@@ -3228,7 +3228,7 @@
                 <!-- method-details -->
                 <!-- Do not remove comments below. It's a trick to remove the spaces. -->
                 <span class="method-name">readUnsignedVarInt</span><!--
-                -->(<span class="param-data-type">variable</span> <span class="variable param-name">$buffer</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$offset</span>)
+                -->(<span class="param-data-type">string</span> <span class="variable param-name">$buffer</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$offset</span>)
             </p>
 
             <div class="method-doc">
@@ -3280,7 +3280,7 @@
                 <!-- method-details -->
                 <!-- Do not remove comments below. It's a trick to remove the spaces. -->
                 <span class="method-name">writeUnsignedVarInt</span><!--
-                -->(<span class="param-data-type">int</span> <span class="variable param-name">$value</span>)
+                -->(<span class="param-data-type">uint</span> <span class="variable param-name">$value</span>)
             </p>
 
             <div class="method-doc">
@@ -3332,7 +3332,7 @@
                 <!-- method-details -->
                 <!-- Do not remove comments below. It's a trick to remove the spaces. -->
                 <span class="method-name">readUnsignedVarLong</span><!--
-                -->(<span class="param-data-type">variable</span> <span class="variable param-name">$buffer</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$offset</span>)
+                -->(<span class="param-data-type">string</span> <span class="variable param-name">$buffer</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$offset</span>)
             </p>
 
             <div class="method-doc">
@@ -3358,7 +3358,7 @@
                 <!-- method-details -->
                 <!-- Do not remove comments below. It's a trick to remove the spaces. -->
                 <span class="method-name">writeVarLong</span><!--
-                -->(<span class="param-data-type">int</span> <span class="variable param-name">$v</span>)
+                -->(<span class="param-data-type">long</span> <span class="variable param-name">$v</span>)
             </p>
 
             <div class="method-doc">
@@ -3384,7 +3384,7 @@
                 <!-- method-details -->
                 <!-- Do not remove comments below. It's a trick to remove the spaces. -->
                 <span class="method-name">writeUnsignedVarLong</span><!--
-                -->(<span class="param-data-type">int</span> <span class="variable param-name">$value</span>)
+                -->(<span class="param-data-type">ulong</span> <span class="variable param-name">$value</span>)
             </p>
 
             <div class="method-doc">
@@ -4473,7 +4473,7 @@
                 <!-- method-details -->
                 <!-- Do not remove comments below. It's a trick to remove the spaces. -->
                 <span class="method-name">readUnsignedVarInt_zephir_internal_call</span><!--
-                -->(<span class="param-data-type">variable</span> <span class="variable param-name">$buffer</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$offset</span>)
+                -->(<span class="param-data-type">string</span> <span class="variable param-name">$buffer</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$offset</span>)
             </p>
 
             <div class="method-doc">
@@ -4523,7 +4523,7 @@
                 <!-- method-details -->
                 <!-- Do not remove comments below. It's a trick to remove the spaces. -->
                 <span class="method-name">writeUnsignedVarInt_zephir_internal_call</span><!--
-                -->(<span class="param-data-type">int</span> <span class="variable param-name">$value</span>)
+                -->(<span class="param-data-type">uint</span> <span class="variable param-name">$value</span>)
             </p>
 
             <div class="method-doc">
@@ -4573,7 +4573,7 @@
                 <!-- method-details -->
                 <!-- Do not remove comments below. It's a trick to remove the spaces. -->
                 <span class="method-name">readUnsignedVarLong_zephir_internal_call</span><!--
-                -->(<span class="param-data-type">variable</span> <span class="variable param-name">$buffer</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$offset</span>)
+                -->(<span class="param-data-type">string</span> <span class="variable param-name">$buffer</span>, <span class="param-data-type">variable</span> <span class="variable param-name">$offset</span>)
             </p>
 
             <div class="method-doc">
@@ -4598,7 +4598,7 @@
                 <!-- method-details -->
                 <!-- Do not remove comments below. It's a trick to remove the spaces. -->
                 <span class="method-name">writeVarLong_zephir_internal_call</span><!--
-                -->(<span class="param-data-type">int</span> <span class="variable param-name">$v</span>)
+                -->(<span class="param-data-type">long</span> <span class="variable param-name">$v</span>)
             </p>
 
             <div class="method-doc">
@@ -4623,7 +4623,7 @@
                 <!-- method-details -->
                 <!-- Do not remove comments below. It's a trick to remove the spaces. -->
                 <span class="method-name">writeUnsignedVarLong_zephir_internal_call</span><!--
-                -->(<span class="param-data-type">int</span> <span class="variable param-name">$value</span>)
+                -->(<span class="param-data-type">ulong</span> <span class="variable param-name">$value</span>)
             </p>
 
             <div class="method-doc">
